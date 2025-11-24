@@ -7157,6 +7157,237 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Angled Grip I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Angled Grip I'''"
+          }
+        ],
+        "input_level": "'''1x Angled Grip I'''"
+      },
+      {
+        "name": "Vertical Grip I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Vertical Grip I'''"
+          }
+        ],
+        "input_level": "'''1x Vertical Grip I'''"
+      },
+      {
+        "name": "Stable Stock I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Stable Stock I'''"
+          }
+        ],
+        "input_level": "'''1x Stable Stock I'''"
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Vertical Grip II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Stable Stock II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Vertical Grip III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Horizontal Grip",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Horizontal Grip",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Stable Stock III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Lightweight Stock",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Lightweight Stock",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Padded Stock",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Padded Stock",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Kinetic Converter",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
       }
     ]
   },
@@ -13095,6 +13326,283 @@
             "name": "Utility Station 2"
           }
         ]
+      },
+      {
+        "name": "Compensator II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Compensator II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Compensator II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Muzzle Brake II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Muzzle Brake II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Muzzle Brake II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Silencer I",
+        "direction": "out",
+        "relation": "craft_to",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Silencer I"
+          }
+        ],
+        "input_level": "1x Silencer I"
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Vertical Grip II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag II"
+          }
+        ],
+        "input_level": "1x Extended Light Mag II"
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag II'''"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag II'''"
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Shotgun Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag II"
+          }
+        ],
+        "input_level": "1x Extended Shotgun Mag II"
+      },
+      {
+        "name": "Extended Shotgun Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Shotgun Mag II",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Stable Stock II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Barrel",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Angled Grip III",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Horizontal Grip",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Extended Light Mag III",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Extended Medium Mag III",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Kinetic Converter",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
+      },
+      {
+        "name": "Anvil Splitter",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
       }
     ]
   },
@@ -15785,6 +16293,81 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 1
+      },
+      {
+        "name": "Compensator I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Compensator I'''"
+          }
+        ],
+        "input_level": "'''1x Compensator I'''"
+      },
+      {
+        "name": "Compensator I",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 5
+      },
+      {
+        "name": "Compensator I",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
+      },
+      {
+        "name": "Muzzle Brake I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Muzzle Brake I'''"
+          }
+        ],
+        "input_level": "'''1x Muzzle Brake I'''"
+      },
+      {
+        "name": "Muzzle Brake I",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 5
+      },
+      {
+        "name": "Muzzle Brake I",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
+      },
+      {
+        "name": "Shotgun Choke I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Shotgun Choke I'''"
+          }
+        ],
+        "input_level": "'''1x Shotgun Choke I'''"
       }
     ]
   },
@@ -15978,6 +16561,333 @@
         "name": "Mechanical Components",
         "direction": "out",
         "relation": "salvage_to",
+        "quantity": 1
+      },
+      {
+        "name": "Compensator III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Compensator III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Muzzle Brake III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Muzzle Brake III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Shotgun Choke III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Silencer II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Shotgun Silencer",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Barrel",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Barrel",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Angled Grip III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Vertical Grip III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Horizontal Grip",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Horizontal Grip",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Light Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag III"
+          }
+        ],
+        "input_level": "1x Extended Light Mag III"
+      },
+      {
+        "name": "Extended Light Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Medium Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag III"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag III"
+      },
+      {
+        "name": "Extended Medium Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Shotgun Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag III"
+          }
+        ],
+        "input_level": "1x Extended Shotgun Mag III"
+      },
+      {
+        "name": "Extended Shotgun Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Stable Stock III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Lightweight Stock",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Lightweight Stock",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Padded Stock",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Padded Stock",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Kinetic Converter",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Anvil Splitter",
+        "direction": "in",
+        "relation": "recycle_from",
         "quantity": 1
       }
     ]
@@ -17240,6 +18150,127 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 2
+      },
+      {
+        "name": "Angled Grip I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Angled Grip I'''"
+          }
+        ],
+        "input_level": "'''1x Angled Grip I'''"
+      },
+      {
+        "name": "Angled Grip I",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 6
+      },
+      {
+        "name": "Angled Grip I",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
+      },
+      {
+        "name": "Vertical Grip I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Vertical Grip I'''"
+          }
+        ],
+        "input_level": "'''1x Vertical Grip I'''"
+      },
+      {
+        "name": "Extended Light Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Light Mag I'''"
+          }
+        ],
+        "input_level": "'''1x Extended Light Mag I'''"
+      },
+      {
+        "name": "Extended Medium Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag I"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag I"
+      },
+      {
+        "name": "Extended Medium Mag I",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 6
+      },
+      {
+        "name": "Extended Medium Mag I",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
+      },
+      {
+        "name": "Extended Shotgun Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Shotgun Mag I'''"
+          }
+        ],
+        "input_level": "'''1x Extended Shotgun Mag I'''"
+      },
+      {
+        "name": "Extended Shotgun Mag I",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 6
+      },
+      {
+        "name": "Extended Shotgun Mag I",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
       }
     ]
   },
@@ -18218,6 +19249,12 @@
         "name": "Trigger 'Nade",
         "direction": "in",
         "relation": "salvage_from",
+        "quantity": 1
+      },
+      {
+        "name": "Anvil Splitter",
+        "direction": "in",
+        "relation": "recycle_from",
         "quantity": 1
       }
     ]
@@ -20024,6 +21061,23 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 1
+      },
+      {
+        "name": "Stable Stock I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Stable Stock I'''"
+          }
+        ],
+        "input_level": "'''1x Stable Stock I'''"
       }
     ]
   },
@@ -23576,6 +24630,219 @@
         "direction": "out",
         "relation": "craft_to",
         "quantity": 2
+      },
+      {
+        "name": "Extended Light Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Light Mag I'''"
+          }
+        ],
+        "input_level": "'''1x Extended Light Mag I'''"
+      },
+      {
+        "name": "Extended Medium Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag I"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag I"
+      },
+      {
+        "name": "Extended Shotgun Mag I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Shotgun Mag I'''"
+          }
+        ],
+        "input_level": "'''1x Extended Shotgun Mag I'''"
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag II"
+          }
+        ],
+        "input_level": "1x Extended Light Mag II"
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag II'''"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag II'''"
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Shotgun Mag II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag II"
+          }
+        ],
+        "input_level": "1x Extended Shotgun Mag II"
+      },
+      {
+        "name": "Extended Shotgun Mag II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Extended Light Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag III"
+          }
+        ],
+        "input_level": "1x Extended Light Mag III"
+      },
+      {
+        "name": "Extended Light Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Extended Medium Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag III"
+          }
+        ],
+        "input_level": "1x Extended Medium Mag III"
+      },
+      {
+        "name": "Extended Medium Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Extended Shotgun Mag III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag III"
+          }
+        ],
+        "input_level": "1x Extended Shotgun Mag III"
+      },
+      {
+        "name": "Extended Shotgun Mag III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
       }
     ]
   },
@@ -25294,6 +26561,235 @@
             "name": "Workbench 1"
           }
         ]
+      },
+      {
+        "name": "Compensator I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Compensator I'''"
+          }
+        ],
+        "input_level": "'''1x Compensator I'''"
+      },
+      {
+        "name": "Muzzle Brake I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Muzzle Brake I'''"
+          }
+        ],
+        "input_level": "'''1x Muzzle Brake I'''"
+      },
+      {
+        "name": "Shotgun Choke I",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Shotgun Choke I'''"
+          }
+        ],
+        "input_level": "'''1x Shotgun Choke I'''"
+      },
+      {
+        "name": "Compensator II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 4,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Compensator II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Muzzle Brake II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 4,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Muzzle Brake II",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Silencer I",
+        "direction": "out",
+        "relation": "craft_to",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Silencer I"
+          }
+        ],
+        "input_level": "1x Silencer I"
+      },
+      {
+        "name": "Compensator III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Compensator III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Muzzle Brake III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Muzzle Brake III",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2
+      },
+      {
+        "name": "Shotgun Choke III",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Silencer II",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Shotgun Silencer",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Barrel",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Extended Barrel",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
       }
     ]
   },
@@ -40608,6 +42104,2912 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Compensator I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Compensator_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Compensator_I&action=edit",
+    "infobox": {
+      "image": "Compensator_I.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Common",
+      "attachquote": "Slightly reduces per-shot dispersion.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "20% Reduced Per-Shot Dispersion",
+        "10% Reduced Max Shot Dispersion"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Compensator_I.png/348px-Compensator_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/5/5f/Compensator_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Compensator_I.png"
+    },
+    "edges": [
+      {
+        "name": "Metal Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Compensator I'''"
+          }
+        ],
+        "output_level": "'''1x Compensator I'''"
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Compensator I'''"
+          }
+        ],
+        "output_level": "'''1x Compensator I'''"
+      },
+      {
+        "name": "Metal Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 5
+      },
+      {
+        "name": "Metal Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Muzzle Brake I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Muzzle_Brake_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Muzzle_Brake_I&action=edit",
+    "infobox": {
+      "image": "Muzzle Brake I.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Common",
+      "attachquote": "Slightly reduces both vertical recoil & horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "15% Reduced Horizontal Recoil",
+        "15% Reduced Vertical Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4f/Muzzle_Brake_I.png/348px-Muzzle_Brake_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/4f/Muzzle_Brake_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Muzzle_Brake_I.png"
+    },
+    "edges": [
+      {
+        "name": "Metal Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Muzzle Brake I'''"
+          }
+        ],
+        "output_level": "'''1x Muzzle Brake I'''"
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Muzzle Brake I'''"
+          }
+        ],
+        "output_level": "'''1x Muzzle Brake I'''"
+      },
+      {
+        "name": "Metal Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 5
+      },
+      {
+        "name": "Metal Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Shotgun Choke I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shotgun_Choke_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shotgun_Choke_I&action=edit",
+    "infobox": {
+      "image": "Shotgun_Choke_I.png",
+      "type": "Modification-Shotgun-Muzzle",
+      "rarity": "Common",
+      "attachquote": "Slightly reduces base dispersion.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "10% Reduced Base Dispersion"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/07/Shotgun_Choke_I.png/348px-Shotgun_Choke_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/0/07/Shotgun_Choke_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Shotgun_Choke_I.png"
+    },
+    "edges": [
+      {
+        "name": "Metal Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Shotgun Choke I'''"
+          }
+        ],
+        "output_level": "'''1x Shotgun Choke I'''"
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Shotgun Choke I'''"
+          }
+        ],
+        "output_level": "'''1x Shotgun Choke I'''"
+      }
+    ]
+  },
+  {
+    "name": "Angled Grip I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Angled_Grip_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Angled_Grip_I&action=edit",
+    "infobox": {
+      "image": "Angled Grip I.png",
+      "type": "Modification-Grip",
+      "rarity": "Common",
+      "attachquote": "Slightly reduces horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "20% Reduced Horizontal Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/b/b5/Angled_Grip_I.png/348px-Angled_Grip_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/b/b5/Angled_Grip_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Angled_Grip_I.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Angled Grip I'''"
+          }
+        ],
+        "output_level": "'''1x Angled Grip I'''"
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Angled Grip I'''"
+          }
+        ],
+        "output_level": "'''1x Angled Grip I'''"
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 6
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Vertical Grip I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Vertical_Grip_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Vertical_Grip_I&action=edit",
+    "infobox": {
+      "image": "Vertical Grip I.png",
+      "type": "Modification-Grip",
+      "rarity": "Common",
+      "attachquote": "Slightly reduces vertical recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "20% Reduced Vertical Recoil Control"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4d/Vertical_Grip_I.png/348px-Vertical_Grip_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/4d/Vertical_Grip_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Vertical_Grip_I.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Vertical Grip I'''"
+          }
+        ],
+        "output_level": "'''1x Vertical Grip I'''"
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Vertical Grip I'''"
+          }
+        ],
+        "output_level": "'''1x Vertical Grip I'''"
+      }
+    ]
+  },
+  {
+    "name": "Extended Light Mag I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Light_Mag_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Light_Mag_I&action=edit",
+    "infobox": {
+      "image": "Extended_Light_Mag_I.png",
+      "type": "Modification-Light-Mag",
+      "rarity": "Common",
+      "attachquote": "Slightly extends the ammo capacity of compatible weapons that use light ammo.",
+      "compatible_weapons": [
+        "Hairpin",
+        "Kettle",
+        "Stitcher",
+        "Burletta",
+        "Bobcat"
+      ],
+      "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
+      "fun2": null,
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "No",
+      "weight": 0.5,
+      "sellprice": 640,
+      "functions": [
+        "+5 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/2/23/Extended_Light_Mag_I.png/348px-Extended_Light_Mag_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/2/23/Extended_Light_Mag_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Light_Mag_I.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Light Mag I'''"
+          }
+        ],
+        "output_level": "'''1x Extended Light Mag I'''"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Light Mag I'''"
+          }
+        ],
+        "output_level": "'''1x Extended Light Mag I'''"
+      }
+    ]
+  },
+  {
+    "name": "Extended Medium Mag I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Medium_Mag_I&action=edit",
+    "infobox": {
+      "image": "Extended Medium Mag I.png",
+      "type": "Modification-Medium-Mag",
+      "rarity": "Common",
+      "attachquote": "Slightly extends the ammo capacity of compatible weapons that use medium ammo.",
+      "compatible_weapons": [
+        "Arpeggio",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Tempest]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "+4 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/44/Extended_Medium_Mag_I.png/348px-Extended_Medium_Mag_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/44/Extended_Medium_Mag_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Medium_Mag_I.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag I"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag I"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag I"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag I"
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 6
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Extended Shotgun Mag I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Shotgun_Mag_I&action=edit",
+    "infobox": {
+      "image": "Extended_Shotgun_Mag_I.png",
+      "type": "Modification-Shotgun-Mag",
+      "rarity": "Common",
+      "attachquote": "Slightly extends the ammo capacity of shotguns",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "+2 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/9/9b/Extended_Shotgun_Mag_I.png/348px-Extended_Shotgun_Mag_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/9/9b/Extended_Shotgun_Mag_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Shotgun_Mag_I.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Shotgun Mag I'''"
+          }
+        ],
+        "output_level": "'''1x Extended Shotgun Mag I'''"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Extended Shotgun Mag I'''"
+          }
+        ],
+        "output_level": "'''1x Extended Shotgun Mag I'''"
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 6
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Stable Stock I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Stable_Stock_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Stable_Stock_I&action=edit",
+    "infobox": {
+      "image": "Stable Stock I.png",
+      "type": "Modification-Stock",
+      "rarity": "Common",
+      "attachquote": "Slightly improves dispersion & recoil recovery time.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "No",
+      "weight": 0.25,
+      "sellprice": 640,
+      "functions": [
+        "20% Reduced Recoil Recovery Duration",
+        "20% Reduced Dispersion Recovery Time"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/8d/Stable_Stock_I.png/348px-Stable_Stock_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/8/8d/Stable_Stock_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Stable_Stock_I.png"
+    },
+    "edges": [
+      {
+        "name": "Rubber Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 6,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Stable Stock I'''"
+          }
+        ],
+        "output_level": "'''1x Stable Stock I'''"
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 1"
+          },
+          {
+            "type": "result_level",
+            "name": "'''1x Stable Stock I'''"
+          }
+        ],
+        "output_level": "'''1x Stable Stock I'''"
+      }
+    ]
+  },
+  {
+    "name": "Compensator II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Compensator_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Compensator_II&action=edit",
+    "infobox": {
+      "image": "Compensator II.png",
+      "name": "Compensator II",
+      "type": "Modification-Muzzle",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately reduces per-shot dispersion.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "40% Reduced Per-Shot Dispersion",
+        "20% Reduced Max Shot Dispersion"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/0/0a/Compensator_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Compensator_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 4,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Muzzle Brake II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Muzzle_Brake_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Muzzle_Brake_II&action=edit",
+    "infobox": {
+      "image": "Muzzle_Brake_II.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately reduces both vertical recoil & horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "20% Reduced Horizontal Recoil",
+        "20% Reduced Vertical Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/2/23/Muzzle_Brake_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Muzzle_Brake_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 4,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Shotgun Choke II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shotgun_Choke_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shotgun_Choke_II&action=edit",
+    "infobox": {
+      "image": "Shotgun Choke II.png",
+      "type": "Modification-Shotgun-Muzzle",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately reduces base dispersion.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "20% Reduced Base Dispersion"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/6/63/Shotgun_Choke_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Shotgun_Choke_II.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Silencer I",
+    "wiki_url": "https://arcraiders.wiki/wiki/Silencer_I",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Silencer_I&action=edit",
+    "infobox": {
+      "image": "Silencer I.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Uncommon",
+      "attachquote": "Slightly reduces the amount of noise produced when firing.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "Yes",
+      "weight": 0.25,
+      "sellprice": 2000,
+      "functions": [
+        "20% Reduced Noise"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/f/f7/Silencer_I.png/348px-Silencer_I.png.webp",
+      "original": "https://arcraiders.wiki/w/images/f/f7/Silencer_I.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Silencer_I.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Silencer I"
+          }
+        ],
+        "output_level": "1x Silencer I"
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Silencer I"
+          }
+        ],
+        "output_level": "1x Silencer I"
+      }
+    ]
+  },
+  {
+    "name": "Angled Grip II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Angled_Grip_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Angled_Grip_II&action=edit",
+    "infobox": {
+      "image": "Angled_Grip_II.png",
+      "name": "Angled Grip II",
+      "type": "Modification-Grip",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately reduces horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "30% Reduced Horizontal Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/2/2b/Angled_Grip_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Angled_Grip_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Vertical Grip II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Vertical_Grip_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Vertical_Grip_II&action=edit",
+    "infobox": {
+      "image": "Vertical_Grip_II.png",
+      "name": "Vertical Grip II",
+      "type": "Modification-Grip",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately reduces vertical recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "30% Reduced Vertical Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/3/3c/Vertical_Grip_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Vertical_Grip_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Extended Light Mag II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Light_Mag_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Light_Mag_II&action=edit",
+    "infobox": {
+      "image": "Extended Light Mag II.png",
+      "name": "Extended Light Mag II",
+      "type": "Modification-Light-Mag",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately extends the ammo capacity of the compatible weapons that use light ammo.",
+      "compatible_weapons": [
+        "Hairpin",
+        "Kettle",
+        "Stitcher",
+        "Burletta",
+        "Bobcat"
+      ],
+      "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "+10 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/c/cf/Extended_Light_Mag_II.png/348px-Extended_Light_Mag_II.png.webp",
+      "original": "https://arcraiders.wiki/w/images/c/cf/Extended_Light_Mag_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Light_Mag_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag II"
+          }
+        ],
+        "output_level": "1x Extended Light Mag II"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag II"
+          }
+        ],
+        "output_level": "1x Extended Light Mag II"
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Extended Medium Mag II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Medium_Mag_II&action=edit",
+    "infobox": {
+      "image": "Extended Medium Mag II.png",
+      "name": "Extended Medium Mag II",
+      "type": "Modification-Medium-Mag",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately extends the ammo capacity of compatible weapons that use medium ammo.",
+      "compatible_weapons": [
+        "Arpeggio",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Tempest",
+        "Venator"
+      ],
+      "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Tempest]], [[Venator]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "+8 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Extended_Medium_Mag_II.png/348px-Extended_Medium_Mag_II.png.webp",
+      "original": "https://arcraiders.wiki/w/images/5/50/Extended_Medium_Mag_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Medium_Mag_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag II'''"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag II'''"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag II'''"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag II'''"
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Extended Shotgun Mag II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Shotgun_Mag_II&action=edit",
+    "infobox": {
+      "image": "Extended Shotgun Mag II.png",
+      "type": "Modification-Shotgun-Mag",
+      "rarity": "Uncommon",
+      "attachquote": "Moderately extends the ammo capacity of compatible weapons that use shotgun ammo.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "+4 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4f/Extended_Shotgun_Mag_II.png/348px-Extended_Shotgun_Mag_II.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/4f/Extended_Shotgun_Mag_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Shotgun_Mag_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag II"
+          }
+        ],
+        "output_level": "1x Extended Shotgun Mag II"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag II"
+          }
+        ],
+        "output_level": "1x Extended Shotgun Mag II"
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Stable Stock II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Stable_Stock_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Stable_Stock_II&action=edit",
+    "infobox": {
+      "image": "Stable Stock II.png",
+      "name": "Stack Stock II",
+      "type": "Modification-Stock",
+      "rarity": "Uncommon",
+      "attachquote": "Slightly improves dispersion & recoil recovery time.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 2000,
+      "functions": [
+        "35% Reduced Recoil Recovery Duration",
+        "35% Reduced Dispersion Recovery Time"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/b/b4/Stable_Stock_II.png/348px-Stable_Stock_II.png.webp",
+      "original": "https://arcraiders.wiki/w/images/b/b4/Stable_Stock_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Stable_Stock_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 2"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Compensator III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Compensator_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Compensator_III&action=edit",
+    "infobox": {
+      "image": "Compensator III.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Rare",
+      "attachquote": "Significantly reduces per-shot dispersion.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "60% Reduced Per-Shot Dispersion",
+        "30% Reduced Max Shot Dispersion",
+        "20% Increased Durability Burn Rate"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/a/af/Compensator_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Compensator_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Muzzle Brake III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Muzzle_Brake_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Muzzle_Brake_III&action=edit",
+    "infobox": {
+      "image": "Muzzle Brake III.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Rare",
+      "attachquote": "Signifcantly reduces both vertical recoil & horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "25% Reduced Horizontal Recoil Control",
+        "25% Reduced Vertical Recoil Control",
+        "20% Increased Durability Burn Rate"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/a/a2/Muzzle_Brake_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Muzzle_Brake_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Shotgun Choke III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shotgun_Choke_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shotgun_Choke_III&action=edit",
+    "infobox": {
+      "image": "Shotgun Choke III.png",
+      "type": "Modification-Shotgun-Muzzle",
+      "rarity": "Rare",
+      "attachquote": "Significantly reduces base dispersion.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "30% Reduced Base Dispersion",
+        "20% Increased Durability Burn Rate"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/3/36/Shotgun_Choke_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Shotgun_Choke_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Silencer II",
+    "wiki_url": "https://arcraiders.wiki/wiki/Silencer_II",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Silencer_II&action=edit",
+    "infobox": {
+      "image": "Silencer II.png",
+      "name": "Silencer II",
+      "type": "Modification-Muzzle",
+      "rarity": "Rare",
+      "attachquote": "Moderately reduces the amount of noise produced when firing.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "40% Reduced Noise"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/c/c0/Silencer_II.png/348px-Silencer_II.png.webp",
+      "original": "https://arcraiders.wiki/w/images/c/c0/Silencer_II.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Silencer_II.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Silencer III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Silencer_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Silencer_III&action=edit",
+    "infobox": {
+      "image": "Silencer_III.png",
+      "type": "Modification-Muzzle",
+      "rarity": "Epic",
+      "attachquote": "?",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 7000,
+      "functions": [
+        "60% Reduced Noise",
+        "20% Increased Durability Burn Rate"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/3e/Silencer_III.png/348px-Silencer_III.png.webp",
+      "original": "https://arcraiders.wiki/w/images/3/3e/Silencer_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Silencer_III.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Shotgun Silencer",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shotgun_Silencer",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shotgun_Silencer&action=edit",
+    "infobox": {
+      "image": "Shotgun_Silencer.png",
+      "type": "Modification-Shotgun-Muzzle",
+      "rarity": "Epic",
+      "attachquote": "Moderately reduces the amount of noise produced when firing.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "fun2": null,
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "50% Reduced Noise"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4d/Shotgun_Silencer.png/348px-Shotgun_Silencer.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/4d/Shotgun_Silencer.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Shotgun_Silencer.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Extended Barrel",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Barrel",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Barrel&action=edit",
+    "infobox": {
+      "image": "Extended Barrel.png",
+      "name": "Extended Barrel",
+      "type": "Modification-Muzzle",
+      "rarity": "Epic",
+      "attachquote": "Moderately increases bullet velocity.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Anvil",
+        "Arpeggio",
+        "Burletta",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Anvil]], [[Arpeggio]], [[Burletta]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "25% Increased Bullet Velocity",
+        "15% Increased Vertical Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/2/2f/Extended_Barrel.png/348px-Extended_Barrel.png.webp",
+      "original": "https://arcraiders.wiki/w/images/2/2f/Extended_Barrel.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Barrel.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Wires",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 8,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Angled Grip III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Angled_Grip_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Angled_Grip_III&action=edit",
+    "infobox": {
+      "image": "Angled Grip III.png",
+      "type": "Modification-Grip",
+      "rarity": "Rare",
+      "attachquote": "Significantly reduces horizontal recoil",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "40% Reduced Horizontal Recoil",
+        "30% Reduced ADS Speed"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/0/0f/Angled_Grip_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Angled_Grip_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Vertical Grip III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Vertical_Grip_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Vertical_Grip_III&action=edit",
+    "infobox": {
+      "image": "Vertical Grip III.png",
+      "type": "Modification-Grip",
+      "rarity": "Rare",
+      "attachquote": "Significantly reduces vertical recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "fun3": null,
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "40% Reduced Vertical Recoil",
+        "30% Reduced ADS Speed"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/2/20/Vertical_Grip_III.png/348px-Vertical_Grip_III.png.webp",
+      "original": "https://arcraiders.wiki/w/images/2/20/Vertical_Grip_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Vertical_Grip_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Horizontal Grip",
+    "wiki_url": "https://arcraiders.wiki/wiki/Horizontal_Grip",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Horizontal_Grip&action=edit",
+    "infobox": {
+      "image": "Horizontal Grip.png",
+      "name": "Horizontal Grip",
+      "type": "Modification-Grip",
+      "rarity": "Epic",
+      "attachquote": "Moderately reduces both vertical and horizontal recoil.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Venator",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Venator]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 7000,
+      "functions": [
+        "30% Reduced Horizontal Recoil",
+        "30% Reduced Vertical Recoil",
+        "30% Reduced ADS Speed"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/89/Horizontal_Grip.png/348px-Horizontal_Grip.png.webp",
+      "original": "https://arcraiders.wiki/w/images/8/89/Horizontal_Grip.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Horizontal_Grip.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Extended Light Mag III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Light_Mag_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Light_Mag_III&action=edit",
+    "infobox": {
+      "image": "Extended Light Mag III.png",
+      "type": "Modification-Light-Mag",
+      "rarity": "Rare",
+      "attachquote": "Significantly extends the ammo capacity of the compatible weapons that use light ammo.",
+      "compatible_weapons": [
+        "Hairpin",
+        "Kettle",
+        "Stitcher",
+        "Burletta",
+        "Bobcat"
+      ],
+      "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "+15 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/4/40/Extended_Light_Mag_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Light_Mag_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag III"
+          }
+        ],
+        "output_level": "1x Extended Light Mag III"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Light Mag III"
+          }
+        ],
+        "output_level": "1x Extended Light Mag III"
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Extended Medium Mag III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Medium_Mag_III&action=edit",
+    "infobox": {
+      "image": "Extended Medium Mag III.png",
+      "type": "Modification-Medium-Mag",
+      "rarity": "Rare",
+      "attachquote": "Significantly extends the ammo capacity of compatible weapons that use medium ammo.",
+      "compatible_weapons": [
+        "Arpeggio",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Tempest",
+        "Venator"
+      ],
+      "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Tempest]], [[Venator]]",
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "+12 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/a/a1/Extended_Medium_Mag_III.png/348px-Extended_Medium_Mag_III.png.webp",
+      "original": "https://arcraiders.wiki/w/images/a/a1/Extended_Medium_Mag_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Medium_Mag_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag III"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag III"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Medium Mag III"
+          }
+        ],
+        "output_level": "1x Extended Medium Mag III"
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Extended Shotgun Mag III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Extended_Shotgun_Mag_III&action=edit",
+    "infobox": {
+      "image": "Extended Shotgun Mag III.png",
+      "name": "Extended Shotgun Mag III",
+      "type": "Modification-Shotgun-Mag",
+      "rarity": "Rare",
+      "attachquote": "Significantly extends the ammo capacity of the compatible weapons that use shotgun ammo.",
+      "compatible_weapons": [
+        "Il Toro",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "+6 Magazine Size"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Extended_Shotgun_Mag_III.png/348px-Extended_Shotgun_Mag_III.png.webp",
+      "original": "https://arcraiders.wiki/w/images/7/77/Extended_Shotgun_Mag_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Extended_Shotgun_Mag_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag III"
+          }
+        ],
+        "output_level": "1x Extended Shotgun Mag III"
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          },
+          {
+            "type": "result_level",
+            "name": "1x Extended Shotgun Mag III"
+          }
+        ],
+        "output_level": "1x Extended Shotgun Mag III"
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Steel Spring",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Stable Stock III",
+    "wiki_url": "https://arcraiders.wiki/wiki/Stable_Stock_III",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Stable_Stock_III&action=edit",
+    "infobox": {
+      "image": "Stable_Stock_III.png",
+      "type": "Modification-Stock",
+      "rarity": "Rare",
+      "attachquote": "Significantly improves dispersion & recoil recovery over time.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 5000,
+      "functions": [
+        "50% Reduced Recoil Recovery Duration",
+        "50% Reduced Dispersion Recovery Time",
+        "20% Increased Equip Time",
+        "20% Increased Unequip Time"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/e/eb/Stable_Stock_III.png/348px-Stable_Stock_III.png.webp",
+      "original": "https://arcraiders.wiki/w/images/e/eb/Stable_Stock_III.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Stable_Stock_III.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lightweight Stock",
+    "wiki_url": "https://arcraiders.wiki/wiki/Lightweight_Stock",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Lightweight_Stock&action=edit",
+    "infobox": {
+      "image": "Lightweight Stock.png",
+      "type": "Modification-Stock",
+      "rarity": "Epic",
+      "attachquote": "Moderately improves ADS & draw speed.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.25,
+      "sellprice": 5000,
+      "functions": [
+        "50% Increased Recoil Recovery Duration",
+        "50% Increased Vertical Recoil Control",
+        "30% Reduced Equip Time",
+        "30% Reduced Unequip Time",
+        "200% ADS Speed"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/c/cb/Lightweight_Stock.png/348px-Lightweight_Stock.png.webp",
+      "original": "https://arcraiders.wiki/w/images/c/cb/Lightweight_Stock.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Lightweight_Stock.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Padded Stock",
+    "wiki_url": "https://arcraiders.wiki/wiki/Padded_Stock",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Padded_Stock&action=edit",
+    "infobox": {
+      "image": "Padded Stock.png",
+      "name": "Padded Stock",
+      "type": "Modification-Stock",
+      "rarity": "Epic",
+      "attachquote": "Significantly improves stability.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 5000,
+      "functions": [
+        "15% Reduced Vertical Recoil",
+        "15% Reduced Horizontal Recoil",
+        "20% Reduced Per-Shot Dispersion",
+        "20% Increased Equip Time",
+        "20% Increased Unequip Time",
+        "30% Reduced ADS Speed"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4b/Padded_Stock.png/348px-Padded_Stock.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/4b/Padded_Stock.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Padded_Stock.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 5,
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Gunsmith 3"
+          },
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Kinetic Converter",
+    "wiki_url": "https://arcraiders.wiki/wiki/Kinetic_Converter",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Kinetic_Converter&action=edit",
+    "infobox": {
+      "image": "Kinetic Converter.png",
+      "type": "Modification-Stock",
+      "rarity": "Legendary",
+      "attachquote": "Moderately increases fire rate.",
+      "compatible_weapons": [
+        "Ferro",
+        "Kettle",
+        "Rattler",
+        "Stitcher",
+        "Arpeggio",
+        "Il Toro",
+        "Osprey",
+        "Renegade",
+        "Torrente",
+        "Bettina",
+        "Bobcat",
+        "Tempest",
+        "Vulcano"
+      ],
+      "warning": "ⓘ Compatible with: [[Ferro]], [[Kettle]], [[Rattler]], [[Stitcher]], [[Arpeggio]], [[Il Toro]], [[Osprey]], [[Renegade]], [[Torrente]], [[Bettina]], [[Bobcat]], [[Tempest]], [[Vulcano]]",
+      "fun4": null,
+      "fun5": null,
+      "fun6": null,
+      "recipe": "Yes",
+      "weight": 0.75,
+      "sellprice": 7000,
+      "functions": [
+        "15% Increased Fire Rate",
+        "20% Increased Horizontal Recoil",
+        "20% Increased Vertical Recoil"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/7/71/Kinetic_Converter.png/348px-Kinetic_Converter.png.webp",
+      "original": "https://arcraiders.wiki/w/images/7/71/Kinetic_Converter.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Kinetic_Converter.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Duct Tape",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Anvil Splitter",
+    "wiki_url": "https://arcraiders.wiki/wiki/Anvil_Splitter",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Anvil_Splitter&action=edit",
+    "infobox": {
+      "image": "Anvil Splitter.png",
+      "type": "Modification-Tech-Mod",
+      "rarity": "Legendary",
+      "attachquote": "Tech mod for the Anvil that replaces its bullets with ones that split into 4 weaker projectiles.",
+      "compatible_weapons": [
+        "Anvil"
+      ],
+      "warning": "ⓘ Compatible with: [[Anvil]]",
+      "recipe": "Yes",
+      "weight": 0.5,
+      "sellprice": 7000,
+      "functions": [
+        "+3 Projectiles Per Shot",
+        "70% Reduced Projectile Damage"
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/e/ef/Anvil_Splitter.png/348px-Anvil_Splitter.png.webp",
+      "original": "https://arcraiders.wiki/w/images/e/ef/Anvil_Splitter.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Anvil_Splitter.png"
+    },
+    "edges": [
+      {
+        "name": "Mod Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Processor",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
       }
     ]
   },

@@ -295,3 +295,40 @@ Gas Mine
 Jolt Mine
 Pulse Mine
 Deadline
+Compensator I
+Muzzle Brake I
+Shotgun Choke I
+Angled Grip I
+Vertical Grip I
+Extended Light Mag I
+Extended Medium Mag I
+Extended Shotgun Mag I
+Stable Stock I
+Compensator II
+Muzzle Brake II
+Shotgun Choke II
+Silencer I
+Angled Grip II
+Vertical Grip II
+Extended Light Mag II
+Extended Medium Mag II
+Extended Shotgun Mag II
+Stable Stock II
+Compensator III
+Muzzle Brake III
+Shotgun Choke III
+Silencer II
+Silencer III
+Shotgun Silencer
+Extended Barrel
+Angled Grip III
+Vertical Grip III
+Horizontal Grip
+Extended Light Mag III
+Extended Medium Mag III
+Extended Shotgun Mag III
+Stable Stock III
+Lightweight Stock
+Padded Stock
+Kinetic Converter
+Anvil Splitter

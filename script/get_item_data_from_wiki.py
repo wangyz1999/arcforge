@@ -49,6 +49,9 @@ def parse_infobox(source_text: str, item_name: str) -> Dict[str, Any]:
                     'usetime', 'duration', 'radius'}
     int_fields = {'stacksize', 'magsize', 'bslots', 'spslots', 'quslots', 'wslots'}
     
+    # Collect function fields (fun1, fun2, fun3, etc.) for weapon mods
+    function_fields = {}
+    
     # Parse each parameter (|key=value)
     lines = infobox_content.split('\n')
     for line in lines:
@@ -106,6 +109,21 @@ def parse_infobox(source_text: str, item_name: str) -> Dict[str, Any]:
                 # Remove any remaining Price tags
                 value = re.sub(r'\{\{Price\|([^}]+)\}\}', r'\1', value)
                 
+                # Handle weapon mod function fields (fun1, fun2, fun3, etc.)
+                if key.startswith('fun') and key[3:].isdigit():
+                    function_fields[int(key[3:])] = clean_text(value)
+                    continue
+                
+                # Handle warning field (contains compatible weapons for mods)
+                if key == 'warning':
+                    # Extract weapon names from wiki links [[Weapon]]
+                    weapon_links = re.findall(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]', value)
+                    if weapon_links:
+                        infobox_data['compatible_weapons'] = [clean_text(w) for w in weapon_links]
+                    # Also keep the original text
+                    infobox_data[key] = clean_text(value)
+                    continue
+                
                 # Convert numeric fields to appropriate types
                 if key in float_fields:
                     # Remove percentage signs and try to convert
@@ -122,6 +140,12 @@ def parse_infobox(source_text: str, item_name: str) -> Dict[str, Any]:
                         infobox_data[key] = clean_text(value)
                 else:
                     infobox_data[key] = clean_text(value)
+    
+    # Group function fields into a list (for weapon mods)
+    if function_fields:
+        # Sort by index and create list
+        sorted_functions = [function_fields[i] for i in sorted(function_fields.keys())]
+        infobox_data['functions'] = sorted_functions
     
     return infobox_data
 
