@@ -52,34 +52,83 @@ const rarityOrder: { [key: string]: number } = {
   Legendary: 5,
 };
 
+// Type to category mapping
+const typeToCategory: { [key: string]: string } = {
+  'Assault Rifle': 'Weapon',
+  'Battle Rifle': 'Weapon',
+  'Hand Cannon': 'Weapon',
+  'LMG': 'Weapon',
+  'Pistol': 'Weapon',
+  'SMG': 'Weapon',
+  'Shotgun': 'Weapon',
+  'Sniper Rifle': 'Weapon',
+  'Modification-Grip': 'Modification',
+  'Modification-Light-Mag': 'Modification',
+  'Modification-Medium-Mag': 'Modification',
+  'Modification-Muzzle': 'Modification',
+  'Modification-Shotgun-Mag': 'Modification',
+  'Modification-Shotgun-Muzzle': 'Modification',
+  'Modification-Stock': 'Modification',
+  'Modification-Tech-Mod': 'Modification',
+  'Quick Use-Gadget': 'Quick Use',
+  'Quick Use-Grenade': 'Quick Use',
+  'Quick Use-Regen': 'Quick Use',
+  'Quick Use-Trap': 'Quick Use',
+  'Quick Use-Utility': 'Quick Use',
+  'Advanced Material': 'Loots',
+  'Basic Material': 'Loots',
+  'Key': 'Loots',
+  'Misc': 'Loots',
+  'Nature': 'Loots',
+  'Recyclable': 'Loots',
+  'Refined Material': 'Loots',
+  'Special': 'Loots',
+  'Topside Material': 'Loots',
+  'Trinket': 'Loots',
+};
+
+const allCategories = ['Weapon', 'Modification', 'Quick Use', 'Loots'];
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortField, setSortField] = useState<SortField>('name');
-  const [sortAscending, setSortAscending] = useState(true);
+  const [sortAscending, setSortAscending] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Get all unique types
-  const allTypes = useMemo(() => {
+  // Get all unique types grouped by category
+  const typesByCategory = useMemo(() => {
+    const grouped: { [category: string]: string[] } = {
+      Weapon: [],
+      Modification: [],
+      'Quick Use': [],
+      Loots: [],
+    };
+    
     const typesSet = new Set<string>();
     (itemsData as Item[]).forEach((item) => {
       if (item.infobox?.type) {
         typesSet.add(item.infobox.type);
       }
     });
-    return Array.from(typesSet).sort();
+    
+    Array.from(typesSet).forEach((type) => {
+      const category = typeToCategory[type];
+      if (category && grouped[category]) {
+        grouped[category].push(type);
+      }
+    });
+    
+    // Sort types within each category
+    Object.keys(grouped).forEach((category) => {
+      grouped[category].sort();
+    });
+    
+    return grouped;
   }, []);
 
-  // Initialize with all types selected
-  const [selectedTypes, setSelectedTypes] = useState<Set<string>>(() => {
-    const typesSet = new Set<string>();
-    (itemsData as Item[]).forEach((item) => {
-      if (item.infobox?.type) {
-        typesSet.add(item.infobox.type);
-      }
-    });
-    return typesSet;
-  });
+  // Initialize with no types selected
+  const [selectedTypes, setSelectedTypes] = useState<Set<string>>(() => new Set());
 
   const toggleType = (type: string) => {
     const newSelected = new Set(selectedTypes);
@@ -88,6 +137,22 @@ export default function Home() {
     } else {
       newSelected.add(type);
     }
+    setSelectedTypes(newSelected);
+  };
+
+  const toggleCategory = (category: string) => {
+    const types = typesByCategory[category] || [];
+    const allSelected = types.every(type => selectedTypes.has(type));
+    const newSelected = new Set(selectedTypes);
+    
+    if (allSelected) {
+      // Deselect all types in this category
+      types.forEach(type => newSelected.delete(type));
+    } else {
+      // Select all types in this category
+      types.forEach(type => newSelected.add(type));
+    }
+    
     setSelectedTypes(newSelected);
   };
 
@@ -306,7 +371,7 @@ export default function Home() {
             {/* Divider */}
             <div className="border-t border-purple-500/20 shadow-sm shadow-purple-500/10"></div>
 
-            {/* Type Filters */}
+            {/* Category Filters */}
             <div>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 flex items-center gap-2 uppercase tracking-wider">
@@ -315,7 +380,13 @@ export default function Home() {
                 </h3>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setSelectedTypes(new Set(allTypes))}
+                    onClick={() => {
+                      const allTypes = new Set<string>();
+                      Object.values(typesByCategory).forEach(types => {
+                        types.forEach(type => allTypes.add(type));
+                      });
+                      setSelectedTypes(allTypes);
+                    }}
                     className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
                   >
                     All
@@ -329,20 +400,51 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {allTypes.map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => toggleType(type)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-                      selectedTypes.has(type)
-                        ? 'bg-blue-500/40 text-blue-100 border border-blue-400/60'
-                        : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-blue-500/20 hover:text-blue-300'
-                    }`}
-                  >
-                    {type}
-                  </button>
-                ))}
+              
+              {/* Hierarchical Category Display */}
+              <div className="space-y-3">
+                {allCategories.map((category) => {
+                  const types = typesByCategory[category] || [];
+                  const allSelected = types.every(type => selectedTypes.has(type));
+                  const someSelected = types.some(type => selectedTypes.has(type));
+                  
+                  return (
+                    <div key={category}>
+                      {/* Category Header */}
+                      <div className="mb-2">
+                        <button
+                          onClick={() => toggleCategory(category)}
+                          className={`text-sm font-bold transition-colors hover:text-purple-300 cursor-pointer ${
+                            allSelected 
+                              ? 'text-blue-300' 
+                              : someSelected 
+                              ? 'text-blue-400/70' 
+                              : 'text-gray-400'
+                          }`}
+                        >
+                          {category}
+                        </button>
+                      </div>
+                      
+                      {/* Types List */}
+                      <div className="flex flex-wrap gap-1.5 mb-1">
+                        {types.map((type) => (
+                          <button
+                            key={type}
+                            onClick={() => toggleType(type)}
+                            className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-colors ${
+                              selectedTypes.has(type)
+                                ? 'bg-blue-500/40 text-blue-100 border border-blue-400/60'
+                                : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-blue-500/20 hover:text-blue-300'
+                            }`}
+                          >
+                            {type.replace('Modification-', '').replace('Quick Use-', '')}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
