@@ -59,7 +59,7 @@ export default function ItemFiltersPanel({
 
   return (
     <aside className={`
-      w-80 bg-black/30 backdrop-blur-xl border-r border-purple-500/30 overflow-y-auto shadow-2xl z-50 lg:z-10
+      w-83 bg-black/30 backdrop-blur-xl border-r border-purple-500/30 overflow-y-auto shadow-2xl z-50 lg:z-10
       fixed lg:relative inset-y-0 left-0 transition-transform duration-300 ease-in-out
       lg:translate-x-0
       ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
