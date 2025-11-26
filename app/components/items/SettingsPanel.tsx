@@ -5,8 +5,8 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 interface SettingsPanelProps {
   isOpen: boolean;
   onClose: () => void;
-  itemSize: 'small' | 'medium' | 'large';
-  setItemSize: (size: 'small' | 'medium' | 'large') => void;
+  itemSize: 'tiny' | 'small' | 'medium' | 'large';
+  setItemSize: (size: 'tiny' | 'small' | 'medium' | 'large') => void;
   displayPrice: boolean;
   setDisplayPrice: (value: boolean) => void;
   displayWeight: boolean;
@@ -62,31 +62,41 @@ export default function SettingsPanel({
               </label>
               <div className="flex gap-2">
                 <button
+                  onClick={() => setItemSize('tiny')}
+                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all border-2 ${
+                    itemSize === 'tiny'
+                      ? 'bg-blue-500/40 text-blue-100 border-blue-400/60 shadow-lg shadow-blue-500/30'
+                      : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
+                  }`}
+                >
+                  Tiny
+                </button>
+                <button
                   onClick={() => setItemSize('small')}
-                  className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all border-2 ${
                     itemSize === 'small'
-                      ? 'bg-blue-500/40 text-blue-100 border-2 border-blue-400/60 shadow-lg shadow-blue-500/30'
-                      : 'bg-black/40 text-gray-400 border border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
+                      ? 'bg-blue-500/40 text-blue-100 border-blue-400/60 shadow-lg shadow-blue-500/30'
+                      : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
                   Small
                 </button>
                 <button
                   onClick={() => setItemSize('medium')}
-                  className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all border-2 ${
                     itemSize === 'medium'
-                      ? 'bg-blue-500/40 text-blue-100 border-2 border-blue-400/60 shadow-lg shadow-blue-500/30'
-                      : 'bg-black/40 text-gray-400 border border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
+                      ? 'bg-blue-500/40 text-blue-100 border-blue-400/60 shadow-lg shadow-blue-500/30'
+                      : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
                   Medium
                 </button>
                 <button
                   onClick={() => setItemSize('large')}
-                  className={`flex-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all border-2 ${
                     itemSize === 'large'
-                      ? 'bg-blue-500/40 text-blue-100 border-2 border-blue-400/60 shadow-lg shadow-blue-500/30'
-                      : 'bg-black/40 text-gray-400 border border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
+                      ? 'bg-blue-500/40 text-blue-100 border-blue-400/60 shadow-lg shadow-blue-500/30'
+                      : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
                   Large

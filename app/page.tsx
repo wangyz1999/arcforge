@@ -26,7 +26,7 @@ export default function Home() {
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [itemSize, setItemSize] = useState<'small' | 'medium' | 'large'>('medium');
+  const [itemSize, setItemSize] = useState<'tiny' | 'small' | 'medium' | 'large'>('small');
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
 

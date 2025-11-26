@@ -5,7 +5,7 @@ import ItemCard from './ItemCard';
 
 interface ItemsGridProps {
   items: Item[];
-  itemSize: 'small' | 'medium' | 'large';
+  itemSize: 'tiny' | 'small' | 'medium' | 'large';
   displayPrice: boolean;
   displayWeight: boolean;
   onItemClick: (item: Item) => void;
@@ -22,8 +22,10 @@ export default function ItemsGrid({
     <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 relative z-10">
       <div className="max-w-[1600px] mx-auto">
         <div className={`grid gap-3 sm:gap-4 lg:gap-6 ${
-          itemSize === 'small' 
-            ? 'grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10' 
+          itemSize === 'tiny' 
+            ? 'grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-10 2xl:grid-cols-10' 
+            : itemSize === 'small' 
+            ? 'grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-8 2xl:grid-cols-8' 
             : itemSize === 'medium'
             ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'
             : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4'
