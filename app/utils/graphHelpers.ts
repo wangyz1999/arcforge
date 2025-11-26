@@ -1,8 +1,25 @@
 import { Edge, ItemData } from '../types/graph';
 
+// Edge type priority order (lower number = higher priority)
+const EDGE_TYPE_PRIORITY: { [key: string]: number } = {
+  'craft': 0,
+  'repair': 1,
+  'upgrade': 2,
+  'recycle': 3,
+  'salvage': 4,
+  'sold_by': 5,
+  'trader': 5, // Same as sold_by
+};
+
 // Helper function to clean relation names
 export const cleanRelationName = (relation: string): string => {
   return relation.replace(/_from$|_to$/g, '');
+};
+
+// Helper function to get edge type priority
+export const getEdgePriority = (edge: Edge): number => {
+  const cleanedRelation = cleanRelationName(edge.relation);
+  return EDGE_TYPE_PRIORITY[cleanedRelation] ?? 999; // Unknown types go last
 };
 
 // Helper function to format edge label with level, quantity, and price
@@ -101,13 +118,29 @@ export const buildGraphElements = (
     }
   });
 
+  // Sort edges within each group by priority
+  leftGrouped.forEach((edges) => {
+    edges.sort((a, b) => getEdgePriority(a) - getEdgePriority(b));
+  });
+  rightGrouped.forEach((edges) => {
+    edges.sort((a, b) => getEdgePriority(a) - getEdgePriority(b));
+  });
+  
+  // Sort groups by the priority of their primary (first) edge type
+  const sortedLeftEntries = Array.from(leftGrouped.entries()).sort((a, b) => {
+    return getEdgePriority(a[1][0]) - getEdgePriority(b[1][0]);
+  });
+  const sortedRightEntries = Array.from(rightGrouped.entries()).sort((a, b) => {
+    return getEdgePriority(a[1][0]) - getEdgePriority(b[1][0]);
+  });
+  
   // Create left nodes (inputs)
   let leftIdx = 0;
-  const totalLeftNodes = leftGrouped.size;
+  const totalLeftNodes = sortedLeftEntries.length;
   const leftIsEven = totalLeftNodes % 2 === 0;
   const leftMiddle = totalLeftNodes / 2;
   
-  leftGrouped.forEach((edges, itemName) => {
+  sortedLeftEntries.forEach(([itemName, edges]) => {
     const nodeId = `left-${itemName}`;
     const relatedItem = itemsLookup.get(itemName);
     const imageUrl = relatedItem?.image_urls?.thumb 
@@ -148,11 +181,11 @@ export const buildGraphElements = (
 
   // Create right nodes (outputs)
   let rightIdx = 0;
-  const totalRightNodes = rightGrouped.size;
+  const totalRightNodes = sortedRightEntries.length;
   const rightIsEven = totalRightNodes % 2 === 0;
   const rightMiddle = totalRightNodes / 2;
   
-  rightGrouped.forEach((edges, itemName) => {
+  sortedRightEntries.forEach(([itemName, edges]) => {
     const nodeId = `right-${itemName}`;
     const relatedItem = itemsLookup.get(itemName);
     const imageUrl = relatedItem?.image_urls?.thumb 
@@ -191,7 +224,7 @@ export const buildGraphElements = (
     rightIdx++;
   });
 
-  return { elements, leftGrouped, rightGrouped };
+  return { elements, leftGrouped: new Map(sortedLeftEntries), rightGrouped: new Map(sortedRightEntries) };
 };
 
 // Build layout positions function

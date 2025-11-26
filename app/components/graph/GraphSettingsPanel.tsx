@@ -44,15 +44,9 @@ export default function GraphSettingsPanel({
   };
 
   return (
-    <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/70 z-40 backdrop-blur-md"
-        onClick={onClose}
-      />
-      
-      {/* Settings Panel - Compact Grid Design */}
-      <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:w-[420px] bg-gradient-to-br from-black/95 via-purple-950/30 to-black/95 backdrop-blur-2xl border border-purple-500/40 z-50 rounded-2xl shadow-2xl animate-slide-up">
+    <>      
+      {/* Settings Panel - Compact Grid Design - Non-blocking floating panel */}
+      <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:w-[420px] bg-gradient-to-br from-black/95 via-purple-950/30 to-black/95 backdrop-blur-2xl border border-purple-500/40 z-50 rounded-2xl shadow-2xl animate-slide-up pointer-events-auto">
         {/* Decorative gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none rounded-2xl" />
         

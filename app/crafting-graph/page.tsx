@@ -18,6 +18,7 @@ function CraftingTreeContent() {
   const cyRef = useRef<cytoscape.Core | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef<string | null>(null); // Track which item has been animated
+  const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null); // Track resize timeout
   const [selectedNode, setSelectedNode] = useState<NodeInfo | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -111,6 +112,22 @@ function CraftingTreeContent() {
 
     cyRef.current = cy;
 
+    // Window resize handler with debouncing
+    const handleResize = () => {
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
+      }
+      resizeTimeoutRef.current = setTimeout(() => {
+        if (cyRef.current) {
+          cyRef.current.resize();
+          cyRef.current.fit(undefined, 120);
+        }
+      }, 150);
+    };
+
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+
     // Force a resize and fit after a short delay to ensure container is sized
     setTimeout(() => {
       if (cyRef.current) {
@@ -190,6 +207,12 @@ function CraftingTreeContent() {
     });
 
     return () => {
+      // Remove resize listener and clear timeout
+      window.removeEventListener('resize', handleResize);
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
+      }
+      
       if (cyRef.current) {
         cyRef.current.destroy();
       }
