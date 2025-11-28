@@ -30,6 +30,8 @@ def clean_text(text: str) -> str:
     text = re.sub(r"'{2,}", '', text)
     # Normalize whitespace
     text = ' '.join(text.split())
+    # Remove any text in between < and >, to account for errors with importing data (like if extra hmtl data gets imported accidentally, should be a catch all for it)
+    text = re.sub(r'<[^>]*>', '', text)
     return text.strip()
 
 
