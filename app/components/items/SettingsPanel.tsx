@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from '../../i18n';
 
 interface SettingsPanelProps {
   isOpen: boolean;
@@ -23,6 +26,8 @@ export default function SettingsPanel({
   displayWeight,
   setDisplayWeight
 }: SettingsPanelProps) {
+  const { t } = useTranslation();
+
   if (!isOpen) return null;
 
   return (
@@ -43,11 +48,12 @@ export default function SettingsPanel({
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 flex items-center gap-3">
               <FontAwesomeIcon icon={faCog} className="text-blue-400" />
-              Settings
+              {t('settings.title')}
             </h2>
             <button
               onClick={onClose}
               className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-xl transition-all duration-300 text-gray-400 hover:text-red-300 border border-blue-500/20 hover:border-red-500/50"
+              aria-label={t('buttons.close')}
             >
               <span className="text-lg">✕</span>
             </button>
@@ -58,7 +64,7 @@ export default function SettingsPanel({
             {/* Item Size */}
             <div>
               <label className="text-sm font-bold text-blue-300 mb-3 block uppercase tracking-wider">
-                Item Size
+                {t('settings.itemSize')}
               </label>
               <div className="flex gap-2">
                 <button
@@ -69,7 +75,7 @@ export default function SettingsPanel({
                       : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
-                  Tiny
+                  {t('settings.tiny')}
                 </button>
                 <button
                   onClick={() => setItemSize('small')}
@@ -79,7 +85,7 @@ export default function SettingsPanel({
                       : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
-                  Small
+                  {t('settings.small')}
                 </button>
                 <button
                   onClick={() => setItemSize('medium')}
@@ -89,7 +95,7 @@ export default function SettingsPanel({
                       : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
-                  Medium
+                  {t('settings.medium')}
                 </button>
                 <button
                   onClick={() => setItemSize('large')}
@@ -99,7 +105,7 @@ export default function SettingsPanel({
                       : 'bg-black/40 text-gray-400 border-blue-500/20 hover:bg-blue-500/20 hover:text-blue-300'
                   }`}
                 >
-                  Large
+                  {t('settings.large')}
                 </button>
               </div>
             </div>
@@ -115,7 +121,7 @@ export default function SettingsPanel({
                     <Image src="/coin.webp" alt="Coin" width={24} height={24} />
                   </div>
                   <span className="text-sm font-bold text-blue-300 uppercase tracking-wider">
-                    Display Price
+                    {t('settings.displayPrice')}
                   </span>
                 </div>
                 <div
@@ -143,7 +149,7 @@ export default function SettingsPanel({
                     <Image src="/weight.webp" alt="Weight" width={24} height={24} />
                   </div>
                   <span className="text-sm font-bold text-blue-300 uppercase tracking-wider">
-                    Display Weight
+                    {t('settings.displayWeight')}
                   </span>
                 </div>
                 <div
@@ -168,4 +174,3 @@ export default function SettingsPanel({
     </>
   );
 }
-

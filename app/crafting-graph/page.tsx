@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useMemo, Suspense } from 'react';
+import { useEffect, useRef, useState, useMemo, Suspense, useCallback } from 'react';
 import cytoscape from 'cytoscape';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,8 +14,10 @@ import HelpPanel from '../components/graph/HelpPanel';
 import { ItemData, NodeInfo } from '../types/graph';
 import { cytoscapeStyles } from '../config/cytoscapeStyles';
 import { buildGraphElements, buildLayoutPositions } from '../utils/graphHelpers';
+import { useTranslation } from '../i18n';
 
 function CraftingTreeContent() {
+  const { t, tItem } = useTranslation();
   const cyRef = useRef<cytoscape.Core | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef<string | null>(null); // Track which item has been animated
@@ -70,6 +72,10 @@ function CraftingTreeContent() {
     return { selectedItem: selected, itemsLookup: lookup };
   }, [itemName]);
 
+  // Memoize translation functions to prevent unnecessary re-renders
+  const translateItem = useCallback((name: string) => tItem(name), [tItem]);
+  const translateRelation = useCallback((key: string) => t(key), [t]);
+
   // Ensure DOM is ready
   useEffect(() => {
     setIsReady(true);
@@ -86,8 +92,14 @@ function CraftingTreeContent() {
       return;
     }
 
-    // Build graph elements from actual data with edge type filtering
-    const { elements, leftGrouped, rightGrouped } = buildGraphElements(currentItem, itemsLookup, selectedEdgeTypes);
+    // Build graph elements from actual data with edge type filtering and translations
+    const { elements, leftGrouped, rightGrouped } = buildGraphElements(
+      currentItem, 
+      itemsLookup, 
+      selectedEdgeTypes,
+      translateItem,
+      translateRelation
+    );
 
     let cy;
     try {
@@ -188,7 +200,7 @@ function CraftingTreeContent() {
       const nodeData = node.data();
       
       if (nodeData.type !== 'center' && nodeData.itemName) {
-        // Navigate to the clicked item with current filters
+        // Navigate to the clicked item with current filters (use original itemName for navigation)
         const filterParam = Array.from(selectedEdgeTypes).join(',');
         router.push(`/crafting-graph?item=${encodeURIComponent(nodeData.itemName)}&filters=${filterParam}`, { scroll: false });
       } else {
@@ -219,7 +231,7 @@ function CraftingTreeContent() {
         cyRef.current.destroy();
       }
     };
-  }, [isReady, itemName, itemsLookup, selectedEdgeTypes, router]);
+  }, [isReady, itemName, itemsLookup, selectedEdgeTypes, router, translateItem, translateRelation]);
 
   // Show loading or error state
   if (!isReady) {
@@ -239,7 +251,7 @@ function CraftingTreeContent() {
       <button
         onClick={() => setIsHelpOpen(true)}
         className="fixed bottom-28 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-cyan-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-cyan-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
-        aria-label="Open help"
+        aria-label={t('buttons.openHelp')}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
         <FontAwesomeIcon icon={faQuestionCircle} className="text-white text-xl relative z-10 drop-shadow-lg" />
@@ -249,7 +261,7 @@ function CraftingTreeContent() {
       <button
         onClick={() => setIsSettingsOpen(true)}
         className="fixed bottom-8 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
-        aria-label="Open relation filters"
+        aria-label={t('buttons.openRelationFilters')}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
         <FontAwesomeIcon icon={faCog} className="text-white text-xl relative z-10 drop-shadow-lg" />

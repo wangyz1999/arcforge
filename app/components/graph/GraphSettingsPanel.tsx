@@ -1,5 +1,8 @@
+'use client';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from '../../i18n';
 
 interface GraphSettingsPanelProps {
   isOpen: boolean;
@@ -8,22 +11,25 @@ interface GraphSettingsPanelProps {
   setSelectedEdgeTypes: (types: Set<string>) => void;
 }
 
-const EDGE_TYPES = [
-  { id: 'craft', label: 'Craft', color: '#60a5fa', bgColor: 'rgba(96, 165, 250, 0.15)' },
-  { id: 'repair', label: 'Repair', color: '#ef4444', bgColor: 'rgba(239, 68, 68, 0.15)' },
-  { id: 'recycle', label: 'Recycle', color: '#34d399', bgColor: 'rgba(52, 211, 153, 0.15)' },
-  { id: 'salvage', label: 'Salvage', color: '#10b981', bgColor: 'rgba(16, 185, 129, 0.15)' },
-  { id: 'upgrade', label: 'Upgrade', color: '#ec4899', bgColor: 'rgba(236, 72, 153, 0.15)' },
-  { id: 'trade', label: 'Trade', color: '#fbbf24', bgColor: 'rgba(251, 191, 36, 0.15)' },
-];
-
 export default function GraphSettingsPanel({
   isOpen,
   onClose,
   selectedEdgeTypes,
   setSelectedEdgeTypes,
 }: GraphSettingsPanelProps) {
+  const { t } = useTranslation();
+
   if (!isOpen) return null;
+
+  // Edge types with their colors (labels will be translated)
+  const EDGE_TYPES = [
+    { id: 'craft', labelKey: 'graph.craft', color: '#60a5fa', bgColor: 'rgba(96, 165, 250, 0.15)' },
+    { id: 'repair', labelKey: 'graph.repair', color: '#ef4444', bgColor: 'rgba(239, 68, 68, 0.15)' },
+    { id: 'recycle', labelKey: 'graph.recycle', color: '#34d399', bgColor: 'rgba(52, 211, 153, 0.15)' },
+    { id: 'salvage', labelKey: 'graph.salvage', color: '#10b981', bgColor: 'rgba(16, 185, 129, 0.15)' },
+    { id: 'upgrade', labelKey: 'graph.upgrade', color: '#ec4899', bgColor: 'rgba(236, 72, 153, 0.15)' },
+    { id: 'trade', labelKey: 'graph.trade', color: '#fbbf24', bgColor: 'rgba(251, 191, 36, 0.15)' },
+  ];
 
   const toggleEdgeType = (typeId: string) => {
     const newTypes = new Set(selectedEdgeTypes);
@@ -55,11 +61,12 @@ export default function GraphSettingsPanel({
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 flex items-center gap-2">
               <FontAwesomeIcon icon={faCog} className="text-purple-400 text-sm" />
-              Relation Filters
+              {t('graph.relationFilters')}
             </h2>
             <button
               onClick={onClose}
               className="w-8 h-8 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50"
+              aria-label={t('buttons.close')}
             >
               <span className="text-sm">✕</span>
             </button>
@@ -85,7 +92,7 @@ export default function GraphSettingsPanel({
                       backgroundColor: selectedEdgeTypes.has(edgeType.id) ? edgeType.color : '#4b5563',
                     }}
                   />
-                  <span>{edgeType.label}</span>
+                  <span>{t(edgeType.labelKey)}</span>
                 </button>
               ))}
             </div>
@@ -96,13 +103,13 @@ export default function GraphSettingsPanel({
                 onClick={selectAll}
                 className="flex-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300 hover:border-purple-400/40"
               >
-                Select All
+                {t('graph.selectAll')}
               </button>
               <button
                 onClick={clearAll}
                 className="flex-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300 hover:border-purple-400/40"
               >
-                Clear All
+                {t('graph.clearAll')}
               </button>
             </div>
           </div>
@@ -112,4 +119,3 @@ export default function GraphSettingsPanel({
     </>
   );
 }
-

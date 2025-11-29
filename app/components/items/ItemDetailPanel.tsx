@@ -1,16 +1,19 @@
+'use client';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faExternalLinkAlt, faDiagramProject, faLocationDot, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { Item } from '../../types/item';
 import { rarityColors, rarityGradients } from '../../config/rarityConfig';
 import { specialTypeLabels } from '../../config/categoryConfig';
+import { useTranslation } from '../../i18n';
 
 interface ItemDetailPanelProps {
   item: Item;
   onClose: () => void;
 }
 
-const getSellPrice = (price: number | number[] | null | undefined): string => {
-  if (!price) return 'N/A';
+const getSellPrice = (price: number | number[] | null | undefined, notAvailable: string): string => {
+  if (!price) return notAvailable;
   if (Array.isArray(price)) {
     return `${price[0]} - ${price[price.length - 1]}`;
   }
@@ -18,6 +21,18 @@ const getSellPrice = (price: number | number[] | null | undefined): string => {
 };
 
 export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps) {
+  const { t, tItem } = useTranslation();
+
+  // Get translated item name
+  const translatedName = tItem(item.name);
+
+  // Get translated special type label
+  const getSpecialTypeLabel = (type: string): string => {
+    const key = `specialType.${type}`;
+    const translated = t(key);
+    return translated !== key ? translated : (specialTypeLabels[type] || type);
+  };
+
   return (
     <>
       {/* Backdrop */}
@@ -36,6 +51,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 shadow-lg hover:scale-110 group"
+            aria-label={t('buttons.close')}
           >
             <span className="text-lg group-hover:rotate-90 transition-transform duration-300">✕</span>
           </button>
@@ -62,7 +78,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
               )}
             </div>
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-purple-200 to-gray-100 mb-3 drop-shadow-lg">
-              {item.name}
+              {translatedName}
             </h2>
             
             {/* Special Type Tags */}
@@ -73,7 +89,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
                     key={specialType}
                     className="px-2.5 py-1 bg-emerald-500/30 text-emerald-200 rounded-md text-xs font-semibold border border-emerald-400/50 shadow-sm"
                   >
-                    {specialTypeLabels[specialType] || specialType}
+                    {getSpecialTypeLabel(specialType)}
                   </span>
                 ))}
               </div>
@@ -96,7 +112,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
               
               <img
                 src={item.image_urls.thumb}
-                alt={item.name}
+                alt={translatedName}
                 className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
               />
             </a>
@@ -118,7 +134,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
               <div className="flex items-start gap-2">
                 <FontAwesomeIcon icon={faLocationDot} className="text-blue-400/70 text-xs mt-0.5 w-3.5" />
                 <div className="flex-1">
-                  <span className="text-gray-400">Location: </span>
+                  <span className="text-gray-400">{t('item.location')}: </span>
                   <span 
                     className="text-gray-200"
                     dangerouslySetInnerHTML={{ __html: item.infobox.location.replace(/<br\s*\/?>/gi, ' • ') }}
@@ -128,25 +144,25 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
             )}
             {item.infobox?.weight != null && (
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 w-24">Weight:</span>
+                <span className="text-gray-400 w-24">{t('item.weight')}:</span>
                 <span className="text-gray-100 font-semibold">{item.infobox.weight}</span>
               </div>
             )}
             {item.infobox?.sellprice != null && (
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 w-24">Sell Price:</span>
-                <span className="text-emerald-400 font-semibold">{getSellPrice(item.infobox.sellprice)}</span>
+                <span className="text-gray-400 w-24">{t('item.sellPrice')}:</span>
+                <span className="text-emerald-400 font-semibold">{getSellPrice(item.infobox.sellprice, t('item.notAvailable'))}</span>
               </div>
             )}
             {item.infobox?.stacksize != null && (
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 w-24">Stack Size:</span>
+                <span className="text-gray-400 w-24">{t('item.stackSize')}:</span>
                 <span className="text-gray-100 font-semibold">{item.infobox.stacksize}</span>
               </div>
             )}
             {item.infobox?.damage != null && (
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 w-24">Damage:</span>
+                <span className="text-gray-400 w-24">{t('item.damage')}:</span>
                 <span className="text-red-400 font-semibold">{item.infobox.damage}</span>
               </div>
             )}
@@ -156,7 +172,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
           {item.sources && item.sources.length > 0 && (
             <div className="mb-4">
               <h3 className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 mb-2 uppercase tracking-wider">
-                Sources
+                {t('item.sources')}
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {item.sources.map((source: string, idx: number) => (
@@ -182,7 +198,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/20 to-purple-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faExternalLinkAlt} />
-                Wiki
+                {t('item.wiki')}
               </span>
             </a>
             <a
@@ -192,7 +208,7 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faDiagramProject} />
-                Crafting Graph
+                {t('item.craftingGraph')}
               </span>
             </a>
           </div>
@@ -201,4 +217,3 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
     </>
   );
 }
-

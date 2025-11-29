@@ -22,13 +22,23 @@ export const getEdgePriority = (edge: Edge): number => {
 };
 
 // Helper function to format edge label with level, quantity, and price
-export const formatEdgeLabel = (edge: Edge): string => {
+// Now accepts an optional translation function for relation names
+export const formatEdgeLabel = (
+  edge: Edge, 
+  translateRelation?: (key: string) => string,
+  translateItem?: (name: string) => string
+): string => {
   let relation = cleanRelationName(edge.relation);
   
   // Rename trader/sold_by to trade for display
   if (relation === 'trader' || relation === 'sold_by') {
     relation = 'trade';
   }
+  
+  // Translate relation if translation function provided
+  const translatedRelation = translateRelation 
+    ? translateRelation(`graph.${relation}`) 
+    : relation;
   
   const quantity = edge.quantity ? `${edge.quantity}x` : '';
   const levelInfo = edge.input_level || edge.output_level || '';
@@ -44,23 +54,35 @@ export const formatEdgeLabel = (edge: Edge): string => {
     }
   }
   
+  // For recycle/salvage with level info, translate the source item name
+  let levelDisplay = levelInfo;
+  if (levelInfo && translateItem) {
+    levelDisplay = translateItem(levelInfo);
+  }
+  
   // Build label
-  const parts = [relation];
+  const parts = [translatedRelation];
   if (quantity) parts.push(`(${quantity})`);
   if (priceInfo) parts.push(`[${priceInfo}]`);
-  else if (levelInfo) parts.push(`[${levelInfo}]`);
+  else if (levelDisplay) parts.push(`[${levelDisplay}]`);
   
   return parts.join(' ');
 };
 
 // Build graph elements from item data
+// Now accepts optional translation function for item names
 export const buildGraphElements = (
   currentItem: ItemData,
   itemsLookup: Map<string, ItemData>,
-  selectedEdgeTypes?: Set<string>
+  selectedEdgeTypes?: Set<string>,
+  translateItem?: (name: string) => string,
+  translateRelation?: (key: string) => string
 ) => {
   const elements: any[] = [];
   const CURVATURE = 90;
+  
+  // Helper to translate item name
+  const tItem = (name: string) => translateItem ? translateItem(name) : name;
   
   // Helper to check if an edge should be included
   const shouldIncludeEdge = (relation: string): boolean => {
@@ -92,7 +114,7 @@ export const buildGraphElements = (
   elements.push({
     data: {
       id: centerId,
-      label: currentItem.name,
+      label: tItem(currentItem.name),
       type: 'center',
       nodeType: currentItem.node_type || 'item',
       rarity: currentItem.infobox?.rarity,
@@ -155,17 +177,17 @@ export const buildGraphElements = (
     elements.push({
       data: {
         id: nodeId,
-        label: itemName,
+        label: tItem(itemName),
         type: 'input',
         nodeType: relatedItem?.node_type || 'item',
         rarity: relatedItem?.infobox?.rarity,
         imageUrl: imageUrl,
-        itemName: itemName,
+        itemName: itemName, // Keep original name for navigation
       }
     });
 
     // Create edge from left to center with combined labels
-    const edgeLabels = edges.map(formatEdgeLabel).join('\n');
+    const edgeLabels = edges.map(e => formatEdgeLabel(e, translateRelation, translateItem)).join('\n');
     
     // Calculate curvature
     const curvature = leftIsEven 
@@ -200,17 +222,17 @@ export const buildGraphElements = (
     elements.push({
       data: {
         id: nodeId,
-        label: itemName,
+        label: tItem(itemName),
         type: 'output',
         nodeType: relatedItem?.node_type || 'item',
         rarity: relatedItem?.infobox?.rarity,
         imageUrl: imageUrl,
-        itemName: itemName,
+        itemName: itemName, // Keep original name for navigation
       }
     });
 
     // Create edge from center to right with combined labels
-    const edgeLabels = edges.map(formatEdgeLabel).join('\n');
+    const edgeLabels = edges.map(e => formatEdgeLabel(e, translateRelation, translateItem)).join('\n');
     
     // Calculate curvature
     const curvature = rightIsEven 
@@ -272,4 +294,3 @@ export const buildLayoutPositions = (
     return { x: 0, y: 0 };
   };
 };
-

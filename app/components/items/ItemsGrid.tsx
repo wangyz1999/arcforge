@@ -1,7 +1,10 @@
+'use client';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Item } from '../../types/item';
 import ItemCard from './ItemCard';
+import { useTranslation } from '../../i18n';
 
 interface ItemsGridProps {
   items: Item[];
@@ -18,6 +21,8 @@ export default function ItemsGrid({
   displayWeight,
   onItemClick
 }: ItemsGridProps) {
+  const { t } = useTranslation();
+
   return (
     <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 relative z-10">
       <div className="max-w-[1600px] mx-auto">
@@ -50,9 +55,9 @@ export default function ItemsGrid({
             <div className="relative z-10">
               <div className="text-8xl mb-6 animate-pulse">🔍</div>
               <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-purple-300 to-gray-300 mb-3">
-                No items found
+                {t('grid.noItemsFound')}
               </h3>
-              <p className="text-gray-400 text-lg">Try adjusting your search or filters</p>
+              <p className="text-gray-400 text-lg">{t('grid.tryAdjusting')}</p>
             </div>
           </div>
         )}
@@ -60,4 +65,3 @@ export default function ItemsGrid({
     </main>
   );
 }
-

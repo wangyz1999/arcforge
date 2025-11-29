@@ -1,6 +1,9 @@
+'use client';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faArrowUpAZ, faArrowDownAZ, faFilter } from '@fortawesome/free-solid-svg-icons';
 import { allCategories, specialTypeLabels } from '../../config/categoryConfig';
+import { useTranslation } from '../../i18n';
 
 export type SortField = 'name' | 'rarity' | 'sellprice' | 'weight';
 
@@ -31,6 +34,8 @@ export default function ItemFiltersPanel({
   isSidebarOpen,
   setIsSidebarOpen,
 }: ItemFiltersPanelProps) {
+  const { t } = useTranslation();
+
   const toggleType = (type: string) => {
     const newSelected = new Set(selectedTypes);
     if (newSelected.has(type)) {
@@ -57,6 +62,38 @@ export default function ItemFiltersPanel({
     setSelectedTypes(newSelected);
   };
 
+  // Get translated category name
+  const getCategoryLabel = (category: string): string => {
+    const key = `category.${category.replace(' ', '')}`;
+    return t(key);
+  };
+
+  // Get translated special type label
+  const getSpecialTypeLabel = (type: string): string => {
+    const key = `specialType.${type}`;
+    const translated = t(key);
+    // If no translation found, fallback to the original label
+    return translated !== key ? translated : (specialTypeLabels[type] || type);
+  };
+
+  // Get translated item type label
+  const getItemTypeLabel = (type: string, category: string): string => {
+    // For special types, use the special type translation
+    if (category === 'Special') {
+      return getSpecialTypeLabel(type);
+    }
+    
+    // Try to get translation for the full type
+    const fullKey = `itemType.${type}`;
+    const fullTranslated = t(fullKey);
+    if (fullTranslated !== fullKey) {
+      return fullTranslated;
+    }
+    
+    // Fallback: clean up the type name for display
+    return type.replace('Modification-', '').replace('Quick Use-', '');
+  };
+
   return (
     <aside className={`
       w-83 bg-black/30 backdrop-blur-xl border-r border-purple-500/30 overflow-y-auto shadow-2xl z-50 lg:z-10
@@ -69,6 +106,7 @@ export default function ItemFiltersPanel({
         <button
           onClick={() => setIsSidebarOpen(false)}
           className="lg:hidden absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-colors text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 z-10"
+          aria-label={t('buttons.close')}
         >
           <span className="text-lg">✕</span>
         </button>
@@ -76,7 +114,7 @@ export default function ItemFiltersPanel({
         {/* Search Bar */}
         <div>
           <h3 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 mb-3 uppercase tracking-wider">
-            Search
+            {t('search.title')}
           </h3>
           <div className="relative group">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -84,7 +122,7 @@ export default function ItemFiltersPanel({
             </div>
             <input
               type="text"
-              placeholder="Search items..."
+              placeholder={t('search.placeholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-11 pr-4 py-3 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-xl text-gray-100 text-sm placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300 shadow-lg shadow-purple-500/10 focus:shadow-purple-500/20"
@@ -99,7 +137,7 @@ export default function ItemFiltersPanel({
         <div>
           <h3 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 mb-4 flex items-center gap-2 uppercase tracking-wider">
             <FontAwesomeIcon icon={faArrowUpAZ} className="text-purple-400" />
-            Sort By
+            {t('sort.title')}
           </h3>
           <div className="flex flex-wrap gap-2 mb-4">
             <button
@@ -110,7 +148,7 @@ export default function ItemFiltersPanel({
                   : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300'
               }`}
             >
-              Name
+              {t('sort.name')}
             </button>
             <button
               onClick={() => setSortField('rarity')}
@@ -120,7 +158,7 @@ export default function ItemFiltersPanel({
                   : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300'
               }`}
             >
-              Rarity
+              {t('sort.rarity')}
             </button>
             <button
               onClick={() => setSortField('sellprice')}
@@ -130,7 +168,7 @@ export default function ItemFiltersPanel({
                   : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300'
               }`}
             >
-              Sell Price
+              {t('sort.sellPrice')}
             </button>
             <button
               onClick={() => setSortField('weight')}
@@ -140,7 +178,7 @@ export default function ItemFiltersPanel({
                   : 'bg-black/40 text-gray-400 border border-purple-500/20 hover:bg-purple-500/20 hover:text-purple-300'
               }`}
             >
-              Weight
+              {t('sort.weight')}
             </button>
           </div>
           
@@ -149,7 +187,7 @@ export default function ItemFiltersPanel({
             className="w-full px-3 py-1.5 rounded-lg text-xs font-semibold bg-black/40 text-gray-300 border border-purple-500/30 hover:bg-purple-500/20 hover:text-purple-200 transition-colors flex items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={sortAscending ? faArrowUpAZ : faArrowDownAZ} className="text-purple-400 text-xs" />
-            <span>{sortAscending ? 'Ascending' : 'Descending'}</span>
+            <span>{sortAscending ? t('sort.ascending') : t('sort.descending')}</span>
           </button>
         </div>
 
@@ -161,7 +199,7 @@ export default function ItemFiltersPanel({
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 flex items-center gap-2 uppercase tracking-wider">
               <FontAwesomeIcon icon={faFilter} className="text-purple-400" />
-              Filter by Type
+              {t('filter.title')}
             </h3>
             <div className="flex gap-2">
               <button
@@ -174,14 +212,14 @@ export default function ItemFiltersPanel({
                 }}
                 className="text-xs text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
               >
-                All
+                {t('filter.all')}
               </button>
               <span className="text-purple-500/50">|</span>
               <button
                 onClick={() => setSelectedTypes(new Set())}
                 className="text-xs text-gray-400 hover:text-gray-300 font-semibold transition-colors"
               >
-                None
+                {t('filter.none')}
               </button>
             </div>
           </div>
@@ -213,17 +251,14 @@ export default function ItemFiltersPanel({
                           : 'text-gray-400'
                       }`}
                     >
-                      {category}
+                      {getCategoryLabel(category)}
                     </button>
                   </div>
                   
                   {/* Types List */}
                   <div className="flex flex-wrap gap-1.5 mb-1">
                     {types.map((type) => {
-                      const displayName = category === 'Special' 
-                        ? (specialTypeLabels[type] || type)
-                        : type.replace('Modification-', '').replace('Quick Use-', '');
-                      
+                      const displayName = getItemTypeLabel(type, category);
                       const isSpecial = category === 'Special';
                       
                       return (
@@ -254,4 +289,3 @@ export default function ItemFiltersPanel({
     </aside>
   );
 }
-

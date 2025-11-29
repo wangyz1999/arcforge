@@ -1,13 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from '../i18n';
+import LanguageSelector from './LanguageSelector';
 
 interface HeaderProps {
   activePage: 'database' | 'graph';
 }
 
 export default function Header({ activePage }: HeaderProps) {
+  const { t } = useTranslation();
   const isDatabaseActive = activePage === 'database';
   const isGraphActive = activePage === 'graph';
 
@@ -38,8 +43,8 @@ export default function Header({ activePage }: HeaderProps) {
               isDatabaseActive ? 'hover:from-purple-500/40 hover:to-purple-600/40 hover:border-purple-400/70' : ''
             } transition-all duration-300 hover:scale-105 whitespace-nowrap`}
           >
-            <span className="relative z-10 hidden sm:inline">Item Database</span>
-            <span className="relative z-10 sm:hidden">Items</span>
+            <span className="relative z-10 hidden sm:inline">{t('nav.itemDatabase')}</span>
+            <span className="relative z-10 sm:hidden">{t('nav.itemDatabaseShort')}</span>
             {isDatabaseActive && (
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-purple-600/20 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             )}
@@ -54,18 +59,19 @@ export default function Header({ activePage }: HeaderProps) {
               isGraphActive ? 'hover:from-purple-500/40 hover:to-purple-600/40 hover:border-purple-400/70' : ''
             } transition-all duration-300 hover:scale-105 whitespace-nowrap`}
           >
-            <span className="relative z-10 hidden sm:inline">Crafting Graph</span>
-            <span className="relative z-10 sm:hidden">Graph</span>
+            <span className="relative z-10 hidden sm:inline">{t('nav.craftingGraph')}</span>
+            <span className="relative z-10 sm:hidden">{t('nav.craftingGraphShort')}</span>
             {isGraphActive && (
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-purple-600/20 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             )}
           </a>
+          <LanguageSelector />
           <a
             href="https://buymeacoffee.com/wangyz1999"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-lg md:rounded-xl text-gray-300 hover:bg-yellow-500/20 hover:text-yellow-300 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105"
-            aria-label="Buy me a coffee"
+            aria-label={t('nav.buyMeACoffee')}
           >
             <FontAwesomeIcon icon={faCoffee} className="text-lg sm:text-xl" />
           </a>
@@ -74,7 +80,7 @@ export default function Header({ activePage }: HeaderProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex-shrink-0 flex items-center justify-center bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-lg md:rounded-xl text-gray-300 hover:bg-purple-500/20 hover:text-purple-200 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-            aria-label="View on GitHub"
+            aria-label={t('nav.viewOnGithub')}
           >
             <FontAwesomeIcon icon={faGithub} className="text-lg sm:text-xl" />
           </a>
@@ -83,4 +89,3 @@ export default function Header({ activePage }: HeaderProps) {
     </header>
   );
 }
-

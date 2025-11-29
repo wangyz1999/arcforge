@@ -15,11 +15,13 @@ import SettingsPanel from './components/items/SettingsPanel';
 import { Item } from './types/item';
 import { typeToCategory } from './config/categoryConfig';
 import { rarityOrder } from './config/rarityConfig';
+import { useTranslation, itemTranslations } from './i18n';
 
 // Prevent FontAwesome from adding its CSS automatically since we're importing it manually
 config.autoAddCss = false;
 
 export default function Home() {
+  const { t, tItem, language } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [sortField, setSortField] = useState<SortField>('name');
   const [sortAscending, setSortAscending] = useState(false);
@@ -78,18 +80,28 @@ export default function Home() {
   // Initialize with no types selected
   const [selectedTypes, setSelectedTypes] = useState<Set<string>>(() => new Set());
 
+  // Get current item translations for search
+  const currentItemTranslations = itemTranslations[language] || {};
+
   const filteredAndSortedItems = useMemo(() => {
     let items = itemsData as Item[];
     
-    // Filter by search query
+    // Filter by search query - search works with both original AND translated names
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       items = items.filter((item) => {
-        return (
-          item.name.toLowerCase().includes(query) ||
-          item.infobox?.rarity?.toLowerCase().includes(query) ||
-          item.infobox?.type?.toLowerCase().includes(query)
-        );
+        // Search in original name
+        const matchesOriginal = item.name.toLowerCase().includes(query);
+        
+        // Search in translated name (if available)
+        const translatedName = currentItemTranslations[item.name] || item.name;
+        const matchesTranslated = translatedName.toLowerCase().includes(query);
+        
+        // Search in rarity and type
+        const matchesRarity = item.infobox?.rarity?.toLowerCase().includes(query);
+        const matchesType = item.infobox?.type?.toLowerCase().includes(query);
+        
+        return matchesOriginal || matchesTranslated || matchesRarity || matchesType;
       });
     }
 
@@ -140,7 +152,10 @@ export default function Home() {
 
       switch (sortField) {
         case 'name':
-          compareResult = a.name.localeCompare(b.name);
+          // Sort by translated name when in non-English language
+          const nameA = tItem(a.name);
+          const nameB = tItem(b.name);
+          compareResult = nameA.localeCompare(nameB);
           break;
         case 'rarity':
           const rarityA = rarityOrder[a.infobox?.rarity || 'Common'] || 0;
@@ -148,7 +163,7 @@ export default function Home() {
           compareResult = rarityA - rarityB;
           // Secondary sort by name when rarity is the same
           if (compareResult === 0) {
-            compareResult = a.name.localeCompare(b.name);
+            compareResult = tItem(a.name).localeCompare(tItem(b.name));
           }
           break;
         case 'sellprice':
@@ -161,7 +176,7 @@ export default function Home() {
           compareResult = priceA - priceB;
           // Secondary sort by name when price is the same
           if (compareResult === 0) {
-            compareResult = a.name.localeCompare(b.name);
+            compareResult = tItem(a.name).localeCompare(tItem(b.name));
           }
           break;
         case 'weight':
@@ -170,7 +185,7 @@ export default function Home() {
           compareResult = weightA - weightB;
           // Secondary sort by name when weight is the same
           if (compareResult === 0) {
-            compareResult = a.name.localeCompare(b.name);
+            compareResult = tItem(a.name).localeCompare(tItem(b.name));
           }
           break;
       }
@@ -179,7 +194,7 @@ export default function Home() {
     });
 
     return items;
-  }, [searchQuery, sortField, sortAscending, selectedTypes, typesByCategory]);
+  }, [searchQuery, sortField, sortAscending, selectedTypes, typesByCategory, currentItemTranslations, tItem]);
 
   const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000';
 
@@ -217,7 +232,7 @@ export default function Home() {
         <button
           onClick={() => setIsSidebarOpen(true)}
           className="lg:hidden fixed bottom-6 left-6 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
-          aria-label="Open filters"
+          aria-label={t('buttons.openFilters')}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
           <FontAwesomeIcon icon={faBars} className="text-white text-xl relative z-10 drop-shadow-lg" />
@@ -227,7 +242,7 @@ export default function Home() {
         <button
           onClick={() => setIsSettingsOpen(true)}
           className="fixed bottom-6 left-24 lg:bottom-8 lg:right-8 lg:left-auto z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
-          aria-label="Open settings"
+          aria-label={t('buttons.openSettings')}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
           <FontAwesomeIcon icon={faCog} className="text-white text-xl relative z-10 drop-shadow-lg" />
