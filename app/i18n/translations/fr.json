@@ -138,5 +138,7 @@
   "buttons.openRelationFilters": "Ouvrir les filtres de relations",
   "buttons.close": "Fermer",
 
-  "language.select": "Choisir la langue"
+  "language.select": "Choisir la langue",
+
+  "toast.translationWarning": "⚠️ Attention : les traductions ont été automatisées. Certains noms d'items pourraient ne pas correspondre à 100% aux noms affichés dans le jeu."
 }

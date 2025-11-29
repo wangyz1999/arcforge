@@ -99,5 +99,7 @@
   "buttons.openRelationFilters": "Open relation filters",
   "buttons.close": "Close",
 
-  "language.select": "Select language"
+  "language.select": "Select language",
+
+  "toast.translationWarning": "⚠️ Warning: translations have been automated. Some item names may not match 100% with the names displayed in the game."
 }

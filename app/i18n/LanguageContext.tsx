@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useRef } from 'react';
 
 // Define supported languages
 export const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
@@ -26,6 +26,8 @@ interface LanguageContextType {
   translations: Record<string, string>;
   itemTranslations: Record<string, string>;
   isHydrated: boolean;
+  showTranslationWarning: boolean;
+  dismissTranslationWarning: () => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -45,6 +47,8 @@ interface LanguageProviderProps {
 export function LanguageProvider({ children, translations, itemTranslations }: LanguageProviderProps) {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
   const [isHydrated, setIsHydrated] = useState(false);
+  const [showTranslationWarning, setShowTranslationWarning] = useState(false);
+  const isUserAction = useRef(false);
 
   // Load saved language preference on mount
   useEffect(() => {
@@ -65,8 +69,9 @@ export function LanguageProvider({ children, translations, itemTranslations }: L
     setIsHydrated(true);
   }, []);
 
-  // Save language preference when it changes
+  // Save language preference when it changes (user action only)
   const setLanguage = useCallback((lang: Language) => {
+    isUserAction.current = true;
     setLanguageState(lang);
     try {
       localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
@@ -77,6 +82,18 @@ export function LanguageProvider({ children, translations, itemTranslations }: L
     } catch {
       // localStorage not available
     }
+    
+    // Show warning only when user switches to non-English
+    if (lang !== 'en') {
+      setShowTranslationWarning(true);
+    } else {
+      setShowTranslationWarning(false);
+    }
+  }, []);
+
+  // Dismiss the translation warning
+  const dismissTranslationWarning = useCallback(() => {
+    setShowTranslationWarning(false);
   }, []);
 
   // Translation function for UI strings
@@ -108,7 +125,9 @@ export function LanguageProvider({ children, translations, itemTranslations }: L
       tItem,
       translations: currentTranslations,
       itemTranslations: currentItemTranslations,
-      isHydrated 
+      isHydrated,
+      showTranslationWarning,
+      dismissTranslationWarning,
     }}>
       {children}
     </LanguageContext.Provider>
@@ -126,6 +145,6 @@ export function useLanguage() {
 
 // Custom hook for just translation function (convenience)
 export function useTranslation() {
-  const { t, tItem, language, isHydrated } = useLanguage();
-  return { t, tItem, language, isHydrated };
+  const { t, tItem, language, isHydrated, showTranslationWarning, dismissTranslationWarning } = useLanguage();
+  return { t, tItem, language, isHydrated, showTranslationWarning, dismissTranslationWarning };
 }
