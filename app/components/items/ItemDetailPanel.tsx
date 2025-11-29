@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faExternalLinkAlt, faDiagramProject, faLocationDot, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faExternalLinkAlt, faDiagramProject, faLocationDot, faQuoteLeft, faEye } from '@fortawesome/free-solid-svg-icons';
 import { Item } from '../../types/item';
 import { rarityColors, rarityGradients } from '../../config/rarityConfig';
 import { specialTypeLabels } from '../../config/categoryConfig';
@@ -7,6 +7,8 @@ import { specialTypeLabels } from '../../config/categoryConfig';
 interface ItemDetailPanelProps {
   item: Item;
   onClose: () => void;
+  onItemTracked: (name: string) => void;
+  isTrackedFunc: (name: string) => boolean;
 }
 
 const getSellPrice = (price: number | number[] | null | undefined): string => {
@@ -17,7 +19,7 @@ const getSellPrice = (price: number | number[] | null | undefined): string => {
   return price.toString();
 };
 
-export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps) {
+export default function ItemDetailPanel({ item, onClose, onItemTracked, isTrackedFunc }: ItemDetailPanelProps) {
   return (
     <>
       {/* Backdrop */}
@@ -32,13 +34,34 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5 pointer-events-none" />
         
         <div className="relative z-10 p-5">
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 shadow-lg hover:scale-110 group"
-          >
-            <span className="text-lg group-hover:rotate-90 transition-transform duration-300">✕</span>
-          </button>
+            <div className="absolute top-4 right-4 z-50 flex gap-4">
+              {/* Track Item Button */}
+              <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onItemTracked(item.name);
+              }}
+              title={isTrackedFunc(item.name) ? 'Untrack' : 'Track'}
+              className={`w-10 h-10 flex items-center justify-center rounded-md text-sm ${
+                isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-purple-200'
+              }`}
+              style={{ cursor: 'pointer' }}
+              >
+              <FontAwesomeIcon
+                icon={faEye}
+                className="text-white text-xl relative z-10 drop-shadow-lg"
+              />
+              </button>
+
+              {/* Close Button */}
+              <button
+              onClick={onClose}
+              className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 shadow-lg hover:scale-110 group"
+              >
+              <span className="text-lg group-hover:rotate-90 transition-transform duration-300">✕</span>
+              </button>
+
+            </div>
 
           {/* Item Header */}
           <div className="mb-4">
@@ -55,12 +78,15 @@ export default function ItemDetailPanel({ item, onClose }: ItemDetailPanelProps)
                 <FontAwesomeIcon icon={faStar} className="text-xs" />
                 {item.infobox?.rarity || 'Common'}
               </div>
+
+              
               {item.infobox?.type && (
                 <span className="text-purple-400 text-xs font-semibold uppercase tracking-wider inline-flex items-center gap-2 px-2.5 py-1 bg-purple-500/20 rounded-lg border border-purple-500/30">
                   {item.infobox.type}
                 </span>
               )}
             </div>
+            
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-purple-200 to-gray-100 mb-3 drop-shadow-lg">
               {item.name}
             </h2>

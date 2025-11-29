@@ -9,6 +9,8 @@ interface ItemsGridProps {
   displayPrice: boolean;
   displayWeight: boolean;
   onItemClick: (item: Item) => void;
+  onItemTracked: (name: string) => void;
+  isTrackedFunc: (name: string) => boolean;
 }
 
 export default function ItemsGrid({
@@ -16,7 +18,9 @@ export default function ItemsGrid({
   itemSize,
   displayPrice,
   displayWeight,
-  onItemClick
+  onItemClick,
+  onItemTracked,
+  isTrackedFunc
 }: ItemsGridProps) {
   return (
     <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 relative z-10">
@@ -37,6 +41,8 @@ export default function ItemsGrid({
               displayPrice={displayPrice}
               displayWeight={displayWeight}
               onClick={() => onItemClick(item)}
+              onTracked={ () => onItemTracked(item.name)}
+              isTrackedFunc={ isTrackedFunc }
             />
           ))}
         </div>

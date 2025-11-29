@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCog, faEye } from '@fortawesome/free-solid-svg-icons';
 import itemsData from '../data/items_database.json';
 import StructuredData from './components/StructuredData';
 import Header from './components/Header';
@@ -15,6 +15,7 @@ import SettingsPanel from './components/items/SettingsPanel';
 import { Item } from './types/item';
 import { typeToCategory } from './config/categoryConfig';
 import { rarityOrder } from './config/rarityConfig';
+import TrackedItemsPanel from './components/items/TrackedItemsPanel';
 
 // Prevent FontAwesome from adding its CSS automatically since we're importing it manually
 config.autoAddCss = false;
@@ -25,11 +26,43 @@ export default function Home() {
   const [sortAscending, setSortAscending] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isTrackedOpen, setIsTrackedOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [itemSize, setItemSize] = useState<'tiny' | 'small' | 'medium' | 'large'>('small');
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
 
+  // get trackedItems from localStorage on init render - prevents error for some reason, idk honestly google told me to do this
+  const [trackedItems, setTrackedItems] = useState<Set<string>>(() => {
+    if (typeof window === "undefined") return new Set();
+    try {
+      const raw = localStorage.getItem("tracked_items");
+      const arr = raw ? JSON.parse(raw) : [];
+      return new Set(Array.isArray(arr) ? arr : []);
+    } catch {
+      return new Set();
+    }
+  });
+
+  const toggleItemTracked = (name: string) => {
+    setTrackedItems((prev) => {
+      const next = new Set(prev);
+      if (next.has(name)) {
+        next.delete(name);
+      } else {
+        next.add(name);
+      }
+
+      try {
+        localStorage.setItem("tracked_items", JSON.stringify(Array.from(next)));
+      } catch {}
+
+      return next;
+    });
+  };
+
+  const isTracked = (name: string) => trackedItems.has(name);
+  
   // Get all unique types grouped by category
   const typesByCategory = useMemo(() => {
     const grouped: { [category: string]: string[] } = {
@@ -223,6 +256,16 @@ export default function Home() {
           <FontAwesomeIcon icon={faBars} className="text-white text-xl relative z-10 drop-shadow-lg" />
         </button>
 
+        {/* Tracked supplies button */}
+        <button
+          onClick={() => setIsTrackedOpen(true)}
+          className="fixed bottom-25 left-25 lg:bottom-25 lg:right-8 lg:left-auto z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+          aria-label="Open tracked items"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
+          <FontAwesomeIcon icon={faEye} className="text-white text-xl relative z-10 drop-shadow-lg"/>
+        </button>
+
         {/* Settings Button */}
         <button
           onClick={() => setIsSettingsOpen(true)}
@@ -265,6 +308,8 @@ export default function Home() {
             displayPrice={displayPrice}
             displayWeight={displayWeight}
             onItemClick={setSelectedItem}
+            onItemTracked={toggleItemTracked}
+            isTrackedFunc={isTracked}
           />
         </div>
 
@@ -273,8 +318,23 @@ export default function Home() {
           <ItemDetailPanel
             item={selectedItem}
             onClose={() => setSelectedItem(null)}
+            onItemTracked={toggleItemTracked}
+            isTrackedFunc={isTracked}
           />
         )}
+
+        {/* Tracked items panel */}
+        <TrackedItemsPanel
+          items={filteredAndSortedItems}
+          trackedItems={trackedItems}
+          isOpen={isTrackedOpen}
+          itemSize={itemSize}
+          onClose={() => setIsTrackedOpen(false)}
+          onItemClick={setSelectedItem}
+          onItemTracked={toggleItemTracked}
+          isTrackedFunc={isTracked}
+        />
+        
 
         {/* Settings Panel */}
         <SettingsPanel

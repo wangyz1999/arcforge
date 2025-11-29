@@ -1,15 +1,19 @@
 import Image from 'next/image';
 import { Item } from '../../types/item';
 import { rarityColors, rarityGradients } from '../../config/rarityConfig';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 interface ItemCardProps {
   item: Item;
   displayPrice: boolean;
   displayWeight: boolean;
   onClick: () => void;
+  onTracked: () => void;
+  isTrackedFunc: (name: string) => boolean;
 }
 
-export default function ItemCard({ item, displayPrice, displayWeight, onClick }: ItemCardProps) {
+export default function ItemCard({ item, displayPrice, displayWeight, onClick, onTracked, isTrackedFunc }: ItemCardProps) {
   const rarity = item.infobox?.rarity || 'Common';
   const borderColor = rarityColors[rarity] || '#717471';
   const gradient = rarityGradients[rarity] || rarityGradients.Common;
@@ -25,6 +29,25 @@ export default function ItemCard({ item, displayPrice, displayWeight, onClick }:
         boxShadow: `0 4px 20px ${borderColor}30, 0 0 40px ${borderColor}10, inset 0 1px 0 rgba(255,255,255,0.1)`
       }}
     >
+
+      {/* Item Tracking Button */}
+      <button
+      onClick={(e) => {
+        e.stopPropagation();
+        onTracked();
+      }}
+      title={ isTrackedFunc(item.name) ? 'Untrack' : 'Track' }
+      className={
+        `absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
+        isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-gray-300'
+      }`}
+      style={ {cursor: 'pointer'}}
+      >
+        <FontAwesomeIcon
+          icon={faEye}
+          className="text-white text-xl relative z-10 drop-shadow-lg"
+        />
+      </button>
       {/* Animated border glow on hover */}
       <div 
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
