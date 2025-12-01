@@ -348,30 +348,53 @@ export default function Home() {
         {/* Header - Logo and Navigation */}
         <Header activePage="database" />
 
-        {/* Mobile Sidebar Toggle Button */}
-        <button
-          onClick={() => setIsSidebarOpen(true)}
-          className="lg:hidden fixed bottom-6 left-6 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
-          aria-label={t('buttons.openFilters')}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
-          <FontAwesomeIcon icon={faBars} className="text-white text-xl relative z-10 drop-shadow-lg" />
-        </button>
+        {/* Mobile action bar: filters, settings, tracked items */}
+        <div className="lg:hidden fixed bottom-6 left-0 right-0 z-30 flex items-center justify-start gap-4 px-4">
+          {/* Mobile Sidebar Toggle Button */}
+          <button
+            onClick={() => setIsSidebarOpen(true)}
+            className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
+            aria-label={t('buttons.openFilters')}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
+            <FontAwesomeIcon icon={faBars} className="text-white text-xl relative z-10 drop-shadow-lg" />
+          </button>
 
-        {/* Tracked supplies button */}
+          {/* Mobile Settings Button */}
+          <button
+            onClick={() => setIsSettingsOpen(true)}
+            className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+            aria-label={t('buttons.openSettings')}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
+            <FontAwesomeIcon icon={faCog} className="text-white text-xl relative z-10 drop-shadow-lg" />
+          </button>
+
+          {/* Mobile Tracked supplies button */}
+          <button
+            onClick={() => setIsTrackedOpen(true)}
+            className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+            aria-label={t('track.openTrackedItems')}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
+            <FontAwesomeIcon icon={faEye} className="text-white text-xl relative z-10 drop-shadow-lg"/>
+          </button>
+        </div>
+
+        {/* Desktop tracked supplies button */}
         <button
           onClick={() => setIsTrackedOpen(true)}
-          className="fixed bottom-25 left-25 lg:bottom-25 lg:right-8 lg:left-auto z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+          className="hidden lg:flex fixed bottom-25 right-8 z-30 w-14 h-14 items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
           aria-label={t('track.openTrackedItems')}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
           <FontAwesomeIcon icon={faEye} className="text-white text-xl relative z-10 drop-shadow-lg"/>
         </button>
 
-        {/* Settings Button */}
+        {/* Desktop Settings Button */}
         <button
           onClick={() => setIsSettingsOpen(true)}
-          className="fixed bottom-6 left-24 lg:bottom-8 lg:right-8 lg:left-auto z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+          className="hidden lg:flex fixed bottom-8 right-8 z-30 w-14 h-14 items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
           aria-label={t('buttons.openSettings')}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
