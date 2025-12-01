@@ -54,47 +54,62 @@ export default function Home() {
   }, []);
 
   // Load item view settings (size, price/weight visibility, track icons) from localStorage
+  // If no lightweightMode is stored yet, default to enabled on small/mobile viewports.
   useEffect(() => {
     try {
       const raw = localStorage.getItem('item_view_settings');
-      if (!raw) return;
 
-      const parsed = JSON.parse(raw) as {
+      let parsed: {
         itemSize?: string;
         displayPrice?: unknown;
         displayWeight?: unknown;
         showTrackIcons?: unknown;
         openCraftingGraphOnClick?: unknown;
         lightweightMode?: unknown;
-      };
+      } | null = null;
 
-      if (
-        parsed.itemSize === 'tiny' ||
-        parsed.itemSize === 'small' ||
-        parsed.itemSize === 'medium' ||
-        parsed.itemSize === 'large'
-      ) {
-        setItemSize(parsed.itemSize);
+      if (raw) {
+        parsed = JSON.parse(raw);
       }
 
-      if (typeof parsed.displayPrice === 'boolean') {
-        setDisplayPrice(parsed.displayPrice);
+      if (parsed) {
+        if (
+          parsed.itemSize === 'tiny' ||
+          parsed.itemSize === 'small' ||
+          parsed.itemSize === 'medium' ||
+          parsed.itemSize === 'large'
+        ) {
+          setItemSize(parsed.itemSize);
+        }
+
+        if (typeof parsed.displayPrice === 'boolean') {
+          setDisplayPrice(parsed.displayPrice);
+        }
+
+        if (typeof parsed.displayWeight === 'boolean') {
+          setDisplayWeight(parsed.displayWeight);
+        }
+
+        if (typeof parsed.showTrackIcons === 'boolean') {
+          setShowTrackIcons(parsed.showTrackIcons);
+        }
+
+        if (typeof parsed.openCraftingGraphOnClick === 'boolean') {
+          setOpenCraftingGraphOnClick(parsed.openCraftingGraphOnClick);
+        }
+
+        if (typeof parsed.lightweightMode === 'boolean') {
+          setLightweightMode(parsed.lightweightMode);
+          return;
+        }
       }
 
-      if (typeof parsed.displayWeight === 'boolean') {
-        setDisplayWeight(parsed.displayWeight);
-      }
-
-      if (typeof parsed.showTrackIcons === 'boolean') {
-        setShowTrackIcons(parsed.showTrackIcons);
-      }
-
-      if (typeof parsed.openCraftingGraphOnClick === 'boolean') {
-        setOpenCraftingGraphOnClick(parsed.openCraftingGraphOnClick);
-      }
-
-      if (typeof parsed.lightweightMode === 'boolean') {
-        setLightweightMode(parsed.lightweightMode);
+      // No stored lightweightMode preference – enable by default on mobile-sized screens.
+      if (typeof window !== 'undefined') {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          setLightweightMode(true);
+        }
       }
     } catch (error) {
       console.error('Failed to load item view settings from localStorage:', error);
