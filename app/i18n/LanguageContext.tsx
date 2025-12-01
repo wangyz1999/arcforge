@@ -2,20 +2,50 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback, useRef } from 'react';
 
-// Define supported languages
-export const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
+// Define supported languages (ordered for dropdown)
+export const SUPPORTED_LANGUAGES = [
+  'en', // English
+  'es', // Spanish
+  'fr', // French
+  'de', // German
+  'it', // Italian
+  'pt', // Portuguese
+  'ja', // Japanese
+  'ko', // Korean
+  'zh', // Simplified Chinese
+  'zht', // Traditional Chinese
+  'ar', // Arabic
+] as const;
 export type Language = typeof SUPPORTED_LANGUAGES[number];
 
 // Language labels for the selector
 export const LANGUAGE_LABELS: Record<Language, string> = {
   en: 'English',
   fr: 'Français',
+  ja: '日本語',
+  de: 'Deutsch',
+  pt: 'Português',
+  es: 'Español',
+  it: 'Italiano',
+  ko: '한국어',
+  zh: '简体中文',
+  zht: '繁體中文',
+  ar: 'العربية',
 };
 
 // Language flags/emojis for visual representation
 export const LANGUAGE_FLAGS: Record<Language, string> = {
-  en: '🇬🇧',
+  en: '🇺🇸',
   fr: '🇫🇷',
+  ja: '🇯🇵',
+  de: '🇩🇪',
+  pt: '🇵🇹',
+  es: '🇪🇸',
+  it: '🇮🇹',
+  ko: '🇰🇷',
+  zh: '🇨🇳',
+  zht: '🇭🇰',
+  ar: '🇸🇦',
 };
 
 interface LanguageContextType {
