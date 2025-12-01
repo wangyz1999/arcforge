@@ -5,6 +5,7 @@ import deTranslations from './translations/de.json';
 import ptTranslations from './translations/pt.json';
 import esTranslations from './translations/es.json';
 import itTranslations from './translations/it.json';
+import ruTranslations from './translations/ru.json';
 import koTranslations from './translations/ko.json';
 import zhTranslations from './translations/zh.json';
 import zhtTranslations from './translations/zht.json';
@@ -15,6 +16,7 @@ import itemsDeTranslations from './translations/items_de.json';
 import itemsPtTranslations from './translations/items_pt.json';
 import itemsEsTranslations from './translations/items_es.json';
 import itemsItTranslations from './translations/items_it.json';
+import itemsRuTranslations from './translations/items_ru.json';
 import itemsKoTranslations from './translations/items_ko.json';
 import itemsZhTranslations from './translations/items_zh.json';
 import itemsZhtTranslations from './translations/items_zht.json';
@@ -30,6 +32,7 @@ export const translations: Record<Language, Record<string, string>> = {
   pt: ptTranslations,
   es: esTranslations,
   it: itTranslations,
+  ru: ruTranslations,
   ko: koTranslations,
   zh: zhTranslations,
   zht: zhtTranslations,
@@ -45,6 +48,7 @@ export const itemTranslations: Record<Language, Record<string, string>> = {
   pt: itemsPtTranslations,
   es: itemsEsTranslations,
   it: itemsItTranslations,
+  ru: itemsRuTranslations,
   ko: itemsKoTranslations,
   zh: itemsZhTranslations,
   zht: itemsZhtTranslations,
