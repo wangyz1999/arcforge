@@ -3,34 +3,39 @@
     <img src="public/logo.webp" alt="ARC Forge Logo">
   </a>
 
-  [![Website](https://img.shields.io/badge/Website-arcforge.org-blueviolet?style=flat-square&logo=vercel)](https://arcforge.org/)
-  ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=wangyz1999.arcforge)
-  [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-  [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
-  [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![Website](https://img.shields.io/badge/Website-arcforge.org-blueviolet?style=flat-square&logo=vercel)](https://arcforge.org/)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=wangyz1999.arcforge)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+
 </div>
 
 **A live version of the website is hosted at <a href="https://arcforge.org/">arcforge.org</a>**
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm, yarn, pnpm, or bun
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/wangyz1999/arcforge.git
 cd arcforge
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -43,6 +48,10 @@ npm run dev
 npm run build
 npm start
 ```
+
+### Code Style
+
+- Prettier is configured and runs automatically on staged files via Husky + lint-staged when you make a commit.
 
 ## Data Pipeline
 
@@ -88,16 +97,13 @@ arcforge/
     └── run_pipeline.py
 ```
 
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 <div align="center">
   Made with ❤️ for the ARC Raiders community
