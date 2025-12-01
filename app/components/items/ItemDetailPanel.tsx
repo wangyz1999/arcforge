@@ -37,28 +37,28 @@ export default function ItemDetailPanel({ item, onClose, onItemTracked, isTracke
             <div className="absolute top-4 right-4 z-50 flex gap-4">
               {/* Track Item Button */}
               <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onItemTracked(item.name);
-              }}
-              title={isTrackedFunc(item.name) ? 'Untrack' : 'Track'}
-              className={`w-10 h-10 flex items-center justify-center rounded-md text-sm ${
-                isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-purple-200'
-              }`}
-              style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onItemTracked(item.name);
+                }}
+                title={isTrackedFunc(item.name) ? 'Untrack' : 'Track'}
+                className={`w-10 h-10 flex items-center justify-center rounded-md text-sm ${
+                  isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-purple-200'
+                }`}
+                style={{cursor: 'pointer'}}
               >
-              <FontAwesomeIcon
-                icon={faEye}
-                className="text-white text-xl relative z-10 drop-shadow-lg"
-              />
+                <FontAwesomeIcon
+                  icon={faEye}
+                  className="text-white text-xl relative z-10 drop-shadow-lg"
+                />
               </button>
 
               {/* Close Button */}
               <button
-              onClick={onClose}
-              className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 shadow-lg hover:scale-110 group"
+                onClick={onClose}
+                className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-lg transition-all duration-300 text-gray-400 hover:text-red-300 border border-purple-500/20 hover:border-red-500/50 shadow-lg hover:scale-110 group"
               >
-              <span className="text-lg group-hover:rotate-90 transition-transform duration-300">✕</span>
+                <span className="text-lg group-hover:rotate-90 transition-transform duration-300">✕</span>
               </button>
 
             </div>

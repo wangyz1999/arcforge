@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,18 +31,23 @@ export default function Home() {
   const [itemSize, setItemSize] = useState<'tiny' | 'small' | 'medium' | 'large'>('small');
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
+  const [showTrackIcons, setShowTrackIcons] = useState(false);
 
-  // get trackedItems from localStorage on init render - prevents error for some reason, idk honestly google told me to do this
-  const [trackedItems, setTrackedItems] = useState<Set<string>>(() => {
-    if (typeof window === "undefined") return new Set();
+  // Fix hydration bug: Initialize trackedItems as empty Set on both server and client
+  const [trackedItems, setTrackedItems] = useState<Set<string>>(new Set());
+
+  // Load tracked items from localStorage after component mounts (client-side only)
+  useEffect(() => {
     try {
       const raw = localStorage.getItem("tracked_items");
-      const arr = raw ? JSON.parse(raw) : [];
-      return new Set(Array.isArray(arr) ? arr : []);
-    } catch {
-      return new Set();
+      if (raw) {
+        const arr = JSON.parse(raw);
+        setTrackedItems(new Set(Array.isArray(arr) ? arr : []));
+      }
+    } catch (error) {
+      console.error("Failed to load tracked items from localStorage:", error);
     }
-  });
+  }, []);
 
   const toggleItemTracked = (name: string) => {
     setTrackedItems((prev) => {
@@ -307,6 +312,7 @@ export default function Home() {
             itemSize={itemSize}
             displayPrice={displayPrice}
             displayWeight={displayWeight}
+            showTrackIcons={showTrackIcons}
             onItemClick={setSelectedItem}
             onItemTracked={toggleItemTracked}
             isTrackedFunc={isTracked}
@@ -325,7 +331,7 @@ export default function Home() {
 
         {/* Tracked items panel */}
         <TrackedItemsPanel
-          items={filteredAndSortedItems}
+          items={itemsData as Item[]}
           trackedItems={trackedItems}
           isOpen={isTrackedOpen}
           itemSize={itemSize}
@@ -346,6 +352,8 @@ export default function Home() {
           setDisplayPrice={setDisplayPrice}
           displayWeight={displayWeight}
           setDisplayWeight={setDisplayWeight}
+          showTrackIcons={showTrackIcons}
+          setShowTrackIcons={setShowTrackIcons}
         />
       </div>
     </>

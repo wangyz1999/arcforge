@@ -136,8 +136,8 @@ export default function TrackedItemsPanel({
                           ? "bg-yellow-400 text-black"
                           : "bg-black/40 text-gray-300"
                       }`}
-                      style={{ cursor: "pointer" }}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
+                      style={{cursor: "pointer"}}
+                    >
                       <FontAwesomeIcon
                         icon={faEye}
                         className="text-white text-xl relative z-10 drop-shadow-lg"

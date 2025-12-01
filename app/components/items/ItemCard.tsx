@@ -8,12 +8,13 @@ interface ItemCardProps {
   item: Item;
   displayPrice: boolean;
   displayWeight: boolean;
+  showTrackIcon: boolean;
   onClick: () => void;
   onTracked: () => void;
   isTrackedFunc: (name: string) => boolean;
 }
 
-export default function ItemCard({ item, displayPrice, displayWeight, onClick, onTracked, isTrackedFunc }: ItemCardProps) {
+export default function ItemCard({ item, displayPrice, displayWeight, showTrackIcon, onClick, onTracked, isTrackedFunc }: ItemCardProps) {
   const rarity = item.infobox?.rarity || 'Common';
   const borderColor = rarityColors[rarity] || '#717471';
   const gradient = rarityGradients[rarity] || rarityGradients.Common;
@@ -30,24 +31,25 @@ export default function ItemCard({ item, displayPrice, displayWeight, onClick, o
       }}
     >
 
-      {/* Item Tracking Button */}
-      <button
-      onClick={(e) => {
-        e.stopPropagation();
-        onTracked();
-      }}
-      title={ isTrackedFunc(item.name) ? 'Untrack' : 'Track' }
-      className={
-        `absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
-        isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-gray-300'
-      }`}
-      style={ {cursor: 'pointer'}}
-      >
-        <FontAwesomeIcon
-          icon={faEye}
-          className="text-white text-xl relative z-10 drop-shadow-lg"
-        />
-      </button>
+      {/* Item Tracking Button - Only show if showTrackIcon is enabled */}
+      {showTrackIcon && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onTracked();
+          }}
+          title={isTrackedFunc(item.name) ? 'Untrack' : 'Track'}
+          className={`absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
+            isTrackedFunc(item.name) ? 'bg-yellow-400 text-black' : 'bg-black/40 text-gray-300'
+          }`}
+          style={{cursor: 'pointer'}}
+        >
+          <FontAwesomeIcon
+            icon={faEye}
+            className="text-white text-xl relative z-10 drop-shadow-lg"
+          />
+        </button>
+      )}
       {/* Animated border glow on hover */}
       <div 
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
