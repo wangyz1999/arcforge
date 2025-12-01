@@ -85,6 +85,7 @@
   "settings.large": "크게",
   "settings.displayPrice": "가격 표시",
   "settings.displayWeight": "무게 표시",
+  "settings.openCraftingGraphOnClick": "클릭 시 그래프 열기",
 
   "item.location": "획득처",
   "item.weight": "무게",

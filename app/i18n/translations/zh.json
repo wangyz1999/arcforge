@@ -85,6 +85,7 @@
   "settings.large": "大",
   "settings.displayPrice": "显示价格",
   "settings.displayWeight": "显示重量",
+  "settings.openCraftingGraphOnClick": "点击时打开关系图",
 
   "item.location": "位置",
   "item.weight": "重量",

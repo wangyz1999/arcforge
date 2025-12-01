@@ -85,6 +85,7 @@
   "settings.large": "كبير",
   "settings.displayPrice": "إظهار السعر",
   "settings.displayWeight": "إظهار الوزن",
+  "settings.openCraftingGraphOnClick": "فتح المخطط عند النقر",
 
   "item.location": "الموقع",
   "item.weight": "الوزن",

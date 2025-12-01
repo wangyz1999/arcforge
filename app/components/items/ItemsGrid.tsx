@@ -15,6 +15,7 @@ interface ItemsGridProps {
   onItemClick: (item: Item) => void;
   onItemTracked: (name: string) => void;
   isTrackedFunc: (name: string) => boolean;
+  openCraftingGraphOnClick: boolean;
 }
 
 export default function ItemsGrid({
@@ -25,7 +26,8 @@ export default function ItemsGrid({
   showTrackIcons,
   onItemClick,
   onItemTracked,
-  isTrackedFunc
+  isTrackedFunc,
+  openCraftingGraphOnClick,
 }: ItemsGridProps) {
   const { t } = useTranslation();
 
@@ -41,18 +43,28 @@ export default function ItemsGrid({
             ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'
             : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4'
         }`}>
-          {items.map((item, index) => (
-            <ItemCard
-              key={`${item.name}-${index}`}
-              item={item}
-              displayPrice={displayPrice}
-              displayWeight={displayWeight}
-              showTrackIcon={showTrackIcons}
-              onClick={() => onItemClick(item)}
-              onTracked={ () => onItemTracked(item.name)}
-              isTrackedFunc={ isTrackedFunc }
-            />
-          ))}
+          {items.map((item, index) => {
+            const handleClick = () => {
+              if (openCraftingGraphOnClick) {
+                window.location.href = `/crafting-graph?item=${encodeURIComponent(item.name)}`;
+              } else {
+                onItemClick(item);
+              }
+            };
+
+            return (
+              <ItemCard
+                key={`${item.name}-${index}`}
+                item={item}
+                displayPrice={displayPrice}
+                displayWeight={displayWeight}
+                showTrackIcon={showTrackIcons}
+                onClick={handleClick}
+                onTracked={() => onItemTracked(item.name)}
+                isTrackedFunc={isTrackedFunc}
+              />
+            );
+          })}
         </div>
 
         {/* No Results */}

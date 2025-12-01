@@ -34,6 +34,7 @@ export default function Home() {
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
   const [showTrackIcons, setShowTrackIcons] = useState(false);
+  const [openCraftingGraphOnClick, setOpenCraftingGraphOnClick] = useState(false);
 
   // Fix hydration bug: Initialize trackedItems as empty Set on both server and client
   const [trackedItems, setTrackedItems] = useState<Set<string>>(new Set());
@@ -62,6 +63,7 @@ export default function Home() {
         displayPrice?: unknown;
         displayWeight?: unknown;
         showTrackIcons?: unknown;
+        openCraftingGraphOnClick?: unknown;
       };
 
       if (
@@ -84,6 +86,10 @@ export default function Home() {
       if (typeof parsed.showTrackIcons === 'boolean') {
         setShowTrackIcons(parsed.showTrackIcons);
       }
+
+      if (typeof parsed.openCraftingGraphOnClick === 'boolean') {
+        setOpenCraftingGraphOnClick(parsed.openCraftingGraphOnClick);
+      }
     } catch (error) {
       console.error('Failed to load item view settings from localStorage:', error);
     }
@@ -97,12 +103,13 @@ export default function Home() {
         displayPrice,
         displayWeight,
         showTrackIcons,
+        openCraftingGraphOnClick,
       };
       localStorage.setItem('item_view_settings', JSON.stringify(settings));
     } catch {
       // Ignore write errors (e.g., private mode / quota exceeded)
     }
-  }, [itemSize, displayPrice, displayWeight, showTrackIcons]);
+  }, [itemSize, displayPrice, displayWeight, showTrackIcons, openCraftingGraphOnClick]);
 
   const toggleItemTracked = (name: string) => {
     setTrackedItems((prev) => {
@@ -381,6 +388,7 @@ export default function Home() {
             displayPrice={displayPrice}
             displayWeight={displayWeight}
             showTrackIcons={showTrackIcons}
+          openCraftingGraphOnClick={openCraftingGraphOnClick}
             onItemClick={setSelectedItem}
             onItemTracked={toggleItemTracked}
             isTrackedFunc={isTracked}
@@ -422,6 +430,8 @@ export default function Home() {
           setDisplayWeight={setDisplayWeight}
           showTrackIcons={showTrackIcons}
           setShowTrackIcons={setShowTrackIcons}
+          openCraftingGraphOnClick={openCraftingGraphOnClick}
+          setOpenCraftingGraphOnClick={setOpenCraftingGraphOnClick}
         />
       </div>
     </>

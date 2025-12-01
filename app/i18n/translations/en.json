@@ -46,6 +46,7 @@
   "settings.large": "Large",
   "settings.displayPrice": "Display Price",
   "settings.displayWeight": "Display Weight",
+  "settings.openCraftingGraphOnClick": "Open graph on click",
 
   "item.location": "Location",
   "item.weight": "Weight",

@@ -85,6 +85,7 @@
   "settings.large": "Groß",
   "settings.displayPrice": "Preis anzeigen",
   "settings.displayWeight": "Gewicht anzeigen",
+  "settings.openCraftingGraphOnClick": "Grafik beim Klick öffnen",
 
   "item.location": "Fundort",
   "item.weight": "Gewicht",

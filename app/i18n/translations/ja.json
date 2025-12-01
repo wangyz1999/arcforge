@@ -85,6 +85,7 @@
   "settings.large": "大",
   "settings.displayPrice": "価格を表示",
   "settings.displayWeight": "重量を表示",
+  "settings.openCraftingGraphOnClick": "クリックでグラフを開く",
 
   "item.location": "入手場所",
   "item.weight": "重量",
