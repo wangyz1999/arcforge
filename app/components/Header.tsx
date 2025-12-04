@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -9,26 +9,18 @@ import { useTranslation } from "../i18n";
 import LanguageSelector from "./LanguageSelector";
 
 interface HeaderProps {
-  activePage: "database";
   searchQuery?: string;
   setSearchQuery?: (query: string) => void;
   onLogoClick?: () => void;
 }
 
-export default function Header({
-  activePage,
-  searchQuery,
-  setSearchQuery,
-  onLogoClick,
-}: HeaderProps) {
+export default function Header({ searchQuery, setSearchQuery, onLogoClick }: HeaderProps) {
   const { t } = useTranslation();
   const searchInputRef = useRef<HTMLInputElement>(null);
-  const [isMac, setIsMac] = useState(true);
 
-  // Detect if user is on macOS
-  useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
-  }, []);
+  // Detect if user is on macOS (computed once, no state needed)
+  const isMac =
+    typeof navigator !== "undefined" && navigator.platform.toUpperCase().indexOf("MAC") >= 0;
 
   // Cmd+K / Ctrl+K keyboard shortcut to focus search
   useEffect(() => {

@@ -98,27 +98,30 @@ export function LanguageProvider({
 
   // Load saved language preference after hydration
   useEffect(() => {
-    setIsHydrated(true);
-    try {
-      const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
-      if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
-        setLanguageState(savedLanguage);
-        if (savedLanguage !== "en") {
-          setShowTranslationWarning(true);
+    // Use requestAnimationFrame to defer state updates and avoid cascading renders
+    requestAnimationFrame(() => {
+      setIsHydrated(true);
+      try {
+        const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
+        if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
+          setLanguageState(savedLanguage);
+          if (savedLanguage !== "en") {
+            setShowTranslationWarning(true);
+          }
+          return;
         }
-        return;
-      }
 
-      const browserLang = navigator.language.split("-")[0] as Language;
-      if (SUPPORTED_LANGUAGES.includes(browserLang)) {
-        setLanguageState(browserLang);
-        if (browserLang !== "en") {
-          setShowTranslationWarning(true);
+        const browserLang = navigator.language.split("-")[0] as Language;
+        if (SUPPORTED_LANGUAGES.includes(browserLang)) {
+          setLanguageState(browserLang);
+          if (browserLang !== "en") {
+            setShowTranslationWarning(true);
+          }
         }
+      } catch {
+        // localStorage or navigator not available
       }
-    } catch {
-      // localStorage or navigator not available
-    }
+    });
   }, []);
 
   // Save language preference when it changes (user action only)

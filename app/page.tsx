@@ -393,7 +393,6 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-br from-[#07020b] via-[#0a0514] to-[#07020b] text-gray-100 flex flex-col relative overflow-hidden">
         {/* Header - Logo and Navigation */}
         <Header
-          activePage="database"
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onLogoClick={handleLogoClick}

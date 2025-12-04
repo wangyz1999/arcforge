@@ -7,7 +7,7 @@ import { faCog, faQuestionCircle, faTimes } from "@fortawesome/free-solid-svg-ic
 import itemsRelationData from "../../../data/items_relation.json";
 import GraphSettingsPanel from "./GraphSettingsPanel";
 import HelpPanel from "./HelpPanel";
-import QuickSearchBar from "./QuickSearchBar";
+// QuickSearchBar import removed - using local QuickSearchBarModal instead
 import { ItemData } from "../../types/graph";
 import { cytoscapeStyles } from "../../config/cytoscapeStyles";
 import { buildGraphElements, buildLayoutPositions } from "../../utils/graphHelpers";
@@ -241,7 +241,6 @@ export default function CraftingGraphModal({
           {/* Quick Search Bar */}
           <div className="absolute top-4 right-4 z-20 w-64 md:w-80">
             <QuickSearchBarModal
-              selectedEdgeTypes={selectedEdgeTypes}
               onItemSelect={(name) => {
                 hasAnimated.current = null;
                 setCurrentItemName(name);
@@ -305,14 +304,8 @@ export default function CraftingGraphModal({
 }
 
 // Simplified QuickSearchBar for modal use (no router navigation)
-function QuickSearchBarModal({
-  selectedEdgeTypes,
-  onItemSelect,
-}: {
-  selectedEdgeTypes: Set<string>;
-  onItemSelect: (name: string) => void;
-}) {
-  const { t, tItem, language } = useTranslation();
+function QuickSearchBarModal({ onItemSelect }: { onItemSelect: (name: string) => void }) {
+  const { t, tItem } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
