@@ -158,5 +158,9 @@
   "track.clearAll": "مسح الكل",
   "track.clearAllTitle": "مسح جميع العناصر المتتبعة",
   "track.noItemsYet": "لا توجد عناصر متتبعة بعد.",
-  "track.openTrackedItems": "فتح العناصر المتتبعة"
+  "track.openTrackedItems": "فتح العناصر المتتبعة",
+
+  "recommendation.title": "التوصية",
+  "recommendation.keepFor": "احتفظ به لـ",
+  "recommendation.recycleFor": "إعادة تدوير للحصول على"
 }

@@ -158,5 +158,9 @@
   "track.clearAll": "すべてクリア",
   "track.clearAllTitle": "追跡中のアイテムをすべてクリア",
   "track.noItemsYet": "まだ追跡中のアイテムはありません。",
-  "track.openTrackedItems": "追跡中のアイテムを開く"
+  "track.openTrackedItems": "追跡中のアイテムを開く",
+
+  "recommendation.title": "おすすめ",
+  "recommendation.keepFor": "保持用途",
+  "recommendation.recycleFor": "リサイクル素材"
 }

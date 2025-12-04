@@ -158,5 +158,9 @@
   "track.clearAll": "Limpar tudo",
   "track.clearAllTitle": "Limpar todos os itens acompanhados",
   "track.noItemsYet": "Nenhum item está sendo acompanhado ainda.",
-  "track.openTrackedItems": "Abrir itens acompanhados"
+  "track.openTrackedItems": "Abrir itens acompanhados",
+
+  "recommendation.title": "Recomendação",
+  "recommendation.keepFor": "Guardar para",
+  "recommendation.recycleFor": "Reciclar para"
 }

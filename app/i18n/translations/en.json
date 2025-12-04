@@ -120,5 +120,9 @@
   "track.clearAll": "Clear All",
   "track.clearAllTitle": "Clear all tracked items",
   "track.noItemsYet": "No tracked items yet.",
-  "track.openTrackedItems": "Open tracked items"
+  "track.openTrackedItems": "Open tracked items",
+
+  "recommendation.title": "Recommendation",
+  "recommendation.keepFor": "Keep for",
+  "recommendation.recycleFor": "Recycle for"
 }

@@ -1,0 +1,1130 @@
+{
+  "Advanced Arc Powercell": {
+    "recommendation": "Recycle",
+    "recycleFor": "2x ARC Powercell",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Advanced Electrical Components": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Electrical Components, 1x Wires",
+    "keepFor": "10x for Gear Bench III and Utility Station III Upgrades",
+    "sellPrice": 1750
+  },
+  "Advanced Mechanical Components": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Mechanical Components, 1x Steel Spring",
+    "keepFor": "5x for Gunsmith III Upgrade",
+    "sellPrice": 1750
+  },
+  "Agave": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Agave Juice": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "Quick Use for Healing",
+    "sellPrice": 1800
+  },
+  "Air Freshener": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Alarm Clock": {
+    "recommendation": "Sell",
+    "recycleFor": "6x Plastic Parts, 1x Processor",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Antiseptic": {
+    "recommendation": "Keep",
+    "recycleFor": "10x Chemical",
+    "keepFor": "Crafting Heals",
+    "sellPrice": 1000
+  },
+  "Apricot": {
+    "recommendation": "Keep until upgrades are complete; sell once done",
+    "recycleFor": "3x Assorted Seeds",
+    "keepFor": "17x for Scrappy Level III and V",
+    "sellPrice": 640
+  },
+  "ARC Alloy": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Metal Parts",
+    "keepFor": "18x for Explosives, Medical Lab, and Utility Station Level I Upgrades",
+    "sellPrice": 200
+  },
+  "ARC Circuitry": {
+    "recommendation": "Keep",
+    "recycleFor": "2x ARC Alloy",
+    "keepFor": "10x for Refiner III Upgrade",
+    "sellPrice": 1000
+  },
+  "ARC Coolant": {
+    "recommendation": "Sell",
+    "recycleFor": "16x Chemicals",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "ARC Flex Rubber": {
+    "recommendation": "Keep or Sell if excess",
+    "recycleFor": "16x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "ARC Motion Core": {
+    "recommendation": "Keep",
+    "recycleFor": "2x ARC Alloy",
+    "keepFor": "5x for Refiner II Upgrades",
+    "sellPrice": 1000
+  },
+  "ARC Performance Steel": {
+    "recommendation": "Recycle",
+    "recycleFor": "12x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "ARC Powercell": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "5x for Refiner I and Crafting Shield Rechargers",
+    "sellPrice": 640
+  },
+  "ARC Synthetic Resin": {
+    "recommendation": "Sell",
+    "recycleFor": "14x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "ARC Thermo Lining": {
+    "recommendation": "Recycle",
+    "recycleFor": "16x Fabric",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Assorted Seeds": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 100
+  },
+  "Bastion Cell": {
+    "recommendation": "Keep until upgrades are complete; sell once done",
+    "recycleFor": "2x ARC Alloy, 2x Advanced Mechanical Components",
+    "keepFor": "6x for Gear Bench III Upgrade",
+    "sellPrice": 5000
+  },
+  "Battery": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 250
+  },
+  "Bicycle Pump": {
+    "recommendation": "Recycle",
+    "recycleFor": "4x Canister, 10x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Bombardier Cell": {
+    "recommendation": "Keep until upgrades are complete; sell once done",
+    "recycleFor": "2x Advanced Mechanical Components, 2x ARC Alloys",
+    "keepFor": "6x for Refiner III Upgrades",
+    "sellPrice": 5000
+  },
+  "Breathtaking Snow Globe": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 7000
+  },
+  "Broken Flashlight": {
+    "recommendation": "Recycle",
+    "recycleFor": "2x Battery, 6x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Broken Guidance System": {
+    "recommendation": "Recycle",
+    "recycleFor": "4x Processor",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Broken Handheld Radio": {
+    "recommendation": "Recycle",
+    "recycleFor": "3x Sensors, 2x Wires",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Broken Taser": {
+    "recommendation": "Sell",
+    "recycleFor": "2x Battery, 2x Wires",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Burned ARC Circuitry": {
+    "recommendation": "Recycle",
+    "recycleFor": "2x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Camera Lens": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Candle Holder": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Canister": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Plastics Parts",
+    "keepFor": null,
+    "sellPrice": 300
+  },
+  "Cat Bed": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": null,
+    "keepFor": "1x for Scrappy Level IV Upgrades",
+    "sellPrice": 1000
+  },
+  "Chemicals": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 50
+  },
+  "Coffee Pot": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Complex Gun Parts": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Simple Gun Parts",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Coolant": {
+    "recommendation": "Sell",
+    "recycleFor": "5x Chemicals, 2x Oil",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Cooling Coil": {
+    "recommendation": "Sell",
+    "recycleFor": "6x Chemicals, 2x Steel Springs",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Cooling Fan": {
+    "recommendation": "Sell",
+    "recycleFor": "14x Plastic Parts, 4x Wires",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Cracked Bioscanner": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "3x Rubber Parts, 3x Battery",
+    "keepFor": "2x for Medical Lab II Upgrade",
+    "sellPrice": 1000
+  },
+  "Crude Explosives": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Chemicals",
+    "keepFor": "5x for Explosives Station II Upgrade",
+    "sellPrice": 270
+  },
+  "Crumpled Plastic Bottle": {
+    "recommendation": "Recycle",
+    "recycleFor": "4x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 270
+  },
+  "Damaged ARC Motion Core": {
+    "recommendation": "Recycle",
+    "recycleFor": "2x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Damaged Fireball Burner": {
+    "recommendation": "Recycle",
+    "recycleFor": "1x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 270
+  },
+  "Damaged Heat Sink": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "6x Metal Parts, 2x Wires",
+    "keepFor": "2x for Utility Station II Upgrade",
+    "sellPrice": 1000
+  },
+  "Damaged Hornet Driver": {
+    "recommendation": "Recycle",
+    "recycleFor": "2x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Damaged Rocketeer Driver": {
+    "recommendation": "Sell",
+    "recycleFor": "3x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Damaged Tick Pod": {
+    "recommendation": "Recycle",
+    "recycleFor": "1x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 270
+  },
+  "Dartboard": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Deflated Football": {
+    "recommendation": "Recycle",
+    "recycleFor": "9x Rubber Parts, 9x Fabric",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Degraded ARC Rubber": {
+    "recommendation": "Recycle",
+    "recycleFor": "11x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Diving Goggles": {
+    "recommendation": "Recycle",
+    "recycleFor": "12x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Dog Collar": {
+    "recommendation": "Keep until upgrade is complete; recycle once done",
+    "recycleFor": "8x Fabric, 1x Metal Parts",
+    "keepFor": "1x Scrappy for Level II Upgrade",
+    "sellPrice": 640
+  },
+  "Dried-Out ARC Resin": {
+    "recommendation": "Recycle",
+    "recycleFor": "9x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Duct Tape": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Durable Cloth": {
+    "recommendation": "Keep",
+    "recycleFor": "6x Fabric",
+    "keepFor": "5x for Medical Lab II Upgrade",
+    "sellPrice": 640
+  },
+  "Electrical Components": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Plastics Parts, 3x Rubber Parts",
+    "keepFor": "10x Gear Bench II and Utility Station II Upgrades",
+    "sellPrice": 640
+  },
+  "Empty Wine Bottle": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Exodus Modules": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Magnet, 1x Mechanical Components",
+    "keepFor": null,
+    "sellPrice": 2750
+  },
+  "Expired Pasta": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Expired Respirator": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Rubber Parts, 4x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Explosive Compound": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Crude Explosives",
+    "keepFor": "5x for Explosives Station III Upgrade",
+    "sellPrice": 1000
+  },
+  "Fabric": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "80x for Gear Bench I and Medical Lab I Upgrades",
+    "sellPrice": 50
+  },
+  "Faded Photograph": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Fertilizer": {
+    "recommendation": "Sell",
+    "recycleFor": "2x Assorted Seeds",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Film Reel": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Fine Wristwatch": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Fireball Burner": {
+    "recommendation": "Keep until upgrade is complete; recycle once done",
+    "recycleFor": "1x ARC Alloy, 1x Crude Explosives",
+    "keepFor": "8x for Refiner II Upgrade",
+    "sellPrice": 640
+  },
+  "Flow Controller": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Mechanical Components, 1x Sensors",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Frequency Modulation Box": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Electrical Components, 1x Speaker Component",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Fried Motherboard": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "5x Plastic Parts, 2x Electrical Components",
+    "keepFor": "3x for Utility Station III Upgrade",
+    "sellPrice": 2000
+  },
+  "Frying Pan": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Garlic Press": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "12x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Geiger Counter": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "3x Battery, 1x Exodus Modules",
+    "keepFor": null,
+    "sellPrice": 3500
+  },
+  "Great Mullein": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Assorted Seeds",
+    "keepFor": null,
+    "sellPrice": 300
+  },
+  "Headphones": {
+    "recommendation": "Sell",
+    "recycleFor": "7x Rubber Parts, 1x Speaker Components",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Heavy Gun Parts": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Simple Gun Parts",
+    "keepFor": null,
+    "sellPrice": 700
+  },
+  "Hornet Driver": {
+    "recommendation": "Keep until upgrade is complete; recycle once done (Sell if excess)",
+    "recycleFor": "2x ARC Alloy, 2x Electrical Components",
+    "keepFor": "5x for Gear Bench II Upgrade",
+    "sellPrice": 2000
+  },
+  "Household Cleaner": {
+    "recommendation": "Recycle",
+    "recycleFor": "11x Chemicals",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Humidifier": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Canister, 2x Wires",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Ice Cream Scooper": {
+    "recommendation": "Recycle",
+    "recycleFor": "7x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Impure ARC Coolant": {
+    "recommendation": "Recycle",
+    "recycleFor": "12x Chemicals",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Industrial Battery": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "7x Chemicals, 2x Battery",
+    "keepFor": "3x for Gear Bench III Upgrade",
+    "sellPrice": 1000
+  },
+  "Industrial Charger": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "5x Metal Parts, 1x Voltage Converter",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Industrial Magnet": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "4x Metal Parts, 2x Magnet",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Ion Sputter": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "4x Voltage Converter, 1x Exodus Modules",
+    "keepFor": null,
+    "sellPrice": 6000
+  },
+  "Laboratory Reagents": {
+    "recommendation": "Keep until upgrade is complete; recycle once done",
+    "recycleFor": "16x Chemicals, 3x Crude Explosives",
+    "keepFor": "3x for Explosives Station III Upgrade",
+    "sellPrice": 2000
+  },
+  "Lance's Mixtape": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 10000
+  },
+  "Leaper Pulse Unit": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "3x Arc Alloy, 2x Advanced Mechanical Components",
+    "keepFor": "4x for Utility Station III Upgrade",
+    "sellPrice": 5000
+  },
+  "Lemon": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "3x Assorted Seeds",
+    "keepFor": "5x for Scrappy Level III Upgrade",
+    "sellPrice": 640
+  },
+  "Light Bulb": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Light Gun Parts": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Simple Gun Parts",
+    "keepFor": null,
+    "sellPrice": 700
+  },
+  "Magnet": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 300
+  },
+  "Magnetic Accelerator": {
+    "recommendation": "Keep for high-tier crafting; if excess, sell",
+    "recycleFor": "1x Advanced Mechanical Components, 1x ARC Motion Core",
+    "keepFor": null,
+    "sellPrice": 5500
+  },
+  "Magnetron": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Magnetic Accelerator, 1x Steel Spring",
+    "keepFor": null,
+    "sellPrice": 6000
+  },
+  "Matriarch Reactor": {
+    "recommendation": "Keep for high-tier crafting; if excess, sell",
+    "recycleFor": "1x Power Rod, 1x Magnetic Accelerator",
+    "keepFor": null,
+    "sellPrice": 13000
+  },
+  "Mechanical Components": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Metal Parts, 2x Rubber Parts",
+    "keepFor": "5x for Gunsmith II Upgrade",
+    "sellPrice": 640
+  },
+  "Medium Gun Parts": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Simple Gun Parts",
+    "keepFor": null,
+    "sellPrice": 700
+  },
+  "Metal Brackets": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Metal Parts": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "80x for Gunsmith I and Refiner I Upgrades",
+    "sellPrice": 75
+  },
+  "Microscope": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Mechanical Components, 3x Magnet",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Mini Centrifuge": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Mechanical Components, 2x Canister",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Mod Components": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Mechanical Components, 1x Steel Spring",
+    "keepFor": null,
+    "sellPrice": 1750
+  },
+  "Moss": {
+    "recommendation": "Keep for defib; recycle after",
+    "recycleFor": "3x Assorted Seeds",
+    "keepFor": "Medical Lab: Defibrillator",
+    "sellPrice": 500
+  },
+  "Motor": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Oil, 2x Mechanical Components",
+    "keepFor": "3x for Refiner III Upgrade",
+    "sellPrice": 2000
+  },
+  "Mushroom": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": null,
+    "keepFor": "12x for Scrappy Level V Upgrade",
+    "sellPrice": 1000
+  },
+  "Music Album": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Music Box": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 5000
+  },
+  "Number Plate": {
+    "recommendation": "Recycle",
+    "recycleFor": "3x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 270
+  },
+  "Oil": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Chemicals",
+    "keepFor": null,
+    "sellPrice": 300
+  },
+  "Olives": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "2x Assorted Seeds",
+    "keepFor": "8x for Scrappy Level IV Upgrade",
+    "sellPrice": 640
+  },
+  "Painted Box": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Plastic Parts": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "75x for Gear Bench I and Utility Station I Upgrades",
+    "sellPrice": 60
+  },
+  "Playing Cards": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 5000
+  },
+  "Polluted Air Filter": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "6x Fabric, 2x Oil",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Pop Trigger": {
+    "recommendation": "Recycle after upgrade is done",
+    "recycleFor": "1x Crude Explosives, 1x ARC Alloy",
+    "keepFor": "5x for Explosives Station II Upgrade",
+    "sellPrice": 640
+  },
+  "Portable TV": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "6x Wires, 2x Battery",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Poster of Natural Wonders": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Pottery": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Power Bank": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Battery, 2x Wires",
+    "keepFor": null,
+    "sellPrice": null
+  },
+  "Power Cable": {
+    "recommendation": "Recycle",
+    "recycleFor": "4x Wires",
+    "keepFor": "3x for Gear Bench II Upgrade",
+    "sellPrice": 1000
+  },
+  "Power Rod": {
+    "recommendation": "Keep for high-tier crafting; if excess, sell",
+    "recycleFor": "1x Advanced Electrical Components, 1x ARC Circuitry",
+    "keepFor": null,
+    "sellPrice": 5500
+  },
+  "Prickly Pear": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": null,
+    "keepFor": "8x for Scrappy Level IV Upgrade",
+    "sellPrice": 640
+  },
+  "Processor": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Wires, 1x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Projector": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Wires, 1x Processor",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Queen Reactor": {
+    "recommendation": "Keep for high-tier crafting; if excess, sell",
+    "recycleFor": "1x Power Rod, 1x Magnetic Accelerator",
+    "keepFor": null,
+    "sellPrice": 13000
+  },
+  "Radio": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Speaker Component, 1x Sensors",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Radio Relay": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Speaker Componets, 2x Sensors",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Recorder": {
+    "recommendation": "Sell",
+    "recycleFor": "10x Plastic Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Red Coral Jewelry": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 5000
+  },
+  "Remote Control": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "7x Plastic Parts, 1x Sensors",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Resin": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Ripped Safety Vest": {
+    "recommendation": "Recycle",
+    "recycleFor": "1x Durable Cloth, 1x Magnet",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Rocketeer Driver": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "3x ARC Alloy, 2x Advanced Electrical Components",
+    "keepFor": "3x for Explosive Station III Upgrade",
+    "sellPrice": 5000
+  },
+  "Roots": {
+    "recommendation": "Sell",
+    "recycleFor": "1x Assorted Seeds",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Rope": {
+    "recommendation": "Keep",
+    "recycleFor": "5x Fabric",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Rosary": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Rotary Encoder": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Electrical Components, 2x Processor",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Rubber Duck": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": "There might be a quest tied to having rubber ducks, so maybe keep some",
+    "sellPrice": 1000
+  },
+  "Rubber Pad": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "18x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Rubber Parts": {
+    "recommendation": "Keep",
+    "recycleFor": null,
+    "keepFor": "30x for Gunsmith I Upgrade",
+    "sellPrice": 50
+  },
+  "Ruined Accordion": {
+    "recommendation": "Sell",
+    "recycleFor": "18x Rubber Parts, 3x Steel Spring",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Ruined Baton": {
+    "recommendation": "Recycle",
+    "recycleFor": "6x Metal Parts, 3x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Ruined Handcuffs": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Ruined Parachute": {
+    "recommendation": "Recycle",
+    "recycleFor": "10x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Ruined Riot Shield": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "10x Plastic Parts, 6x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Ruined Tactical Vest": {
+    "recommendation": "Recycle",
+    "recycleFor": "5x Fabric, 1x Magnet",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Rusted Bolts": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Rusted Gear": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "4x Metal Parts, 2x Mechanical Components",
+    "keepFor": "3x for Gunsmith III Upgrade",
+    "sellPrice": 2000
+  },
+  "Rusted Shut Medical Kit": {
+    "recommendation": "Keep until upgrade is complete; recycle once done",
+    "recycleFor": "2x Syringe, 1x Antiseptic",
+    "keepFor": "3x for Medical Lab III Upgrade",
+    "sellPrice": 2000
+  },
+  "Rusted Tools": {
+    "recommendation": "Keep until upgrade is complete; sell once done",
+    "recycleFor": "8x Metal Parts, 1x Steel Spring",
+    "keepFor": "3x for Gunsmith II Upgrade",
+    "sellPrice": 1000
+  },
+  "Rusty ARC Steel": {
+    "recommendation": "Recycle",
+    "recycleFor": "8x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Sample Cleaner": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Electrical Components, 14x Assorted Seeds",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Sensors": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Wires, 1x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Sentinel Firing Core": {
+    "recommendation": "Keep until upgrade is complete; sell or recycle once done",
+    "recycleFor": "2x ARC Alloy, 3x Mechanical Components",
+    "keepFor": "4x for Gunsmith III Upgrade",
+    "sellPrice": 3000
+  },
+  "Shredder Gyro": {
+    "recommendation": "Recycle",
+    "recycleFor": "3x Mechanical Components, 3x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Signal Amplifier": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Electrical Components, 2x Voltage Converter",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Silver Teaspoon Set": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Simple Gun Parts": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Metals Parts",
+    "keepFor": null,
+    "sellPrice": 330
+  },
+  "Snitch Scanner": {
+    "recommendation": "Keep",
+    "recycleFor": "4x ARC Alloy",
+    "keepFor": "6x for Utility Station II Upgrade",
+    "sellPrice": 2000
+  },
+  "Speaker Component": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Plastic Parts, 3x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Spectrometer": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Electrical Components, 1x Sensors",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Spectrum Analyzer": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Sensors, 1x Exodus Modules",
+    "keepFor": null,
+    "sellPrice": 3500
+  },
+  "Spotter Relay": {
+    "recommendation": "Sell",
+    "recycleFor": "2x Electrical Components, 1x ARC Alloy",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Spring Cushion": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Durable Cloth, 2x Steel Springs",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Statuette": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Steel Spring": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Metal Parts",
+    "keepFor": null,
+    "sellPrice": 300
+  },
+  "Surveyor Vault": {
+    "recommendation": "Keep until upgrade is complete; sell or recycle once done",
+    "recycleFor": "2x Mechanical Components, 2x ARC Alloy",
+    "keepFor": "5x for Medical Lab III Upgrades",
+    "sellPrice": 2000
+  },
+  "Synthesised Fuel": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Oil, 1x Chemicals",
+    "keepFor": "3x for Explosives Station II Upgrade",
+    "sellPrice": 700
+  },
+  "Syringe": {
+    "recommendation": "Keep",
+    "recycleFor": "3x Plastic Parts, 2x Chemicals",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Tattered ARC Lining": {
+    "recommendation": "Recycle",
+    "recycleFor": "12x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Tattered Clothes": {
+    "recommendation": "Recycle",
+    "recycleFor": "11x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Telemetry Transceiver": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Advanced Electrical Components, 1x Processor",
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Thermostat": {
+    "recommendation": "Sell",
+    "recycleFor": "7x Rubber Parts, 1x Sensors",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Tick Pod": {
+    "recommendation": "Keep until upgrade is complete; sell or recycle once done",
+    "recycleFor": "2x Arc Alloy, 2x Chemicals",
+    "keepFor": "8x for Medical Lab II Upgrade",
+    "sellPrice": 640
+  },
+  "Toaster": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "5x Plastic Parts, 3x Wires",
+    "keepFor": "3x for Refiner II Upgrade",
+    "sellPrice": 1000
+  },
+  "Torn Blanket": {
+    "recommendation": "Recycle",
+    "recycleFor": "12x Fabric",
+    "keepFor": null,
+    "sellPrice": 640
+  },
+  "Torn Book": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Turbo Pump": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "1x Mechanical Components, 3x Oil",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Unusable Weapon": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "4x Metal Parts, 5x Simple Gun Parts",
+    "keepFor": null,
+    "sellPrice": 2000
+  },
+  "Vase": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 3000
+  },
+  "Very Comfortable Pillow": {
+    "recommendation": "Keep for Scrappy Level V Upgrade; sell afterwards",
+    "recycleFor": null,
+    "keepFor": "3x for Scrappy Level V Upgrade",
+    "sellPrice": 2000
+  },
+  "Volcanic Rock": {
+    "recommendation": "Sell",
+    "recycleFor": null,
+    "keepFor": null,
+    "sellPrice": 270
+  },
+  "Voltage Converter": {
+    "recommendation": "Keep",
+    "recycleFor": "1x Wires, 1x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 500
+  },
+  "Wasp Driver": {
+    "recommendation": "Keep",
+    "recycleFor": "1x ARC Alloy, 1x Electrical Components",
+    "keepFor": "8x for Gunsmith II Upgrade",
+    "sellPrice": 1000
+  },
+  "Water Filter": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "2x Rubber Parts, 3x Canister",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Water Pump": {
+    "recommendation": "Recycle if short on materials; if not, sell",
+    "recycleFor": "4x Metal Parts, 2x Oil",
+    "keepFor": null,
+    "sellPrice": 1000
+  },
+  "Wires": {
+    "recommendation": "Keep",
+    "recycleFor": "2x Rubber Parts",
+    "keepFor": null,
+    "sellPrice": 200
+  }
+}

@@ -158,5 +158,9 @@
   "track.clearAll": "Alle löschen",
   "track.clearAllTitle": "Alle verfolgten Items löschen",
   "track.noItemsYet": "Noch keine Items werden verfolgt.",
-  "track.openTrackedItems": "Verfolgte Items öffnen"
+  "track.openTrackedItems": "Verfolgte Items öffnen",
+
+  "recommendation.title": "Empfehlung",
+  "recommendation.keepFor": "Behalten für",
+  "recommendation.recycleFor": "Recyceln für"
 }

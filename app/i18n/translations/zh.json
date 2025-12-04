@@ -158,5 +158,9 @@
   "track.clearAll": "全部清除",
   "track.clearAllTitle": "清除所有已追踪物品",
   "track.noItemsYet": "当前还没有被追踪的物品。",
-  "track.openTrackedItems": "打开已追踪物品"
+  "track.openTrackedItems": "打开已追踪物品",
+
+  "recommendation.title": "建议",
+  "recommendation.keepFor": "保留用于",
+  "recommendation.recycleFor": "回收获得"
 }

@@ -158,5 +158,9 @@
   "track.clearAll": "全部清除",
   "track.clearAllTitle": "清除所有已追蹤物品",
   "track.noItemsYet": "目前尚未追蹤任何物品。",
-  "track.openTrackedItems": "開啟已追蹤物品"
+  "track.openTrackedItems": "開啟已追蹤物品",
+
+  "recommendation.title": "建議",
+  "recommendation.keepFor": "保留用於",
+  "recommendation.recycleFor": "回收獲得"
 }

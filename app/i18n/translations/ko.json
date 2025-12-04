@@ -158,5 +158,9 @@
   "track.clearAll": "전체 삭제",
   "track.clearAllTitle": "모든 추적 아이템 삭제",
   "track.noItemsYet": "아직 추적 중인 아이템이 없습니다.",
-  "track.openTrackedItems": "추적 아이템 열기"
+  "track.openTrackedItems": "추적 아이템 열기",
+
+  "recommendation.title": "추천",
+  "recommendation.keepFor": "보관 용도",
+  "recommendation.recycleFor": "재활용 재료"
 }

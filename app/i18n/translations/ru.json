@@ -152,5 +152,9 @@
   "track.clearAll": "Очистить все",
   "track.clearAllTitle": "Очистить все отслеживаемые предметы",
   "track.noItemsYet": "Пока нет отслеживаемых предметов.",
-  "track.openTrackedItems": "Открыть отслеживаемые предметы"
+  "track.openTrackedItems": "Открыть отслеживаемые предметы",
+
+  "recommendation.title": "Рекомендация",
+  "recommendation.keepFor": "Хранить для",
+  "recommendation.recycleFor": "Переработать в"
 }

@@ -158,5 +158,9 @@
   "track.clearAll": "Pulisci tutto",
   "track.clearAllTitle": "Pulisci tutti gli oggetti tracciati",
   "track.noItemsYet": "Nessun oggetto è ancora tracciato.",
-  "track.openTrackedItems": "Apri oggetti tracciati"
+  "track.openTrackedItems": "Apri oggetti tracciati",
+
+  "recommendation.title": "Raccomandazione",
+  "recommendation.keepFor": "Conserva per",
+  "recommendation.recycleFor": "Ricicla per"
 }
