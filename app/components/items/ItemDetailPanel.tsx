@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
@@ -12,12 +13,14 @@ import {
   faCoins,
   faRecycle,
   faLightbulb,
+  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import { Item } from "../../types/item";
 import { rarityColors, rarityGradients } from "../../config/rarityConfig";
 import { specialTypeLabels } from "../../config/categoryConfig";
 import { useTranslation } from "../../i18n";
 import itemRecommendations from "../../../data/item_recommendations.json";
+import CraftingGraphModal from "../graph/CraftingGraphModal";
 
 interface ItemRecommendation {
   recommendation: string;
@@ -90,6 +93,19 @@ export default function ItemDetailPanel({
   isTrackedFunc,
 }: ItemDetailPanelProps) {
   const { t, tItem } = useTranslation();
+  const [isGraphModalOpen, setIsGraphModalOpen] = useState(false);
+
+  // Handle Escape key to close panel (only if graph modal is not open)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !isGraphModalOpen) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose, isGraphModalOpen]);
 
   // Get translated item name
   const translatedName = tItem(item.name);
@@ -196,8 +212,27 @@ export default function ItemDetailPanel({
                 {t("recommendation.title")}
               </h3>
               <div
-                className={`p-3 rounded-xl bg-gradient-to-br ${getRecommendationStyle(itemRecommendation.recommendation).bgColor} border ${getRecommendationStyle(itemRecommendation.recommendation).borderColor} shadow-lg`}
+                className={`p-3 rounded-xl bg-gradient-to-br ${getRecommendationStyle(itemRecommendation.recommendation).bgColor} border ${getRecommendationStyle(itemRecommendation.recommendation).borderColor} shadow-lg relative`}
               >
+                {/* Info Icon with Tooltip */}
+                <div className="absolute top-1.5 right-1.5 group/info">
+                  <FontAwesomeIcon
+                    icon={faCircleInfo}
+                    className="text-gray-400/60 hover:text-gray-300 text-xs cursor-help transition-colors"
+                  />
+                  <div className="absolute right-0 top-full mt-1 w-56 p-2 bg-gray-900/95 border border-gray-700 rounded-lg text-xs text-gray-300 opacity-0 invisible group-hover/info:opacity-100 group-hover/info:visible transition-all duration-200 z-50 shadow-xl">
+                    Recommendations are based on community-created data in{" "}
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1zGlYsm7zNQQszuOBFwB_bXqr-lo8WO4jGPrNeQo8jvI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-400 hover:text-purple-300 underline"
+                    >
+                      ARC Raiders - Safe to Sell or Recycle GUIDE Dec. 2025
+                    </a>
+                  </div>
+                </div>
+
                 {/* Main Recommendation */}
                 <div className="flex items-center gap-2 mb-2">
                   <FontAwesomeIcon
@@ -236,9 +271,9 @@ export default function ItemDetailPanel({
 
           {/* Item Image */}
           {item.image_urls?.thumb && (
-            <a
-              href={`/crafting-graph?item=${encodeURIComponent(item.name)}`}
-              className="relative w-full aspect-square rounded-xl mb-4 flex items-center justify-center p-8 border overflow-hidden group shadow-xl cursor-pointer block"
+            <button
+              onClick={() => setIsGraphModalOpen(true)}
+              className="relative w-full aspect-square rounded-xl mb-4 flex items-center justify-center p-8 border overflow-hidden group shadow-xl cursor-pointer"
               style={{
                 background: rarityGradients[item.infobox?.rarity] || rarityGradients.Common,
                 borderColor: `${rarityColors[item.infobox?.rarity] || "#717471"}40`,
@@ -255,7 +290,7 @@ export default function ItemDetailPanel({
                 alt={translatedName}
                 className="w-full h-full object-contain relative z-10 drop-shadow-2xl"
               />
-            </a>
+            </button>
           )}
 
           {/* Quote */}
@@ -351,19 +386,26 @@ export default function ItemDetailPanel({
                 {t("item.wiki")}
               </span>
             </a>
-            <a
-              href={`/crafting-graph?item=${encodeURIComponent(item.name)}`}
-              className="group relative flex-1 block py-3 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 hover:from-blue-500/40 hover:to-cyan-500/40 backdrop-blur-sm border border-blue-400/50 hover:border-blue-400/70 rounded-lg text-center text-blue-200 hover:text-blue-100 font-semibold text-sm transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-[1.02] overflow-hidden"
+            <button
+              onClick={() => setIsGraphModalOpen(true)}
+              className="group relative flex-1 py-3 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 hover:from-blue-500/40 hover:to-cyan-500/40 backdrop-blur-sm border border-blue-400/50 hover:border-blue-400/70 rounded-lg text-center text-blue-200 hover:text-blue-100 font-semibold text-sm transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-[1.02] overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faDiagramProject} />
                 {t("item.craftingGraph")}
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Crafting Graph Modal */}
+      <CraftingGraphModal
+        itemName={item.name}
+        isOpen={isGraphModalOpen}
+        onClose={() => setIsGraphModalOpen(false)}
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faEye, faDiagramProject } from "@fortawesome/free-solid-svg-icons";
+import { faCog, faEye, faDiagramProject, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "../../i18n";
 
 interface SettingsPanelProps {
@@ -20,6 +20,8 @@ interface SettingsPanelProps {
   setOpenCraftingGraphOnClick: (value: boolean) => void;
   lightweightMode: boolean;
   setLightweightMode: (value: boolean) => void;
+  showRecommendations: boolean;
+  setShowRecommendations: (value: boolean) => void;
 }
 
 const TooltipLabel = ({ title, children }: { title: string; children: React.ReactNode }) => (
@@ -46,6 +48,8 @@ export default function SettingsPanel({
   setOpenCraftingGraphOnClick,
   lightweightMode,
   setLightweightMode,
+  showRecommendations,
+  setShowRecommendations,
 }: SettingsPanelProps) {
   const { t } = useTranslation();
 
@@ -210,6 +214,34 @@ export default function SettingsPanel({
                     <div
                       className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 shadow-lg ${
                         showTrackIcons ? "translate-x-6" : "translate-x-0"
+                      }`}
+                    />
+                  </div>
+                </label>
+              </TooltipLabel>
+            </div>
+
+            {/* Show Recommendations */}
+            <div>
+              <TooltipLabel title={t("settings.showRecommendationsHelp")}>
+                <label className="flex items-center justify-between cursor-pointer group">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 flex items-center justify-center bg-black/60 rounded-lg border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
+                      <FontAwesomeIcon icon={faLightbulb} className="text-white text-lg" />
+                    </div>
+                    <span className="text-sm font-bold text-blue-300 uppercase tracking-wider">
+                      {t("settings.showRecommendations")}
+                    </span>
+                  </div>
+                  <div
+                    className={`relative w-14 h-8 rounded-full transition-all duration-300 ${
+                      showRecommendations ? "bg-blue-500/60" : "bg-black/60"
+                    } border ${showRecommendations ? "border-blue-400/60" : "border-blue-500/20"}`}
+                    onClick={() => setShowRecommendations(!showRecommendations)}
+                  >
+                    <div
+                      className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 shadow-lg ${
+                        showRecommendations ? "translate-x-6" : "translate-x-0"
                       }`}
                     />
                   </div>

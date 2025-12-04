@@ -87,6 +87,8 @@
   "settings.displayWeight": "Показывать вес",
   "settings.lightweightMode": "Облегчённый режим",
   "settings.openCraftingGraphOnClick": "Открывать граф при клике",
+  "settings.showRecommendations": "Показать рекомендации",
+  "settings.showRecommendationsHelp": "Отображает значки сохранить/продать/переработать на карточках предметов.",
 
   "item.location": "Местоположение",
   "item.weight": "Вес",

@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "Muestra pequeños iconos de seguir/dejar de seguir en las cartas para un seguimiento rápido.",
   "settings.openCraftingGraphOnClickHelp": "Al hacer clic en una carta de objeto se abrirá directamente su gráfico de creación.",
   "settings.lightweightModeHelp": "Desactiva algunos efectos visuales para mejorar el rendimiento en dispositivos más lentos.",
+  "settings.showRecommendations": "Mostrar recomendaciones",
+  "settings.showRecommendationsHelp": "Muestra insignias de conservar/vender/reciclar en las tarjetas de objetos.",
 
   "item.location": "Ubicación",
   "item.weight": "Peso",

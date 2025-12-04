@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "Affiche de petits icônes pour suivre/ne plus suivre directement depuis les cartes.",
   "settings.openCraftingGraphOnClickHelp": "Un clic sur une carte d’objet ouvre directement son graphe de craft.",
   "settings.lightweightModeHelp": "Désactive certains effets visuels pour améliorer les performances sur les machines moins puissantes.",
+  "settings.showRecommendations": "Afficher les recommandations",
+  "settings.showRecommendationsHelp": "Affiche des badges garder/vendre/recycler sur les cartes d'objets.",
 
   "item.location": "Emplacement",
   "item.weight": "Poids",

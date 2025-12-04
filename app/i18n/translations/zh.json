@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "在物品卡片上显示用于快速追踪/取消追踪的小图标。",
   "settings.openCraftingGraphOnClickHelp": "点击物品卡片时，将直接跳转到该物品的制作关系图。",
   "settings.lightweightModeHelp": "关闭部分视觉效果，以提升在性能较弱设备上的流畅度。",
+  "settings.showRecommendations": "显示推荐",
+  "settings.showRecommendationsHelp": "在物品卡片上显示保留/出售/回收徽章。",
 
   "item.location": "位置",
   "item.weight": "重量",

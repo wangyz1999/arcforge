@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "Mostra pequenos ícones de acompanhar/parar de acompanhar diretamente nas cartas de item.",
   "settings.openCraftingGraphOnClickHelp": "Ao clicar em uma carta de item, o gráfico de criação desse item é aberto diretamente.",
   "settings.lightweightModeHelp": "Desativa alguns efeitos visuais para melhorar o desempenho em dispositivos mais fracos.",
+  "settings.showRecommendations": "Mostrar recomendações",
+  "settings.showRecommendationsHelp": "Exibe emblemas de manter/vender/reciclar nos cartões de itens.",
 
   "item.location": "Localização",
   "item.weight": "Peso",

@@ -223,7 +223,7 @@ function CraftingTreeContent() {
   return (
     <div className="h-screen bg-[#07020b] text-gray-100 flex flex-col overflow-hidden">
       {/* Header */}
-      <Header activePage="graph" />
+      <Header activePage="database" />
 
       {/* Help Button */}
       <button

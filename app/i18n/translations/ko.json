@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "아이템 카드를 따라 작은 추적/추적 해제 아이콘을 표시하여 빠르게 관리할 수 있습니다.",
   "settings.openCraftingGraphOnClickHelp": "아이템 카드를 클릭하면 해당 아이템의 제작 그래프로 바로 이동합니다.",
   "settings.lightweightModeHelp": "일부 시각 효과를 끄고, 성능이 낮은 기기에서의 프레임과 반응 속도를 개선합니다.",
+  "settings.showRecommendations": "추천 표시",
+  "settings.showRecommendationsHelp": "아이템 카드에 보관/판매/재활용 배지를 표시합니다.",
 
   "item.location": "획득처",
   "item.weight": "무게",

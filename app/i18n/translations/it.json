@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "Mostra piccole icone di traccia/smetti di tracciare direttamente sulle carte.",
   "settings.openCraftingGraphOnClickHelp": "Facendo clic su una carta oggetto si apre direttamente il suo grafo di crafting.",
   "settings.lightweightModeHelp": "Disattiva alcuni effetti visivi per migliorare le prestazioni sui dispositivi meno potenti.",
+  "settings.showRecommendations": "Mostra raccomandazioni",
+  "settings.showRecommendationsHelp": "Mostra badge conserva/vendi/ricicla sulle carte degli oggetti.",
 
   "item.location": "Posizione",
   "item.weight": "Peso",

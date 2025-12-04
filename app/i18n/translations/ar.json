@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "تُظهر أيقونات صغيرة للتتبع/إلغاء التتبع مباشرة على بطاقات العناصر.",
   "settings.openCraftingGraphOnClickHelp": "النقر على بطاقة عنصر سيفتح مخطط التصنيع الخاص به مباشرة.",
   "settings.lightweightModeHelp": "تُعطّل بعض التأثيرات البصرية لتحسين الأداء على الأجهزة الأبطأ.",
+  "settings.showRecommendations": "إظهار التوصيات",
+  "settings.showRecommendationsHelp": "يعرض شارات الاحتفاظ/البيع/إعادة التدوير على بطاقات العناصر.",
 
   "item.location": "الموقع",
   "item.weight": "الوزن",

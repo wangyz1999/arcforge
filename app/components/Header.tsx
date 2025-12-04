@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -10,12 +9,18 @@ import { useTranslation } from "../i18n";
 import LanguageSelector from "./LanguageSelector";
 
 interface HeaderProps {
-  activePage: "database" | "graph";
+  activePage: "database";
   searchQuery?: string;
   setSearchQuery?: (query: string) => void;
+  onLogoClick?: () => void;
 }
 
-export default function Header({ activePage, searchQuery, setSearchQuery }: HeaderProps) {
+export default function Header({
+  activePage,
+  searchQuery,
+  setSearchQuery,
+  onLogoClick,
+}: HeaderProps) {
   const { t } = useTranslation();
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [isMac, setIsMac] = useState(true);
@@ -44,15 +49,13 @@ export default function Header({ activePage, searchQuery, setSearchQuery }: Head
       searchInputRef.current?.blur();
     }
   };
-  const isDatabaseActive = activePage === "database";
-  const isGraphActive = activePage === "graph";
 
   return (
     <header className="bg-black/20 backdrop-blur-xl border-b border-purple-500/30 sticky top-0 z-40 shadow-lg shadow-purple-500/5">
-      <div className="flex items-center justify-between px-2 sm:px-4 md:pr-8 relative">
+      <div className="flex items-center px-2 sm:px-4 md:px-8 relative">
         {/* Logo */}
-        <Link
-          href="/"
+        <button
+          onClick={onLogoClick}
           className="flex-shrink-0 h-16 sm:h-20 md:h-24 flex items-center cursor-pointer"
         >
           <Image
@@ -63,17 +66,16 @@ export default function Header({ activePage, searchQuery, setSearchQuery }: Head
             className="h-full w-auto drop-shadow-2xl"
             priority
           />
-        </Link>
+        </button>
 
-        {/* Navigation */}
-        <nav className="flex gap-1 sm:gap-2 md:gap-3 items-center">
-          {/* Search Bar - Only shown on database page */}
-          {setSearchQuery && (
-            <div className="relative group hidden sm:block">
+        {/* Search Bar - Centered */}
+        {setSearchQuery && (
+          <div className="flex-1 flex justify-center px-4">
+            <div className="relative group w-full max-w-md lg:max-w-xl hidden sm:block">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <FontAwesomeIcon
                   icon={faSearch}
-                  className="text-purple-400/70 text-sm group-focus-within:text-purple-400 transition-colors"
+                  className="text-purple-400/70 text-base group-focus-within:text-purple-400 transition-colors"
                 />
               </div>
               <input
@@ -83,56 +85,24 @@ export default function Header({ activePage, searchQuery, setSearchQuery }: Head
                 value={searchQuery || ""}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
-                className="w-48 md:w-64 lg:w-72 h-10 sm:h-11 md:h-12 pl-10 pr-16 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-lg md:rounded-xl text-gray-100 text-sm placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300"
+                className="w-full h-11 sm:h-12 md:h-14 pl-12 pr-20 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-xl md:rounded-2xl text-gray-100 text-base placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300"
               />
-              <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                <kbd className="hidden md:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-gray-400 bg-black/60 border border-purple-500/30 rounded">
+              <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                <kbd className="hidden md:inline-flex items-center gap-0.5 px-2 py-1 text-xs font-medium text-gray-400 bg-black/60 border border-purple-500/30 rounded-lg">
                   {isMac ? (
-                    <span className="text-[9px]">⌘</span>
+                    <span className="text-[10px]">⌘</span>
                   ) : (
-                    <span className="text-[9px]">Ctrl+</span>
+                    <span className="text-[10px]">Ctrl+</span>
                   )}
                   K
                 </kbd>
               </div>
             </div>
-          )}
-          <Link
-            href="/"
-            className={`group relative px-2 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 ${
-              isDatabaseActive
-                ? "bg-gradient-to-br from-purple-500/30 to-purple-600/30 border border-purple-400/50 text-purple-200 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
-                : "bg-black/40 backdrop-blur-sm border border-purple-500/30 text-gray-300 hover:bg-purple-500/20 hover:text-purple-200 hover:border-purple-400/50"
-            } rounded-lg md:rounded-xl text-xs sm:text-sm md:text-base font-semibold ${
-              isDatabaseActive
-                ? "hover:from-purple-500/40 hover:to-purple-600/40 hover:border-purple-400/70"
-                : ""
-            } transition-all duration-300 hover:scale-105 whitespace-nowrap`}
-          >
-            <span className="relative z-10 hidden sm:inline">{t("nav.itemDatabase")}</span>
-            <span className="relative z-10 sm:hidden">{t("nav.itemDatabaseShort")}</span>
-            {isDatabaseActive && (
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-purple-600/20 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            )}
-          </Link>
-          <Link
-            href="/crafting-graph?item=Power%20Rod"
-            className={`group relative px-2 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 ${
-              isGraphActive
-                ? "bg-gradient-to-br from-purple-500/30 to-purple-600/30 border border-purple-400/50 text-purple-200 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
-                : "bg-black/40 backdrop-blur-sm border border-purple-500/30 text-gray-300 hover:bg-purple-500/20 hover:text-purple-200 hover:border-purple-400/50"
-            } rounded-lg md:rounded-xl text-xs sm:text-sm md:text-base font-semibold ${
-              isGraphActive
-                ? "hover:from-purple-500/40 hover:to-purple-600/40 hover:border-purple-400/70"
-                : ""
-            } transition-all duration-300 hover:scale-105 whitespace-nowrap`}
-          >
-            <span className="relative z-10 hidden sm:inline">{t("nav.craftingGraph")}</span>
-            <span className="relative z-10 sm:hidden">{t("nav.craftingGraphShort")}</span>
-            {isGraphActive && (
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-purple-600/20 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            )}
-          </Link>
+          </div>
+        )}
+
+        {/* Navigation */}
+        <nav className="flex gap-1 sm:gap-2 md:gap-3 items-center flex-shrink-0">
           <LanguageSelector />
           <a
             href="https://buymeacoffee.com/wangyz1999"

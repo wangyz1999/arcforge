@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "Zeigt kleine Verfolgen-/Nicht-mehr-verfolgen-Symbole direkt auf den Item-Karten.",
   "settings.openCraftingGraphOnClickHelp": "Ein Klick auf eine Item-Karte öffnet direkt ihren Crafting-Grafen.",
   "settings.lightweightModeHelp": "Deaktiviert einige visuelle Effekte, um die Performance auf langsameren Geräten zu verbessern.",
+  "settings.showRecommendations": "Empfehlungen anzeigen",
+  "settings.showRecommendationsHelp": "Zeigt Behalten/Verkaufen/Recyceln-Abzeichen auf Gegenstandskarten an.",
 
   "item.location": "Fundort",
   "item.weight": "Gewicht",

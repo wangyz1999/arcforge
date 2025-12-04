@@ -93,6 +93,8 @@
   "settings.showTrackIconsHelp": "アイテムカード上に小さな追跡/追跡解除アイコンを表示して素早く操作できます。",
   "settings.openCraftingGraphOnClickHelp": "アイテムカードをクリックすると、そのアイテムのクラフトグラフへ直接移動します。",
   "settings.lightweightModeHelp": "一部のビジュアル効果を無効にして、低スペック環境でのパフォーマンスを改善します。",
+  "settings.showRecommendations": "レコメンドを表示",
+  "settings.showRecommendationsHelp": "アイテムカードに保持/売却/リサイクルのバッジを表示します。",
 
   "item.location": "入手場所",
   "item.weight": "重量",
