@@ -1,15 +1,13 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faArrowUpAZ, faArrowDownAZ, faFilter } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpAZ, faArrowDownAZ, faFilter } from '@fortawesome/free-solid-svg-icons';
 import { allCategories, specialTypeLabels } from '../../config/categoryConfig';
 import { useTranslation } from '../../i18n';
 
 export type SortField = 'name' | 'rarity' | 'sellprice' | 'weight';
 
 interface ItemFiltersPanelProps {
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
   sortField: SortField;
   setSortField: (field: SortField) => void;
   sortAscending: boolean;
@@ -22,8 +20,6 @@ interface ItemFiltersPanelProps {
 }
 
 export default function ItemFiltersPanel({
-  searchQuery,
-  setSearchQuery,
   sortField,
   setSortField,
   sortAscending,
@@ -110,28 +106,6 @@ export default function ItemFiltersPanel({
         >
           <span className="text-lg">✕</span>
         </button>
-        
-        {/* Search Bar */}
-        <div>
-          <h3 className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 mb-3 uppercase tracking-wider">
-            {t('search.title')}
-          </h3>
-          <div className="relative group">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <FontAwesomeIcon icon={faSearch} className="text-purple-400/70 text-sm group-focus-within:text-purple-400 transition-colors" />
-            </div>
-            <input
-              type="text"
-              placeholder={t('search.placeholder')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-xl text-gray-100 text-sm placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300 shadow-lg shadow-purple-500/10 focus:shadow-purple-500/20"
-            />
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-purple-500/20 shadow-sm shadow-purple-500/10"></div>
         
         {/* Sort Section */}
         <div>

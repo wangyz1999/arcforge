@@ -1,19 +1,36 @@
 'use client';
 
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from '../i18n';
 import LanguageSelector from './LanguageSelector';
 
 interface HeaderProps {
   activePage: 'database' | 'graph';
+  searchQuery?: string;
+  setSearchQuery?: (query: string) => void;
 }
 
-export default function Header({ activePage }: HeaderProps) {
+export default function Header({ activePage, searchQuery, setSearchQuery }: HeaderProps) {
   const { t } = useTranslation();
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Cmd+K / Ctrl+K keyboard shortcut to focus search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
   const isDatabaseActive = activePage === 'database';
   const isGraphActive = activePage === 'graph';
 
@@ -34,6 +51,27 @@ export default function Header({ activePage }: HeaderProps) {
         
         {/* Navigation */}
         <nav className="flex gap-1 sm:gap-2 md:gap-3 items-center">
+          {/* Search Bar - Only shown on database page */}
+          {setSearchQuery && (
+            <div className="relative group hidden sm:block">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <FontAwesomeIcon icon={faSearch} className="text-purple-400/70 text-sm group-focus-within:text-purple-400 transition-colors" />
+              </div>
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder={t('search.placeholder')}
+                value={searchQuery || ''}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-40 md:w-56 lg:w-64 pl-9 pr-16 py-2 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-lg text-gray-100 text-sm placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300"
+              />
+              <div className="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+                <kbd className="hidden md:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-medium text-gray-400 bg-black/60 border border-purple-500/30 rounded">
+                  <span className="text-[9px]">⌘</span>K
+                </kbd>
+              </div>
+            </div>
+          )}
           <Link
             href="/"
             className={`group relative px-2 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 ${

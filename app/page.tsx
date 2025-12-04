@@ -356,7 +356,7 @@ export default function Home() {
       
       <div className="min-h-screen bg-gradient-to-br from-[#07020b] via-[#0a0514] to-[#07020b] text-gray-100 flex flex-col relative overflow-hidden">
         {/* Header - Logo and Navigation */}
-        <Header activePage="database" />
+        <Header activePage="database" searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
         {/* Mobile action bar: filters, settings, tracked items */}
         <div className="lg:hidden fixed bottom-6 left-0 right-0 z-30 flex items-center justify-start gap-4 px-4">
@@ -421,10 +421,8 @@ export default function Home() {
             />
           )}
 
-          {/* Left Sidebar - Search, Filters and Sort */}
+          {/* Left Sidebar - Filters and Sort */}
           <ItemFiltersPanel
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
             sortField={sortField}
             setSortField={setSortField}
             sortAscending={sortAscending}
