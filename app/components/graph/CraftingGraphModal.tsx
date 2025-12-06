@@ -1,56 +1,43 @@
 "use client";
 
-import { useEffect, useRef, useState, useMemo, Suspense, useCallback } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import cytoscape from "cytoscape";
-import { useSearchParams, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
-import itemsRelationData from "../../data/items_relation.json";
-import Header from "../components/Header";
-import LoadingState from "../components/graph/LoadingState";
-import ErrorState from "../components/graph/ErrorState";
-import GraphSettingsPanel from "../components/graph/GraphSettingsPanel";
-import HelpPanel from "../components/graph/HelpPanel";
-import QuickSearchBar from "../components/graph/QuickSearchBar";
-import { ItemData } from "../types/graph";
-import { cytoscapeStyles } from "../config/cytoscapeStyles";
-import { buildGraphElements, buildLayoutPositions } from "../utils/graphHelpers";
-import { useTranslation } from "../i18n";
+import { faCog, faQuestionCircle, faTimes } from "@fortawesome/free-solid-svg-icons";
+import itemsRelationData from "../../../data/items_relation.json";
+import GraphSettingsPanel from "./GraphSettingsPanel";
+import HelpPanel from "./HelpPanel";
+import { ItemData } from "../../types/graph";
+import { cytoscapeStyles } from "../../config/cytoscapeStyles";
+import { buildGraphElements, buildLayoutPositions } from "../../utils/graphHelpers";
+import { useTranslation } from "../../i18n";
+import ErrorState from "./ErrorState";
 
-function CraftingTreeContent() {
+interface CraftingGraphModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  itemName: string;
+  onItemChange: (itemName: string) => void;
+}
+
+export default function CraftingGraphModal({
+  isOpen,
+  onClose,
+  itemName,
+  onItemChange,
+}: CraftingGraphModalProps) {
   const { t, tItem } = useTranslation();
   const cyRef = useRef<cytoscape.Core | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const hasAnimated = useRef<string | null>(null); // Track which item has been animated
-  const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null); // Track resize timeout
+  const hasAnimated = useRef<string | null>(null);
+  const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
-  const searchParams = useSearchParams();
-  const router = useRouter();
 
-  const itemName = searchParams.get("item") || "Power Rod";
-
-  // Compute edge types from URL or default to all types
-  const selectedEdgeTypes = useMemo(() => {
-    const filterParam = searchParams.get("filters");
-    if (filterParam !== null) {
-      // If filters param exists (even if empty), use it
-      return filterParam === ""
-        ? new Set<string>()
-        : new Set(filterParam.split(",").filter((f) => f));
-    }
-    // Default to all types if no filters param
-    return new Set<string>(["craft", "repair", "recycle", "salvage", "upgrade", "trade"]);
-  }, [searchParams]);
-
-  // Custom setter that also updates the URL
-  const updateSelectedEdgeTypes = (newTypes: Set<string>) => {
-    // Update URL with new filters
-    const filterParam = Array.from(newTypes).join(",");
-    router.push(`/crafting-graph?item=${encodeURIComponent(itemName)}&filters=${filterParam}`, {
-      scroll: false,
-    });
-  };
+  // Edge type filters - default to all types
+  const [selectedEdgeTypes, setSelectedEdgeTypes] = useState<Set<string>>(
+    () => new Set(["craft", "repair", "recycle", "salvage", "upgrade", "trade"]),
+  );
 
   // Find the selected item and build item lookup
   const { selectedItem, itemsLookup } = useMemo(() => {
@@ -62,12 +49,20 @@ function CraftingTreeContent() {
     return { selectedItem: selected, itemsLookup: lookup };
   }, [itemName]);
 
-  // Memoize translation functions to prevent unnecessary re-renders
+  // Memoize translation functions
   const translateItem = useCallback((name: string) => tItem(name), [tItem]);
   const translateRelation = useCallback((key: string) => t(key), [t]);
 
+  // Handle item navigation within the modal
+  const handleItemSelect = useCallback(
+    (name: string) => {
+      onItemChange(name);
+    },
+    [onItemChange],
+  );
+
   useEffect(() => {
-    if (!containerRef.current) {
+    if (!isOpen || !containerRef.current) {
       return;
     }
 
@@ -102,7 +97,6 @@ function CraftingTreeContent() {
           fit: true,
           padding: 120,
         },
-        // Enable interactivity
         userZoomingEnabled: true,
         userPanningEnabled: true,
         boxSelectionEnabled: false,
@@ -127,16 +121,14 @@ function CraftingTreeContent() {
       }, 150);
     };
 
-    // Add resize listener
     window.addEventListener("resize", handleResize);
 
-    // Force a resize and fit after a short delay to ensure container is sized
+    // Force a resize and fit after a short delay
     setTimeout(() => {
       if (cyRef.current) {
         cyRef.current.resize();
         cyRef.current.fit(undefined, 150);
 
-        // Only animate if this item hasn't been animated yet
         const shouldAnimate = hasAnimated.current !== itemName;
 
         if (shouldAnimate) {
@@ -145,43 +137,30 @@ function CraftingTreeContent() {
           const centerNode = cyRef.current.$('[type="center"]');
           const currentZoom = cyRef.current.zoom();
 
-          // Calculate zoom needed to make center node properly visible
           const containerHeight = cyRef.current.height();
           const centerNodeHeight = 250;
           const targetNodeScreenHeight = containerHeight * 0.22;
           const targetZoom = targetNodeScreenHeight / centerNodeHeight;
 
-          // Zoom in if current zoom is significantly smaller than target (many nodes)
           if (currentZoom < targetZoom * 0.8) {
             const finalZoom = Math.max(currentZoom * 1.5, targetZoom);
 
             cyRef.current.animate(
               {
                 zoom: finalZoom,
-                center: {
-                  eles: centerNode,
-                },
+                center: { eles: centerNode },
               },
-              {
-                duration: 1300,
-                easing: "ease-out-cubic",
-              },
+              { duration: 1300, easing: "ease-out-cubic" },
             );
           } else {
-            // Graph is already big (few nodes), do a slight zoom out for dynamic feel
             const finalZoom = currentZoom * 0.85;
 
             cyRef.current.animate(
               {
                 zoom: finalZoom,
-                center: {
-                  eles: centerNode,
-                },
+                center: { eles: centerNode },
               },
-              {
-                duration: 1300,
-                easing: "ease-out-cubic",
-              },
+              { duration: 1300, easing: "ease-out-cubic" },
             );
           }
         }
@@ -194,17 +173,11 @@ function CraftingTreeContent() {
       const nodeData = node.data();
 
       if (nodeData.type !== "center" && nodeData.itemName) {
-        // Navigate to the clicked item with current filters (use original itemName for navigation)
-        const filterParam = Array.from(selectedEdgeTypes).join(",");
-        router.push(
-          `/crafting-graph?item=${encodeURIComponent(nodeData.itemName)}&filters=${filterParam}`,
-          { scroll: false },
-        );
+        handleItemSelect(nodeData.itemName);
       }
     });
 
     return () => {
-      // Remove resize listener and clear timeout
       window.removeEventListener("resize", handleResize);
       if (resizeTimeoutRef.current) {
         clearTimeout(resizeTimeoutRef.current);
@@ -214,21 +187,58 @@ function CraftingTreeContent() {
         cyRef.current.destroy();
       }
     };
-  }, [itemName, itemsLookup, selectedEdgeTypes, router, translateItem, translateRelation]);
+  }, [
+    isOpen,
+    itemName,
+    itemsLookup,
+    selectedEdgeTypes,
+    translateItem,
+    translateRelation,
+    handleItemSelect,
+  ]);
+
+  // Reset animation tracking when item changes
+  useEffect(() => {
+    if (isOpen) {
+      hasAnimated.current = null;
+    }
+  }, [itemName, isOpen]);
+
+  if (!isOpen) return null;
 
   if (!selectedItem) {
-    return <ErrorState itemName={itemName} />;
+    return (
+      /* Modal Container - positioned below header using margin-top */
+      <div className="fixed inset-0 z-30 mt-16 sm:mt-20 md:mt-24 flex flex-col bg-[#07020b]">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-30 w-12 h-12 flex items-center justify-center bg-gradient-to-br from-red-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-red-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:scale-105"
+          aria-label={t("buttons.close")}
+        >
+          <FontAwesomeIcon icon={faTimes} className="text-white text-xl" />
+        </button>
+        <ErrorState itemName={itemName} />
+      </div>
+    );
   }
 
   return (
-    <div className="h-screen bg-[#07020b] text-gray-100 flex flex-col overflow-hidden">
-      {/* Header */}
-      <Header activePage="graph" />
+    /* Modal Container - positioned below header using margin-top matching header heights */
+    <div className="fixed inset-0 z-30 mt-16 sm:mt-20 md:mt-24 flex flex-col bg-[#07020b] text-gray-100 overflow-hidden">
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-30 w-12 h-12 flex items-center justify-center bg-gradient-to-br from-red-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-red-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:scale-105"
+        aria-label={t("buttons.close")}
+      >
+        <FontAwesomeIcon icon={faTimes} className="text-white text-xl" />
+      </button>
 
       {/* Help Button */}
       <button
         onClick={() => setIsHelpOpen(true)}
-        className="fixed bottom-28 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-cyan-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-cyan-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
+        className="absolute bottom-28 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-cyan-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-cyan-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
         aria-label={t("buttons.openHelp")}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
@@ -241,7 +251,7 @@ function CraftingTreeContent() {
       {/* Settings Button */}
       <button
         onClick={() => setIsSettingsOpen(true)}
-        className="fixed bottom-8 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
+        className="absolute bottom-8 right-8 z-30 w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-purple-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-purple-500/50 hover:scale-105"
         aria-label={t("buttons.openRelationFilters")}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
@@ -250,9 +260,6 @@ function CraftingTreeContent() {
 
       {/* Graph Canvas */}
       <div className="flex-1 relative bg-[#07020b] overflow-hidden">
-        {/* Quick Search Bar */}
-        <QuickSearchBar selectedEdgeTypes={selectedEdgeTypes} />
-
         <div
           ref={containerRef}
           className="w-full h-full"
@@ -271,16 +278,8 @@ function CraftingTreeContent() {
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
         selectedEdgeTypes={selectedEdgeTypes}
-        setSelectedEdgeTypes={updateSelectedEdgeTypes}
+        setSelectedEdgeTypes={setSelectedEdgeTypes}
       />
     </div>
-  );
-}
-
-export default function CraftingTree() {
-  return (
-    <Suspense fallback={<LoadingState />}>
-      <CraftingTreeContent />
-    </Suspense>
   );
 }

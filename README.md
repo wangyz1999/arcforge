@@ -64,7 +64,7 @@ python run_pipeline.py
 
 ## Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 16](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **UI Library**: [React 19](https://reactjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
@@ -80,7 +80,10 @@ arcforge/
 │   ├── api/                  # API routes
 │   │   └── proxy-image/      # Image proxy for wiki thumbnails
 │   ├── components/           # React components
-│   ├── crafting-graph/       # Crafting graph page
+│   ├── i18n/                 # Internationalization
+│   │   └── translations/     # Translation files
+│   │       ├── {lang}.json       # UI strings
+│   │       └── items_{lang}.json # Item names
 │   ├── layout.tsx            # Root layout
 │   └── page.tsx              # Item database page
 ├── data/                     # JSON data files

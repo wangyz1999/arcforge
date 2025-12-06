@@ -1,9 +1,9 @@
-import { MetadataRoute } from 'next';
-import itemsRelationData from '../data/items_relation.json';
-import type { ItemData } from './types/graph';
+import { MetadataRoute } from "next";
+import itemsRelationData from "../data/items_relation.json";
+import type { ItemData } from "./types/graph";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const currentDate = new Date();
 
   // Base routes
@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'daily',
+      changeFrequency: "daily",
       priority: 1.0,
     },
   ];
@@ -20,9 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const craftingGraphRoutes = (itemsRelationData as ItemData[])
     .filter((item) => item.edges && item.edges.length > 0)
     .map((item) => ({
-      url: `${baseUrl}/crafting-graph?item=${encodeURIComponent(item.name)}`,
+      url: `${baseUrl}/?graph=${encodeURIComponent(item.name)}`,
       lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     }));
 
@@ -30,4 +30,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes;
 }
-

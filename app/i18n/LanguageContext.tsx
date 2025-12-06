@@ -69,12 +69,14 @@ interface LanguageContextType {
   isHydrated: boolean;
   showTranslationWarning: boolean;
   dismissTranslationWarning: () => void;
+  dismissTranslationWarningPermanently: () => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Storage key for persisting language preference
 const LANGUAGE_STORAGE_KEY = "arcforge-language";
+const TRANSLATION_WARNING_DISMISSED_KEY = "arcforge-translation-warning-dismissed";
 
 // Default language
 const DEFAULT_LANGUAGE: Language = "en";
@@ -95,30 +97,39 @@ export function LanguageProvider({
   const [isHydrated, setIsHydrated] = useState(false);
   const [showTranslationWarning, setShowTranslationWarning] = useState(false);
   const isUserAction = useRef(false);
+  const hasInitialized = useRef(false);
 
   // Load saved language preference after hydration
   useEffect(() => {
-    setIsHydrated(true);
-    try {
-      const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
-      if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
-        setLanguageState(savedLanguage);
-        if (savedLanguage !== "en") {
-          setShowTranslationWarning(true);
-        }
-        return;
-      }
+    if (hasInitialized.current) return;
+    hasInitialized.current = true;
+    // Use requestAnimationFrame to defer setState and avoid cascading renders
+    requestAnimationFrame(() => {
+      setIsHydrated(true);
+      try {
+        // Check if user has permanently dismissed the warning
+        const warningDismissed = localStorage.getItem(TRANSLATION_WARNING_DISMISSED_KEY) === "true";
 
-      const browserLang = navigator.language.split("-")[0] as Language;
-      if (SUPPORTED_LANGUAGES.includes(browserLang)) {
-        setLanguageState(browserLang);
-        if (browserLang !== "en") {
-          setShowTranslationWarning(true);
+        const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
+        if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
+          setLanguageState(savedLanguage);
+          if (savedLanguage !== "en" && !warningDismissed) {
+            setShowTranslationWarning(true);
+          }
+          return;
         }
+
+        const browserLang = navigator.language.split("-")[0] as Language;
+        if (SUPPORTED_LANGUAGES.includes(browserLang)) {
+          setLanguageState(browserLang);
+          if (browserLang !== "en" && !warningDismissed) {
+            setShowTranslationWarning(true);
+          }
+        }
+      } catch {
+        // localStorage or navigator not available
       }
-    } catch {
-      // localStorage or navigator not available
-    }
+    });
   }, []);
 
   // Save language preference when it changes (user action only)
@@ -135,17 +146,36 @@ export function LanguageProvider({
       // localStorage not available
     }
 
-    // Show warning only when user switches to non-English
-    if (lang !== "en") {
-      setShowTranslationWarning(true);
-    } else {
-      setShowTranslationWarning(false);
+    // Show warning only when user switches to non-English (and hasn't permanently dismissed)
+    try {
+      const warningDismissed = localStorage.getItem(TRANSLATION_WARNING_DISMISSED_KEY) === "true";
+      if (lang !== "en" && !warningDismissed) {
+        setShowTranslationWarning(true);
+      } else {
+        setShowTranslationWarning(false);
+      }
+    } catch {
+      if (lang !== "en") {
+        setShowTranslationWarning(true);
+      } else {
+        setShowTranslationWarning(false);
+      }
     }
   }, []);
 
-  // Dismiss the translation warning
+  // Dismiss the translation warning (for this session)
   const dismissTranslationWarning = useCallback(() => {
     setShowTranslationWarning(false);
+  }, []);
+
+  // Permanently dismiss the translation warning (don't show again)
+  const dismissTranslationWarningPermanently = useCallback(() => {
+    setShowTranslationWarning(false);
+    try {
+      localStorage.setItem(TRANSLATION_WARNING_DISMISSED_KEY, "true");
+    } catch {
+      // localStorage not available
+    }
   }, []);
 
   // Translation function for UI strings
@@ -187,6 +217,7 @@ export function LanguageProvider({
         isHydrated,
         showTranslationWarning,
         dismissTranslationWarning,
+        dismissTranslationWarningPermanently,
       }}
     >
       {children}
@@ -205,7 +236,22 @@ export function useLanguage() {
 
 // Custom hook for just translation function (convenience)
 export function useTranslation() {
-  const { t, tItem, language, isHydrated, showTranslationWarning, dismissTranslationWarning } =
-    useLanguage();
-  return { t, tItem, language, isHydrated, showTranslationWarning, dismissTranslationWarning };
+  const {
+    t,
+    tItem,
+    language,
+    isHydrated,
+    showTranslationWarning,
+    dismissTranslationWarning,
+    dismissTranslationWarningPermanently,
+  } = useLanguage();
+  return {
+    t,
+    tItem,
+    language,
+    isHydrated,
+    showTranslationWarning,
+    dismissTranslationWarning,
+    dismissTranslationWarningPermanently,
+  };
 }

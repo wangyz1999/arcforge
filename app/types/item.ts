@@ -1,3 +1,20 @@
+export interface WorkshopUpgradeDetail {
+  workshop: string;
+  level: number;
+  quantity: number;
+}
+
+export interface ExpeditionDetail {
+  part: number;
+  quantity: number;
+}
+
+export interface QuestDetail {
+  quest: string;
+  quantity: number;
+  note?: string;
+}
+
 export interface Item {
   name: string;
   wiki_url: string;
@@ -7,6 +24,9 @@ export interface Item {
     quote?: string;
     type?: string;
     special_types?: string[];
+    workshop_upgrades?: WorkshopUpgradeDetail[];
+    expedition_parts?: ExpeditionDetail[];
+    quests?: QuestDetail[];
     location?: string;
     weight?: number;
     sellprice?: number | number[];
@@ -22,4 +42,3 @@ export interface Item {
   sources?: string[];
   [key: string]: unknown;
 }
-
