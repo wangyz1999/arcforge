@@ -50,8 +50,11 @@ function HomeContent() {
   // Handle URL parameter changes for graph modal
   useEffect(() => {
     if (graphItemParam) {
-      setGraphItemName(graphItemParam);
-      setIsGraphModalOpen(true);
+      // Use requestAnimationFrame to defer setState and avoid cascading renders
+      requestAnimationFrame(() => {
+        setGraphItemName(graphItemParam);
+        setIsGraphModalOpen(true);
+      });
     }
   }, [graphItemParam]);
 
@@ -207,6 +210,9 @@ function HomeContent() {
     router.push(`/?graph=${encodeURIComponent(graphItemName)}`, { scroll: false });
   }, [router, graphItemName]);
 
+  // Initialize with no types selected
+  const [selectedTypes, setSelectedTypes] = useState<Set<string>>(() => new Set());
+
   // Handle modal close - clear URL parameter
   const handleGraphModalClose = useCallback(() => {
     setIsGraphModalOpen(false);
@@ -284,9 +290,6 @@ function HomeContent() {
 
     return grouped;
   }, []);
-
-  // Initialize with no types selected
-  const [selectedTypes, setSelectedTypes] = useState<Set<string>>(() => new Set());
 
   // Get current item translations for search, memoized by language
   const currentItemTranslations = useMemo(() => itemTranslations[language] || {}, [language]);

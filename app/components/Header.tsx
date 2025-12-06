@@ -32,15 +32,22 @@ export default function Header({
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [isMac, setIsMac] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMac = useMemo(() => {
+    if (typeof navigator !== "undefined") {
+      return navigator.platform.toUpperCase().indexOf("MAC") >= 0;
+    }
+    return false;
+  }, []);
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth < 640;
+    }
+    return false;
+  });
 
-  // Detect macOS for keyboard shortcut display and screen size for placeholder
+  // Listen for screen size changes
   useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
-
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
-    checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);

@@ -97,33 +97,39 @@ export function LanguageProvider({
   const [isHydrated, setIsHydrated] = useState(false);
   const [showTranslationWarning, setShowTranslationWarning] = useState(false);
   const isUserAction = useRef(false);
+  const hasInitialized = useRef(false);
 
   // Load saved language preference after hydration
   useEffect(() => {
-    setIsHydrated(true);
-    try {
-      // Check if user has permanently dismissed the warning
-      const warningDismissed = localStorage.getItem(TRANSLATION_WARNING_DISMISSED_KEY) === "true";
+    if (hasInitialized.current) return;
+    hasInitialized.current = true;
+    // Use requestAnimationFrame to defer setState and avoid cascading renders
+    requestAnimationFrame(() => {
+      setIsHydrated(true);
+      try {
+        // Check if user has permanently dismissed the warning
+        const warningDismissed = localStorage.getItem(TRANSLATION_WARNING_DISMISSED_KEY) === "true";
 
-      const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
-      if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
-        setLanguageState(savedLanguage);
-        if (savedLanguage !== "en" && !warningDismissed) {
-          setShowTranslationWarning(true);
+        const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
+        if (savedLanguage && SUPPORTED_LANGUAGES.includes(savedLanguage)) {
+          setLanguageState(savedLanguage);
+          if (savedLanguage !== "en" && !warningDismissed) {
+            setShowTranslationWarning(true);
+          }
+          return;
         }
-        return;
-      }
 
-      const browserLang = navigator.language.split("-")[0] as Language;
-      if (SUPPORTED_LANGUAGES.includes(browserLang)) {
-        setLanguageState(browserLang);
-        if (browserLang !== "en" && !warningDismissed) {
-          setShowTranslationWarning(true);
+        const browserLang = navigator.language.split("-")[0] as Language;
+        if (SUPPORTED_LANGUAGES.includes(browserLang)) {
+          setLanguageState(browserLang);
+          if (browserLang !== "en" && !warningDismissed) {
+            setShowTranslationWarning(true);
+          }
         }
+      } catch {
+        // localStorage or navigator not available
       }
-    } catch {
-      // localStorage or navigator not available
-    }
+    });
   }, []);
 
   // Save language preference when it changes (user action only)
