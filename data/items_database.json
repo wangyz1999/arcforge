@@ -5199,7 +5199,8 @@
       "location": "ARC",
       "weight": 10.0,
       "sellprice": 13000,
-      "stacksize": 1
+      "stacksize": 1,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/24/Matriarch_Reactor.png/348px-Matriarch_Reactor.png.webp",
