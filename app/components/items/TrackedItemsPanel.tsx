@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Item } from "../../types/item";
@@ -14,6 +14,7 @@ interface TrackedItemsPanelProps {
   displayPrice: boolean;
   displayWeight: boolean;
   openCraftingGraphOnClick: boolean;
+  onOpenCraftingGraph?: (itemName: string) => void;
   onClose: () => void;
   onItemClick: (item: Item) => void;
   onItemTracked: (name: string) => void;
@@ -30,14 +31,11 @@ const rarityColors: { [key: string]: string } = {
 };
 
 const rarityGradients: { [key: string]: string } = {
-  Common:
-    "linear-gradient(to right, rgb(153 159 165 / 25%) 0%, rgb(5 13 36) 100%)",
-  Uncommon:
-    "linear-gradient(to right, rgb(86 203 134 / 25%) 0%, rgb(5 13 36) 100%)",
+  Common: "linear-gradient(to right, rgb(153 159 165 / 25%) 0%, rgb(5 13 36) 100%)",
+  Uncommon: "linear-gradient(to right, rgb(86 203 134 / 25%) 0%, rgb(5 13 36) 100%)",
   Rare: "linear-gradient(to right, rgb(30 150 252 / 30%) 0%, rgb(5 13 36) 100%)",
   Epic: "linear-gradient(to right, rgb(216 41 155 / 25%) 0%, rgb(5 13 36) 100%)",
-  Legendary:
-    "linear-gradient(to right, rgb(251 199 0 / 25%) 0%, rgb(5 13 36) 100%)",
+  Legendary: "linear-gradient(to right, rgb(251 199 0 / 25%) 0%, rgb(5 13 36) 100%)",
 };
 
 export default function TrackedItemsPanel({
@@ -48,6 +46,7 @@ export default function TrackedItemsPanel({
   displayPrice,
   displayWeight,
   openCraftingGraphOnClick,
+  onOpenCraftingGraph,
   onClose,
   onItemClick,
   onItemTracked,
@@ -61,10 +60,7 @@ export default function TrackedItemsPanel({
   return (
     <>
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/70 z-40 backdrop-blur-md"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 bg-black/70 z-40 backdrop-blur-md" onClick={onClose} />
       {/* Panel */}
       <div className="fixed bottom-0 left-0 w-full md:w-[70vw] h-[70vh] md:bottom-8 md:right-8 md:left-auto bg-gradient-to-br from-black/95 via-blue-950/30 to-black/95 backdrop-blur-2xl border border-blue-500/40 z-50 rounded-t-3xl md:rounded-2xl shadow-2xl animate-slide-up">
         {/* Gradient */}
@@ -74,7 +70,7 @@ export default function TrackedItemsPanel({
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 flex items-center gap-3">
-              {t('track.trackedItems')}
+              {t("track.trackedItems")}
             </h2>
             <div className="flex">
               <button
@@ -88,32 +84,32 @@ export default function TrackedItemsPanel({
                   } catch {}
                 }}
                 className="flex items-center justify-center px-4 py-2 rounded-lg bg-red-500/30 text-red-200 font-semibold hover:bg-red-500/50 hover:text-white transition-all mr-4"
-                title={t('track.clearAllTitle')}>
-                {t('track.clearAll')}
+                title={t("track.clearAllTitle")}
+              >
+                {t("track.clearAll")}
               </button>
               <button
                 onClick={onClose}
                 className="w-10 h-10 flex items-center justify-center bg-black/60 hover:bg-red-500/30 backdrop-blur-sm rounded-xl transition-all duration-300 text-gray-400 hover:text-red-300 border border-blue-500/20 hover:border-red-500/50"
-                aria-label={t('buttons.close')}>
+                aria-label={t("buttons.close")}
+              >
                 <span className="text-lg">✕</span>
               </button>
             </div>
           </div>
 
           {/* Tracked Items */}
-          <div
-            className="max-h-[55vh] overflow-y-auto pr-2"
-          >
+          <div className="max-h-[55vh] overflow-y-auto pr-2">
             {items.filter((item) => isTrackedFunc(item.name)).length > 0 ? (
               <div
                 className={`grid gap-3 sm:gap-4 lg:gap-6 ${
                   itemSize === "tiny"
                     ? "grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-10 2xl:grid-cols-10"
                     : itemSize === "small"
-                    ? "grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10"
-                    : itemSize === "medium"
-                    ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
-                    : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4"
+                      ? "grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10"
+                      : itemSize === "medium"
+                        ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+                        : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4"
                 }`}
               >
                 {items
@@ -121,14 +117,13 @@ export default function TrackedItemsPanel({
                   .map((item, index) => {
                     const rarity = item.infobox?.rarity || "Common";
                     const borderColor = rarityColors[rarity] || "#717471";
-                    const gradient =
-                      rarityGradients[rarity] || rarityGradients.Common;
+                    const gradient = rarityGradients[rarity] || rarityGradients.Common;
                     return (
                       <div
                         key={`${item.name}-${index}`}
                         onClick={() => {
-                          if (openCraftingGraphOnClick) {
-                            window.location.href = `/crafting-graph?item=${encodeURIComponent(item.name)}`;
+                          if (openCraftingGraphOnClick && onOpenCraftingGraph) {
+                            onOpenCraftingGraph(item.name);
                           } else {
                             onItemClick(item);
                           }
@@ -136,8 +131,8 @@ export default function TrackedItemsPanel({
                         }}
                         className={`group relative rounded-2xl overflow-hidden cursor-pointer ${
                           lightweightMode
-                            ? 'bg-black/40 border border-gray-700'
-                            : 'bg-gradient-to-br from-black/60 via-black/40 to-black/60 backdrop-blur-sm transition-all duration-300'
+                            ? "bg-black/40 border border-gray-700"
+                            : "bg-gradient-to-br from-black/60 via-black/40 to-black/60 backdrop-blur-sm transition-all duration-300"
                         }`}
                         style={
                           lightweightMode
@@ -148,12 +143,19 @@ export default function TrackedItemsPanel({
                                 borderColor: borderColor,
                                 boxShadow: `0 4px 20px ${borderColor}30, 0 0 40px ${borderColor}10, inset 0 1px 0 rgba(255,255,255,0.1)`,
                               }
-                        }>
+                        }
+                      >
                         {/* Price / Weight display */}
                         <div className="absolute top-2 right-2 z-20 flex flex-col gap-1">
                           {displayPrice && item.infobox?.sellprice != null && (
                             <div className="flex items-center gap-1 bg-black/80 backdrop-blur-sm px-2 py-1 rounded-lg border border-yellow-500/30">
-                              <Image src="/coin.webp" alt="Coin" width={16} height={16} className="w-4 h-4" />
+                              <Image
+                                src="/coin.webp"
+                                alt="Coin"
+                                width={16}
+                                height={16}
+                                className="w-4 h-4"
+                              />
                               <span className="text-yellow-400 text-xs font-bold">
                                 {Array.isArray(item.infobox.sellprice)
                                   ? item.infobox.sellprice[0]
@@ -163,7 +165,13 @@ export default function TrackedItemsPanel({
                           )}
                           {displayWeight && item.infobox?.weight != null && (
                             <div className="flex items-center gap-1 bg-black/80 backdrop-blur-sm px-2 py-1 rounded-lg border border-gray-500/30">
-                              <Image src="/weight.webp" alt="Weight" width={16} height={16} className="w-4 h-4" />
+                              <Image
+                                src="/weight.webp"
+                                alt="Weight"
+                                width={16}
+                                height={16}
+                                className="w-4 h-4"
+                              />
                               <span className="text-gray-300 text-xs font-bold">
                                 {item.infobox.weight}
                               </span>
@@ -176,13 +184,13 @@ export default function TrackedItemsPanel({
                             e.stopPropagation();
                             onItemTracked(item.name);
                           }}
-                          title={isTrackedFunc(item.name) ? t('track.untrack') : t('track.track')}
+                          title={isTrackedFunc(item.name) ? t("track.untrack") : t("track.track")}
                           className={`absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
                             isTrackedFunc(item.name)
                               ? "bg-yellow-400 text-black"
                               : "bg-black/40 text-gray-300"
                           }`}
-                          style={{cursor: "pointer"}}
+                          style={{ cursor: "pointer" }}
                         >
                           <FontAwesomeIcon
                             icon={faEye}
@@ -201,9 +209,10 @@ export default function TrackedItemsPanel({
                         {/* Image Section */}
                         <div
                           className={`aspect-square flex items-center justify-center p-4 relative overflow-hidden ${
-                            lightweightMode ? 'bg-black/60' : ''
+                            lightweightMode ? "bg-black/60" : ""
                           }`}
-                          style={lightweightMode ? undefined : { background: gradient }}>
+                          style={lightweightMode ? undefined : { background: gradient }}
+                        >
                           {item.image_urls?.thumb ? (
                             <Image
                               src={item.image_urls.thumb}
@@ -211,7 +220,9 @@ export default function TrackedItemsPanel({
                               fill
                               sizes="(max-width: 768px) 100vw, 33vw"
                               className={`w-full h-full object-contain relative z-10 ${
-                                lightweightMode ? '' : 'group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 drop-shadow-2xl'
+                                lightweightMode
+                                  ? ""
+                                  : "group-hover:scale-110 group-hover:rotate-2 transition-all duration-300 drop-shadow-2xl"
                               }`}
                               onError={(e) => {
                                 if (e && e.currentTarget) {
@@ -227,15 +238,19 @@ export default function TrackedItemsPanel({
                         {/* Name Section */}
                         <div
                           className={`p-2.5 border-t ${
-                            lightweightMode ? 'bg-black/80' : 'bg-gradient-to-br from-black/80 to-black/60 backdrop-blur-sm'
+                            lightweightMode
+                              ? "bg-black/80"
+                              : "bg-gradient-to-br from-black/80 to-black/60 backdrop-blur-sm"
                           }`}
-                          style={{ borderColor: `${borderColor}20` }}>
+                          style={{ borderColor: `${borderColor}20` }}
+                        >
                           <h3
                             className="font-semibold text-xs group-hover:brightness-125 transition-all line-clamp-2 text-center leading-tight drop-shadow-lg"
                             style={{
                               color: borderColor,
                               textShadow: `0 2px 8px ${borderColor}40`,
-                            }}>
+                            }}
+                          >
                             {tItem(item.name)}
                           </h3>
                         </div>
@@ -253,9 +268,7 @@ export default function TrackedItemsPanel({
               </div>
             ) : (
               <div className="flex items-center justify-center h-[55vh]">
-                <div className="text-center text-gray-400 text-lg">
-                  {t('track.noItemsYet')}
-                </div>
+                <div className="text-center text-gray-400 text-lg">{t("track.noItemsYet")}</div>
               </div>
             )}
           </div>

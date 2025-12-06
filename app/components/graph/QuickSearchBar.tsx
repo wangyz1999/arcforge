@@ -15,9 +15,10 @@ config.autoAddCss = false;
 
 interface QuickSearchBarProps {
   selectedEdgeTypes: Set<string>;
+  onItemSelect?: (itemName: string) => void; // Optional callback for modal use
 }
 
-export default function QuickSearchBar({ selectedEdgeTypes }: QuickSearchBarProps) {
+export default function QuickSearchBar({ selectedEdgeTypes, onItemSelect }: QuickSearchBarProps) {
   const { t, tItem, language } = useTranslation();
   const router = useRouter();
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -63,10 +64,16 @@ export default function QuickSearchBar({ selectedEdgeTypes }: QuickSearchBarProp
 
   // Navigate to selected item from search
   const handleSearchItemSelect = (name: string) => {
-    const filterParam = Array.from(selectedEdgeTypes).join(",");
-    router.push(`/crafting-graph?item=${encodeURIComponent(name)}&filters=${filterParam}`, {
-      scroll: false,
-    });
+    if (onItemSelect) {
+      // Use callback for modal navigation
+      onItemSelect(name);
+    } else {
+      // Use router for page navigation
+      const filterParam = Array.from(selectedEdgeTypes).join(",");
+      router.push(`/crafting-graph?item=${encodeURIComponent(name)}&filters=${filterParam}`, {
+        scroll: false,
+      });
+    }
     setSearchQuery("");
     setIsSearchFocused(false);
   };
