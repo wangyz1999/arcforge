@@ -13,7 +13,7 @@ export default function ErrorState({ itemName }: ErrorStateProps) {
 
   return (
     <div className="min-h-screen bg-[#07020b] text-gray-100 flex flex-col">
-      <Header activePage="graph" />
+      <Header />
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">❌</div>
