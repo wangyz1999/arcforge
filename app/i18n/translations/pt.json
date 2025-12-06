@@ -150,6 +150,7 @@
   "language.select": "Selecionar idioma",
 
   "toast.translationWarning": "⚠️ Aviso: as traduções foram geradas automaticamente. Alguns nomes de itens podem não corresponder 100% aos nomes exibidos no jogo. Para contribuir, edite as traduções no GitHub.",
+  "toast.dontShowAgain": "Não mostrar novamente",
 
   "track.track": "Acompanhar",
   "track.untrack": "Parar de acompanhar",

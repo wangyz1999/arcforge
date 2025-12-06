@@ -149,7 +149,8 @@
 
   "language.select": "Choisir la langue",
 
-  "toast.translationWarning": "⚠️ Attention : les traductions ont été automatisées. Certains noms d'items pourraient ne pas correspondre à 100% aux noms affichés dans le jeu. Pour contribuer, veuillez modifier les traductions sur GitHub.",
+  "toast.translationWarning": "⚠️ Attention : les traductions ont été automatisées. Certains noms d'items pourraient ne pas correspondre à 100% aux noms affichés dans le jeu. Pour contribuir, veuillez modifier les traductions sur GitHub.",
+  "toast.dontShowAgain": "Ne plus afficher",
 
   "track.track": "Suivre",
   "track.untrack": "Ne plus suivre",

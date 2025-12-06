@@ -150,6 +150,7 @@
   "language.select": "言語を選択",
 
   "toast.translationWarning": "⚠️ 注意: 翻訳は自動生成されています。ゲーム内で表示される名称と完全には一致しない場合があります。貢献するには、GitHub 上の翻訳を編集してください。",
+  "toast.dontShowAgain": "今後表示しない",
 
   "track.track": "追跡する",
   "track.untrack": "追跡をやめる",

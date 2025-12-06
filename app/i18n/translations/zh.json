@@ -150,6 +150,7 @@
   "language.select": "选择语言",
 
   "toast.translationWarning": "⚠️ 提示：翻译为自动生成，部分物品名称可能与游戏内显示不完全一致。若想参与贡献，请在 GitHub 上编辑翻译内容。",
+  "toast.dontShowAgain": "不再显示",
 
   "track.track": "追踪",
   "track.untrack": "取消追踪",
