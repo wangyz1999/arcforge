@@ -66,7 +66,7 @@ export default function ItemCard({
       className={`group relative rounded-2xl overflow-hidden cursor-pointer ${
         lightweightMode
           ? "bg-black/40 border border-gray-700"
-          : "bg-gradient-to-br from-black/60 via-black/40 to-black/60 backdrop-blur-sm hover:scale-105 hover:-translate-y-1 transition-all duration-300"
+          : "bg-gradient-to-br from-black/60 via-black/40 to-black/60 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
       }`}
       style={
         lightweightMode
@@ -76,6 +76,10 @@ export default function ItemCard({
               borderStyle: "solid",
               borderColor: borderColor,
               boxShadow: `0 4px 20px ${borderColor}30, 0 0 40px ${borderColor}10, inset 0 1px 0 rgba(255,255,255,0.1)`,
+              transform: "translateZ(0)",
+              willChange: "transform",
+              backfaceVisibility: "hidden",
+              WebkitFontSmoothing: "antialiased",
             }
       }
     >
@@ -218,6 +222,8 @@ export default function ItemCard({
           style={{
             color: borderColor,
             textShadow: `0 2px 8px ${borderColor}40`,
+            transform: "scale(1)",
+            transformOrigin: "center",
           }}
         >
           {translatedName}
