@@ -38,7 +38,6 @@ function HomeContent() {
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
   const [showTrackIcons, setShowTrackIcons] = useState(false);
-  const [openCraftingGraphOnClick, setOpenCraftingGraphOnClick] = useState(false);
   const [lightweightMode, setLightweightMode] = useState(false);
   const [showSpecialIcons, setShowSpecialIcons] = useState(false);
   const [showCraftGraphIcon, setShowCraftGraphIcon] = useState(true);
@@ -124,10 +123,6 @@ function HomeContent() {
             setShowTrackIcons(parsed.showTrackIcons);
           }
 
-          if (typeof parsed.openCraftingGraphOnClick === "boolean") {
-            setOpenCraftingGraphOnClick(parsed.openCraftingGraphOnClick);
-          }
-
           if (typeof parsed.lightweightMode === "boolean") {
             setLightweightMode(parsed.lightweightMode);
           }
@@ -162,7 +157,6 @@ function HomeContent() {
         displayPrice,
         displayWeight,
         showTrackIcons,
-        openCraftingGraphOnClick,
         lightweightMode,
         showSpecialIcons,
         showCraftGraphIcon,
@@ -176,7 +170,6 @@ function HomeContent() {
     displayPrice,
     displayWeight,
     showTrackIcons,
-    openCraftingGraphOnClick,
     lightweightMode,
     showSpecialIcons,
     showCraftGraphIcon,
@@ -565,8 +558,6 @@ function HomeContent() {
             showTrackIcons={showTrackIcons}
             showSpecialIcons={showSpecialIcons}
             showCraftGraphIcon={showCraftGraphIcon}
-            openCraftingGraphOnClick={openCraftingGraphOnClick}
-            onOpenCraftingGraph={openCraftingGraph}
             lightweightMode={lightweightMode}
             onItemClick={setSelectedItem}
             onItemTracked={toggleItemTracked}
@@ -594,8 +585,6 @@ function HomeContent() {
           displayWeight={displayWeight}
           showSpecialIcons={showSpecialIcons}
           showCraftGraphIcon={showCraftGraphIcon}
-          openCraftingGraphOnClick={openCraftingGraphOnClick}
-          onOpenCraftingGraph={openCraftingGraph}
           lightweightMode={lightweightMode}
           onClose={() => setIsTrackedOpen(false)}
           onItemClick={setSelectedItem}
@@ -615,8 +604,6 @@ function HomeContent() {
           setDisplayWeight={setDisplayWeight}
           showTrackIcons={showTrackIcons}
           setShowTrackIcons={setShowTrackIcons}
-          openCraftingGraphOnClick={openCraftingGraphOnClick}
-          setOpenCraftingGraphOnClick={setOpenCraftingGraphOnClick}
           lightweightMode={lightweightMode}
           setLightweightMode={setLightweightMode}
           showSpecialIcons={showSpecialIcons}

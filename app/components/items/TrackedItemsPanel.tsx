@@ -35,8 +35,6 @@ interface TrackedItemsPanelProps {
   displayWeight: boolean;
   showSpecialIcons: boolean;
   showCraftGraphIcon?: boolean;
-  openCraftingGraphOnClick: boolean;
-  onOpenCraftingGraph?: (itemName: string) => void;
   onClose: () => void;
   onItemClick: (item: Item) => void;
   onItemTracked: (name: string) => void;
@@ -69,8 +67,6 @@ export default function TrackedItemsPanel({
   displayWeight,
   showSpecialIcons,
   showCraftGraphIcon = true,
-  openCraftingGraphOnClick,
-  onOpenCraftingGraph,
   onClose,
   onItemClick,
   onItemTracked,
@@ -146,11 +142,7 @@ export default function TrackedItemsPanel({
                       <div
                         key={`${item.name}-${index}`}
                         onClick={() => {
-                          if (openCraftingGraphOnClick && onOpenCraftingGraph) {
-                            onOpenCraftingGraph(item.name);
-                          } else {
-                            onItemClick(item);
-                          }
+                          onItemClick(item);
                           onClose();
                         }}
                         className={`group relative rounded-2xl overflow-hidden cursor-pointer ${

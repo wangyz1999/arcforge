@@ -16,8 +16,6 @@ interface SettingsPanelProps {
   setDisplayWeight: (value: boolean) => void;
   showTrackIcons: boolean;
   setShowTrackIcons: (value: boolean) => void;
-  openCraftingGraphOnClick: boolean;
-  setOpenCraftingGraphOnClick: (value: boolean) => void;
   lightweightMode: boolean;
   setLightweightMode: (value: boolean) => void;
   showSpecialIcons: boolean;
@@ -46,8 +44,6 @@ export default function SettingsPanel({
   setDisplayWeight,
   showTrackIcons,
   setShowTrackIcons,
-  openCraftingGraphOnClick,
-  setOpenCraftingGraphOnClick,
   lightweightMode,
   setLightweightMode,
   showSpecialIcons,
@@ -246,36 +242,6 @@ export default function SettingsPanel({
                     <div
                       className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 shadow-lg ${
                         showCraftGraphIcon ? "translate-x-6" : "translate-x-0"
-                      }`}
-                    />
-                  </div>
-                </label>
-              </TooltipLabel>
-            </div>
-
-            {/* Open crafting graph directly on item click */}
-            <div>
-              <TooltipLabel title={t("settings.openCraftingGraphOnClickHelp")}>
-                <label className="flex items-center justify-between cursor-pointer group">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 flex items-center justify-center bg-black/60 rounded-lg border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
-                      <FontAwesomeIcon icon={faDiagramProject} className="text-white text-lg" />
-                    </div>
-                    <span className="text-sm font-bold text-blue-300 uppercase tracking-wider">
-                      {t("settings.openCraftingGraphOnClick")}
-                    </span>
-                  </div>
-                  <div
-                    className={`relative w-14 h-8 rounded-full transition-all duration-300 ${
-                      openCraftingGraphOnClick ? "bg-blue-500/60" : "bg-black/60"
-                    } border ${
-                      openCraftingGraphOnClick ? "border-blue-400/60" : "border-blue-500/20"
-                    }`}
-                    onClick={() => setOpenCraftingGraphOnClick(!openCraftingGraphOnClick)}
-                  >
-                    <div
-                      className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 shadow-lg ${
-                        openCraftingGraphOnClick ? "translate-x-6" : "translate-x-0"
                       }`}
                     />
                   </div>

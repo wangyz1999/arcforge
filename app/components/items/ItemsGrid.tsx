@@ -17,8 +17,6 @@ interface ItemsGridProps {
   onItemClick: (item: Item) => void;
   onItemTracked: (name: string) => void;
   isTrackedFunc: (name: string) => boolean;
-  openCraftingGraphOnClick: boolean;
-  onOpenCraftingGraph?: (itemName: string) => void;
   lightweightMode?: boolean;
 }
 
@@ -33,8 +31,6 @@ export default function ItemsGrid({
   onItemClick,
   onItemTracked,
   isTrackedFunc,
-  openCraftingGraphOnClick,
-  onOpenCraftingGraph,
   lightweightMode = false,
 }: ItemsGridProps) {
   const { t } = useTranslation();
@@ -55,11 +51,7 @@ export default function ItemsGrid({
         >
           {items.map((item, index) => {
             const handleClick = () => {
-              if (openCraftingGraphOnClick && onOpenCraftingGraph) {
-                onOpenCraftingGraph(item.name);
-              } else {
-                onItemClick(item);
-              }
+              onItemClick(item);
             };
 
             return (
