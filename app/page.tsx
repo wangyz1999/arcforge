@@ -34,13 +34,13 @@ function HomeContent() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isTrackedOpen, setIsTrackedOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [itemSize, setItemSize] = useState<"tiny" | "small" | "medium" | "large">("small");
+  const [itemSize, setItemSize] = useState<"tiny" | "small" | "medium" | "large">("medium");
   const [displayPrice, setDisplayPrice] = useState(false);
   const [displayWeight, setDisplayWeight] = useState(false);
   const [showTrackIcons, setShowTrackIcons] = useState(false);
   const [lightweightMode, setLightweightMode] = useState(false);
   const [showSpecialIcons, setShowSpecialIcons] = useState(false);
-  const [showCraftGraphIcon, setShowCraftGraphIcon] = useState(true);
+  const [showCraftGraphIcon, setShowCraftGraphIcon] = useState(false);
 
   // Crafting Graph Modal state - check URL params for initial state
   const graphItemParam = searchParams.get("graph");
