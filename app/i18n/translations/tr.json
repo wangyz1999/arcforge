@@ -117,6 +117,8 @@
   "settings.lightweightModeHelp": "Yavaş cihazlarda performansı artırmak için bazı görsel efektleri devre dışı bırakır.",
   "settings.showSpecialIcons": "Özel Simgeleri Göster",
   "settings.showSpecialIconsHelp": "Eşya kartlarında özel eşya türleri için simgeler gösterir (atölye yükseltmesi, keşif, görev vb.).",
+  "settings.showCraftGraphIcon": "Grafik için tıkla",
+  "settings.showCraftGraphIconHelp": "Her eşya kartında üretim grafiğini doğrudan açmak için bir düğme gösterir.",
 
   "item.location": "Konum",
   "item.weight": "Ağırlık",
@@ -203,7 +205,7 @@
 
   "track.track": "Takip Et",
   "track.untrack": "Takibi Bırak",
-  "track.showTrackIcons": "Takip Simgelerini Göster",
+  "track.showTrackIcons": "Takip için tıkla",
   "track.trackedItems": "Takip Edilen Eşyalar",
   "track.clickToNavigate": "Detaylara gitmek için bir eşyaya tıklayın",
   "track.clearAll": "Tümünü Temizle",

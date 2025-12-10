@@ -116,6 +116,8 @@
   "settings.lightweightModeHelp": "关闭部分视觉效果，以提升在性能较弱设备上的流畅度。",
   "settings.showSpecialIcons": "显示特殊图标",
   "settings.showSpecialIconsHelp": "在物品卡片上显示特殊类型图标（工作台升级、远征、任务等）。",
+  "settings.showCraftGraphIcon": "点击查看关系图",
+  "settings.showCraftGraphIconHelp": "在每个物品卡片上显示一个按钮，可直接打开制作关系图。",
 
   "item.location": "位置",
   "item.weight": "重量",
@@ -202,7 +204,7 @@
 
   "track.track": "追踪",
   "track.untrack": "取消追踪",
-  "track.showTrackIcons": "显示追踪图标",
+  "track.showTrackIcons": "点击追踪",
   "track.trackedItems": "已追踪物品",
   "track.clickToNavigate": "点击物品可跳转到详情页面",
   "track.clearAll": "全部清除",

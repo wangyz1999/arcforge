@@ -117,6 +117,8 @@
   "settings.lightweightModeHelp": "Wyłącza niektóre efekty wizualne, aby poprawić wydajność na wolniejszych urządzeniach.",
   "settings.showSpecialIcons": "Pokaż specjalne ikony",
   "settings.showSpecialIconsHelp": "Pokazuje ikony dla specjalnych typów przedmiotów (ulepszenie warsztatu, ekspedycja, misja itp.) na kartach przedmiotów.",
+  "settings.showCraftGraphIcon": "Kliknij dla grafu",
+  "settings.showCraftGraphIconHelp": "Pokazuje przycisk na każdej karcie przedmiotu do bezpośredniego otwarcia grafu wytwarzania.",
 
   "item.location": "Lokalizacja",
   "item.weight": "Waga",
@@ -203,7 +205,7 @@
 
   "track.track": "Śledź",
   "track.untrack": "Przestań śledzić",
-  "track.showTrackIcons": "Pokaż ikony śledzenia",
+  "track.showTrackIcons": "Kliknij aby śledzić",
   "track.trackedItems": "Śledzone przedmioty",
   "track.clickToNavigate": "Kliknij przedmiot, aby przejść do szczegółów",
   "track.clearAll": "Wyczyść wszystko",

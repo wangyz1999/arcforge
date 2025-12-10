@@ -90,15 +90,14 @@ export default function ItemCard({
             onTracked();
           }}
           title={isTrackedFunc(item.name) ? t("track.untrack") : t("track.track")}
-          className={`absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
-            isTrackedFunc(item.name) ? "bg-yellow-400 text-black" : "bg-black/40 text-gray-300"
+          className={`absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm backdrop-blur-sm transition-all duration-200 hover:scale-110 ${
+            isTrackedFunc(item.name)
+              ? "bg-gradient-to-br from-yellow-500/50 to-amber-500/50 hover:from-yellow-500/60 hover:to-amber-500/60 text-white"
+              : "bg-gradient-to-br from-gray-500/30 to-slate-500/30 hover:from-gray-500/40 hover:to-slate-500/40 text-white"
           }`}
           style={{ cursor: "pointer" }}
         >
-          <FontAwesomeIcon
-            icon={faEye}
-            className="text-white text-xl relative z-10 drop-shadow-lg"
-          />
+          <FontAwesomeIcon icon={faEye} className="text-sm relative z-10 drop-shadow-lg" />
         </button>
       )}
 

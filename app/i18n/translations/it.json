@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "Disattiva alcuni effetti visivi per migliorare le prestazioni sui dispositivi meno potenti.",
   "settings.showSpecialIcons": "Mostra icone speciali",
   "settings.showSpecialIconsHelp": "Mostra icone per tipi di oggetti speciali (potenziamento officina, spedizione, missione, ecc.) sulle carte.",
+  "settings.showCraftGraphIcon": "Clicca per il grafo",
+  "settings.showCraftGraphIconHelp": "Mostra un pulsante su ogni carta oggetto per aprire direttamente il grafo di crafting.",
 
   "item.location": "Posizione",
   "item.weight": "Peso",
@@ -206,7 +208,7 @@
 
   "track.track": "Traccia",
   "track.untrack": "Smetti di tracciare",
-  "track.showTrackIcons": "Mostra icone di tracciamento",
+  "track.showTrackIcons": "Clicca per tracciare",
   "track.trackedItems": "Oggetti tracciati",
   "track.clickToNavigate": "Clicca su un oggetto per andare ai dettagli",
   "track.clearAll": "Pulisci tutto",

@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "關閉部分視覺效果，以提升在效能較低裝置上的流暢度。",
   "settings.showSpecialIcons": "顯示特殊圖示",
   "settings.showSpecialIconsHelp": "在物品卡片上顯示特殊類型圖示（工作台升級、遠征、任務等）。",
+  "settings.showCraftGraphIcon": "點擊查看關係圖",
+  "settings.showCraftGraphIconHelp": "在每張物品卡片上顯示一個按鈕，可直接開啟製作關係圖。",
 
   "item.location": "位置",
   "item.weight": "重量",
@@ -206,7 +208,7 @@
 
   "track.track": "追蹤",
   "track.untrack": "取消追蹤",
-  "track.showTrackIcons": "顯示追蹤圖示",
+  "track.showTrackIcons": "點擊追蹤",
   "track.trackedItems": "已追蹤物品",
   "track.clickToNavigate": "點擊物品可前往詳細資訊",
   "track.clearAll": "全部清除",

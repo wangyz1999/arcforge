@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "تُعطّل بعض التأثيرات البصرية لتحسين الأداء على الأجهزة الأبطأ.",
   "settings.showSpecialIcons": "إظهار الأيقونات الخاصة",
   "settings.showSpecialIconsHelp": "تُظهر أيقونات لأنواع العناصر الخاصة (ترقية الورشة، البعثة، المهمة، إلخ) على البطاقات.",
+  "settings.showCraftGraphIcon": "انقر للرسم البياني",
+  "settings.showCraftGraphIconHelp": "يعرض زرًا على كل بطاقة عنصر لفتح مخطط التصنيع مباشرة.",
 
   "item.location": "الموقع",
   "item.weight": "الوزن",
@@ -206,7 +208,7 @@
 
   "track.track": "تتبع",
   "track.untrack": "إلغاء التتبع",
-  "track.showTrackIcons": "إظهار أيقونات التتبع",
+  "track.showTrackIcons": "انقر للتتبع",
   "track.trackedItems": "العناصر المتتبعة",
   "track.clickToNavigate": "انقر على عنصر للانتقال إلى صفحة التفاصيل",
   "track.clearAll": "مسح الكل",

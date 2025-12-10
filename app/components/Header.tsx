@@ -171,7 +171,7 @@ export default function Header({
                   setTimeout(() => setIsSearchFocused(false), 150);
                 }}
                 placeholder={isMobile ? t("search.placeholderShort") : t("search.placeholder")}
-                className="w-full pl-10 pr-8 sm:pr-20 py-2 sm:py-2.5 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-xl text-gray-100 text-sm placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300 shadow-lg shadow-purple-500/10 focus:shadow-purple-500/20"
+                className="w-full pl-10 pr-8 sm:pr-20 py-2 sm:py-2.5 bg-black/50 backdrop-blur-sm border border-purple-500/30 rounded-xl text-gray-100 text-base placeholder-gray-500 focus:outline-none focus:border-purple-400/60 focus:ring-2 focus:ring-purple-500/30 focus:bg-black/60 transition-all duration-300 shadow-lg shadow-purple-500/10 focus:shadow-purple-500/20"
               />
               {/* Keyboard shortcut hint - only on desktop when not focused and no search query */}
               {!isSearchFocused && !searchQuery && (

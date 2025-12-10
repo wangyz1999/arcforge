@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "Deaktiviert einige visuelle Effekte, um die Performance auf langsameren Geräten zu verbessern.",
   "settings.showSpecialIcons": "Spezial-Icons anzeigen",
   "settings.showSpecialIconsHelp": "Zeigt Icons für spezielle Item-Typen (Werkstatt-Upgrade, Expedition, Quest, etc.) auf den Item-Karten an.",
+  "settings.showCraftGraphIcon": "Klicken für Graph",
+  "settings.showCraftGraphIconHelp": "Zeigt einen Button auf jeder Item-Karte, um den Crafting-Graph direkt zu öffnen.",
 
   "item.location": "Fundort",
   "item.weight": "Gewicht",
@@ -206,7 +208,7 @@
 
   "track.track": "Verfolgen",
   "track.untrack": "Nicht mehr verfolgen",
-  "track.showTrackIcons": "Verfolgungs-Icons anzeigen",
+  "track.showTrackIcons": "Klicken zum Verfolgen",
   "track.trackedItems": "Verfolgte Items",
   "track.clickToNavigate": "Klicke auf ein Item, um zu den Details zu springen",
   "track.clearAll": "Alle löschen",

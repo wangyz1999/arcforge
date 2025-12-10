@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "Desativa alguns efeitos visuais para melhorar o desempenho em dispositivos mais fracos.",
   "settings.showSpecialIcons": "Mostrar ícones especiais",
   "settings.showSpecialIconsHelp": "Mostra ícones para tipos de itens especiais (aprimoramento de oficina, expedição, missão, etc.) nas cartas.",
+  "settings.showCraftGraphIcon": "Clique para gráfico",
+  "settings.showCraftGraphIconHelp": "Mostra um botão em cada carta de item para abrir diretamente o gráfico de criação.",
 
   "item.location": "Localização",
   "item.weight": "Peso",
@@ -206,7 +208,7 @@
 
   "track.track": "Acompanhar",
   "track.untrack": "Parar de acompanhar",
-  "track.showTrackIcons": "Mostrar ícones de acompanhamento",
+  "track.showTrackIcons": "Clique para acompanhar",
   "track.trackedItems": "Itens acompanhados",
   "track.clickToNavigate": "Clique em um item para ir aos detalhes",
   "track.clearAll": "Limpar tudo",

@@ -136,6 +136,8 @@
   "settings.openCraftingGraphOnClick": "Открывать граф при клике",
   "settings.showSpecialIcons": "Показать спец. иконки",
   "settings.showSpecialIconsHelp": "Показывает иконки специальных типов предметов (улучшение мастерской, экспедиция, квест и др.) на карточках.",
+  "settings.showCraftGraphIcon": "Нажмите для графа",
+  "settings.showCraftGraphIconHelp": "Показывает кнопку на каждой карточке предмета для прямого открытия графа крафта.",
 
   "item.location": "Местоположение",
   "item.weight": "Вес",
@@ -200,7 +202,7 @@
 
   "track.track": "Отслеживать",
   "track.untrack": "Не отслеживать",
-  "track.showTrackIcons": "Показать иконки отслеживания",
+  "track.showTrackIcons": "Нажмите для отслеживания",
   "track.trackedItems": "Отслеживаемые предметы",
   "track.clickToNavigate": "Нажмите на предмет, чтобы перейти к деталям",
   "track.clearAll": "Очистить все",

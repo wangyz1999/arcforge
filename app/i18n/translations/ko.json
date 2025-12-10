@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "일부 시각 효과를 끄고, 성능이 낮은 기기에서의 프레임과 반응 속도를 개선합니다.",
   "settings.showSpecialIcons": "특수 아이콘 표시",
   "settings.showSpecialIconsHelp": "특수 아이템 유형(작업장 업그레이드, 원정, 퀘스트 등)의 아이콘을 카드에 표시합니다.",
+  "settings.showCraftGraphIcon": "클릭하여 그래프",
+  "settings.showCraftGraphIconHelp": "각 아이템 카드에 제작 그래프를 직접 열 수 있는 버튼을 표시합니다.",
 
   "item.location": "획득처",
   "item.weight": "무게",
@@ -206,7 +208,7 @@
 
   "track.track": "추적",
   "track.untrack": "추적 해제",
-  "track.showTrackIcons": "추적 아이콘 표시",
+  "track.showTrackIcons": "클릭하여 추적",
   "track.trackedItems": "추적 중인 아이템",
   "track.clickToNavigate": "아이템을 클릭하면 상세 페이지로 이동합니다",
   "track.clearAll": "전체 삭제",

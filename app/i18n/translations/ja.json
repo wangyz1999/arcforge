@@ -142,6 +142,8 @@
   "settings.lightweightModeHelp": "一部のビジュアル効果を無効にして、低スペック環境でのパフォーマンスを改善します。",
   "settings.showSpecialIcons": "特殊アイコンを表示",
   "settings.showSpecialIconsHelp": "特殊なアイテムタイプ（ワークショップ強化、エクスペディション、クエストなど）のアイコンをカードに表示します。",
+  "settings.showCraftGraphIcon": "クリックでグラフ",
+  "settings.showCraftGraphIconHelp": "各アイテムカードにクラフトグラフを直接開くボタンを表示します。",
 
   "item.location": "入手場所",
   "item.weight": "重量",
@@ -206,7 +208,7 @@
 
   "track.track": "追跡する",
   "track.untrack": "追跡をやめる",
-  "track.showTrackIcons": "追跡アイコンを表示",
+  "track.showTrackIcons": "クリックで追跡",
   "track.trackedItems": "追跡中のアイテム",
   "track.clickToNavigate": "アイテムをクリックして詳細画面へ移動",
   "track.clearAll": "すべてクリア",

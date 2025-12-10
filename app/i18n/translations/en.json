@@ -115,7 +115,7 @@
   "settings.lightweightModeHelp": "Disables some visual effects to improve performance on slower devices.",
   "settings.showSpecialIcons": "Show Special Icons",
   "settings.showSpecialIconsHelp": "Shows icons for special item types (workshop upgrade, expedition, quest, etc.) on the item cards.",
-  "settings.showCraftGraphIcon": "Craft Graph Button",
+  "settings.showCraftGraphIcon": "Click to Graph",
   "settings.showCraftGraphIconHelp": "Shows a button on each item card to directly open the crafting graph for that item.",
 
   "item.location": "Location",
@@ -203,7 +203,7 @@
 
   "track.track": "Track",
   "track.untrack": "Untrack",
-  "track.showTrackIcons": "Show Track Icons",
+  "track.showTrackIcons": "Click to Track",
   "track.trackedItems": "Tracked Items",
   "track.clickToNavigate": "Click an item to navigate to details",
   "track.clearAll": "Clear All",
