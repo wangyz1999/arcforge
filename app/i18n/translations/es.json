@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "Mejora de taller",
   "specialType.expedition": "Expedición",
+  "specialType.candlelight": "Luz de vela",
   "specialType.safe_to_recycle": "Seguro para reciclar",
   "specialType.crafting_material": "Material de creación",
   "specialType.quest": "Misión",
@@ -154,6 +155,8 @@
   "item.workshopUpgrades": "Mejoras de taller",
   "item.expeditionParts": "Expedición",
   "item.expeditionPart": "Parte",
+  "item.candlelightParts": "Luz de vela",
+  "item.candlelightPart": "Parte",
   "item.quests": "Misiones",
   "item.wiki": "Wiki",
   "item.craftingGraph": "Gráfico de creación",

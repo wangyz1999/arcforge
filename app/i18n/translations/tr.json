@@ -41,6 +41,7 @@
 
   "specialType.workshop_upgrade": "Atölye Yükseltmesi",
   "specialType.expedition": "Keşif",
+  "specialType.candlelight": "Mum Işığı",
   "specialType.safe_to_recycle": "Geri Dönüşüme Uygun",
   "specialType.crafting_material": "Üretim Malzemesi",
   "specialType.quest": "Görev",
@@ -129,6 +130,8 @@
   "item.workshopUpgrades": "Atölye Yükseltmeleri",
   "item.expeditionParts": "Keşif",
   "item.expeditionPart": "Parça",
+  "item.candlelightParts": "Mum Işığı",
+  "item.candlelightPart": "Parça",
   "item.quests": "Görevler",
 
   "source.Scavenging": "Çöpçülük",

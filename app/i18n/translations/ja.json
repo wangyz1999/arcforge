@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "ワークショップ強化",
   "specialType.expedition": "エクスペディション",
+  "specialType.candlelight": "キャンドルライト",
   "specialType.safe_to_recycle": "安全にリサイクル可能",
   "specialType.crafting_material": "クラフト素材",
   "specialType.quest": "クエスト",
@@ -154,6 +155,8 @@
   "item.workshopUpgrades": "ワークショップ強化",
   "item.expeditionParts": "エクスペディション",
   "item.expeditionPart": "パート",
+  "item.candlelightParts": "キャンドルライト",
+  "item.candlelightPart": "パート",
   "item.quests": "クエスト",
   "item.wiki": "Wiki",
   "item.craftingGraph": "クラフトグラフ",

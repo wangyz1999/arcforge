@@ -40,6 +40,7 @@
 
   "specialType.workshop_upgrade": "工作台升级",
   "specialType.expedition": "远征",
+  "specialType.candlelight": "烛光",
   "specialType.safe_to_recycle": "可安全回收",
   "specialType.crafting_material": "制作材料",
   "specialType.quest": "任务",
@@ -128,6 +129,8 @@
   "item.workshopUpgrades": "工作台升级",
   "item.expeditionParts": "远征",
   "item.expeditionPart": "阶段",
+  "item.candlelightParts": "烛光",
+  "item.candlelightPart": "阶段",
   "item.quests": "任务",
 
   "source.Scavenging": "拾荒",

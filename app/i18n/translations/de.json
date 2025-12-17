@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "Werkstatt-Upgrade",
   "specialType.expedition": "Expedition",
+  "specialType.candlelight": "Kerzenlicht",
   "specialType.safe_to_recycle": "Sicher zu recyceln",
   "specialType.crafting_material": "Crafting-Material",
   "specialType.quest": "Quest",
@@ -154,6 +155,8 @@
   "item.workshopUpgrades": "Werkstatt-Upgrades",
   "item.expeditionParts": "Expedition",
   "item.expeditionPart": "Teil",
+  "item.candlelightParts": "Kerzenlicht",
+  "item.candlelightPart": "Teil",
   "item.quests": "Quests",
   "item.wiki": "Wiki",
   "item.craftingGraph": "Crafting-Graf",

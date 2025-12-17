@@ -41,6 +41,7 @@
 
   "specialType.workshop_upgrade": "Workshop Upgrade",
   "specialType.expedition": "Expedition",
+  "specialType.candlelight": "Candlelight",
   "specialType.safe_to_recycle": "Safe to Recycle",
   "specialType.crafting_material": "Crafting Material",
   "specialType.quest": "Quest",
@@ -127,6 +128,8 @@
   "item.workshopUpgrades": "Workshop Upgrades",
   "item.expeditionParts": "Expedition",
   "item.expeditionPart": "Part",
+  "item.candlelightParts": "Candlelight",
+  "item.candlelightPart": "Part",
   "item.quests": "Quests",
 
   "source.Scavenging": "Scavenging",

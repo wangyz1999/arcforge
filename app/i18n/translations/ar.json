@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "ترقية الورشة",
   "specialType.expedition": "بعثة",
+  "specialType.candlelight": "ضوء الشمعة",
   "specialType.safe_to_recycle": "آمن لإعادة التدوير",
   "specialType.crafting_material": "مواد تصنيع",
   "specialType.quest": "مهمة",
@@ -154,6 +155,8 @@
   "item.workshopUpgrades": "ترقيات الورشة",
   "item.expeditionParts": "البعثة",
   "item.expeditionPart": "جزء",
+  "item.candlelightParts": "ضوء الشمعة",
+  "item.candlelightPart": "جزء",
   "item.quests": "المهام",
   "item.wiki": "ويكي",
   "item.craftingGraph": "مخطط التصنيع",

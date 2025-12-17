@@ -9,6 +9,11 @@ export interface ExpeditionDetail {
   quantity: number;
 }
 
+export interface CandlelightDetail {
+  part: number;
+  quantity: number;
+}
+
 export interface QuestDetail {
   quest: string;
   quantity: number;
@@ -26,6 +31,7 @@ export interface Item {
     special_types?: string[];
     workshop_upgrades?: WorkshopUpgradeDetail[];
     expedition_parts?: ExpeditionDetail[];
+    candlelight_parts?: CandlelightDetail[];
     quests?: QuestDetail[];
     location?: string;
     weight?: number;

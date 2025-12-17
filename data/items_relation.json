@@ -5033,7 +5033,13 @@
       "weight": 2.0,
       "sellprice": 640,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 2,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/58/Candle_Holder.png/348px-Candle_Holder.png.webp",
@@ -5931,7 +5937,13 @@
       "weight": 0.3,
       "sellprice": 1000,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 4,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/33/Coffee_Pot.png/348px-Coffee_Pot.png.webp",
@@ -7618,7 +7630,13 @@
       "weight": 0.25,
       "sellprice": 300,
       "stacksize": 15,
-      "special_types": ["crafting_material"]
+      "special_types": ["candlelight", "crafting_material"],
+      "candlelight_parts": [
+        {
+          "part": 3,
+          "quantity": 10
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4e/Duct_Tape.png/348px-Duct_Tape.png.webp",
@@ -7928,7 +7946,13 @@
       "duration": null,
       "radius": null,
       "recharge": null,
-      "special_types": ["crafting_material", "expedition", "quest", "workshop_upgrade"],
+      "special_types": [
+        "candlelight",
+        "crafting_material",
+        "expedition",
+        "quest",
+        "workshop_upgrade"
+      ],
       "workshop_upgrades": [
         {
           "workshop": "medical_lab",
@@ -7946,6 +7970,12 @@
         {
           "quest": "Doctor's Orders",
           "quantity": 1
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 1,
+          "quantity": 5
         }
       ]
     },
@@ -8500,7 +8530,13 @@
       "weight": 0.2,
       "sellprice": 1000,
       "stacksize": 5,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 1,
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e1/Empty_Wine_Bottle.png/348px-Empty_Wine_Bottle.png.webp",
@@ -9516,7 +9552,13 @@
       "weight": 0.2,
       "sellprice": 2000,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 3,
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/44/Film_Reel.png/348px-Film_Reel.png.webp",
@@ -9567,12 +9609,18 @@
       "damage": "5/s",
       "duration": "10s",
       "radius": "2m",
-      "special_types": ["workshop_upgrade"],
+      "special_types": ["candlelight", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "refiner",
           "level": 2,
           "quantity": 8
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 4,
+          "quantity": 10
         }
       ]
     },
@@ -9810,7 +9858,13 @@
       "weight": 2.0,
       "sellprice": 640,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 5,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/74/Frying_Pan.png/348px-Frying_Pan.png.webp",
@@ -11223,12 +11277,18 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "special_types": ["workshop_upgrade"],
+      "special_types": ["candlelight", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gear_bench",
           "level": 3,
           "quantity": 3
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 2,
+          "quantity": 1
         }
       ]
     },
@@ -11732,11 +11792,17 @@
       "weight": 0.2,
       "sellprice": 2000,
       "stacksize": 3,
-      "special_types": ["expedition"],
+      "special_types": ["candlelight", "expedition"],
       "expedition_parts": [
         {
           "part": 3,
           "quantity": 5
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 2,
+          "quantity": 3
         }
       ]
     },
@@ -18090,12 +18156,18 @@
       "usetime": "1s",
       "duration": null,
       "radius": null,
-      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "special_types": ["candlelight", "scrappy_items", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "scrappy",
           "level": 5,
           "quantity": 12
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 5,
+          "quantity": 7
         }
       ]
     },
@@ -18131,7 +18203,13 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 5,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/90/Music_Album.png/348px-Music_Album.png.webp",
@@ -18593,7 +18671,7 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "special_types": ["crafting_material", "workshop_upgrade"],
+      "special_types": ["candlelight", "crafting_material", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gear_bench",
@@ -18604,6 +18682,12 @@
           "workshop": "utility_station",
           "level": 1,
           "quantity": 50
+        }
+      ],
+      "candlelight_parts": [
+        {
+          "part": 1,
+          "quantity": 25
         }
       ]
     },
@@ -27804,7 +27888,13 @@
       "weight": 2.0,
       "sellprice": 1000,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["candlelight", "safe_to_recycle"],
+      "candlelight_parts": [
+        {
+          "part": 4,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/48/Water_Filter.png/348px-Water_Filter.png.webp",
@@ -43272,7 +43362,14 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": "7.5m"
+      "radius": "7.5m",
+      "special_types": ["candlelight"],
+      "candlelight_parts": [
+        {
+          "part": 3,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Snap_Blast_Grenade.png/348px-Snap_Blast_Grenade.png.webp",
@@ -48435,7 +48532,30 @@
       "location": "Nature",
       "weight": 0.5,
       "stacksize": 10,
-      "sellprice": 460
+      "sellprice": 460,
+      "special_types": ["candlelight"],
+      "candlelight_parts": [
+        {
+          "part": 1,
+          "quantity": 20
+        },
+        {
+          "part": 2,
+          "quantity": 50
+        },
+        {
+          "part": 3,
+          "quantity": 60
+        },
+        {
+          "part": 4,
+          "quantity": 60
+        },
+        {
+          "part": 5,
+          "quantity": 70
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9e/Candleberries.png/348px-Candleberries.png.webp",
@@ -48955,7 +49075,7 @@
         ]
       },
       {
-        "name": "Light Stick",
+        "name": "Blue Light Stick",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -48976,6 +49096,45 @@
           {
             "type": "price",
             "amount": 20,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Green Light Stick",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Red Light Stick",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Yellow Light Stick",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
             "currency": "Cred"
           }
         ]

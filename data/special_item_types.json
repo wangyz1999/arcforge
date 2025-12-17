@@ -140,6 +140,38 @@
       { "item": "Leaper Pulse Unit", "quantity": 3 }
     ]
   },
+  "candlelight": {
+    "part_1": [
+      { "item": "Empty Wine Bottle", "quantity": 1 },
+      { "item": "Plastic Parts", "quantity": 25 },
+      { "item": "Durable Cloth", "quantity": 5 },
+      { "item": "Candleberries", "quantity": 20 }
+    ],
+    "part_2": [
+      { "item": "Candle Holder", "quantity": 3 },
+      { "item": "Light Bulb", "quantity": 3 },
+      { "item": "Industrial Battery", "quantity": 1 },
+      { "item": "Candleberries", "quantity": 50 }
+    ],
+    "part_3": [
+      { "item": "Snap Blast Grenade", "quantity": 5 },
+      { "item": "Duct Tape", "quantity": 10 },
+      { "item": "Film Reel", "quantity": 1 },
+      { "item": "Candleberries", "quantity": 60 }
+    ],
+    "part_4": [
+      { "item": "Coffee Pot", "quantity": 2 },
+      { "item": "Fireball Burner", "quantity": 10 },
+      { "item": "Water Filter", "quantity": 2 },
+      { "item": "Candleberries", "quantity": 60 }
+    ],
+    "part_5": [
+      { "item": "Mushroom", "quantity": 7 },
+      { "item": "Frying Pan", "quantity": 2 },
+      { "item": "Music Album", "quantity": 2 },
+      { "item": "Candleberries", "quantity": 70 }
+    ]
+  },
   "quest": {
     "Clearer Skies": [{ "item": "ARC Alloy", "quantity": 3 }],
     "Trash Into Treasure": [

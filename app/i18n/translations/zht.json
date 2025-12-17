@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "工作台升級",
   "specialType.expedition": "遠征",
+  "specialType.candlelight": "燭光",
   "specialType.safe_to_recycle": "可安心回收",
   "specialType.crafting_material": "製作素材",
   "specialType.quest": "任務",
@@ -154,6 +155,8 @@
   "item.workshopUpgrades": "工作台升級",
   "item.expeditionParts": "遠征",
   "item.expeditionPart": "階段",
+  "item.candlelightParts": "燭光",
+  "item.candlelightPart": "階段",
   "item.quests": "任務",
   "item.wiki": "Wiki",
   "item.craftingGraph": "製作關係圖",

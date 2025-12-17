@@ -11,8 +11,15 @@ import {
   faWrench,
   faRocket,
   faScroll,
+  faFire,
 } from "@fortawesome/free-solid-svg-icons";
-import { Item, WorkshopUpgradeDetail, ExpeditionDetail, QuestDetail } from "../../types/item";
+import {
+  Item,
+  WorkshopUpgradeDetail,
+  ExpeditionDetail,
+  CandlelightDetail,
+  QuestDetail,
+} from "../../types/item";
 import { rarityColors, rarityGradients } from "../../config/rarityConfig";
 import { specialTypeLabels } from "../../config/categoryConfig";
 import { useTranslation } from "../../i18n";
@@ -253,7 +260,7 @@ export default function ItemDetailPanel({
           {item.infobox?.special_types &&
             item.infobox.special_types.length > 0 &&
             (() => {
-              const redundantTypes = ["workshop_upgrade", "expedition", "quest"];
+              const redundantTypes = ["workshop_upgrade", "expedition", "candlelight", "quest"];
               const filteredTypes = item.infobox.special_types.filter(
                 (type: string) => !redundantTypes.includes(type),
               );
@@ -322,6 +329,29 @@ export default function ItemDetailPanel({
                         {t("item.expeditionPart")} {exp.part}
                       </span>
                       <span className="text-cyan-300 font-mono text-xs">×{exp.quantity}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Candlelight Parts */}
+            {item.infobox?.candlelight_parts && item.infobox.candlelight_parts.length > 0 && (
+              <div>
+                <h3 className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300 mb-2 uppercase tracking-wider flex items-center gap-2">
+                  <FontAwesomeIcon icon={faFire} className="text-yellow-400/70" />
+                  {t("item.candlelightParts") || "Candlelight"}
+                </h3>
+                <div className="space-y-1">
+                  {item.infobox.candlelight_parts.map((candle: CandlelightDetail, idx: number) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between px-2 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded border border-yellow-400/30"
+                    >
+                      <span className="text-yellow-200 font-semibold text-xs">
+                        {t("item.candlelightPart")} {candle.part}
+                      </span>
+                      <span className="text-yellow-300 font-mono text-xs">×{candle.quantity}</span>
                     </div>
                   ))}
                 </div>

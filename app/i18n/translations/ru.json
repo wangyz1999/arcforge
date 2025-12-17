@@ -34,6 +34,7 @@
 
   "specialType.workshop_upgrade": "Улучшение мастерской",
   "specialType.expedition": "Экспедиция",
+  "specialType.candlelight": "Свет свечи",
   "specialType.safe_to_recycle": "Безопасно переработать",
   "specialType.crafting_material": "Материал для крафта",
   "specialType.quest": "Квест",
@@ -148,6 +149,8 @@
   "item.workshopUpgrades": "Улучшения мастерской",
   "item.expeditionParts": "Экспедиция",
   "item.expeditionPart": "Часть",
+  "item.candlelightParts": "Свет свечи",
+  "item.candlelightPart": "Часть",
   "item.quests": "Квесты",
   "item.wiki": "Вики",
   "item.craftingGraph": "Граф крафта",
