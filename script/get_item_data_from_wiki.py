@@ -804,7 +804,10 @@ if __name__ == "__main__":
         # "Shotgun Ammo",
         # "Launcher Ammo",
         # "Energy Clip",
-        "Ruined Augment"
+        # "Ruined Augment"
+        # "Firecracker",
+        # "Fireworks Box",
+        "Candleberries"
     ]
     
     # Choose mode:

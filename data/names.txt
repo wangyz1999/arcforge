@@ -338,3 +338,6 @@ Heavy Ammo
 Shotgun Ammo
 Launcher Ammo
 Energy Clip
+Firecracker
+Fireworks Box
+Candleberries

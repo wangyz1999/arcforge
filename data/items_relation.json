@@ -15,7 +15,8 @@
       "sellprice": 640,
       "stacksize": 5,
       "shield": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Advanced_ARC_Powercell.png/348px-Advanced_ARC_Powercell.png.webp",
@@ -75,7 +76,26 @@
       "location": "Electrical",
       "weight": 1.0,
       "sellprice": 1750,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 3,
+          "quantity": 5
+        },
+        {
+          "workshop": "utility_station",
+          "level": 3,
+          "quantity": 5
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9b/Advanced_Electrical_Components.png/348px-Advanced_Electrical_Components.png.webp",
@@ -479,7 +499,15 @@
       "location": "Mechanical",
       "weight": 1.0,
       "sellprice": 1750,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 3,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/25/Advanced_Mechanical_Components.png/348px-Advanced_Mechanical_Components.png.webp",
@@ -2314,7 +2342,8 @@
       "healing": "1/s",
       "usetime": "1s",
       "duration": "10s",
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/47/Agave.png/348px-Agave.png.webp",
@@ -2363,7 +2392,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/03/Air_Freshener.png/348px-Air_Freshener.png.webp",
@@ -2409,7 +2439,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/95/Alarm_Clock.png/348px-Alarm_Clock.png.webp",
@@ -2456,7 +2487,21 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["crafting_material", "quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 3,
+          "quantity": 8
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Doctor's Orders",
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f5/Antiseptic.png/348px-Antiseptic.png.webp",
@@ -2605,7 +2650,20 @@
       "sellprice": 640,
       "stacksize": 10,
       "stamina": "20",
-      "usetime": "1s"
+      "usetime": "1s",
+      "special_types": ["crafting_material", "scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 3,
+          "quantity": 3
+        },
+        {
+          "workshop": "scrappy",
+          "level": 5,
+          "quantity": 12
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/fc/Apricot.png/348px-Apricot.png.webp",
@@ -2653,7 +2711,37 @@
       "location": "ARC",
       "weight": 0.25,
       "sellprice": 200,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material", "expedition", "quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 1,
+          "quantity": 6
+        },
+        {
+          "workshop": "explosives_bench",
+          "level": 1,
+          "quantity": 6
+        },
+        {
+          "workshop": "utility_station",
+          "level": 1,
+          "quantity": 6
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 80
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Clearer Skies",
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a6/ARC_Alloy.png/348px-ARC_Alloy.png.webp",
@@ -3112,7 +3200,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 3,
+          "quantity": 10
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/dc/ARC_Circuitry.png/348px-ARC_Circuitry.png.webp",
@@ -3266,7 +3362,8 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e9/ARC_Coolant.png/348px-ARC_Coolant.png.webp",
@@ -3316,7 +3413,8 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/29/ARC_Flex_Rubber.png/348px-ARC_Flex_Rubber.png.webp",
@@ -3366,7 +3464,15 @@
       "location": null,
       "weight": 0.3,
       "sellprice": 1000,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 2,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/ad/ARC_Motion_Core.png/348px-ARC_Motion_Core.png.webp",
@@ -3466,7 +3572,8 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/02/ARC_Performance_Steel.png/348px-ARC_Performance_Steel.png.webp",
@@ -3521,7 +3628,15 @@
       "shield": "20",
       "recharge": "2/s",
       "usetime": "3s",
-      "duration": "10s"
+      "duration": "10s",
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 1,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/df/ARC_Powercell.png/348px-ARC_Powercell.png.webp",
@@ -3586,7 +3701,8 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/72/ARC_Synthetic_Resin.png/348px-ARC_Synthetic_Resin.png.webp",
@@ -3646,7 +3762,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/ARC_Thermo_Lining.png/348px-ARC_Thermo_Lining.png.webp",
@@ -3836,6 +3953,19 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 2
+      },
+      {
+        "name": "Candleberries",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Candleberries"
+          }
+        ],
+        "output_level": "Candleberries"
       }
     ]
   },
@@ -3862,7 +3992,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 3,
+          "quantity": 6
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/06/Bastion_Cell.png/348px-Bastion_Cell.png.webp",
@@ -3925,7 +4063,20 @@
       "location": "Technological<br>Electrical",
       "weight": 0.25,
       "sellprice": 250,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material", "expedition", "quest"],
+      "expedition_parts": [
+        {
+          "part": 3,
+          "quantity": 30
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Trash Into Treasure",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/6d/Battery.png/348px-Battery.png.webp",
@@ -4187,7 +4338,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/fa/Bicycle_Pump.png/348px-Bicycle_Pump.png.webp",
@@ -4252,7 +4404,8 @@
       "sellprice": 1000,
       "stacksize": 15,
       "usetime": "1s",
-      "stamina": "25"
+      "stamina": "25",
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/01/Bloated_Tuna_Can.png/348px-Bloated_Tuna_Can.png.webp",
@@ -4365,7 +4518,15 @@
       "location": "ARC",
       "weight": 1.0,
       "sellprice": 5000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 3,
+          "quantity": 6
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/46/Bombardier_Cell.png/348px-Bombardier_Cell.png.webp",
@@ -4415,7 +4576,8 @@
       "location": "Residential<br>Old World<br>Commercial",
       "weight": 0.2,
       "sellprice": 7000,
-      "stacksize": 1
+      "stacksize": 1,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/63/Breathtaking_Snow_Globe.png/348px-Breathtaking_Snow_Globe.png.webp",
@@ -4445,7 +4607,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/17/Broken_Flashlight.png/348px-Broken_Flashlight.png.webp",
@@ -4518,7 +4681,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/93/Broken_Guidance_System.png/348px-Broken_Guidance_System.png.webp",
@@ -4568,7 +4732,8 @@
       "location": null,
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/3b/Broken_Handheld_Radio.png/348px-Broken_Handheld_Radio.png.webp",
@@ -4618,7 +4783,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/18/Broken_Taser.png/348px-Broken_Taser.png.webp",
@@ -4815,7 +4981,8 @@
       "location": "Security",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a6/Camera_Lens.png/348px-Camera_Lens.png.webp",
@@ -4865,7 +5032,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/58/Candle_Holder.png/348px-Candle_Holder.png.webp",
@@ -4915,7 +5083,8 @@
       "location": "Commercial",
       "weight": 0.25,
       "sellprice": 300,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Canister.png/348px-Canister.png.webp",
@@ -5164,7 +5333,15 @@
       "location": null,
       "weight": 0.5,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 4,
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/82/Cat_Bed.png/348px-Cat_Bed.png.webp",
@@ -5187,7 +5364,8 @@
       "location": "Mechanical<br>Residential<br>Medical",
       "weight": 0.1,
       "sellprice": 50,
-      "stacksize": 50
+      "stacksize": 50,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/92/Chemicals.png/348px-Chemicals.png.webp",
@@ -5724,6 +5902,17 @@
             "name": "Workbench 1"
           }
         ]
+      },
+      {
+        "name": "Firecracker",
+        "direction": "out",
+        "relation": "craft_to",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Utility Station 1"
+          }
+        ]
       }
     ]
   },
@@ -5741,7 +5930,8 @@
       "location": null,
       "weight": 0.3,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/33/Coffee_Pot.png/348px-Coffee_Pot.png.webp",
@@ -5764,7 +5954,8 @@
       "location": "Security",
       "weight": 1.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/3d/Complex_Gun_Parts.png/348px-Complex_Gun_Parts.png.webp",
@@ -5966,7 +6157,8 @@
       "location": "Mechanical",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/40/Coolant.png/348px-Coolant.png.webp",
@@ -6039,7 +6231,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/7f/Cooling_Coil.png/348px-Cooling_Coil.png.webp",
@@ -6102,7 +6295,14 @@
       "location": "Technological",
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["expedition"],
+      "expedition_parts": [
+        {
+          "part": 2,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/13/Cooling_Fan.png/348px-Cooling_Fan.png.webp",
@@ -6165,7 +6365,15 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 2,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9a/Cracked_Bioscanner.png/348px-Cracked_Bioscanner.png.webp",
@@ -6239,7 +6447,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": "1.5m"
+      "radius": "1.5m",
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 2,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/fc/Crude_Explosives.png/348px-Crude_Explosives.png.webp",
@@ -6439,7 +6655,8 @@
       "location": null,
       "weight": 0.8,
       "sellprice": 270,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8e/Crumpled_Plastic_Bottle.png/348px-Crumpled_Plastic_Bottle.png.webp",
@@ -6609,7 +6826,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9e/Damaged_ARC_Motion_Core.png/348px-Damaged_ARC_Motion_Core.png.webp",
@@ -6666,7 +6884,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/58/Damaged_ARC_Powercell.png/348px-Damaged_ARC_Powercell.png.webp",
@@ -6716,7 +6935,8 @@
       "location": "ARC",
       "weight": 1.0,
       "sellprice": 270,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/d8/Damaged_Fireball_Burner.png/348px-Damaged_Fireball_Burner.png.webp",
@@ -6753,7 +6973,15 @@
       "location": "Technological",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "utility_station",
+          "level": 2,
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1f/Damaged_Heat_Sink.png/348px-Damaged_Heat_Sink.png.webp",
@@ -6827,7 +7055,8 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/96/Damaged_Hornet_Driver.png/348px-Damaged_Hornet_Driver.png.webp",
@@ -6857,7 +7086,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/3a/Damaged_Rocketeer_Driver.png/348px-Damaged_Rocketeer_Driver.png.webp",
@@ -6948,7 +7178,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/d6/Damaged_Tick_Pod.png/348px-Damaged_Tick_Pod.png.webp",
@@ -7007,7 +7238,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e6/Damaged_Wasp_Driver.png/348px-Damaged_Wasp_Driver.png.webp",
@@ -7057,7 +7289,8 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4d/Dart_Board.png/348px-Dart_Board.png.webp",
@@ -7090,7 +7323,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/7c/Deflated_Football.png/348px-Deflated_Football.png.webp",
@@ -7163,7 +7397,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/37/Degraded_ARC_Rubber.png/348px-Degraded_ARC_Rubber.png.webp",
@@ -7213,7 +7448,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1a/Diving_Goggles.png/348px-Diving_Goggles.png.webp",
@@ -7263,7 +7499,15 @@
       "location": "Residential",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 2,
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c5/Dog_Collar.png/348px-Dog_Collar.png.webp",
@@ -7336,7 +7580,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/0/0b/Dried-Out_ARC_Resin.png",
@@ -7372,7 +7617,8 @@
       "location": "Commercial<br>Residential",
       "weight": 0.25,
       "sellprice": 300,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4e/Duct_Tape.png/348px-Duct_Tape.png.webp",
@@ -7681,7 +7927,27 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["crafting_material", "expedition", "quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 2,
+          "quantity": 5
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 2,
+          "quantity": 35
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Doctor's Orders",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/25/Durable_Cloth.png/348px-Durable_Cloth.png.webp",
@@ -7785,7 +8051,26 @@
       "location": "Electrical",
       "weight": 0.5,
       "sellprice": 640,
-      "stacksize": 10
+      "stacksize": 10,
+      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 2,
+          "quantity": 5
+        },
+        {
+          "workshop": "utility_station",
+          "level": 2,
+          "quantity": 5
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 2,
+          "quantity": 30
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/06/Electrical_Components.png/348px-Electrical_Components.png.webp",
@@ -8214,7 +8499,8 @@
       "location": null,
       "weight": 0.2,
       "sellprice": 1000,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e1/Empty_Wine_Bottle.png/348px-Empty_Wine_Bottle.png.webp",
@@ -8267,7 +8553,14 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["crafting_material", "expedition"],
+      "expedition_parts": [
+        {
+          "part": 3,
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1b/Exodus_Modules.png/348px-Exodus_Modules.png.webp",
@@ -8489,7 +8782,8 @@
       "persecond": null,
       "usetime": "1s",
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/91/Expired_Pasta.png/348px-Expired_Pasta.png.webp",
@@ -8512,7 +8806,8 @@
       "location": "Medical",
       "weight": 2.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/ba/Expired_Respirator.png/348px-Expired_Respirator.png.webp",
@@ -8586,7 +8881,15 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 3,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/11/Explosive_Compound.png/348px-Explosive_Compound.png.webp",
@@ -8740,6 +9043,30 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 1
+      },
+      {
+        "name": "Fireworks Box",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Fireworks Box",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Fireworks Box",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
       }
     ]
   },
@@ -8761,7 +9088,20 @@
       "stacksize": 50,
       "usetime": "1s",
       "healing": "0.4/s",
-      "duration": "25s"
+      "duration": "25s",
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 1,
+          "quantity": 30
+        },
+        {
+          "workshop": "medical_lab",
+          "level": 1,
+          "quantity": 50
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/2b/Fabric.png/348px-Fabric.png.webp",
@@ -9121,7 +9461,8 @@
       "location": "Residential",
       "weight": 0.3,
       "sellprice": 640,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/0/0c/Faded_Photograph.png",
@@ -9143,7 +9484,8 @@
       "location": null,
       "weight": 0.4,
       "sellprice": 1000,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["quest"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/25/Fertilizer.png/348px-Fertilizer.png.webp",
@@ -9173,7 +9515,8 @@
       "location": "Residential<br>Old World",
       "weight": 0.2,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/44/Film_Reel.png/348px-Film_Reel.png.webp",
@@ -9196,7 +9539,8 @@
       "location": null,
       "weight": 0.2,
       "sellprice": 3000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/9/94/Fine_Wristwatch.png",
@@ -9222,7 +9566,15 @@
       "stacksize": 3,
       "damage": "5/s",
       "duration": "10s",
-      "radius": "2m"
+      "radius": "2m",
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 2,
+          "quantity": 8
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8b/Fireball_Burner.png/348px-Fireball_Burner.png.webp",
@@ -9322,7 +9674,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "sellprice": 3000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/36/Frequency_Modulation_Box.png/348px-Frequency_Modulation_Box.png.webp",
@@ -9385,7 +9738,15 @@
       "location": "Technological",
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "utility_station",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/29/Fried_Motherboard.png/348px-Fried_Motherboard.png.webp",
@@ -9448,7 +9809,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/74/Frying_Pan.png/348px-Frying_Pan.png.webp",
@@ -9498,7 +9860,8 @@
       "location": null,
       "weight": 0.8,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/88/Garlic_Press.png/348px-Garlic_Press.png.webp",
@@ -9553,7 +9916,14 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["crafting_material", "quest"],
+      "quests": [
+        {
+          "quest": "Doctor's Orders",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0d/Great_Mullein.png/348px-Great_Mullein.png.webp",
@@ -9631,7 +10001,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/Headphones.png/348px-Headphones.png.webp",
@@ -9701,7 +10072,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/33/Heavy_Gun_Parts.png/348px-Heavy_Gun_Parts.png.webp",
@@ -10543,7 +10915,21 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": "6m"
+      "radius": "6m",
+      "special_types": ["quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 2,
+          "quantity": 5
+        }
+      ],
+      "quests": [
+        {
+          "quest": "The Trifecta",
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/bb/Hornet_Driver.png/348px-Hornet_Driver.png.webp",
@@ -10606,7 +10992,8 @@
       "location": null,
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/36/Household_Cleaner.png/348px-Household_Cleaner.png.webp",
@@ -10656,7 +11043,14 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["expedition"],
+      "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4b/Humidifier.png/348px-Humidifier.png.webp",
@@ -10719,7 +11113,8 @@
       "location": null,
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c9/Ice_Cream_Scooper.png/348px-Ice_Cream_Scooper.png.webp",
@@ -10779,7 +11174,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a0/Impure_ARC_Coolant.png/348px-Impure_ARC_Coolant.png.webp",
@@ -10826,7 +11222,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c9/Industrial_Battery.png/348px-Industrial_Battery.png.webp",
@@ -10889,7 +11293,8 @@
       "location": "Industrial",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/66/Industrial_Charger.png/348px-Industrial_Charger.png.webp",
@@ -10952,7 +11357,8 @@
       "location": "Industrial",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/38/Industrial_Magnet.png/348px-Industrial_Magnet.png.webp",
@@ -11015,7 +11421,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "stacksize": 3,
-      "sellprice": 6000
+      "sellprice": 6000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e7/Ion_Sputter.png/348px-Ion_Sputter.png.webp",
@@ -11083,7 +11490,15 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e5/Laboratory_Reagents.png/348px-Laboratory_Reagents.png.webp",
@@ -11146,7 +11561,8 @@
       "location": "Residential<br>Commercial",
       "weight": 0.2,
       "sellprice": 10000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/15/Lance%27s_Mixtape_%285th_Edition%29.png/348px-Lance%27s_Mixtape_%285th_Edition%29.png.webp",
@@ -11179,7 +11595,15 @@
       "persecond": null,
       "usetime": "1s",
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material", "scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/35/Lemon.png/348px-Lemon.png.webp",
@@ -11230,7 +11654,21 @@
       "sellprice": 5000,
       "stacksize": 3,
       "damage": 100.0,
-      "radius": "10m"
+      "radius": "10m",
+      "special_types": ["expedition", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "utility_station",
+          "level": 3,
+          "quantity": 4
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a0/Leaper_Pulse_Unit.png/348px-Leaper_Pulse_Unit.png.webp",
@@ -11293,7 +11731,14 @@
       "location": "Electrical",
       "weight": 0.2,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["expedition"],
+      "expedition_parts": [
+        {
+          "part": 3,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/2c/Light_Bulb.png/348px-Light_Bulb.png.webp",
@@ -11323,7 +11768,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c9/Light_Gun_Parts.png/348px-Light_Gun_Parts.png.webp",
@@ -11674,7 +12120,8 @@
       "location": "Exodus",
       "weight": 0.25,
       "sellprice": 300,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8c/Magnet.png/348px-Magnet.png.webp",
@@ -11939,7 +12386,14 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["crafting_material", "expedition"],
+      "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/5e/Magnetic_Accelerator.png/348px-Magnetic_Accelerator.png.webp",
@@ -12237,7 +12691,8 @@
       "sellprice": 6000,
       "input1": "Magnetron",
       "recycling1": "1 Magnetic Accelerator + 1 Steel Spring",
-      "salvaging1": "1 Advanced Mechanical Components"
+      "salvaging1": "1 Advanced Mechanical Components",
+      "special_types": ["quest"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a2/Magnetron.png/348px-Magnetron.png.webp",
@@ -12300,7 +12755,8 @@
       "location": "ARC",
       "weight": 10.0,
       "sellprice": 13000,
-      "stacksize": 1
+      "stacksize": 1,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/24/Matriarch_Reactor.png/348px-Matriarch_Reactor.png.webp",
@@ -12379,7 +12835,15 @@
       "location": "Mechanical",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 10
+      "stacksize": 10,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 2,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/94/Mechanical_Components.png/348px-Mechanical_Components.png.webp",
@@ -14087,7 +14551,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9a/Medium_Gun_Parts.png/348px-Medium_Gun_Parts.png.webp",
@@ -15312,7 +15777,8 @@
       "location": "Mechanical<br>Electrical",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/62/Metal_Brackets.png/348px-Metal_Brackets.png.webp",
@@ -15362,7 +15828,26 @@
       "location": "Mechanical<br>Industrial<br>Electrical<br>Technological",
       "weight": 0.1,
       "sellprice": 75,
-      "stacksize": 50
+      "stacksize": 50,
+      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 1,
+          "quantity": 20
+        },
+        {
+          "workshop": "refiner",
+          "level": 1,
+          "quantity": 60
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 150
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/89/Metal_Parts.png/348px-Metal_Parts.png.webp",
@@ -16927,7 +17412,8 @@
       "weight": 1.5,
       "location": "Exodus",
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/2c/Microscope.png/348px-Microscope.png.webp",
@@ -16990,7 +17476,8 @@
       "location": "Exodus",
       "weight": 3.0,
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9f/Mini_Centrifuge.png/348px-Mini_Centrifuge.png.webp",
@@ -17058,7 +17545,8 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/Mod_Components.png/348px-Mod_Components.png.webp",
@@ -17454,7 +17942,8 @@
       "stacksize": 10,
       "healing": "1/s",
       "usetime": "1s",
-      "duration": "10s"
+      "duration": "10s",
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/64/Moss.png/348px-Moss.png.webp",
@@ -17540,7 +18029,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/Motor.png/348px-Motor.png.webp",
@@ -17592,7 +18089,15 @@
       "persecond": null,
       "usetime": "1s",
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 5,
+          "quantity": 12
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8c/Mushroom.png/348px-Mushroom.png.webp",
@@ -17625,7 +18130,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/90/Music_Album.png/348px-Music_Album.png.webp",
@@ -17658,7 +18164,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/74/Music_Box.png/348px-Music_Box.png.webp",
@@ -17686,7 +18193,8 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/51/Number_Plate.png/348px-Number_Plate.png.webp",
@@ -17736,7 +18244,8 @@
       "location": "Mechanical",
       "weight": 0.25,
       "sellprice": 300,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/06/Oil.png/348px-Oil.png.webp",
@@ -17984,7 +18493,15 @@
       "persecond": null,
       "usetime": "1s",
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 4,
+          "quantity": 6
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f3/Olives.png/348px-Olives.png.webp",
@@ -18020,7 +18537,8 @@
       "location": "Old World",
       "weight": 0.3,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/53/Painted_Box.png/348px-Painted_Box.png.webp",
@@ -18074,7 +18592,20 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 1,
+          "quantity": 25
+        },
+        {
+          "workshop": "utility_station",
+          "level": 1,
+          "quantity": 50
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c9/Plastic_Parts.png/348px-Plastic_Parts.png.webp",
@@ -18876,6 +19407,29 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 3
+      },
+      {
+        "name": "Firecracker",
+        "direction": "out",
+        "relation": "craft_to",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Utility Station 1"
+          }
+        ]
+      },
+      {
+        "name": "Firecracker",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 3
+      },
+      {
+        "name": "Firecracker",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 1
       }
     ]
   },
@@ -18903,7 +19457,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e2/Playing_Cards.png/348px-Playing_Cards.png.webp",
@@ -18935,7 +19490,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/6e/Polluted_Air_Filter.png/348px-Polluted_Air_Filter.png.webp",
@@ -18998,7 +19554,15 @@
       "location": "ARC",
       "weight": 0.5,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 2,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c6/Pop_Trigger.png/348px-Pop_Trigger.png.webp",
@@ -19044,6 +19608,18 @@
           }
         ],
         "input_level": "Pop Trigger"
+      },
+      {
+        "name": "Fireworks Box",
+        "direction": "out",
+        "relation": "craft_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
       }
     ]
   },
@@ -19071,7 +19647,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Portable_TV.png/348px-Portable_TV.png.webp",
@@ -19144,7 +19721,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c0/Pottery.png/348px-Pottery.png.webp",
@@ -19177,7 +19755,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Power_Bank.png/348px-Power_Bank.png.webp",
@@ -19245,7 +19824,15 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gear_bench",
+          "level": 2,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f8/Power_Cable.png/348px-Power_Cable.png.webp",
@@ -19295,7 +19882,8 @@
       "location": "Exodus",
       "weight": 1.0,
       "sellprice": 5500,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Power_Rod.png/348px-Power_Rod.png.webp",
@@ -19470,7 +20058,15 @@
       "persecond": null,
       "usetime": "1s",
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material", "scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 4,
+          "quantity": 6
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/80/Prickly_Pear.png/348px-Prickly_Pear.png.webp",
@@ -19518,7 +20114,8 @@
       "location": "Technological",
       "weight": 0.2,
       "sellprice": 500,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4e/Processor.png/348px-Processor.png.webp",
@@ -19906,7 +20503,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/04/Projector.png/348px-Projector.png.webp",
@@ -19979,7 +20577,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/6b/Queen_Reactor.png/348px-Queen_Reactor.png.webp",
@@ -20074,7 +20673,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Radio.png/348px-Radio.png.webp",
@@ -20137,7 +20737,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b6/Radio_Relay.png/348px-Radio_Relay.png.webp",
@@ -20239,12 +20840,12 @@
         "dependency": [
           {
             "type": "price",
-            "amount": 9000,
-            "currency": "Coins"
+            "amount": 100,
+            "currency": "Cred"
           },
           {
             "type": "stock",
-            "value": "1/1",
+            "value": "2/2",
             "is_limited": true
           }
         ]
@@ -20275,7 +20876,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1a/Red_Coral_Jewelry.png/348px-Red_Coral_Jewelry.png.webp",
@@ -20298,7 +20900,8 @@
       "location": null,
       "weight": 0.8,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f4/Remote_Control.png/348px-Remote_Control.png.webp",
@@ -20371,7 +20974,8 @@
       "persecond": null,
       "usetime": "1s",
       "duration": "10s",
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/2c/Resin.png/348px-Resin.png.webp",
@@ -20457,7 +21061,8 @@
       "location": "Exodus",
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8a/Rocket_Thruster.png/348px-Rocket_Thruster.png.webp",
@@ -20520,7 +21125,21 @@
       "location": null,
       "weight": 1.0,
       "sellprice": 5000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 3,
+          "quantity": 3
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Out of the Shadows",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/ef/Rocketeer_Driver.png/348px-Rocketeer_Driver.png.webp",
@@ -20593,7 +21212,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/57/Roots.png/348px-Roots.png.webp",
@@ -20623,7 +21243,8 @@
       "location": "Commercial<br>Residential",
       "weight": 0.3,
       "sellprice": 500,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b4/Rope.png/348px-Rope.png.webp",
@@ -20717,7 +21338,8 @@
       "location": "Old World<br>Residential",
       "weight": 0.3,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Rosary.png/348px-Rosary.png.webp",
@@ -20743,7 +21365,8 @@
       "sellprice": 3000,
       "input1": "Rotary Encoder",
       "recycling1": "2 Electrical Components + 2 Processor",
-      "salvaging1": "2 Processor"
+      "salvaging1": "2 Processor",
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/e/e4/Rotary_Encoder.png",
@@ -20773,7 +21396,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/df/Rubber_Duck.png/348px-Rubber_Duck.png.webp",
@@ -20796,7 +21420,8 @@
       "location": "Electrical",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1a/Rubber_Pad.png/348px-Rubber_Pad.png.webp",
@@ -20846,7 +21471,26 @@
       "location": "Mechanical<br>Industrial<br>Electrical",
       "weight": 0.1,
       "sellprice": 50,
-      "stacksize": 50
+      "stacksize": 50,
+      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 1,
+          "quantity": 30
+        },
+        {
+          "workshop": "explosives_bench",
+          "level": 1,
+          "quantity": 50
+        }
+      ],
+      "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 200
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/93/Rubber_Parts.png/348px-Rubber_Parts.png.webp",
@@ -21819,7 +22463,8 @@
       "location": null,
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a6/Ruined_Accordion.png/348px-Ruined_Accordion.png.webp",
@@ -21943,7 +22588,8 @@
       "location": "Security",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/ee/Ruined_Baton.png/348px-Ruined_Baton.png.webp",
@@ -22003,7 +22649,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/7c/Ruined_Handcuffs.png/348px-Ruined_Handcuffs.png.webp",
@@ -22053,7 +22700,8 @@
       "location": "Exodus",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/5c/Ruined_Parachute.png/348px-Ruined_Parachute.png.webp",
@@ -22090,7 +22738,8 @@
       "location": "Security",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c2/Ruined_Tactical_Vest.png/348px-Ruined_Tactical_Vest.png.webp",
@@ -22153,7 +22802,8 @@
       "location": "Security",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/cb/Ruined_Riot_Shield.png/348px-Ruined_Riot_Shield.png.webp",
@@ -22216,7 +22866,8 @@
       "location": "Mechanical<br>Industrial",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/bf/Rusted_Bolts.png/348px-Rusted_Bolts.png.webp",
@@ -22276,7 +22927,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/c/cf/Rusted_Gear.png",
@@ -22348,7 +23007,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 3,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1a/Rusted_Shut_Medical_Kit.png/348px-Rusted_Shut_Medical_Kit.png.webp",
@@ -22411,7 +23078,15 @@
       "location": "Mechanical<br>Industrial",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 2,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/30/Rusted_Tools.png/348px-Rusted_Tools.png.webp",
@@ -22474,7 +23149,8 @@
       "location": "ARC",
       "weight": 1.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/3/33/Rusty_ARC_Steel.png",
@@ -22523,7 +23199,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/d8/Sample_Cleaner.png/348px-Sample_Cleaner.png.webp",
@@ -22586,7 +23263,14 @@
       "location": "Technological<br>Security",
       "weight": 0.3,
       "sellprice": 500,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material", "expedition"],
+      "expedition_parts": [
+        {
+          "part": 3,
+          "quantity": 20
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9c/Sensors.png/348px-Sensors.png.webp",
@@ -22844,7 +23528,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 3,
+          "quantity": 4
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/91/Sentinel_Firing_Core.png/348px-Sentinel_Firing_Core.png.webp",
@@ -22907,7 +23599,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/de/Signal_Amplifier.png/348px-Signal_Amplifier.png.webp",
@@ -22970,7 +23663,8 @@
       "location": "Old World<br>Commercial<br>Residential",
       "weight": 0.3,
       "sellprice": 3000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/90/Silver_Teaspoon_Set.png/348px-Silver_Teaspoon_Set.png.webp",
@@ -22993,7 +23687,8 @@
       "location": "Raider<br>Security",
       "weight": 0.3,
       "sellprice": 330,
-      "stacksize": 10
+      "stacksize": 10,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Simple-gun-parts.png/348px-Simple-gun-parts.png.webp",
@@ -24605,7 +25300,21 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "utility_station",
+          "level": 2,
+          "quantity": 6
+        }
+      ],
+      "quests": [
+        {
+          "quest": "The Trifecta",
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e5/Snitch_Scanner.png/348px-Snitch_Scanner.png.webp",
@@ -24756,7 +25465,8 @@
       "location": "Commercial",
       "weight": 0.3,
       "sellprice": 500,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/ee/Speaker_Component.png/348px-Speaker_Component.png.webp",
@@ -24976,7 +25686,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "sellprice": 3000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0e/Spectrometer.png/348px-Spectrometer.png.webp",
@@ -25039,7 +25750,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "sellprice": 3500,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/0a/Spectrum_Analyzer.png/348px-Spectrum_Analyzer.png.webp",
@@ -25102,7 +25814,8 @@
       "location": "Commercial<br>Residential",
       "weight": 2.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/26/Spring_Cushion.png/348px-Spring_Cushion.png.webp",
@@ -25176,7 +25889,8 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/58/Spotter_Relay.png/348px-Spotter_Relay.png.webp",
@@ -25226,7 +25940,8 @@
       "location": "Old World<br>Residential",
       "weight": 0.3,
       "sellprice": 3000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8a/Statuette.png/348px-Statuette.png.webp",
@@ -25254,7 +25969,14 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["crafting_material", "expedition"],
+      "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 15
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/db/Steel_Spring.png/348px-Steel_Spring.png.webp",
@@ -25798,7 +26520,21 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 3,
+          "quantity": 5
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Mixed Signals",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a9/Surveyor_Vault.png/348px-Surveyor_Vault.png.webp",
@@ -25864,7 +26600,15 @@
       "sellprice": 700,
       "stacksize": 5,
       "damage": 80.0,
-      "radius": "7.5m"
+      "radius": "7.5m",
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "explosives_bench",
+          "level": 2,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8e/Synthesized_Fuel.png/348px-Synthesized_Fuel.png.webp",
@@ -25970,7 +26714,14 @@
       "shield": null,
       "damage": null,
       "persecond": null,
-      "usetime": null
+      "usetime": null,
+      "special_types": ["quest"],
+      "quests": [
+        {
+          "quest": "Doctor's Orders",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/17/Syringe.png/348px-Syringe.png.webp",
@@ -26137,7 +26888,8 @@
       "location": "Residential",
       "weight": 0.8,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c4/Tattered_Clothes.png/348px-Tattered_Clothes.png.webp",
@@ -26187,7 +26939,8 @@
       "location": "Exodus",
       "weight": 1.5,
       "stacksize": 3,
-      "sellprice": 3000
+      "sellprice": 3000,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a8/Telemetry_Transceiver.png/348px-Telemetry_Transceiver.png.webp",
@@ -26250,7 +27003,8 @@
       "location": "Residential",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/9/9a/Thermostat.png",
@@ -26312,7 +27066,15 @@
       "location": "ARC",
       "weight": 0.25,
       "sellprice": 640,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "medical_lab",
+          "level": 2,
+          "quantity": 8
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/95/Tick_Pod.png/348px-Tick_Pod.png.webp",
@@ -26375,7 +27137,15 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "refiner",
+          "level": 2,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Toaster.png/348px-Toaster.png.webp",
@@ -26449,7 +27219,8 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/cc/Torn_Book.png/348px-Torn_Book.png.webp",
@@ -26472,7 +27243,8 @@
       "location": "Residential<br>Medical",
       "weight": 2.0,
       "sellprice": 640,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/af/Torn_Blanket.png/348px-Torn_Blanket.png.webp",
@@ -26522,7 +27294,8 @@
       "location": "Exodus",
       "weight": 3.0,
       "sellprice": 2000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f1/Turbo_Pump.png/348px-Turbo_Pump.png.webp",
@@ -26596,7 +27369,8 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/37/Unusable_Weapon.png/348px-Unusable_Weapon.png.webp",
@@ -26669,7 +27443,8 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/6e/Vase.png/348px-Vase.png.webp",
@@ -26702,7 +27477,15 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": null
+      "radius": null,
+      "special_types": ["scrappy_items", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "scrappy",
+          "level": 5,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a4/Very_Comfortable_Pillow.png/348px-Very_Comfortable_Pillow.png.webp",
@@ -26736,7 +27519,8 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "recharge": null
+      "recharge": null,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/26/Volcanic_Rock.png/348px-Volcanic_Rock.png.webp",
@@ -26759,7 +27543,8 @@
       "location": "Technological",
       "weight": 0.3,
       "sellprice": 500,
-      "stacksize": 5
+      "stacksize": 5,
+      "special_types": ["crafting_material"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9a/Voltage-converter.png/348px-Voltage-converter.png.webp",
@@ -26941,7 +27726,21 @@
       "persecond": null,
       "usetime": null,
       "duration": null,
-      "radius": "5m"
+      "radius": "5m",
+      "special_types": ["quest", "workshop_upgrade"],
+      "workshop_upgrades": [
+        {
+          "workshop": "gunsmith",
+          "level": 2,
+          "quantity": 8
+        }
+      ],
+      "quests": [
+        {
+          "quest": "The Trifecta",
+          "quantity": 2
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/30/Wasp_Driver.png/348px-Wasp_Driver.png.webp",
@@ -27004,7 +27803,8 @@
       "location": null,
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["safe_to_recycle"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/48/Water_Filter.png/348px-Water_Filter.png.webp",
@@ -27067,7 +27867,14 @@
       "location": "Mechanical<br>Industrial",
       "weight": 2.0,
       "sellprice": 1000,
-      "stacksize": 3
+      "stacksize": 3,
+      "special_types": ["quest"],
+      "quests": [
+        {
+          "quest": "Unexpected Initiative",
+          "quantity": 1
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/28/Water_Pump.png/348px-Water_Pump.png.webp",
@@ -27130,7 +27937,20 @@
       "location": "Electrical<br>Technological",
       "weight": 0.25,
       "sellprice": 200,
-      "stacksize": 15
+      "stacksize": 15,
+      "special_types": ["crafting_material", "expedition", "quest"],
+      "expedition_parts": [
+        {
+          "part": 2,
+          "quantity": 30
+        }
+      ],
+      "quests": [
+        {
+          "quest": "Trash Into Treasure",
+          "quantity": 6
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/39/Wires.png/348px-Wires.png.webp",
@@ -27741,12 +28561,7 @@
       "stealth": 14.0,
       "stability": 78.9,
       "weight": 11.0,
-      "sellprice": [
-        13000,
-        17000,
-        22000,
-        27000
-      ]
+      "sellprice": [13000, 17000, 22000, 27000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c9/Tempest-Level1.png/348px-Tempest-Level1.png.webp",
@@ -28212,12 +29027,7 @@
       "agility": 54.8,
       "stealth": 14.0,
       "weight": 6.0,
-      "sellprice": [
-        1750,
-        3000,
-        5000,
-        7000
-      ]
+      "sellprice": [1750, 3000, 5000, 7000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/be/Rattler-Level1.png/348px-Rattler-Level1.png.webp",
@@ -28742,12 +29552,7 @@
       "stability": 69.8,
       "stealth": 26.0,
       "weight": 7.0,
-      "sellprice": [
-        840,
-        2000,
-        3000,
-        5000
-      ]
+      "sellprice": [840, 2000, 3000, 5000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c1/Kettle-Level1.png/348px-Kettle-Level1.png.webp",
@@ -29353,12 +30158,7 @@
       "stealth": 14.0,
       "stability": 76.4,
       "weight": 11.0,
-      "sellprice": [
-        8000,
-        11000,
-        14000,
-        18000
-      ]
+      "sellprice": [8000, 11000, 14000, 18000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/ac/Bettina.png/348px-Bettina.png.webp",
@@ -29980,12 +30780,7 @@
       "agility": 57.3,
       "range": 55.9,
       "weight": 7.0,
-      "sellprice": [
-        5500,
-        8000,
-        11500,
-        15000
-      ]
+      "sellprice": [5500, 8000, 11500, 15000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/6c/Arpeggio-Level1.png/348px-Arpeggio-Level1.png.webp",
@@ -30578,12 +31373,7 @@
       "agility": 32.1,
       "stealth": 8.0,
       "weight": 8.0,
-      "sellprice": [
-        475,
-        1000,
-        2000,
-        2900
-      ]
+      "sellprice": [475, 1000, 2000, 2900]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b0/Ferro-Level1.png/348px-Ferro-Level1.png.webp",
@@ -31171,12 +31961,7 @@
       "agility": 55.8,
       "stealth": 16.0,
       "weight": 10.0,
-      "sellprice": [
-        7000,
-        10000,
-        13000,
-        17000
-      ]
+      "sellprice": [7000, 10000, 13000, 17000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b5/Renegade-Level1.png/348px-Renegade-Level1.png.webp",
@@ -31573,12 +32358,12 @@
       "firingmode": "2-Round Burst",
       "ARCarmorpenetr": "Strong",
       "SpecialTrait": "Experimental",
-      "damage": "24 <ref name=\"stats\"/>",
-      "firerate": "9 <ref name=\"stats\"/>",
-      "range": "76 <ref name=\"stats\"/>",
-      "stability": "88 <ref name=\"stats\"/>",
-      "agility": "39 <ref name=\"stats\"/>",
-      "stealth": "16 <ref name=\"stats\"/>",
+      "damage": 24,
+      "firerate": 9,
+      "range": 76,
+      "stability": 88,
+      "agility": 39,
+      "stealth": 16,
       "price": null,
       "weight": 10.0,
       "sellprice": 27500,
@@ -31677,12 +32462,7 @@
       "stealth": 19.0,
       "stability": 45.3,
       "weight": 5.0,
-      "sellprice": [
-        800,
-        2000,
-        3000,
-        5000
-      ]
+      "sellprice": [800, 2000, 3000, 5000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/3a/Stitcher-Level1.png/348px-Stitcher-Level1.png.webp",
@@ -32288,12 +33068,7 @@
       "stealth": 21.0,
       "stability": 45.9,
       "weight": 7.0,
-      "sellprice": [
-        13000,
-        17000,
-        22000,
-        27000
-      ]
+      "sellprice": [13000, 17000, 22000, 27000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/36/Bobcat-Level1.png/348px-Bobcat-Level1.png.webp",
@@ -32915,12 +33690,7 @@
       "agility": 61.1,
       "stealth": 18.0,
       "weight": 8.0,
-      "sellprice": [
-        5000,
-        7000,
-        10000,
-        13000
-      ]
+      "sellprice": [5000, 7000, 10000, 13000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Il_Toro-Level1.png/348px-Il_Toro-Level1.png.webp",
@@ -33539,12 +34309,7 @@
       "agility": 70.3,
       "stealth": 15.0,
       "weight": 8.0,
-      "sellprice": [
-        10000,
-        13000,
-        17000,
-        22000
-      ]
+      "sellprice": [10000, 13000, 17000, 22000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/da/Vulcano-Level1.png/348px-Vulcano-Level1.png.webp",
@@ -34167,12 +34932,7 @@
       "agility": 78.3,
       "stealth": 70.0,
       "weight": 3.0,
-      "sellprice": [
-        450,
-        1000,
-        2000,
-        2900
-      ]
+      "sellprice": [450, 1000, 2000, 2900]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/6/65/Hairpin-Level1.png/348px-Hairpin-Level1.png.webp",
@@ -34748,12 +35508,7 @@
       "agility": 84.4,
       "stealth": 24.0,
       "weight": 4.0,
-      "sellprice": [
-        2900,
-        5000,
-        7000,
-        10000
-      ]
+      "sellprice": [2900, 5000, 7000, 10000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/d/d4/Burletta-Level1.png/348px-Burletta-Level1.png.webp",
@@ -35372,12 +36127,7 @@
       "agility": 69.1,
       "stealth": 10.0,
       "weight": 5.0,
-      "sellprice": [
-        5000,
-        7000,
-        10000,
-        13000
-      ]
+      "sellprice": [5000, 7000, 10000, 13000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/00/Anvil-Level1.png/348px-Anvil-Level1.png.webp",
@@ -35997,12 +36747,7 @@
       "agility": 76.4,
       "stealth": 12.0,
       "weight": 5.0,
-      "sellprice": [
-        7000,
-        10000,
-        13000,
-        17000
-      ]
+      "sellprice": [7000, 10000, 13000, 17000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b4/Venator-Level1.png/348px-Venator-Level1.png.webp",
@@ -36468,12 +37213,7 @@
       "agility": 37.7,
       "stealth": 1.0,
       "weight": 12.0,
-      "sellprice": [
-        7000,
-        10000,
-        13000,
-        17000
-      ]
+      "sellprice": [7000, 10000, 13000, 17000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/1/1e/Torrente-Level1.png/348px-Torrente-Level1.png.webp",
@@ -37096,12 +37836,7 @@
       "agility": 45.9,
       "stealth": 12.0,
       "weight": 7.0,
-      "sellprice": [
-        7000,
-        10000,
-        13000,
-        17000
-      ]
+      "sellprice": [7000, 10000, 13000, 17000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/ae/Osprey-Level1.png/348px-Osprey-Level1.png.webp",
@@ -37701,12 +38436,7 @@
       "agility": 67.9,
       "stealth": 1.0,
       "weight": 7.0,
-      "sellprice": [
-        10000,
-        13000,
-        17000,
-        22000
-      ]
+      "sellprice": [10000, 13000, 17000, 22000]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/ba/Hullcracker-Level1.png/348px-Hullcracker-Level1.png.webp",
@@ -38913,6 +39643,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Lance",
         "direction": "in",
         "relation": "sold_by",
@@ -39028,6 +39776,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       },
       {
         "name": "Lance",
@@ -40389,6 +41155,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Lance",
         "direction": "in",
         "relation": "sold_by",
@@ -40806,6 +41590,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 5
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "5/5",
+            "is_limited": true
+          }
+        ]
       },
       {
         "name": "Lance",
@@ -41431,8 +42233,8 @@
         "dependency": [
           {
             "type": "price",
-            "amount": 1920,
-            "currency": "Coins"
+            "amount": 20,
+            "currency": "Cred"
           }
         ]
       }
@@ -41788,6 +42590,24 @@
         "direction": "out",
         "relation": "recycle_to",
         "quantity": 10
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 50,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
       },
       {
         "name": "Apollo",
@@ -43934,10 +44754,7 @@
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "20% Reduced Per-Shot Dispersion",
-        "10% Reduced Max Shot Dispersion"
-      ]
+      "functions": ["20% Reduced Per-Shot Dispersion", "10% Reduced Max Shot Dispersion"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Compensator_I.png/348px-Compensator_I.png.webp",
@@ -44041,10 +44858,7 @@
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "15% Reduced Horizontal Recoil",
-        "15% Reduced Vertical Recoil"
-      ]
+      "functions": ["15% Reduced Horizontal Recoil", "15% Reduced Vertical Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4f/Muzzle_Brake_I.png/348px-Muzzle_Brake_I.png.webp",
@@ -44128,17 +44942,12 @@
       "type": "Modification-Shotgun-Muzzle",
       "rarity": "Common",
       "attachquote": "Slightly reduces base dispersion.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "10% Reduced Base Dispersion"
-      ]
+      "functions": ["10% Reduced Base Dispersion"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/0/07/Shotgun_Choke_I.png/348px-Shotgun_Choke_I.png.webp",
@@ -44227,9 +45036,7 @@
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "20% Reduced Horizontal Recoil"
-      ]
+      "functions": ["20% Reduced Horizontal Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b5/Angled_Grip_I.png/348px-Angled_Grip_I.png.webp",
@@ -44330,9 +45137,7 @@
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "20% Reduced Vertical Recoil Control"
-      ]
+      "functions": ["20% Reduced Vertical Recoil Control"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4d/Vertical_Grip_I.png/348px-Vertical_Grip_I.png.webp",
@@ -44404,13 +45209,7 @@
       "type": "Modification-Light-Mag",
       "rarity": "Common",
       "attachquote": "Slightly extends the ammo capacity of compatible weapons that use light ammo.",
-      "compatible_weapons": [
-        "Hairpin",
-        "Kettle",
-        "Stitcher",
-        "Burletta",
-        "Bobcat"
-      ],
+      "compatible_weapons": ["Hairpin", "Kettle", "Stitcher", "Burletta", "Bobcat"],
       "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
       "fun2": null,
       "fun3": null,
@@ -44420,9 +45219,7 @@
       "recipe": "No",
       "weight": 0.5,
       "sellprice": 640,
-      "functions": [
-        "+5 Magazine Size"
-      ]
+      "functions": ["+5 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/23/Extended_Light_Mag_I.png/348px-Extended_Light_Mag_I.png.webp",
@@ -44494,21 +45291,12 @@
       "type": "Modification-Medium-Mag",
       "rarity": "Common",
       "attachquote": "Slightly extends the ammo capacity of compatible weapons that use medium ammo.",
-      "compatible_weapons": [
-        "Arpeggio",
-        "Osprey",
-        "Renegade",
-        "Torrente",
-        "Venator",
-        "Tempest"
-      ],
+      "compatible_weapons": ["Arpeggio", "Osprey", "Renegade", "Torrente", "Venator", "Tempest"],
       "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Venator]], [[Tempest]]",
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "+4 Magazine Size"
-      ]
+      "functions": ["+4 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/44/Extended_Medium_Mag_I.png/348px-Extended_Medium_Mag_I.png.webp",
@@ -44592,17 +45380,12 @@
       "type": "Modification-Shotgun-Mag",
       "rarity": "Common",
       "attachquote": "Slightly extends the ammo capacity of shotguns",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "+2 Magazine Size"
-      ]
+      "functions": ["+2 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/9/9b/Extended_Shotgun_Mag_I.png/348px-Extended_Shotgun_Mag_I.png.webp",
@@ -44705,10 +45488,7 @@
       "recipe": "No",
       "weight": 0.25,
       "sellprice": 640,
-      "functions": [
-        "20% Reduced Recoil Recovery Duration",
-        "20% Reduced Dispersion Recovery Time"
-      ]
+      "functions": ["20% Reduced Recoil Recovery Duration", "20% Reduced Dispersion Recovery Time"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/8/8d/Stable_Stock_I.png/348px-Stable_Stock_I.png.webp",
@@ -44805,10 +45585,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "40% Reduced Per-Shot Dispersion",
-        "20% Reduced Max Shot Dispersion"
-      ]
+      "functions": ["40% Reduced Per-Shot Dispersion", "20% Reduced Max Shot Dispersion"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/0/0a/Compensator_II.png",
@@ -44864,6 +45641,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -44897,10 +45692,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "20% Reduced Horizontal Recoil",
-        "20% Reduced Vertical Recoil"
-      ]
+      "functions": ["20% Reduced Horizontal Recoil", "20% Reduced Vertical Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/2/23/Muzzle_Brake_II.png",
@@ -44969,17 +45761,12 @@
       "type": "Modification-Shotgun-Muzzle",
       "rarity": "Uncommon",
       "attachquote": "Moderately reduces base dispersion.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "20% Reduced Base Dispersion"
-      ]
+      "functions": ["20% Reduced Base Dispersion"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/6/63/Shotgun_Choke_II.png",
@@ -45036,9 +45823,7 @@
       "recipe": "Yes",
       "weight": 0.25,
       "sellprice": 2000,
-      "functions": [
-        "20% Reduced Noise"
-      ]
+      "functions": ["20% Reduced Noise"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/f/f7/Silencer_I.png/348px-Silencer_I.png.webp",
@@ -45085,6 +45870,24 @@
           }
         ],
         "output_level": "1x Silencer I"
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45116,9 +45919,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "30% Reduced Horizontal Recoil"
-      ]
+      "functions": ["30% Reduced Horizontal Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/2/2b/Angled_Grip_II.png",
@@ -45174,6 +45975,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45205,9 +46024,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "30% Reduced Vertical Recoil"
-      ]
+      "functions": ["30% Reduced Vertical Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/3/3c/Vertical_Grip_II.png",
@@ -45259,20 +46076,12 @@
       "type": "Modification-Light-Mag",
       "rarity": "Uncommon",
       "attachquote": "Moderately extends the ammo capacity of the compatible weapons that use light ammo.",
-      "compatible_weapons": [
-        "Hairpin",
-        "Kettle",
-        "Stitcher",
-        "Burletta",
-        "Bobcat"
-      ],
+      "compatible_weapons": ["Hairpin", "Kettle", "Stitcher", "Burletta", "Bobcat"],
       "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "+10 Magazine Size"
-      ]
+      "functions": ["+10 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/cf/Extended_Light_Mag_II.png/348px-Extended_Light_Mag_II.png.webp",
@@ -45341,6 +46150,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Tian Wen",
         "direction": "in",
         "relation": "sold_by",
@@ -45371,21 +46198,12 @@
       "type": "Modification-Medium-Mag",
       "rarity": "Uncommon",
       "attachquote": "Moderately extends the ammo capacity of compatible weapons that use medium ammo.",
-      "compatible_weapons": [
-        "Arpeggio",
-        "Osprey",
-        "Renegade",
-        "Torrente",
-        "Tempest",
-        "Venator"
-      ],
+      "compatible_weapons": ["Arpeggio", "Osprey", "Renegade", "Torrente", "Tempest", "Venator"],
       "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Tempest]], [[Venator]]",
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "+8 Magazine Size"
-      ]
+      "functions": ["+8 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Extended_Medium_Mag_II.png/348px-Extended_Medium_Mag_II.png.webp",
@@ -45452,6 +46270,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45465,17 +46301,12 @@
       "type": "Modification-Shotgun-Mag",
       "rarity": "Uncommon",
       "attachquote": "Moderately extends the ammo capacity of compatible weapons that use shotgun ammo.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "+4 Magazine Size"
-      ]
+      "functions": ["+4 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4f/Extended_Shotgun_Mag_II.png/348px-Extended_Shotgun_Mag_II.png.webp",
@@ -45575,10 +46406,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 2000,
-      "functions": [
-        "35% Reduced Recoil Recovery Duration",
-        "35% Reduced Dispersion Recovery Time"
-      ]
+      "functions": ["35% Reduced Recoil Recovery Duration", "35% Reduced Dispersion Recovery Time"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/b/b4/Stable_Stock_II.png/348px-Stable_Stock_II.png.webp",
@@ -45656,6 +46484,24 @@
           }
         ],
         "input_level": "1x Stable Stock II"
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45849,10 +46695,7 @@
       "type": "Modification-Shotgun-Muzzle",
       "rarity": "Rare",
       "attachquote": "Significantly reduces base dispersion.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "fun3": null,
       "fun4": null,
@@ -45861,10 +46704,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 5000,
-      "functions": [
-        "30% Reduced Base Dispersion",
-        "20% Increased Durability Burn Rate"
-      ]
+      "functions": ["30% Reduced Base Dispersion", "20% Increased Durability Burn Rate"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/3/36/Shotgun_Choke_III.png",
@@ -45936,9 +46776,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 5000,
-      "functions": [
-        "40% Reduced Noise"
-      ]
+      "functions": ["40% Reduced Noise"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/c/c0/Silencer_II.png/348px-Silencer_II.png.webp",
@@ -46014,10 +46852,7 @@
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 7000,
-      "functions": [
-        "60% Reduced Noise",
-        "20% Increased Durability Burn Rate"
-      ]
+      "functions": ["60% Reduced Noise", "20% Increased Durability Burn Rate"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/3e/Silencer_III.png/348px-Silencer_III.png.webp",
@@ -46036,10 +46871,7 @@
       "type": "Modification-Shotgun-Muzzle",
       "rarity": "Epic",
       "attachquote": "Moderately reduces the amount of noise produced when firing.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "fun2": null,
       "fun3": null,
@@ -46049,9 +46881,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 5000,
-      "functions": [
-        "50% Reduced Noise"
-      ]
+      "functions": ["50% Reduced Noise"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/4/4d/Shotgun_Silencer.png/348px-Shotgun_Silencer.png.webp",
@@ -46123,10 +46953,7 @@
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 5000,
-      "functions": [
-        "25% Increased Bullet Velocity",
-        "15% Increased Vertical Recoil"
-      ]
+      "functions": ["25% Increased Bullet Velocity", "15% Increased Vertical Recoil"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/2f/Extended_Barrel.png/348px-Extended_Barrel.png.webp",
@@ -46213,10 +47040,7 @@
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 5000,
-      "functions": [
-        "40% Reduced Horizontal Recoil",
-        "30% Reduced ADS Speed"
-      ]
+      "functions": ["40% Reduced Horizontal Recoil", "30% Reduced ADS Speed"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/0/0f/Angled_Grip_III.png",
@@ -46324,10 +47148,7 @@
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 5000,
-      "functions": [
-        "40% Reduced Vertical Recoil",
-        "30% Reduced ADS Speed"
-      ]
+      "functions": ["40% Reduced Vertical Recoil", "30% Reduced ADS Speed"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/2/20/Vertical_Grip_III.png/348px-Vertical_Grip_III.png.webp",
@@ -46471,20 +47292,12 @@
       "type": "Modification-Light-Mag",
       "rarity": "Rare",
       "attachquote": "Significantly extends the ammo capacity of the compatible weapons that use light ammo.",
-      "compatible_weapons": [
-        "Hairpin",
-        "Kettle",
-        "Stitcher",
-        "Burletta",
-        "Bobcat"
-      ],
+      "compatible_weapons": ["Hairpin", "Kettle", "Stitcher", "Burletta", "Bobcat"],
       "warning": "ⓘ Compatible with: [[Hairpin]], [[Kettle]], [[Stitcher]], [[Burletta]], [[Bobcat]]",
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 5000,
-      "functions": [
-        "+15 Magazine Size"
-      ]
+      "functions": ["+15 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/4/40/Extended_Light_Mag_III.png",
@@ -46563,21 +47376,12 @@
       "type": "Modification-Medium-Mag",
       "rarity": "Rare",
       "attachquote": "Significantly extends the ammo capacity of compatible weapons that use medium ammo.",
-      "compatible_weapons": [
-        "Arpeggio",
-        "Osprey",
-        "Renegade",
-        "Torrente",
-        "Tempest",
-        "Venator"
-      ],
+      "compatible_weapons": ["Arpeggio", "Osprey", "Renegade", "Torrente", "Tempest", "Venator"],
       "warning": "ⓘ Compatible with: [[Arpeggio]], [[Osprey]], [[Renegade]], [[Torrente]], [[Tempest]], [[Venator]]",
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 5000,
-      "functions": [
-        "+12 Magazine Size"
-      ]
+      "functions": ["+12 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/a/a1/Extended_Medium_Mag_III.png/348px-Extended_Medium_Mag_III.png.webp",
@@ -46658,17 +47462,12 @@
       "type": "Modification-Shotgun-Mag",
       "rarity": "Rare",
       "attachquote": "Significantly extends the ammo capacity of the compatible weapons that use shotgun ammo.",
-      "compatible_weapons": [
-        "Il Toro",
-        "Vulcano"
-      ],
+      "compatible_weapons": ["Il Toro", "Vulcano"],
       "warning": "ⓘ Compatible with: [[Il Toro]], [[Vulcano]]",
       "recipe": "Yes",
       "weight": 0.75,
       "sellprice": 5000,
-      "functions": [
-        "+6 Magazine Size"
-      ]
+      "functions": ["+6 Magazine Size"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Extended_Shotgun_Mag_III.png/348px-Extended_Shotgun_Mag_III.png.webp",
@@ -47065,17 +47864,12 @@
       "type": "Modification-Tech-Mod",
       "rarity": "Legendary",
       "attachquote": "Tech mod for the Anvil that replaces its bullets with ones that split into 4 weaker projectiles.",
-      "compatible_weapons": [
-        "Anvil"
-      ],
+      "compatible_weapons": ["Anvil"],
       "warning": "ⓘ Compatible with: [[Anvil]]",
       "recipe": "Yes",
       "weight": 0.5,
       "sellprice": 7000,
-      "functions": [
-        "+3 Projectiles Per Shot",
-        "70% Reduced Projectile Damage"
-      ]
+      "functions": ["+3 Projectiles Per Shot", "70% Reduced Projectile Damage"]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/ef/Anvil_Splitter.png/348px-Anvil_Splitter.png.webp",
@@ -47477,6 +48271,190 @@
             "currency": "Coins"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Firecracker",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Firecracker",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Firecracker&action=edit",
+    "infobox": {
+      "image": "Firecracker.png",
+      "name": "Firecracker",
+      "rarity": "Common",
+      "quote": "A device that sparks and pops in a pleasant manner.",
+      "type": "Quick Use-Grenade",
+      "weight": 0.05,
+      "sellprice": 270,
+      "stacksize": 5,
+      "duration": "7.5s"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/86/Firecracker.png/348px-Firecracker.png.webp",
+      "original": "https://arcraiders.wiki/w/images/8/86/Firecracker.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Firecracker.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "in",
+        "relation": "craft_from",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Utility Station 1"
+          }
+        ]
+      },
+      {
+        "name": "Chemicals",
+        "direction": "in",
+        "relation": "craft_from",
+        "dependency": [
+          {
+            "type": "workshop",
+            "name": "Utility Station 1"
+          }
+        ]
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 3
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 20,
+            "currency": "Cred"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fireworks Box",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Fireworks_Box",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Fireworks_Box&action=edit",
+    "infobox": {
+      "image": "Fireworks Box.png",
+      "name": "Fireworks Box",
+      "rarity": "Rare",
+      "quote": "A remotely triggered arrangment of dazzling fireworks, sure to put on a show.",
+      "type": "Quick Use-Utility",
+      "weight": 0.5,
+      "sellprice": 2000
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/Fireworks_Box.png/348px-Fireworks_Box.png.webp",
+      "original": "https://arcraiders.wiki/w/images/0/0f/Fireworks_Box.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Fireworks_Box.png"
+    },
+    "edges": [
+      {
+        "name": "Explosive Compound",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Pop Trigger",
+        "direction": "in",
+        "relation": "craft_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "blueprint",
+            "name": "required"
+          }
+        ]
+      },
+      {
+        "name": "Explosive Compound",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Explosive Compound",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 60,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Candleberries",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Candleberries",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Candleberries&action=edit",
+    "infobox": {
+      "image": "Candleberries.png",
+      "rarity": "Rare",
+      "type": "Nature",
+      "name": "Candleberries",
+      "quote": "A waxy berry that grows only during a small window each year. People have depended on them to make candles, foods and medicine for ages.",
+      "location": "Nature",
+      "weight": 0.5,
+      "stacksize": 10,
+      "sellprice": 460
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/9/9e/Candleberries.png/348px-Candleberries.png.webp",
+      "original": "https://arcraiders.wiki/w/images/9/9e/Candleberries.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Candleberries.png"
+    },
+    "edges": [
+      {
+        "name": "Assorted Seeds",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Candleberries"
+          }
+        ],
+        "input_level": "Candleberries"
       }
     ]
   },
@@ -47971,8 +48949,232 @@
         "dependency": [
           {
             "type": "price",
-            "amount": 1920,
-            "currency": "Coins"
+            "amount": 20,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Light Stick",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Firecracker",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 20,
+            "currency": "Cred"
+          }
+        ]
+      },
+      {
+        "name": "Combat Mk. 2",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Tactical Mk. 2",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Angled Grip II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Compensator II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Extended Light Mag II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Silencer I",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Stable Stock II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Recorder",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 50,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Sterilized Bandage",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Surge Shield Recharger",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "5/5",
+            "is_limited": true
           }
         ]
       },
@@ -47984,13 +49186,107 @@
         "dependency": [
           {
             "type": "price",
-            "amount": 9000,
-            "currency": "Coins"
+            "amount": 100,
+            "currency": "Cred"
           },
           {
             "type": "stock",
-            "value": "1/1",
+            "value": "2/2",
             "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Fireworks Box",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 60,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blue Light Stick",
+    "node_type": "item",
+    "edges": [
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Green Light Stick",
+    "node_type": "item",
+    "edges": [
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Red Light Stick",
+    "node_type": "item",
+    "edges": [
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Yellow Light Stick",
+    "node_type": "item",
+    "edges": [
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 10,
+            "currency": "Cred"
           }
         ]
       }

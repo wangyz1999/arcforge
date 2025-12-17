@@ -21772,5 +21772,153 @@
         "output_quantity": 5
       }
     ]
+  },
+  {
+    "name": "Firecracker",
+    "wiki_url": "https://arcraiders.wiki/wiki/Firecracker",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Firecracker&action=edit",
+    "infobox": {
+      "image": "Firecracker.png",
+      "name": "Firecracker",
+      "rarity": "Common",
+      "quote": "A device that sparks and pops in a pleasant manner.",
+      "type": "Quick Use-Grenade",
+      "weight": 0.05,
+      "sellprice": 270,
+      "stacksize": 5,
+      "duration": "7.5s"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/86/Firecracker.png/348px-Firecracker.png.webp",
+      "original": "https://arcraiders.wiki/w/images/8/86/Firecracker.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Firecracker.png"
+    },
+    "crafting": [
+      {
+        "recipe": [
+          {
+            "item": "Plastic Parts"
+          },
+          {
+            "item": "Chemicals"
+          }
+        ],
+        "workshop": "Utility Station 1"
+      }
+    ],
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 3,
+              "item": "Plastic Parts"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 1,
+              "item": "Plastic Parts"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Fireworks Box",
+    "wiki_url": "https://arcraiders.wiki/wiki/Fireworks_Box",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Fireworks_Box&action=edit",
+    "infobox": {
+      "image": "Fireworks Box.png",
+      "name": "Fireworks Box",
+      "rarity": "Rare",
+      "quote": "A remotely triggered arrangment of dazzling fireworks, sure to put on a show.",
+      "type": "Quick Use-Utility",
+      "weight": 0.5,
+      "sellprice": 2000
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0f/Fireworks_Box.png/348px-Fireworks_Box.png.webp",
+      "original": "https://arcraiders.wiki/w/images/0/0f/Fireworks_Box.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Fireworks_Box.png"
+    },
+    "crafting": [
+      {
+        "recipe": [
+          {
+            "quantity": 1,
+            "item": "Explosive Compound"
+          },
+          {
+            "quantity": 3,
+            "item": "Pop Trigger"
+          }
+        ],
+        "blueprint_locked": true
+      }
+    ],
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 1,
+              "item": "Explosive Compound"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 1,
+              "item": "Explosive Compound"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Candleberries",
+    "wiki_url": "https://arcraiders.wiki/wiki/Candleberries",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Candleberries&action=edit",
+    "infobox": {
+      "image": "Candleberries.png",
+      "rarity": "Rare",
+      "type": "Nature",
+      "name": "Candleberries",
+      "quote": "A waxy berry that grows only during a small window each year. People have depended on them to make candles, foods and medicine for ages.",
+      "location": "Nature",
+      "weight": 0.5,
+      "stacksize": 10,
+      "sellprice": 460
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/9/9e/Candleberries.png/348px-Candleberries.png.webp",
+      "original": "https://arcraiders.wiki/w/images/9/9e/Candleberries.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Candleberries.png"
+    },
+    "sources": ["Live Event: Community Unlock Events#Flickering Flames", "Scavenging"],
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Assorted Seeds"
+            }
+          ],
+          "input": "Candleberries"
+        }
+      ],
+      "salvaging": []
+    }
   }
 ]

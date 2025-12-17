@@ -202,14 +202,123 @@
     "shop": [
       {
         "name": "Binoculars",
-        "price": 1920,
-        "currency": "Coins"
+        "price": 20,
+        "currency": "Cred"
+      },
+      {
+        "name": "Blue Light Stick",
+        "price": 10,
+        "currency": "Cred"
+      },
+      {
+        "name": "Firecracker",
+        "price": 20,
+        "currency": "Cred"
+      },
+      {
+        "name": "Green Light Stick",
+        "price": 10,
+        "currency": "Cred"
+      },
+      {
+        "name": "Red Light Stick",
+        "price": 10,
+        "currency": "Cred"
+      },
+      {
+        "name": "Yellow Light Stick",
+        "price": 10,
+        "currency": "Cred"
+      },
+      {
+        "name": "Combat Mk. 2",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Tactical Mk. 2",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Angled Grip II",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Compensator II",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Extended Light Mag II",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Silencer I",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "1/1",
+        "is_limited": true
+      },
+      {
+        "name": "Stable Stock II",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Recorder",
+        "price": 50,
+        "currency": "Cred",
+        "stock": "3/3",
+        "is_limited": true
+      },
+      {
+        "name": "Sterilized Bandage",
+        "price": 40,
+        "currency": "Cred",
+        "stock": "3/3",
+        "is_limited": true
+      },
+      {
+        "name": "Surge Shield Recharger",
+        "price": 40,
+        "currency": "Cred",
+        "stock": "5/5",
+        "is_limited": true
       },
       {
         "name": "Raider Hatch Key",
-        "price": 9000,
-        "currency": "Coins",
-        "stock": "1/1",
+        "price": 100,
+        "currency": "Cred",
+        "stock": "2/2",
+        "is_limited": true
+      },
+      {
+        "name": "Fireworks Box",
+        "price": 60,
+        "currency": "Cred",
+        "stock": "3/3",
         "is_limited": true
       }
     ]
