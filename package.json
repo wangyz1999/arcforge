@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "@types/cytoscape": "^3.21.9",
     "cytoscape": "^3.33.1",
-    "next": "^16.0.7",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
