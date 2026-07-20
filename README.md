@@ -107,6 +107,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 If you find this work helpful, please consider to **star🌟** this repo. Thanks for your support!
 [![Stargazers repo roster for @wangyz1999/arcforge](https://reporoster.com/stars/wangyz1999/arcforge)](https://github.com/wangyz1999/arcforge/stargazers)
 
+
+
+## Related Resources
+
+- [ARC Raider Hub](https://arcraiderhub.xyz/) — ARC Raiders weapon tier lists, extraction routes, augment guides, and raid strategies.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
