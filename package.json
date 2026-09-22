@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "data:refresh": "node script/refresh_data.mjs",
+    "data:check": "node script/check_data.mjs",
+    "test": "node --test script/data_helpers.test.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",

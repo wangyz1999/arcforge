@@ -1,10 +1,30 @@
+"Leviathan's Crown" Ship Model
+"Sirena Dorata" Ship Model
+"Twilight Compass" Ship Model
+"Velocity" Ship Model
+"Wind Sprite" Ship Model
+Acoustic Guitar
+Adrenaline Shot
 Advanced ARC Powercell
 Advanced Electrical Components
 Advanced Mechanical Components
 Agave
+Agave Juice
 Air Freshener
 Alarm Clock
+Alien Duck
+Ancient Fort Security Code
+Angled Grip I
+Angled Grip II
+Angled Grip II Blueprint
+Angled Grip III
+Angled Grip III Blueprint
 Antiseptic
+Anvil
+Anvil Blueprint
+Anvil Splitter
+Aphelion
+Aphelion Blueprint
 Apricot
 ARC Alloy
 ARC Circuitry
@@ -15,15 +35,31 @@ ARC Performance Steel
 ARC Powercell
 ARC Synthetic Resin
 ARC Thermo Lining
+Arcade Duck
+Arpeggio
+Assessor Matrix
 Assorted Seeds
+Bandage
+Barricade Kit
+Barricade Kit Blueprint
 Bastion Cell
 Battery
+Bettina
+Bettina Blueprint
 Bicycle Pump
+Binoculars
+Blaze Grenade
+Blaze Grenade Blueprint
+Blaze Grenade Trap
 Bloated Tuna Can
+Blue Gate Cellar Key
 Blue Gate Communication Tower Key
 Blue Gate Confiscation Room Key
-Blue Gate Cellar Key
 Blue Gate Village Key
+Blue Light Stick
+Blue Light Stick Blueprint
+Bobcat
+Bobcat Blueprint
 Bombardier Cell
 Breathtaking Snow Globe
 Broken Flashlight
@@ -32,120 +68,307 @@ Broken Handheld Radio
 Broken Taser
 Buried City Hospital Key
 Buried City JKV Employee Access Card
-Buried City Residential Mastery Key
+Buried City Residential Master Key
 Buried City Town Hall Key
+Burletta
+Burletta Blueprint
 Burned ARC Circuitry
+Burnt-Out Candles
 Camera Lens
 Candle Holder
+Candleberries
 Canister
+Canto
+Canto Blueprint
 Cat Bed
+Celeste's Journal
 Chemicals
 Coffee Pot
+Colorful Shoes
+Combat Mk. 1
+Combat Mk. 2
+Combat Mk. 3 (Aggressive)
+Combat Mk. 3 (Aggressive) Blueprint
+Combat Mk. 3 (Flanking)
+Combat Mk. 3 (Flanking) Blueprint
+Comet Igniter
+Compensator I
+Compensator II
+Compensator II Blueprint
+Compensator III
+Compensator III Blueprint
 Complex Gun Parts
+Complex Gun Parts Blueprint
 Coolant
 Cooling Coil
 Cooling Fan
 Cracked Bioscanner
+Crash Mat
+Crash Mat Blueprint
 Crude Explosives
 Crumpled Plastic Bottle
 Dam Control Tower Key
+Dam Controlled Access Zone Key
 Dam Staff Room Key
 Dam Surveillance Key
 Dam Testing Annex Key
-Dam Utility Key
 Damaged ARC Motion Core
 Damaged ARC Powercell
 Damaged Fireball Burner
 Damaged Heat Sink
 Damaged Hornet Driver
+Damaged Leaper Pulse Unit
 Damaged Rocketeer Driver
 Damaged Snitch Scanner
 Damaged Tick Pod
 Damaged Wasp Driver
 Dart Board
+Deadline
+Deadline Blueprint
+Defibrillator
+Defibrillator Blueprint
 Deflated Football
 Degraded ARC Rubber
 Diving Goggles
+Dockmaster's Detector
+Dodger's Note
 Dog Collar
+Dolabra
+Dolabra Blueprint
+Doodly Duck
+Door Blocker
 Dried-Out ARC Resin
 Duct Tape
 Durable Cloth
+Dusty Film Reel
 Electrical Components
+Elephant Obelisk
 Empty Wine Bottle
+Energy Clip
+Equalizer
+Equalizer Blueprint
+Equatorial Sundial
+Espresso Machine Parts
+ESR Analyzer
 Exodus Modules
+Experimental Seed Sample
 Expired Pasta
 Expired Respirator
+Expired Security Code
 Explosive Compound
+Explosive Mine
+Explosive Mine Blueprint
+Extended Barrel I
+Extended Barrel II
+Extended Barrel II Blueprint
+Extended Barrel III
+Extended Barrel III Blueprint
+Extended Light Mag I
+Extended Light Mag II
+Extended Light Mag II Blueprint
+Extended Light Mag III
+Extended Light Mag III Blueprint
+Extended Medium Mag I
+Extended Medium Mag II
+Extended Medium Mag II Blueprint
+Extended Medium Mag III
+Extended Medium Mag III Blueprint
+Extended Shotgun Mag I
+Extended Shotgun Mag II
+Extended Shotgun Mag II Blueprint
+Extended Shotgun Mag III
+Extended Shotgun Mag III Blueprint
 Fabric
 Faded Photograph
+Familiar Duck
+Ferro
 Fertilizer
 Film Reel
 Fine Wristwatch
 Fireball Burner
+Firecracker
+Firefly Burner
+Fireworks Box
+Fireworks Box Blueprint
+First Wave Compass
+First Wave Rations
+First Wave Tape
+Flame Spray
+Flashy Duck
+Flow Controller
+Flushing Terminal Key
+Fossilized Lightning
+Free Loadout Augment
 Frequency Modulation Box
 Fried Motherboard
+Frosty Duck
+Fruit Mix
 Frying Pan
 Garlic Press
+Gas Grenade
+Gas Grenade Trap
+Gas Mine
+Gas Mine Blueprint
+Geiger Counter
+Gentle Duck
+Glitched ARC Circuitry
+Glitched ARC Light Ring
+Glitched ARC Phased Array
+Glitched ARC Power Converter
+Glitched ARC Transmitter
 Great Mullein
+Green Light Stick
+Green Light Stick Blueprint
+Hairpin
 Headphones
+Heavy Ammo
+Heavy Fuze Grenade
 Heavy Gun Parts
+Heavy Gun Parts Blueprint
+Heavy Shield
+Herbal Bandage
+Horizontal Grip
 Hornet Driver
 Household Cleaner
+Hullcracker
+Hullcracker Blueprint
 Humidifier
 Ice Cream Scooper
+Il Toro
+Il Toro Blueprint
 Impure ARC Coolant
 Industrial Battery
 Industrial Charger
 Industrial Magnet
+Integrated Binoculars
+Integrated Defibrillator
+Integrated Shield Recharger
 Ion Sputter
+Jolt Mine
+Jolt Mine Blueprint
+Jupiter
+Jupiter Blueprint
+Kettle
+Kinetic Converter
 Laboratory Reagents
 Lance's Mixtape (5th Edition)
-Lemon
+Launcher Ammo
 Leaper Pulse Unit
+Lemon
+Li'l Smoke Grenade
+LiDAR Scanner
+Light Ammo
 Light Bulb
 Light Gun Parts
+Light Gun Parts Blueprint
+Light Impact Grenade
+Light Shield
+Lightweight Stock
+Lightweight Stock Blueprint
+Looting Mk. 1
+Looting Mk. 2
+Looting Mk. 3 (Cautious)
+Looting Mk. 3 (Safekeeper)
+Looting Mk. 3 (Safekeeper) Blueprint
+Looting Mk. 3 (Survivor)
+Looting Mk. 3 (Survivor) Blueprint
+Lure Grenade
+Lure Grenade Blueprint
+Lure Grenade Trap
 Magnet
 Magnetic Accelerator
 Magnetron
+Major Aiva's Mementos
+Major Aiva's Patch
+Marano Market Business Card
 Matriarch Reactor
 Mechanical Components
+Medium Ammo
 Medium Gun Parts
+Medium Gun Parts Blueprint
+Medium Shield
 Metal Brackets
 Metal Parts
 Microscope
 Mini Centrifuge
 Mod Components
+Moisture Meter
 Moss
 Motor
+MRI Duck
 Mushroom
 Music Album
 Music Box
+Muzzle Brake I
+Muzzle Brake II
+Muzzle Brake II Blueprint
+Muzzle Brake III
+Muzzle Brake III Blueprint
+Noisemaker
 Number Plate
+Nutrient Meter
+Official Shutdown Documentation
 Oil
+Old World Books
 Olives
+Osprey
+Osprey Blueprint
+Padded Stock
+Padded Stock Blueprint
 Painted Box
 Patrol Car Key
+Photoelectric Cloak
+Pilgrim's Peak Security Code
 Plastic Parts
 Playing Cards
 Polluted Air Filter
 Pop Trigger
 Portable TV
-Poster of Natural Wonders
+Possibly Toxic Plant
+Poster Of Natural Wonders
 Pottery
 Power Bank
 Power Cable
 Power Rod
+Powered Descender
+Powered Descender Blueprint
+Precision Gimbal
 Prickly Pear
 Processor
+Project Heartwood Blueprints
 Projector
+Pulse Mine
+Pulse Mine Blueprint
 Queen Reactor
 Radio
 Radio Relay
+Raider Flag
 Raider Hatch Key
+Raider's Refuge Security Code
+Rascal
+Rascal Blueprint
+Rattler
+Recorder
 Red Coral Jewelry
+Red Light Stick
+Red Light Stick Blueprint
+Reinforced Reception Security Code
 Remote Control
+Remote Raider Flare
+Remote Raider Flare Blueprint
+Renegade
 Resin
 Ripped Safety Vest
+Riven Tides Classified Records Keycard
+Riven Tides Crane House Keycard
+Riven Tides Crane Secure Storage Keycard
+Riven Tides Hotel Keycard No. 102
+Riven Tides Hotel Keycard No. 107
+Riven Tides Hotel Keycard No. 113
+Riven Tides Hotel Keycard No. 205
+Riven Tides Hotel Keycard No. 208
+Riven Tides Hotel Keycard No. 311
+Riven Tides Hotel Keycard No. 404
 Rocket Thruster
 Rocketeer Driver
 Roots
@@ -160,20 +383,52 @@ Ruined Augment
 Ruined Baton
 Ruined Handcuffs
 Ruined Parachute
-Ruined Tactical Vest
 Ruined Riot Shield
+Ruined Tactical Vest
 Rusted Bolts
 Rusted Gear
 Rusted Shut Medical Kit
 Rusted Tools
 Rusty ARC Steel
 Sample Cleaner
+Scout Patrol Note
+Secret Meeting Info
+Seed Vault Box Key
+Seeker Grenade
+Seeker Grenade Blueprint
 Sensors
 Sentinel Firing Core
+Sextant
+Shaker
+Shield Recharger
+Shotgun Ammo
+Shotgun Choke I
+Shotgun Choke II
+Shotgun Choke II Blueprint
+Shotgun Choke III
+Shotgun Choke III Blueprint
+Shotgun Silencer
+Shotgun Silencer Blueprint
+Showstopper
+Showstopper Blueprint
+Shrapnel Grenade
+Shredder Gyro
 Signal Amplifier
+Silencer I
+Silencer I Blueprint
+Silencer II
+Silencer II Blueprint
+Silencer III
 Silver Teaspoon Set
 Simple Gun Parts
+Smoke Grenade
+Smoke Grenade Blueprint
+Smoke Grenade Trap
+Snap Blast Grenade
+Snap Hook
+Snap Hook Blueprint
 Snitch Scanner
+Snowball
 Spaceport Container Storage Key
 Spaceport Control Tower Key
 Spaceport Trench Tower Key
@@ -181,183 +436,89 @@ Spaceport Warehouse Key
 Speaker Component
 Spectrometer
 Spectrum Analyzer
-Spring Cushion
 Spotter Relay
+Spring Cushion
+Stable Stock I
+Stable Stock II
+Stable Stock II Blueprint
+Stable Stock III
+Stable Stock III Blueprint
+Stack Of Movie Tapes
 Statuette
 Steel Spring
 Stella Montis Archives Key
 Stella Montis Assembly Admin Key
 Stella Montis Medical Storage Key
 Stella Montis Security Checkpoint Key
+Sterilized Bandage
+Stitcher
+Surge Coil
+Surge Coil Blueprint
+Surge Shield Recharger
 Surveyor Vault
 Synthesized Fuel
 Syringe
+Tactical Mk. 1
+Tactical Mk. 2
+Tactical Mk. 3 (Defensive)
+Tactical Mk. 3 (Defensive) Blueprint
+Tactical Mk. 3 (Healing)
+Tactical Mk. 3 (Healing) Blueprint
+Tactical Mk. 3 (Revival)
+Tactical Mk. 3 (Revival) Blueprint
+Tactical Mk. 3 (Smoke)
+Tactical Mk. 3 (Smoke) Blueprint
+Tagging Grenade
+Tagging Grenade Blueprint
 Tattered ARC Lining
 Tattered Clothes
 Telemetry Transceiver
+Tellurion
+Tempest
+Tempest Blueprint
 Thermostat
 Tick Pod
 Toaster
-Torn Book
 Torn Blanket
+Torn Book
+Torrente
+Torrente Blueprint
+Trailblazer
+Trailblazer Blueprint
+Train Model
+Trigger 'Nade
+Trigger 'Nade Blueprint
+Tropical Duck
+Turbine Compressor
 Turbo Pump
 Unusable Weapon
+Vaporizer Regulator
 Vase
+Venator
+Venator Blueprint
+Vertical Grip I
+Vertical Grip II
+Vertical Grip II Blueprint
+Vertical Grip III
+Vertical Grip III Blueprint
 Very Comfortable Pillow
+Vintage Steering Wheel
+Vita Shot
+Vita Shot Blueprint
+Vita Spray
+Vita Spray Blueprint
 Volcanic Rock
 Voltage Converter
+Vulcano
+Vulcano Blueprint
 Wasp Driver
 Water Filter
 Water Pump
+White Flag
+White Flag Blueprint
 Wires
-Tempest
-Rattler
-Kettle
-Bettina
-Arpeggio
-Ferro
-Renegade
-Aphelion
-Stitcher
-Bobcat
-Il Toro
-Vulcano
-Hairpin
-Burletta
-Anvil
-Venator
-Torrente
-Osprey
-Jupiter
-Hullcracker
-Equalizer
-Free Loadout Augment
-Looting Mk. 1
-Combat Mk. 1
-Tactical Mk. 1
-Looting Mk. 2
-Combat Mk. 2
-Tactical Mk. 2
-Looting Mk. 3 (Cautious)
-Looting Mk. 3 (Survivor)
-Combat Mk. 3 (Aggressive)
-Combat Mk. 3 (Flanking)
-Tactical Mk. 3 (Defensive)
-Tactical Mk. 3 (Healing)
-Light Shield
-Medium Shield
-Heavy Shield
-Bandage
-Defibrillator
-Fruit Mix
-Herbal Bandage
-Sterilized Bandage
-Vita Shot
-Vita Spray
-Integrated Shield Recharger
-Shield Recharger
-Surge Shield Recharger
-Adrenaline Shot
-Agave Juice
-Barricade Kit
-Door Blocker
-Remote Raider Flare
-Zipline
-Binoculars
-Flame Spray
-Integrated Binoculars
-Noisemaker
-Photoelectric Cloak
-Recorder
-Snap Hook
-Light Impact Grenade
-Heavy Fuze Grenade
-Blaze Grenade
-Gas Grenade
-Showstopper
-Snap Blast Grenade
-Seeker Grenade
-Shrapnel Grenade
-Trigger 'Nade
-Trailblazer
 Wolfpack
-Lure Grenade
-Li'l Smoke Grenade
-Smoke Grenade
-Tagging Grenade
-Light Stick
-Blaze Grenade Trap
-Gas Grenade Trap
-Lure Grenade Trap
-Smoke Grenade Trap
-Explosive Mine
-Gas Mine
-Jolt Mine
-Pulse Mine
-Deadline
-Compensator I
-Muzzle Brake I
-Shotgun Choke I
-Angled Grip I
-Vertical Grip I
-Extended Light Mag I
-Extended Medium Mag I
-Extended Shotgun Mag I
-Stable Stock I
-Compensator II
-Muzzle Brake II
-Shotgun Choke II
-Silencer I
-Angled Grip II
-Vertical Grip II
-Extended Light Mag II
-Extended Medium Mag II
-Extended Shotgun Mag II
-Stable Stock II
-Compensator III
-Muzzle Brake III
-Shotgun Choke III
-Silencer II
-Silencer III
-Shotgun Silencer
-Extended Barrel
-Angled Grip III
-Vertical Grip III
-Horizontal Grip
-Extended Light Mag III
-Extended Medium Mag III
-Extended Shotgun Mag III
-Stable Stock III
-Lightweight Stock
-Padded Stock
-Kinetic Converter
-Anvil Splitter
-Light Ammo
-Medium Ammo
-Heavy Ammo
-Shotgun Ammo
-Launcher Ammo
-Energy Clip
-Firecracker
-Fireworks Box
-Candleberries
-Snowball
-Acoustic Guitar
-Ancient Fort Security Code
-Pilgrim's Peak Security Code
-Raider's Refuge Security Code
-Reinforced Reception Security Code
-Fossilized Lightning
-Burnt-Out Candles
-Tropical Duck
-Gentle Duck
-Flashy Duck
-Familiar Duck
-Doodly Duck
-Alien Duck
-Shredder Gyro
-Shaker
-Damaged Leaper Pulse Unit
-Flow Controller
-Integrated Defibrillator
-Looting Mk. 3 (Safekeeper)
+Wolfpack Blueprint
+Yellow Light Stick
+Yellow Light Stick Blueprint
+Zipline

@@ -1,0 +1,1186 @@
+[
+  {
+    "name": "Trophy Display",
+    "start": "2026-01-27",
+    "end": null,
+    "wiki_url": "https://arcraiders.wiki/wiki/Trophy_Display",
+    "requirements": [
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Rusted Bolts",
+        "itemName": "Rusted Bolts",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Pop Trigger",
+        "itemName": "Pop Trigger",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Tick Pod",
+        "itemName": "Tick Pod",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Surveyor Vault",
+        "itemName": "Surveyor Vault",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Spotter Relay",
+        "itemName": "Spotter Relay",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Expired Respirator",
+        "itemName": "Expired Respirator",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Wasp Driver",
+        "itemName": "Wasp Driver",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Hornet Driver",
+        "itemName": "Hornet Driver",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "ARC Performance Steel",
+        "itemName": "ARC Performance Steel",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Shredder Gyro",
+        "itemName": "Shredder Gyro",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Leaper Pulse Unit",
+        "itemName": "Leaper Pulse Unit",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Bastion Cell",
+        "itemName": "Bastion Cell",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "ARC Synthetic Resin",
+        "itemName": "ARC Synthetic Resin",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Magnetic Accelerator",
+        "itemName": "Magnetic Accelerator",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Rocketeer Driver",
+        "itemName": "Rocketeer Driver",
+        "qty": "8"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Queen Reactor",
+        "itemName": "Queen Reactor",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "5",
+        "context": "require",
+        "itemPage": "Exodus Modules",
+        "itemName": "Exodus Modules",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "5",
+        "context": "require",
+        "itemPage": "Geiger Counter",
+        "itemName": "Geiger Counter",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "5",
+        "context": "require",
+        "itemPage": "Bombardier Cell",
+        "itemName": "Bombardier Cell",
+        "qty": "8"
+      },
+      {
+        "projectPage": "Trophy Display",
+        "projectName": "Trophy Display",
+        "projectPart": "1",
+        "stage": "5",
+        "context": "require",
+        "itemPage": "Matriarch Reactor",
+        "itemName": "Matriarch Reactor",
+        "qty": "3"
+      }
+    ]
+  },
+  {
+    "name": "Expedition",
+    "start": "2026-07-21",
+    "end": "2026-09-29",
+    "wiki_url": "https://arcraiders.wiki/wiki/Expedition",
+    "requirements": [
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Metal Parts",
+        "itemName": "Metal Parts",
+        "qty": "150"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Rubber Parts",
+        "itemName": "Rubber Parts",
+        "qty": "200"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "ARC Alloy",
+        "itemName": "ARC Alloy",
+        "qty": "80"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Steel Spring",
+        "itemName": "Steel Spring",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Durable Cloth",
+        "itemName": "Durable Cloth",
+        "qty": "35"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Wires",
+        "itemName": "Wires",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Electrical Components",
+        "itemName": "Electrical Components",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Cooling Fan",
+        "itemName": "Cooling Fan",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Light Bulb",
+        "itemName": "Light Bulb",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Battery",
+        "itemName": "Battery",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Sensors",
+        "itemName": "Sensors",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Exodus Modules",
+        "itemName": "Exodus Modules",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Humidifier",
+        "itemName": "Humidifier",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Electrical Components",
+        "itemName": "Advanced Electrical Components",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Magnetic Accelerator",
+        "itemName": "Magnetic Accelerator",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 1",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Leaper Pulse Unit",
+        "itemName": "Leaper Pulse Unit",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Metal Parts",
+        "itemName": "Metal Parts",
+        "qty": "150"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Plastic Parts",
+        "itemName": "Plastic Parts",
+        "qty": "200"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "ARC Alloy",
+        "itemName": "ARC Alloy",
+        "qty": "80"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Steel Spring",
+        "itemName": "Steel Spring",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Durable Cloth",
+        "itemName": "Durable Cloth",
+        "qty": "35"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Wires",
+        "itemName": "Wires",
+        "qty": "25"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Electrical Components",
+        "itemName": "Electrical Components",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Cooling Coil",
+        "itemName": "Cooling Coil",
+        "qty": "4"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Light Bulb",
+        "itemName": "Light Bulb",
+        "qty": "4"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Battery",
+        "itemName": "Battery",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Shredder Gyro",
+        "itemName": "Shredder Gyro",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Exodus Modules",
+        "itemName": "Exodus Modules",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Frequency Modulation Box",
+        "itemName": "Frequency Modulation Box",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Electrical Components",
+        "itemName": "Advanced Electrical Components",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Ion Sputter",
+        "itemName": "Ion Sputter",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 2",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Leaper Pulse Unit",
+        "itemName": "Leaper Pulse Unit",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Metal Parts",
+        "itemName": "Metal Parts",
+        "qty": "150"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Chemicals",
+        "itemName": "Chemicals",
+        "qty": "100"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "ARC Alloy",
+        "itemName": "ARC Alloy",
+        "qty": "80"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Steel Spring",
+        "itemName": "Steel Spring",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Durable Cloth",
+        "itemName": "Durable Cloth",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Wires",
+        "itemName": "Wires",
+        "qty": "25"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Electrical Components",
+        "itemName": "Electrical Components",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Industrial Charger",
+        "itemName": "Industrial Charger",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Coffee Pot",
+        "itemName": "Coffee Pot",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Battery",
+        "itemName": "Battery",
+        "qty": "25"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Firefly Burner",
+        "itemName": "Firefly Burner",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Exodus Modules",
+        "itemName": "Exodus Modules",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Broken Guidance System",
+        "itemName": "Broken Guidance System",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Electrical Components",
+        "itemName": "Advanced Electrical Components",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Breathtaking Snow Globe",
+        "itemName": "Breathtaking Snow Globe",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 3",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Bombardier Cell",
+        "itemName": "Bombardier Cell",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Metal Parts",
+        "itemName": "Metal Parts",
+        "qty": "150"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Chemicals",
+        "itemName": "Chemicals",
+        "qty": "100"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "ARC Alloy",
+        "itemName": "ARC Alloy",
+        "qty": "80"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Canister",
+        "itemName": "Canister",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Durable Cloth",
+        "itemName": "Durable Cloth",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Oil",
+        "itemName": "Oil",
+        "qty": "25"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Electrical Components",
+        "itemName": "Electrical Components",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Industrial Charger",
+        "itemName": "Industrial Charger",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "ARC Motion Core",
+        "itemName": "ARC Motion Core",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Speaker Component",
+        "itemName": "Speaker Component",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Turbine Compressor",
+        "itemName": "Turbine Compressor",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Exodus Modules",
+        "itemName": "Exodus Modules",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Portable TV",
+        "itemName": "Portable TV",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Electrical Components",
+        "itemName": "Advanced Electrical Components",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "\"Sirena Dorata\" Ship Model",
+        "itemName": "\"Sirena Dorata\" Ship Model",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 4",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Vaporizer Regulator",
+        "itemName": "Vaporizer Regulator",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Metal Parts",
+        "itemName": "Metal Parts",
+        "qty": "150"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Plastic Parts",
+        "itemName": "Plastic Parts",
+        "qty": "100"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "ARC Alloy",
+        "itemName": "ARC Alloy",
+        "qty": "80"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Magnet",
+        "itemName": "Magnet",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Durable Cloth",
+        "itemName": "Durable Cloth",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Duct Tape",
+        "itemName": "Duct Tape",
+        "qty": "25"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Mechanical Components",
+        "itemName": "Mechanical Components",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Voltage Converter",
+        "itemName": "Voltage Converter",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "ARC Circuitry",
+        "itemName": "ARC Circuitry",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Speaker Component",
+        "itemName": "Speaker Component",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Bastion Cell",
+        "itemName": "Bastion Cell",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Magnetic Accelerator",
+        "itemName": "Magnetic Accelerator",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Radio",
+        "itemName": "Radio",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Mechanical Components",
+        "itemName": "Advanced Mechanical Components",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Lance's Mixtape (5th Edition)",
+        "itemName": "Lance's Mixtape (5th Edition)",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Expedition",
+        "projectName": "Expedition 5",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Rocketeer Driver",
+        "itemName": "Rocketeer Driver",
+        "qty": "3"
+      }
+    ]
+  },
+  {
+    "name": "Ascending The Mountain",
+    "start": "2026-09-08",
+    "end": "2026-10-05",
+    "wiki_url": "https://arcraiders.wiki/wiki/Ascending_The_Mountain",
+    "requirements": [
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Mechanical Components",
+        "itemName": "Mechanical Components",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Pop Trigger",
+        "itemName": "Pop Trigger",
+        "qty": "6"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Explosive Compound",
+        "itemName": "Explosive Compound",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "1",
+        "context": "require",
+        "itemPage": "Headphones",
+        "itemName": "Headphones",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Wires",
+        "itemName": "Wires",
+        "qty": "20"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Voltage Converter",
+        "itemName": "Voltage Converter",
+        "qty": "8"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Sentinel Firing Core",
+        "itemName": "Sentinel Firing Core",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "2",
+        "context": "require",
+        "itemPage": "Rocket Thruster",
+        "itemName": "Rocket Thruster",
+        "qty": "1"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Ruined Parachute",
+        "itemName": "Ruined Parachute",
+        "qty": "2"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Crash Mat",
+        "itemName": "Crash Mat",
+        "qty": "10"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Shredder Gyro",
+        "itemName": "Shredder Gyro",
+        "qty": "5"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "3",
+        "context": "require",
+        "itemPage": "Breathtaking Snow Globe",
+        "itemName": "Breathtaking Snow Globe",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Sensors",
+        "itemName": "Sensors",
+        "qty": "30"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Broken Guidance System",
+        "itemName": "Broken Guidance System",
+        "qty": "3"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Advanced Electrical Components",
+        "itemName": "Advanced Electrical Components",
+        "qty": "15"
+      },
+      {
+        "projectPage": "Ascending The Mountain",
+        "projectName": "Ascending The Mountain",
+        "projectPart": "1",
+        "stage": "4",
+        "context": "require",
+        "itemPage": "Vaporizer Regulator",
+        "itemName": "Vaporizer Regulator",
+        "qty": "3"
+      }
+    ]
+  }
+]

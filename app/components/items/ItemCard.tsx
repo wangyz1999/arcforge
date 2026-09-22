@@ -24,6 +24,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 const specialTypeIcons: Record<string, { icon: IconDefinition; color: string; bg: string }> = {
   workshop_upgrade: { icon: faWrench, color: "text-amber-400", bg: "bg-amber-500/30" },
   expedition: { icon: faRocket, color: "text-cyan-400", bg: "bg-cyan-500/30" },
+  project: { icon: faDiagramProject, color: "text-cyan-400", bg: "bg-cyan-500/30" },
   candlelight: { icon: faFire, color: "text-yellow-400", bg: "bg-yellow-500/30" },
   quest: { icon: faScroll, color: "text-rose-400", bg: "bg-rose-500/30" },
   safe_to_recycle: { icon: faRecycle, color: "text-green-400", bg: "bg-green-500/30" },

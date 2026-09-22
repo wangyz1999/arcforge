@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-22T05:49:06.899Z",
+  "source": "ARC Raiders Wiki",
+  "source_url": "https://arcraiders.wiki/",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "item_count": 524,
+  "weapon_count": 24,
+  "trader_count": 6,
+  "crafting_recipe_count": 222,
+  "recycling_row_count": 962,
+  "missing_images": [],
+  "notes": [
+    "Community-maintained item data; linked wiki revisions record provenance.",
+    "No item is labeled safe to recycle. Check quests, workshop upgrades and project requirements first.",
+    "Ermal's rotating barter inventory is linked rather than represented as fixed trades.",
+    "Untranslated item names fall back to English."
+  ]
+}

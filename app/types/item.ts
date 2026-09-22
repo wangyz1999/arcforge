@@ -20,9 +20,20 @@ export interface QuestDetail {
   note?: string;
 }
 
+export interface ProjectRequirement {
+  project: string;
+  part: number;
+  stage: number;
+  quantity: number;
+  wiki_url: string;
+  end: string | null;
+}
+
 export interface Item {
   name: string;
   wiki_url: string;
+  verified_at?: string;
+  source_url?: string;
   infobox: {
     image: string;
     rarity: string;
@@ -34,11 +45,12 @@ export interface Item {
     expedition_2_parts?: ExpeditionDetail[];
     candlelight_parts?: CandlelightDetail[];
     quests?: QuestDetail[];
+    projects?: ProjectRequirement[];
     location?: string;
     weight?: number;
     sellprice?: number | number[];
     stacksize?: number;
-    damage?: number;
+    damage?: number | string;
     [key: string]: unknown;
   };
   image_urls: {

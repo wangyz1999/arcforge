@@ -471,7 +471,7 @@ function HomeContent() {
         data={{
           name: "ARC Forge",
           description:
-            "Complete ARC Raiders item database with crafting graphs, recipes, and item information",
+            "ARC Raiders item database with sourced crafting recipes and project requirements",
           url: baseUrl,
         }}
       />
@@ -479,7 +479,7 @@ function HomeContent() {
         type="ItemList"
         data={{
           name: "ARC Raiders Items",
-          description: "Complete list of items in ARC Raiders",
+          description: "ARC Raiders items sourced from the community wiki",
           numberOfItems: (itemsData as Item[]).length,
           items: (itemsData as Item[]).slice(0, 100).map((item) => ({
             name: item.name,

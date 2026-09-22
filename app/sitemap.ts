@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
 import itemsRelationData from "../data/items_relation.json";
 import type { ItemData } from "./types/graph";
+import dataStatus from "../data/data_status.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const currentDate = new Date();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://arcforge.org";
+  const currentDate = new Date(dataStatus.checked_at);
 
   // Base routes
   const routes: MetadataRoute.Sitemap = [

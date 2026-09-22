@@ -1,19 +1,16 @@
 {
   "site.name": "ARC Forge",
-  "site.description": "Complete ARC Raiders item database with crafting graphs, recipes, and item information",
-
+  "site.description": "ARC Raiders item database with sourced crafting recipes and project requirements",
   "nav.itemDatabase": "Item Database",
   "nav.itemDatabaseShort": "Items",
   "nav.craftingGraph": "Crafting Graph",
   "nav.craftingGraphShort": "Graph",
   "nav.buyMeACoffee": "Buy me a coffee",
   "nav.viewOnGithub": "View on GitHub",
-
   "search.title": "Search",
   "search.placeholder": "Search items...",
   "search.placeholderShort": "Search...",
   "search.noResults": "No items found",
-
   "sort.title": "Sort By",
   "sort.name": "Name",
   "sort.rarity": "Rarity",
@@ -21,24 +18,20 @@
   "sort.weight": "Weight",
   "sort.ascending": "Ascending",
   "sort.descending": "Descending",
-
   "filter.title": "Filter by Type",
   "filter.all": "All",
   "filter.none": "None",
-
   "category.Special": "Special",
   "category.Weapon": "Weapon",
   "category.Modification": "Modification",
   "category.QuickUse": "Quick Use",
   "category.Equipment": "Equipment",
   "category.Loots": "Loots",
-
   "rarity.Common": "Common",
   "rarity.Uncommon": "Uncommon",
   "rarity.Rare": "Rare",
   "rarity.Epic": "Epic",
   "rarity.Legendary": "Legendary",
-
   "specialType.workshop_upgrade": "Workshop Upgrade",
   "specialType.expedition": "Expedition",
   "specialType.expedition_2": "Expedition 2",
@@ -48,7 +41,6 @@
   "specialType.quest": "Quest",
   "specialType.scrappy": "Scrappy",
   "specialType.scrappy_items": "Scrappy Items",
-
   "workshop.scrappy": "Scrappy",
   "workshop.gunsmith": "Gunsmith",
   "workshop.gear_bench": "Gear Bench",
@@ -56,7 +48,6 @@
   "workshop.explosives_bench": "Explosives Bench",
   "workshop.utility_station": "Utility Station",
   "workshop.refiner": "Refiner",
-
   "quest.Clearer Skies": "Clearer Skies",
   "quest.Trash Into Treasure": "Trash Into Treasure",
   "quest.The Trifecta": "The Trifecta",
@@ -65,7 +56,6 @@
   "quest.Out of the Shadows": "Out of the Shadows",
   "quest.Doctor's Orders": "Doctor's Orders",
   "quest.A Reveal in Ruins": "A Reveal in Ruins",
-
   "itemType.Assault Rifle": "Assault Rifle",
   "itemType.Battle Rifle": "Battle Rifle",
   "itemType.Hand Cannon": "Hand Cannon",
@@ -100,7 +90,6 @@
   "itemType.Refined Material": "Refined Material",
   "itemType.Topside Material": "Topside Material",
   "itemType.Trinket": "Trinket",
-
   "settings.title": "Settings",
   "settings.itemSize": "Item Size",
   "settings.tiny": "Tiny",
@@ -119,7 +108,6 @@
   "settings.showSpecialIconsHelp": "Shows icons for special item types (workshop upgrade, expedition, quest, etc.) on the item cards.",
   "settings.showCraftGraphIcon": "Click to Graph",
   "settings.showCraftGraphIconHelp": "Shows a button on each item card to directly open the crafting graph for that item.",
-
   "item.location": "Location",
   "item.weight": "Weight",
   "item.sellPrice": "Sell Price",
@@ -134,7 +122,6 @@
   "item.candlelightParts": "Candlelight",
   "item.candlelightPart": "Part",
   "item.quests": "Quests",
-
   "source.Scavenging": "Scavenging",
   "source.Crafting": "Crafting",
   "source.Recycling": "Recycling",
@@ -162,10 +149,8 @@
   "item.graph": "Graph",
   "item.table": "Table",
   "item.notAvailable": "N/A",
-
   "grid.noItemsFound": "No items found",
   "grid.tryAdjusting": "Try adjusting your search or filters",
-
   "graph.relationFilters": "Relation Filters",
   "graph.selectAll": "Select All",
   "graph.clearAll": "Clear All",
@@ -179,7 +164,6 @@
   "graph.outputs": "Outputs",
   "graph.noRelations": "No relations found",
   "graph.checkFilters": "Try adjusting the filters",
-
   "help.title": "How to Use",
   "help.navigation": "Navigation",
   "help.clickNodes": "Click nodes",
@@ -196,27 +180,20 @@
   "help.leftNodesDesc": "Required inputs",
   "help.rightNodes": "Right nodes",
   "help.rightNodesDesc": "Possible outputs",
-
   "error.itemNotFound": "Item not found",
   "error.couldNotBeFound": "could not be found in the database",
   "error.goToPowerRod": "Go to Power Rod",
-
   "loading.text": "Loading...",
-
   "buttons.openFilters": "Open filters",
   "buttons.openSettings": "Open settings",
   "buttons.openHelp": "Open help",
   "buttons.openRelationFilters": "Open relation filters",
   "buttons.close": "Close",
   "buttons.share": "Share",
-
   "graph.shareText": "Check out this crafting graph on ARC Forge",
-
   "language.select": "Select language",
-
   "toast.translationWarning": "⚠️ Warning: translations have been automated. Some item names may not match 100% with the names displayed in the game. To contribute, please edit the translations on GitHub.",
   "toast.dontShowAgain": "Don't show again",
-
   "track.track": "Track",
   "track.untrack": "Untrack",
   "track.showTrackIcons": "Click to Track",
@@ -226,7 +203,6 @@
   "track.clearAllTitle": "Clear all tracked items",
   "track.noItemsYet": "No tracked items yet.",
   "track.openTrackedItems": "Open tracked items",
-
   "favorite.favorite": "Favorite",
   "favorite.unfavorite": "Unfavorite",
   "favorite.showFavoriteIcons": "Click to Favorite",
@@ -235,5 +211,25 @@
   "favorite.clearAll": "Clear All",
   "favorite.clearAllTitle": "Clear all favorite items",
   "favorite.noItemsYet": "No favorite items yet.",
-  "favorite.openFavoriteItems": "Open favorite items"
+  "favorite.openFavoriteItems": "Open favorite items",
+  "updates.verified": "Data checked",
+  "updates.endDate": "Listed end date",
+  "item.projects": "Project requirements",
+  "item.projectAdvice": "Use the requirements for your personal Expedition number and stage. Project deadlines are shown as listed by the wiki at the last data check.",
+  "item.stage": "Stage",
+  "item.sourceRevision": "Wiki source revision",
+  "specialType.project": "Project",
+  "workshop.explosives_station": "Explosives Station",
+  "itemType.Modification-Underbarrel": "Underbarrel",
+  "itemType.Modification-Heavy-Mag": "Heavy Magazine",
+  "itemType.Blueprint": "Blueprint",
+  "itemType.Quest Item": "Quest Item",
+  "rarity.Unspecified": "Not specified",
+  "item.stat.ammo": "Ammunition",
+  "item.stat.magsize": "Magazine size",
+  "item.stat.range": "Range",
+  "item.stat.firerate": "Fire rate",
+  "item.stat.ARCarmorpenetr": "ARC armor penetration",
+  "item.blueprintRequired": "Blueprint required",
+  "item.batchOutput": "Batch output"
 }

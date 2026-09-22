@@ -11,16 +11,9 @@ import {
   faWrench,
   faRocket,
   faScroll,
-  faFire,
   faTableColumns,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  Item,
-  WorkshopUpgradeDetail,
-  ExpeditionDetail,
-  CandlelightDetail,
-  QuestDetail,
-} from "../../types/item";
+import { Item, WorkshopUpgradeDetail, QuestDetail } from "../../types/item";
 import { rarityColors, rarityGradients } from "../../config/rarityConfig";
 import { specialTypeLabels } from "../../config/categoryConfig";
 import { useTranslation } from "../../i18n";
@@ -164,7 +157,7 @@ export default function ItemDetailPanel({
                 }}
               >
                 <FontAwesomeIcon icon={faStar} className="text-xs" />
-                {getRarityLabel(item.infobox?.rarity || "Common")}
+                {getRarityLabel(item.infobox?.rarity || "Unspecified")}
               </div>
 
               {item.infobox?.type && (
@@ -269,11 +262,36 @@ export default function ItemDetailPanel({
             )}
           </div>
 
+          {Array.isArray(item.infobox.functions) && (
+            <ul className="mb-4 space-y-1 text-sm text-gray-300">
+              {(item.infobox.functions as string[]).map((effect) => (
+                <li key={effect}>{effect}</li>
+              ))}
+            </ul>
+          )}
+          {item.infobox.ammo != null && (
+            <dl className="mb-4 grid grid-cols-2 gap-2 text-xs">
+              {(["ammo", "magsize", "range", "firerate", "ARCarmorpenetr"] as const).map(
+                (field) =>
+                  item.infobox[field] != null && (
+                    <div key={field} className="rounded bg-white/5 p-2">
+                      <dt className="text-gray-400">{t(`item.stat.${field}`)}</dt>
+                      <dd className="mt-1 text-gray-200">
+                        {field === "ammo"
+                          ? tItem(String(item.infobox[field]))
+                          : String(item.infobox[field])}
+                      </dd>
+                    </div>
+                  ),
+              )}
+            </dl>
+          )}
+
           {/* Special Type Tags - filter out redundant ones */}
           {item.infobox?.special_types &&
             item.infobox.special_types.length > 0 &&
             (() => {
-              const redundantTypes = ["workshop_upgrade", "expedition", "candlelight", "quest"];
+              const redundantTypes = ["workshop_upgrade", "expedition", "project", "quest"];
               const filteredTypes = item.infobox.special_types.filter(
                 (type: string) => !redundantTypes.includes(type),
               );
@@ -325,70 +343,40 @@ export default function ItemDetailPanel({
               </div>
             )}
 
-            {/* Expedition Parts */}
-            {item.infobox?.expedition_parts && item.infobox.expedition_parts.length > 0 && (
-              <div>
-                <h3 className="text-xs font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-teal-300 mb-2 uppercase tracking-wider flex items-center gap-2">
-                  <FontAwesomeIcon icon={faRocket} className="text-cyan-400/70" />
-                  {t("item.expeditionParts") || "Expedition"}
+            {/* Requirements are grouped by the named personal Expedition or project. */}
+            {item.infobox.projects && item.infobox.projects.length > 0 && (
+              <div className="col-span-full">
+                <h3 className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-300">
+                  <FontAwesomeIcon icon={faRocket} /> {t("item.projects")}
                 </h3>
-                <div className="space-y-1">
-                  {item.infobox.expedition_parts.map((exp: ExpeditionDetail, idx: number) => (
-                    <div
-                      key={idx}
-                      className="flex items-center justify-between px-2 py-1 bg-linear-to-r from-cyan-500/20 to-teal-500/20 rounded border border-cyan-400/30"
+                <p className="mb-2 text-xs leading-relaxed text-gray-400">
+                  {t("item.projectAdvice")}
+                </p>
+                <div className="space-y-2">
+                  {item.infobox.projects.map((project, index) => (
+                    <a
+                      key={index}
+                      href={project.wiki_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between gap-3 rounded border border-cyan-400/20 bg-cyan-500/10 px-3 py-2 text-xs hover:bg-cyan-500/20"
                     >
-                      <span className="text-cyan-200 font-semibold text-xs">
-                        {t("item.expeditionPart")} {exp.part}
+                      <span className="text-cyan-200">
+                        {project.project} · {t("item.stage")} {project.stage}
+                        {project.part > 1 && (
+                          <span>
+                            {" "}
+                            · {t("item.expeditionPart")} {project.part}
+                          </span>
+                        )}
+                        {project.end && (
+                          <span className="mt-1 block text-gray-400">
+                            {t("updates.endDate")}: {project.end}
+                          </span>
+                        )}
                       </span>
-                      <span className="text-cyan-300 font-mono text-xs">×{exp.quantity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Expedition 2 Parts */}
-            {item.infobox?.expedition_2_parts && item.infobox.expedition_2_parts.length > 0 && (
-              <div>
-                <h3 className="text-xs font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-teal-300 mb-2 uppercase tracking-wider flex items-center gap-2">
-                  <FontAwesomeIcon icon={faRocket} className="text-cyan-400/70" />
-                  {t("item.expedition2Parts") || "Expedition 2"}
-                </h3>
-                <div className="space-y-1">
-                  {item.infobox.expedition_2_parts.map((exp: ExpeditionDetail, idx: number) => (
-                    <div
-                      key={idx}
-                      className="flex items-center justify-between px-2 py-1 bg-linear-to-r from-cyan-500/20 to-teal-500/20 rounded border border-cyan-400/30"
-                    >
-                      <span className="text-cyan-200 font-semibold text-xs">
-                        {t("item.expedition2Part")} {exp.part}
-                      </span>
-                      <span className="text-cyan-300 font-mono text-xs">×{exp.quantity}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Candlelight Parts */}
-            {item.infobox?.candlelight_parts && item.infobox.candlelight_parts.length > 0 && (
-              <div>
-                <h3 className="text-xs font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-300 to-orange-300 mb-2 uppercase tracking-wider flex items-center gap-2">
-                  <FontAwesomeIcon icon={faFire} className="text-yellow-400/70" />
-                  {t("item.candlelightParts") || "Candlelight"}
-                </h3>
-                <div className="space-y-1">
-                  {item.infobox.candlelight_parts.map((candle: CandlelightDetail, idx: number) => (
-                    <div
-                      key={idx}
-                      className="flex items-center justify-between px-2 py-1 bg-linear-to-r from-yellow-500/20 to-orange-500/20 rounded border border-yellow-400/30"
-                    >
-                      <span className="text-yellow-200 font-semibold text-xs">
-                        {t("item.candlelightPart")} {candle.part}
-                      </span>
-                      <span className="text-yellow-300 font-mono text-xs">×{candle.quantity}</span>
-                    </div>
+                      <span className="shrink-0 font-mono text-cyan-300">×{project.quantity}</span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -419,6 +407,20 @@ export default function ItemDetailPanel({
               </div>
             )}
           </div>
+
+          {item.verified_at && (
+            <p className="mb-4 text-xs leading-relaxed text-gray-400">
+              {t("updates.verified")} {item.verified_at.slice(0, 10)} UTC ·{" "}
+              <a
+                href={item.source_url || item.wiki_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-300 underline"
+              >
+                {t("item.sourceRevision")}
+              </a>
+            </p>
+          )}
 
           {/* Action Buttons */}
           <div className="flex gap-2">

@@ -1,581 +1,66 @@
 [
   {
-    "name": "Celeste",
-    "wiki_url": "https://arcraiders.wiki/wiki/Celeste",
-    "source_url": "https://arcraiders.wiki/w/index.php?title=Celeste&action=edit",
-    "image_filename": "Trader Celeste vertical.png",
+    "name": "Apollo",
+    "wiki_url": "https://arcraiders.wiki/wiki/Apollo",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=40749",
+    "verified_at": "2026-09-22T05:49:06.899Z",
+    "image_filename": "Trader Apollo horizontal.png",
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/3/3f/Trader_Celeste_vertical.png/220px-Trader_Celeste_vertical.png.webp"
+      "thumb": "https://arcraiders.wiki/w/images/thumb/e/ee/Trader_Apollo_horizontal.png/348px-Trader_Apollo_horizontal.png.webp",
+      "original": "https://arcraiders.wiki/w/images/e/ee/Trader_Apollo_horizontal.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Apollo_horizontal.png"
     },
     "shop": [
-      {
-        "name": "Chemicals",
-        "price": 1,
-        "currency": "Assorted Seeds"
-      },
-      {
-        "name": "Fabric",
-        "price": 1,
-        "currency": "Assorted Seeds"
-      },
-      {
-        "name": "Metal Parts",
-        "price": 1,
-        "currency": "Assorted Seeds"
-      },
-      {
-        "name": "Plastic Parts",
-        "price": 1,
-        "currency": "Assorted Seeds"
-      },
-      {
-        "name": "Rubber Parts",
-        "price": 1,
-        "currency": "Assorted Seeds"
-      },
-      {
-        "name": "Complex Gun Parts",
-        "price": 60,
-        "currency": "Assorted Seeds",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Exodus Modules",
-        "price": 55,
-        "currency": "Assorted Seeds",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Heavy Gun Parts",
-        "price": 15,
-        "currency": "Assorted Seeds",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Light Gun Parts",
-        "price": 15,
-        "currency": "Assorted Seeds",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Medium Gun Parts",
-        "price": 15,
-        "currency": "Assorted Seeds",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Moss",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Processor",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Rope",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Sensors",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Speaker Component",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Synthesized Fuel",
-        "price": 14,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Syringe",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Voltage Converter",
-        "price": 10,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Battery",
-        "price": 5,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Canister",
-        "price": 6,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Duct Tape",
-        "price": 6,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Great Mullein",
-        "price": 5,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Magnet",
-        "price": 6,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Oil",
-        "price": 6,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Simple Gun Parts",
-        "price": 7,
-        "currency": "Assorted Seeds",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Steel Spring",
-        "price": 6,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      },
-      {
-        "name": "Wires",
-        "price": 4,
-        "currency": "Assorted Seeds",
-        "stock": "10/10",
-        "is_limited": true
-      }
-    ]
-  },
-  {
-    "name": "Shani",
-    "wiki_url": "https://arcraiders.wiki/wiki/Shani",
-    "source_url": "https://arcraiders.wiki/w/index.php?title=Shani&action=edit",
-    "image_filename": "Trader Shani vertical.png",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/4/40/Trader_Shani_vertical.png/220px-Trader_Shani_vertical.png.webp"
-    },
-    "shop": [
-      {
-        "name": "Binoculars",
-        "price": 20,
-        "currency": "Cred"
-      },
       {
         "name": "Blue Light Stick",
-        "price": 10,
-        "currency": "Cred"
-      },
-      {
-        "name": "Firecracker",
-        "price": 20,
-        "currency": "Cred"
+        "price": 450,
+        "currency": "Coins",
+        "is_limited": false
       },
       {
         "name": "Green Light Stick",
-        "price": 10,
-        "currency": "Cred"
+        "price": 450,
+        "currency": "Coins",
+        "is_limited": false
       },
       {
         "name": "Red Light Stick",
-        "price": 10,
-        "currency": "Cred"
+        "price": 450,
+        "currency": "Coins",
+        "is_limited": false
       },
       {
         "name": "Yellow Light Stick",
-        "price": 10,
-        "currency": "Cred"
-      },
-      {
-        "name": "Combat Mk. 2",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Looting Mk. 2",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Tactical Mk. 2",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Angled Grip II",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Compensator II",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Light Mag II",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Medium Mag II",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Silencer I",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Stable Stock II",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Acoustic Guitar",
-        "price": 70,
-        "currency": "Cred",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Recorder",
-        "price": 50,
-        "currency": "Cred",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Shaker",
-        "price": 40,
-        "currency": "Cred",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Sterilized Bandage",
-        "price": 40,
-        "currency": "Cred",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Surge Shield Recharger",
-        "price": 40,
-        "currency": "Cred",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Raider Hatch Key",
-        "price": 100,
-        "currency": "Cred",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Fireworks Box",
-        "price": 60,
-        "currency": "Cred",
-        "stock": "3/3",
-        "is_limited": true
-      }
-    ]
-  },
-  {
-    "name": "Tian Wen",
-    "wiki_url": "https://arcraiders.wiki/wiki/Tian_Wen",
-    "source_url": "https://arcraiders.wiki/w/index.php?title=Tian_Wen&action=edit",
-    "image_filename": "Trader_Tian Wen horizontal.png",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/d/d5/Trader_Tian_Wen_horizontal.png/400px-Trader_Tian_Wen_horizontal.png.webp"
-    },
-    "shop": [
-      {
-        "name": "Ferro",
-        "price": 1425,
-        "currency": "Coins"
-      },
-      {
-        "name": "Hairpin",
-        "price": 1350,
-        "currency": "Coins"
-      },
-      {
-        "name": "Kettle",
-        "price": 2520,
-        "currency": "Coins"
-      },
-      {
-        "name": "Stitcher",
-        "price": 2400,
-        "currency": "Coins"
-      },
-      {
-        "name": "Energy Clip",
-        "price": 3000,
-        "currency": "Coins"
-      },
-      {
-        "name": "Launcher Ammo",
-        "price": 4500,
-        "currency": "Coins"
-      },
-      {
-        "name": "Heavy Ammo",
-        "price": 900,
-        "currency": "Coins"
-      },
-      {
-        "name": "Light Ammo",
-        "price": 900,
-        "currency": "Coins"
-      },
-      {
-        "name": "Medium Ammo",
-        "price": 900,
-        "currency": "Coins"
-      },
-      {
-        "name": "Shotgun Ammo",
-        "price": 900,
-        "currency": "Coins"
-      },
-      {
-        "name": "Hullcracker",
-        "price": 30000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Renegade",
-        "price": 21000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Anvil",
-        "price": 15000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Burletta",
-        "price": 8700,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Il Toro",
-        "price": 15000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Ferro",
-        "price": 8700,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Padded Stock",
-        "price": 15000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Angled Grip III",
-        "price": 15000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Light Mag II",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Shotgun Choke II",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Silencer I",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Stable Stock II",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "2/2",
-        "is_limited": true
-      },
-      {
-        "name": "Angled Grip I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Compensator I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Light Mag I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Medium Mag I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Extended Shotgun Mag I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Muzzle Brake I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Shotgun Choke I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      },
-      {
-        "name": "Vertical Grip I",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
-      }
-    ]
-  },
-  {
-    "name": "Apollo",
-    "wiki_url": "https://arcraiders.wiki/wiki/Apollo",
-    "source_url": "https://arcraiders.wiki/w/index.php?title=Apollo&action=edit",
-    "image_filename": "Trader Apollo horizontal.png",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/e/ee/Trader_Apollo_horizontal.png/400px-Trader_Apollo_horizontal.png.webp"
-    },
-    "shop": [
-      {
-        "name": "Light Stick",
         "price": 450,
-        "currency": "Coins"
+        "currency": "Coins",
+        "is_limited": false
       },
       {
-        "name": "Light Stick",
-        "price": 450,
-        "currency": "Coins"
-      },
-      {
-        "name": "Light Impact Grenade",
+        "name": "Remote Raider Flare",
         "price": 810,
-        "currency": "Coins"
+        "currency": "Coins",
+        "is_limited": false
       },
       {
-        "name": "Light Stick",
-        "price": 450,
-        "currency": "Coins"
+        "name": "Gas Grenade",
+        "price": 810,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 6
       },
       {
-        "name": "Light Stick",
-        "price": 450,
-        "currency": "Coins"
+        "name": "Noisemaker",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 6
+      },
+      {
+        "name": "Door Blocker",
+        "price": 810,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 6
       },
       {
         "name": "Gas Mine",
@@ -584,223 +69,826 @@
         "is_limited": false
       },
       {
-        "name": "Remote Raider Flare",
-        "price": 810,
-        "currency": "Coins"
-      },
-      {
-        "name": "Recorder",
-        "price": 3000,
-        "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
-      },
-      {
-        "name": "Noisemaker",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
-      },
-      {
-        "name": "Smoke Grenade",
-        "price": 3000,
-        "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
-      },
-      {
-        "name": "Trailblazer",
-        "price": 4800,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Seeker Grenade",
-        "price": 1920,
-        "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
-      },
-      {
-        "name": "Snap Blast Grenade",
-        "price": 2400,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Gas Grenade",
+        "name": "Light Impact Grenade",
         "price": 810,
         "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
-      },
-      {
-        "name": "Deadline",
-        "price": 15000,
-        "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Jolt Mine",
-        "price": 2550,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
+        "is_limited": false
       },
       {
         "name": "Pulse Mine",
         "price": 1410,
         "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 6
       },
       {
-        "name": "Zipline",
-        "price": 3000,
+        "name": "Seeker Grenade",
+        "price": 1920,
         "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 6
       },
       {
         "name": "Barricade Kit",
         "price": 1920,
         "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 6
       },
       {
-        "name": "Door Blocker",
-        "price": 810,
+        "name": "Recorder",
+        "price": 3000,
         "currency": "Coins",
-        "stock": "6/6",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 6
+      },
+      {
+        "name": "Snap Blast Grenade",
+        "price": 2400,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Jolt Mine",
+        "price": 2550,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Smoke Grenade",
+        "price": 3000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 6
+      },
+      {
+        "name": "Zipline",
+        "price": 3000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Trailblazer",
+        "price": 6600,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Deadline",
+        "price": 18000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      }
+    ]
+  },
+  {
+    "name": "Celeste",
+    "wiki_url": "https://arcraiders.wiki/wiki/Celeste",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=40751",
+    "verified_at": "2026-09-22T05:49:06.899Z",
+    "image_filename": "Trader Celeste vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/3f/Trader_Celeste_vertical.png/348px-Trader_Celeste_vertical.png.webp",
+      "original": "https://arcraiders.wiki/w/images/3/3f/Trader_Celeste_vertical.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Celeste_vertical.png"
+    },
+    "shop": [
+      {
+        "name": "Metal Parts",
+        "price": 1,
+        "currency": "Assorted Seeds",
+        "is_limited": false
+      },
+      {
+        "name": "Plastic Parts",
+        "price": 1,
+        "currency": "Assorted Seeds",
+        "is_limited": false
+      },
+      {
+        "name": "Rubber Parts",
+        "price": 1,
+        "currency": "Assorted Seeds",
+        "is_limited": false
+      },
+      {
+        "name": "Chemicals",
+        "price": 1,
+        "currency": "Assorted Seeds",
+        "is_limited": false
+      },
+      {
+        "name": "Fabric",
+        "price": 1,
+        "currency": "Assorted Seeds",
+        "is_limited": false
+      },
+      {
+        "name": "Great Mullein",
+        "price": 5,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Wires",
+        "price": 4,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Steel Spring",
+        "price": 6,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Oil",
+        "price": 6,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Simple Gun Parts",
+        "price": 7,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Battery",
+        "price": 5,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Canister",
+        "price": 6,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Magnet",
+        "price": 6,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Duct Tape",
+        "price": 6,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Rope",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Synthesized Fuel",
+        "price": 14,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Syringe",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Sensors",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Heavy Gun Parts",
+        "price": 15,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Medium Gun Parts",
+        "price": 15,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Light Gun Parts",
+        "price": 15,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Moss",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Speaker Component",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Processor",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Voltage Converter",
+        "price": 10,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Complex Gun Parts",
+        "price": 60,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Exodus Modules",
+        "price": 55,
+        "currency": "Assorted Seeds",
+        "is_limited": true,
+        "stock": 1
       }
     ]
   },
   {
     "name": "Lance",
     "wiki_url": "https://arcraiders.wiki/wiki/Lance",
-    "source_url": "https://arcraiders.wiki/w/index.php?title=Lance&action=edit",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=35887",
+    "verified_at": "2026-09-22T05:49:06.899Z",
     "image_filename": "Trader Lance vertical.png",
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Trader_Lance_vertical.png/220px-Trader_Lance_vertical.png.webp"
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Trader_Lance_vertical.png/348px-Trader_Lance_vertical.png.webp",
+      "original": "https://arcraiders.wiki/w/images/3/31/Trader_Lance_vertical.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Lance_vertical.png"
     },
     "shop": [
       {
-        "name": "Combat Mk. 1",
-        "price": 1920,
-        "currency": "Coins"
+        "name": "Looting Mk. 1",
+        "price": 1,
+        "currency": "Augment",
+        "is_limited": false
       },
       {
         "name": "Combat Mk. 1",
         "price": 1,
-        "currency": "Augment"
-      },
-      {
-        "name": "Looting Mk. 1",
-        "price": 1920,
-        "currency": "Coins"
-      },
-      {
-        "name": "Looting Mk. 1",
-        "price": 1,
-        "currency": "Augment"
-      },
-      {
-        "name": "Tactical Mk. 1",
-        "price": 1920,
-        "currency": "Coins"
+        "currency": "Augment",
+        "is_limited": false
       },
       {
         "name": "Tactical Mk. 1",
         "price": 1,
-        "currency": "Augment"
+        "currency": "Augment",
+        "is_limited": false
       },
       {
-        "name": "Light Shield",
+        "name": "Looting Mk. 1",
         "price": 1920,
-        "currency": "Coins"
-      },
-      {
-        "name": "Defibrillator",
-        "price": 3000,
-        "currency": "Coins"
-      },
-      {
-        "name": "Shield Recharger",
-        "price": 1560,
-        "currency": "Coins"
-      },
-      {
-        "name": "Adrenaline Shot",
-        "price": 900,
-        "currency": "Coins"
-      },
-      {
-        "name": "Bandage",
-        "price": 750,
-        "currency": "Coins"
-      },
-      {
-        "name": "Combat Mk. 2",
-        "price": 6000,
         "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
+        "is_limited": false
+      },
+      {
+        "name": "Combat Mk. 1",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Tactical Mk. 1",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": false
       },
       {
         "name": "Looting Mk. 2",
         "price": 6000,
         "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Combat Mk. 2",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
       },
       {
         "name": "Tactical Mk. 2",
         "price": 6000,
         "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 1
       },
       {
-        "name": "Heavy Shield",
-        "price": 16500,
+        "name": "Bandage",
+        "price": 750,
         "currency": "Coins",
-        "stock": "1/1",
-        "is_limited": true
-      },
-      {
-        "name": "Medium Shield",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Sterilized Bandage",
-        "price": 6000,
-        "currency": "Coins",
-        "stock": "3/3",
-        "is_limited": true
-      },
-      {
-        "name": "Surge Shield Recharger",
-        "price": 3600,
-        "currency": "Coins",
-        "stock": "5/5",
-        "is_limited": true
+        "is_limited": false
       },
       {
         "name": "Herbal Bandage",
         "price": 2700,
         "currency": "Coins",
-        "stock": "10/10",
-        "is_limited": true
+        "is_limited": true,
+        "stock": 10
+      },
+      {
+        "name": "Sterilized Bandage",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Light Shield",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Medium Shield",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Heavy Shield",
+        "price": 16500,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Shield Recharger",
+        "price": 1560,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Surge Shield Recharger",
+        "price": 3600,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Defibrillator",
+        "price": 3000,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Adrenaline Shot",
+        "price": 900,
+        "currency": "Coins",
+        "is_limited": false
       }
     ]
+  },
+  {
+    "name": "Shani",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shani",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=41100",
+    "verified_at": "2026-09-22T05:49:06.899Z",
+    "image_filename": "Trader Shani vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/40/Trader_Shani_vertical.png/348px-Trader_Shani_vertical.png.webp",
+      "original": "https://arcraiders.wiki/w/images/4/40/Trader_Shani_vertical.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Shani_vertical.png"
+    },
+    "shop": [
+      {
+        "name": "Hullcracker Blueprint",
+        "price": 150,
+        "currency": "Cred",
+        "is_limited": false,
+        "stock": 1
+      },
+      {
+        "name": "Burletta Blueprint",
+        "price": 150,
+        "currency": "Cred",
+        "is_limited": false,
+        "stock": 1
+      },
+      {
+        "name": "Trigger 'Nade Blueprint",
+        "price": 150,
+        "currency": "Cred",
+        "is_limited": false,
+        "stock": 1
+      },
+      {
+        "name": "Binoculars",
+        "price": 20,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Firecracker",
+        "price": 20,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Blue Light Stick",
+        "price": 10,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Green Light Stick",
+        "price": 10,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Red Light Stick",
+        "price": 10,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Yellow Light Stick",
+        "price": 10,
+        "currency": "Cred",
+        "is_limited": false
+      },
+      {
+        "name": "Recorder",
+        "price": 50,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Shaker",
+        "price": 40,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Acoustic Guitar",
+        "price": 70,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Silencer I",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Extended Light Mag II",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Extended Medium Mag II",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Stable Stock II",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Angled Grip II",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Compensator II",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Raider Hatch Key",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Surge Shield Recharger",
+        "price": 40,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Sterilized Bandage",
+        "price": 40,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Tactical Mk. 2",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Combat Mk. 2",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Looting Mk. 2",
+        "price": 100,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Fireworks Box",
+        "price": 60,
+        "currency": "Cred",
+        "is_limited": true,
+        "stock": 3
+      }
+    ]
+  },
+  {
+    "name": "Tian Wen",
+    "wiki_url": "https://arcraiders.wiki/wiki/Tian_Wen",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=40750",
+    "verified_at": "2026-09-22T05:49:06.899Z",
+    "image_filename": "Trader Tian Wen horizontal.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/d5/Trader_Tian_Wen_horizontal.png/348px-Trader_Tian_Wen_horizontal.png.webp",
+      "original": "https://arcraiders.wiki/w/images/d/d5/Trader_Tian_Wen_horizontal.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Tian_Wen_horizontal.png"
+    },
+    "shop": [
+      {
+        "name": "Light Ammo",
+        "price": 900,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Medium Ammo",
+        "price": 900,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Heavy Ammo",
+        "price": 900,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Shotgun Ammo",
+        "price": 900,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Launcher Ammo",
+        "price": 4500,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Energy Clip",
+        "price": 3000,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Hairpin",
+        "price": 1350,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Stitcher",
+        "price": 2400,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Kettle",
+        "price": 2520,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Ferro",
+        "price": 1425,
+        "currency": "Coins",
+        "is_limited": false
+      },
+      {
+        "name": "Ferro",
+        "price": 8700,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Il Toro",
+        "price": 15000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Burletta",
+        "price": 8700,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Anvil",
+        "price": 15000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Renegade",
+        "price": 21000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Extended Light Mag I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Extended Medium Mag I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Extended Shotgun Mag I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Muzzle Brake I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Compensator I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Shotgun Choke I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Vertical Grip I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Angled Grip I",
+        "price": 1920,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 5
+      },
+      {
+        "name": "Angled Grip III",
+        "price": 15000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Silencer I",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Shotgun Choke II",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Extended Light Mag II",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 3
+      },
+      {
+        "name": "Stable Stock II",
+        "price": 6000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 2
+      },
+      {
+        "name": "Padded Stock",
+        "price": 15000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      },
+      {
+        "name": "Hullcracker",
+        "price": 30000,
+        "currency": "Coins",
+        "is_limited": true,
+        "stock": 1
+      }
+    ]
+  },
+  {
+    "name": "Ermal",
+    "wiki_url": "https://arcraiders.wiki/wiki/Ermal",
+    "source_url": "https://arcraiders.wiki/w/index.php?oldid=41075",
+    "verified_at": "2026-09-22T05:49:06.899Z",
+    "image_filename": "Trader Ermal Vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/37/Trader_Ermal_Vertical.png/348px-Trader_Ermal_Vertical.png.webp",
+      "original": "https://arcraiders.wiki/w/images/3/37/Trader_Ermal_Vertical.png",
+      "file_page": "https://arcraiders.wiki/wiki/File:Trader_Ermal_Vertical.png"
+    },
+    "shop": [],
+    "note": "Rotating barter offers; check the in-game shop for current stock and costs."
   }
 ]

@@ -9,6 +9,9 @@ export const typeToCategory: { [key: string]: string } = {
   Shotgun: "Weapon",
   "Sniper Rifle": "Weapon",
   "Modification-Grip": "Modification",
+  "Modification-Underbarrel": "Modification",
+  "Modification-Heavy-Mag": "Modification",
+  Modification: "Modification",
   "Modification-Light-Mag": "Modification",
   "Modification-Medium-Mag": "Modification",
   "Modification-Muzzle": "Modification",
@@ -24,6 +27,8 @@ export const typeToCategory: { [key: string]: string } = {
   "Advanced Material": "Loots",
   "Basic Material": "Loots",
   Key: "Loots",
+  Blueprint: "Equipment",
+  "Quest Item": "Loots",
   Misc: "Loots",
   Nature: "Loots",
   Recyclable: "Loots",
@@ -47,6 +52,7 @@ export const allCategories = [
 
 export const specialTypeLabels: { [key: string]: string } = {
   workshop_upgrade: "Workshop Upgrade",
+  project: "Project",
   expedition: "Expedition",
   expedition_2: "Expedition 2",
   candlelight: "Candlelight",

@@ -255,10 +255,24 @@ export default function CraftingTableModal({
             detail = `${priceDep.amount} ${priceDep.currency}`;
           }
         } else {
-          const levelInfo = edge.input_level || edge.output_level;
+          const upgradeLevel = edge.dependency?.find(
+            (dependency) => dependency.type === "upgrade_level",
+          );
+          const levelInfo = upgradeLevel?.name
+            ? String(upgradeLevel.name)
+            : edge.input_level || edge.output_level;
           if (levelInfo) {
             detail = translateItem ? translateItem(levelInfo) : levelInfo;
           }
+          const requirements = (edge.dependency || []).flatMap((dependency) => {
+            if (dependency.type === "workshop" || dependency.type === "skill")
+              return [String(dependency.name)];
+            if (dependency.type === "blueprint") return [t("item.blueprintRequired")];
+            if (dependency.type === "output_quantity")
+              return [`${t("item.batchOutput")}: ${dependency.value}`];
+            return [];
+          });
+          detail = [detail, ...requirements].filter(Boolean).join(" · ");
         }
 
         const otherName = edge.name;
@@ -299,7 +313,7 @@ export default function CraftingTableModal({
     Object.keys(outputs).forEach((key) => sortEntries(outputs[key]));
 
     return { inputs, outputs, currentThumb };
-  }, [currentItem, itemsLookup, selectedEdgeTypes, translateItem]);
+  }, [currentItem, itemsLookup, selectedEdgeTypes, translateItem, t]);
 
   // Get all active relation types
   const activeRelationTypes = useMemo(() => {
@@ -569,9 +583,14 @@ export default function CraftingTableModal({
                                 <div className="flex-1 min-w-0 text-left">
                                   <div className="text-sm font-medium text-gray-200 truncate group-hover:text-white transition-colors">
                                     {tItem(item.name)}
+                                    {item.edge.quantity != null && (
+                                      <span className="ml-2 font-mono text-cyan-300">
+                                        ×{item.edge.quantity}
+                                      </span>
+                                    )}
                                   </div>
                                   {item.detail && (
-                                    <div className="text-[10px] text-gray-500 truncate">
+                                    <div className="text-[10px] leading-relaxed text-gray-400 break-words">
                                       {item.detail}
                                     </div>
                                   )}
@@ -620,9 +639,14 @@ export default function CraftingTableModal({
                                 <div className="flex-1 min-w-0 text-left">
                                   <div className="text-sm font-medium text-gray-200 truncate group-hover:text-white transition-colors">
                                     {tItem(item.name)}
+                                    {item.edge.quantity != null && (
+                                      <span className="ml-2 font-mono text-cyan-300">
+                                        ×{item.edge.quantity}
+                                      </span>
+                                    )}
                                   </div>
                                   {item.detail && (
-                                    <div className="text-[10px] text-gray-500 truncate">
+                                    <div className="text-[10px] leading-relaxed text-gray-400 break-words">
                                       {item.detail}
                                     </div>
                                   )}

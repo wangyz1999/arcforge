@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://arcforge.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | ARC Forge",
   },
   description:
-    "Complete ARC Raiders item database with crafting trees, recipes, and item information. Browse weapons, modifications, materials, and more for ARC Raiders.",
+    "ARC Raiders item database with sourced crafting recipes and project requirements. Browse weapons, modifications, materials, and more for ARC Raiders.",
   keywords: [
     "ARC Raiders",
     "item database",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "ARC Forge",
     title: "ARC Forge - ARC Raiders Item Database & Crafting Guide",
     description:
-      "Complete ARC Raiders item database with crafting trees, recipes, and item information. Browse weapons, modifications, materials, and more.",
+      "ARC Raiders item database with sourced crafting recipes and project requirements. Browse weapons, modifications, materials, and more.",
     images: [
       {
         url: `${baseUrl}/logo.webp`,
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ARC Forge - ARC Raiders Item Database",
     description:
-      "Complete ARC Raiders item database with crafting trees, recipes, and item information.",
+      "ARC Raiders item database with sourced crafting recipes and project requirements.",
     images: [`${baseUrl}/logo.webp`],
     creator: "@arcforge",
     site: "@arcforge",

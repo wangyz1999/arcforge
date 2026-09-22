@@ -16,7 +16,7 @@
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20.9+ (Node 22 or newer recommended)
 - npm, yarn, pnpm, or bun
 
 ### Installation
@@ -55,12 +55,27 @@ npm start
 
 ## Data Pipeline
 
-The project includes Python scripts to scrape and process item data from the ARC Raiders wiki:
+Refresh the catalog from the ARC Raiders Wiki's public MediaWiki and Cargo APIs:
 
 ```bash
-cd script
-python run_pipeline.py
+npm run data:refresh
+npm run data:check
+npm test
 ```
+
+The refresh discovers items and weapons, fetches source revisions and images, and rebuilds crafting, upgrade, repair, recycling, salvage, trader, workshop, quest, and project data. It validates all graph references before publishing and refuses unexpectedly large catalog deletions. Network errors leave the published data untouched. Node is the only runtime required.
+
+For an offline rebuild of the last downloaded snapshot, run `npm run data:refresh -- --offline`. The ignored `.cache/arc-wiki/` directory must be present; the original check date is preserved. `python script/run_pipeline.py` is a compatibility wrapper for the same importer. The older scraper and manual-adjustment scripts are historical utilities, not the current pipeline.
+
+`data/data_status.json` records the actual item-data check date. Item details link to their wiki source revisions. Future item stats are not inferred from announcements.
+
+Project requirements use the wiki's project names, stages, and listed end dates; personal Expeditions 1–5 are distinct. Expired projects are excluded on refresh. Ermal's rotating barter stock is linked rather than treated as permanent offers. Unknown source values stay unspecified, and untranslated item names fall back to English. No material is labeled universally safe to recycle.
+
+The September 22, 2026 UTC snapshot contains 524 items, 24 weapons, and six traders, including newer equipment, blueprints, and quest items.
+
+### Data attribution
+
+Wiki-derived data is adapted from [ARC Raiders Wiki contributors](https://arcraiders.wiki/) under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Each item links to its source revision. Game artwork and game content belong to Embark Studios AB. The application code remains MIT licensed; ARC Forge is an unofficial community companion.
 
 ## Tech Stack
 
