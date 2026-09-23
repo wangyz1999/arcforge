@@ -1,4 +1,4 @@
-import { Edge, ItemData } from "../types/graph";
+import type { Edge, ItemData } from "../types/graph";
 
 // Edge type priority order (lower number = higher priority)
 const EDGE_TYPE_PRIORITY: { [key: string]: number } = {
@@ -12,7 +12,8 @@ const EDGE_TYPE_PRIORITY: { [key: string]: number } = {
 
 // Helper function to clean relation names
 export const cleanRelationName = (relation: string): string => {
-  return relation.replace(/_from$|_to$/g, "");
+  const name = relation.replace(/_from$|_to$/g, "");
+  return name === "trader" || name === "sold_by" ? "trade" : name;
 };
 
 // Helper function to get edge type priority
@@ -21,57 +22,95 @@ export const getEdgePriority = (edge: Edge): number => {
   return EDGE_TYPE_PRIORITY[cleanedRelation] ?? 999; // Unknown types go last
 };
 
-// Helper function to format edge label with level, quantity, and price
-// Now accepts an optional translation function for relation names
+// Shared by the graph and table so prices, levels and requirements read identically.
+export const formatRelationDetail = (
+  edge: Edge,
+  translateRelation?: (key: string) => string,
+  translateItem?: (name: string) => string,
+  currentItemName?: string,
+): string => {
+  const tItem = translateItem ?? ((name: string) => name);
+  if (cleanRelationName(edge.relation) === "trade") {
+    const price = edge.dependency?.find((d) => d.type === "price");
+    return price?.amount != null && typeof price.currency === "string"
+      ? `${price.amount} ${tItem(price.currency)}`
+      : "";
+  }
+
+  const upgrade = edge.dependency?.find((d) => d.type === "upgrade_level");
+  const level = String(upgrade?.name ?? edge.input_level ?? edge.output_level ?? "");
+  // The item names already appear on the cards; preserve only meaningful variants.
+  const levelText = level === edge.name || level === currentItemName ? "" : tItem(level);
+  const requirements = (edge.dependency ?? []).flatMap((d) => {
+    if ((d.type === "workshop" || d.type === "skill") && typeof d.name === "string")
+      return [tItem(d.name)];
+    if (d.type === "blueprint")
+      return [translateRelation?.("item.blueprintRequired") ?? "Blueprint required"];
+    if (d.type === "output_quantity" && d.value != null)
+      return [`${translateRelation?.("item.batchOutput") ?? "Batch output"}: ×${d.value}`];
+    return [];
+  });
+  return [...new Set([levelText.replace(/\s*->\s*/g, " → "), ...requirements])]
+    .filter(Boolean)
+    .join(" · ");
+};
+
+export const formatEdgeQuantity = (edge: Edge): string =>
+  edge.quantity == null || (cleanRelationName(edge.relation) === "trade" && edge.quantity === 1)
+    ? ""
+    : `×${edge.quantity}`;
+
 export const formatEdgeLabel = (
   edge: Edge,
   translateRelation?: (key: string) => string,
   translateItem?: (name: string) => string,
+  currentItemName?: string,
 ): string => {
-  let relation = cleanRelationName(edge.relation);
+  const relation = cleanRelationName(edge.relation);
+  return [
+    translateRelation?.(`graph.${relation}`) ?? relation,
+    formatEdgeQuantity(edge),
+    formatRelationDetail(edge, translateRelation, translateItem, currentItemName),
+  ]
+    .filter(Boolean)
+    .join(" · ");
+};
 
-  // Rename trader/sold_by to trade for display
-  if (relation === "trader" || relation === "sold_by") {
-    relation = "trade";
+// Print the action once per group, retaining distinct quantities and recipe requirements.
+const formatGroupedLabels = (
+  edges: Edge[],
+  translateRelation?: (key: string) => string,
+  translateItem?: (name: string) => string,
+  currentItemName?: string,
+  isTrader = false,
+) => {
+  const groups = new Map<string, Set<string>>();
+  for (const edge of edges) {
+    const relation = cleanRelationName(edge.relation);
+    const title =
+      isTrader && relation === "trade"
+        ? ""
+        : (translateRelation?.(`graph.${relation}`) ?? relation);
+    const details = [
+      formatEdgeQuantity(edge),
+      formatRelationDetail(edge, translateRelation, translateItem, currentItemName),
+    ]
+      .filter(Boolean)
+      .join(" · ");
+    if (!groups.has(title)) groups.set(title, new Set());
+    groups.get(title)!.add(details);
   }
-
-  // Translate relation if translation function provided
-  const translatedRelation = translateRelation ? translateRelation(`graph.${relation}`) : relation;
-
-  const quantity = edge.quantity ? `${edge.quantity}x` : "";
-  const levelInfo = edge.input_level || edge.output_level || "";
-
-  // Extract price info from dependency for trader edges
-  let priceInfo = "";
-  if (edge.relation === "trader" || edge.relation === "sold_by") {
-    const priceDep = edge.dependency?.find((d) => d.type === "price");
-    if (priceDep) {
-      const amount = priceDep.amount;
-      const currency = priceDep.currency;
-      priceInfo = `${amount} ${currency}`;
-    }
-  }
-
-  // For recycle/salvage with level info, translate the source item name
-  let levelDisplay = levelInfo;
-  if (levelInfo && translateItem) {
-    levelDisplay = translateItem(levelInfo);
-  }
-
-  // Build label
-  const parts = [translatedRelation];
-  if (quantity) parts.push(`(${quantity})`);
-  if (priceInfo) parts.push(`[${priceInfo}]`);
-  else if (levelDisplay) parts.push(`[${levelDisplay}]`);
-
-  return parts.join(" ");
+  return Array.from(groups, ([title, details]) =>
+    [title, ...Array.from(details)].filter(Boolean).join("\n"),
+  ).join("\n\n");
 };
 
 // Shape of elements we build for Cytoscape
 interface GraphElementData {
   id?: string;
   label?: string;
-  type?: "center" | "input" | "output";
+  type?: "center" | "input" | "output" | "label";
+  attachedTo?: string;
   nodeType?: string;
   rarity?: string;
   imageUrl?: string;
@@ -116,11 +155,6 @@ export const buildGraphElements = (
     // Relations can be: craft_from, craft_to, recycle_from, etc.
     const cleanedRelation = cleanRelationName(relation);
 
-    // Map both 'trader' and 'sold_by' to the 'trade' filter
-    if (cleanedRelation === "trader" || cleanedRelation === "sold_by") {
-      return selectedEdgeTypes.has("trade");
-    }
-
     return selectedEdgeTypes.has(cleanedRelation);
   };
 
@@ -132,7 +166,10 @@ export const buildGraphElements = (
   elements.push({
     data: {
       id: centerId,
-      label: tItem(currentItem.name),
+      label:
+        currentItem.node_type === "trader"
+          ? `${tItem(currentItem.name)}\n${translateRelation?.("graph.trade") ?? "Trade"}`
+          : tItem(currentItem.name),
       type: "center",
       nodeType: currentItem.node_type || "item",
       rarity: currentItem.infobox?.rarity,
@@ -209,9 +246,23 @@ export const buildGraphElements = (
     });
 
     // Create edge from left to center with combined labels
-    const edgeLabels = edges
-      .map((e) => formatEdgeLabel(e, translateRelation, translateItem))
-      .join("\n");
+    const edgeLabels = formatGroupedLabels(
+      edges,
+      translateRelation,
+      translateItem,
+      currentItem.name,
+      currentItem.node_type === "trader",
+    );
+
+    elements.push({
+      data: {
+        id: `label-${nodeId}`,
+        type: "label",
+        attachedTo: nodeId,
+        label: edgeLabels,
+        relation: cleanRelationName(edges[0].relation),
+      },
+    });
 
     // Calculate curvature
     const curvature = leftIsEven
@@ -228,7 +279,6 @@ export const buildGraphElements = (
       data: {
         source: nodeId,
         target: centerId,
-        label: edgeLabels,
         relation: edges.map((e) => cleanRelationName(e.relation)).join(","),
         curvature: curvature,
       },
@@ -266,9 +316,23 @@ export const buildGraphElements = (
     });
 
     // Create edge from center to right with combined labels
-    const edgeLabels = edges
-      .map((e) => formatEdgeLabel(e, translateRelation, translateItem))
-      .join("\n");
+    const edgeLabels = formatGroupedLabels(
+      edges,
+      translateRelation,
+      translateItem,
+      currentItem.name,
+      currentItem.node_type === "trader",
+    );
+
+    elements.push({
+      data: {
+        id: `label-${nodeId}`,
+        type: "label",
+        attachedTo: nodeId,
+        label: edgeLabels,
+        relation: cleanRelationName(edges[0].relation),
+      },
+    });
 
     // Calculate curvature
     const curvature = rightIsEven
@@ -285,7 +349,6 @@ export const buildGraphElements = (
       data: {
         source: centerId,
         target: nodeId,
-        label: edgeLabels,
         relation: edges.map((e) => cleanRelationName(e.relation)).join(","),
         curvature: curvature,
       },
@@ -300,47 +363,34 @@ export const buildGraphElements = (
   };
 };
 
-// Build layout positions function
+// Size each row from its rendered label, keeping long recipe groups clear of neighbors.
 export const buildLayoutPositions = (
   elements: GraphElement[],
   leftGrouped: Map<string, Edge[]>,
   rightGrouped: Map<string, Edge[]>,
+  labelHeights: Map<string, number> = new Map(),
 ) => {
-  return (node: { id: () => string; data: (key: string) => string }) => {
-    const nodeId = node.id();
-    const nodeType = node.data("type");
-
-    const leftX = 250;
-    const centerX = 700;
-    const rightX = 1150;
-    const centerY = 400;
-    const spacing = 180;
-
-    // Center node
-    if (nodeType === "center") {
-      return { x: centerX, y: centerY };
+  const positions = new Map<string, { x: number; y: number }>();
+  const centerY = 400;
+  for (const [side, groups, x] of [
+    ["left", leftGrouped, 100],
+    ["right", rightGrouped, 1300],
+  ] as const) {
+    const rows = Array.from(groups.keys(), (name) => {
+      const id = `${side}-${name}`;
+      return { id, height: Math.max(180, (labelHeights.get(`label-${id}`) ?? 0) + 48) };
+    });
+    let y = centerY - rows.reduce((sum, row) => sum + row.height, 0) / 2;
+    for (const row of rows) {
+      const rowY = y + row.height / 2;
+      positions.set(row.id, { x, y: rowY });
+      positions.set(`label-${row.id}`, { x: x + (side === "left" ? 210 : -210), y: rowY });
+      y += row.height;
     }
-
-    // Left nodes (inputs)
-    if (nodeType === "input") {
-      const leftNodeIndex = elements
-        .filter((el) => el.data?.type === "input")
-        .findIndex((el) => el.data?.id === nodeId);
-      const totalLeftNodes = leftGrouped.size;
-      const startY = centerY - ((totalLeftNodes - 1) * spacing) / 2;
-      return { x: leftX, y: startY + leftNodeIndex * spacing };
-    }
-
-    // Right nodes (outputs)
-    if (nodeType === "output") {
-      const rightNodeIndex = elements
-        .filter((el) => el.data?.type === "output")
-        .findIndex((el) => el.data?.id === nodeId);
-      const totalRightNodes = rightGrouped.size;
-      const startY = centerY - ((totalRightNodes - 1) * spacing) / 2;
-      return { x: rightX, y: startY + rightNodeIndex * spacing };
-    }
-
-    return { x: 0, y: 0 };
-  };
+  }
+  for (const element of elements) {
+    if (element.data?.type === "center" && element.data.id)
+      positions.set(element.data.id, { x: 700, y: centerY });
+  }
+  return (node: { id: () => string }) => positions.get(node.id()) ?? { x: 700, y: centerY };
 };

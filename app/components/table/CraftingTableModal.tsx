@@ -22,7 +22,12 @@ import itemsRelationData from "../../../data/items_relation.json";
 import TableSettingsPanel from "./TableSettingsPanel";
 import HelpPanel from "./HelpPanel";
 import { ItemData } from "../../types/graph";
-import { cleanRelationName, getEdgePriority } from "../../utils/graphHelpers";
+import {
+  cleanRelationName,
+  getEdgePriority,
+  formatRelationDetail,
+  formatEdgeQuantity,
+} from "../../utils/graphHelpers";
 import { useTranslation } from "../../i18n";
 import ErrorState from "./ErrorState";
 import type { CraftingLayout } from "../graph/CraftingGraphModal";
@@ -211,9 +216,6 @@ export default function CraftingTableModal({
       if (selectedEdgeTypes.size === 0) return false;
 
       const cleaned = cleanRelationName(relation);
-      if (cleaned === "trader" || cleaned === "sold_by") {
-        return selectedEdgeTypes.has("trade");
-      }
       return selectedEdgeTypes.has(cleaned);
     };
 
@@ -242,38 +244,9 @@ export default function CraftingTableModal({
     currentItem.edges
       .filter((edge) => shouldIncludeEdge(edge.relation))
       .forEach((edge, idx) => {
-        const cleaned = cleanRelationName(edge.relation);
-        const relationKey = cleaned === "trader" || cleaned === "sold_by" ? "trade" : cleaned;
+        const relationKey = cleanRelationName(edge.relation);
 
-        // Extra detail: price (trade) or level item (recycle/salvage/etc)
-        let detail = "";
-        if (edge.relation === "trader" || edge.relation === "sold_by") {
-          const priceDep = edge.dependency?.find((d) => d.type === "price") as
-            | { type: "price"; amount?: string | number; currency?: string }
-            | undefined;
-          if (priceDep?.amount != null && priceDep?.currency) {
-            detail = `${priceDep.amount} ${priceDep.currency}`;
-          }
-        } else {
-          const upgradeLevel = edge.dependency?.find(
-            (dependency) => dependency.type === "upgrade_level",
-          );
-          const levelInfo = upgradeLevel?.name
-            ? String(upgradeLevel.name)
-            : edge.input_level || edge.output_level;
-          if (levelInfo) {
-            detail = translateItem ? translateItem(levelInfo) : levelInfo;
-          }
-          const requirements = (edge.dependency || []).flatMap((dependency) => {
-            if (dependency.type === "workshop" || dependency.type === "skill")
-              return [String(dependency.name)];
-            if (dependency.type === "blueprint") return [t("item.blueprintRequired")];
-            if (dependency.type === "output_quantity")
-              return [`${t("item.batchOutput")}: ${dependency.value}`];
-            return [];
-          });
-          detail = [detail, ...requirements].filter(Boolean).join(" · ");
-        }
+        const detail = formatRelationDetail(edge, t, translateItem, currentItem.name);
 
         const otherName = edge.name;
         const otherItem = itemsLookup.get(otherName);
@@ -581,16 +554,16 @@ export default function CraftingTableModal({
                                   )}
                                 </div>
                                 <div className="flex-1 min-w-0 text-left">
-                                  <div className="text-sm font-medium text-gray-200 truncate group-hover:text-white transition-colors">
+                                  <div className="text-sm font-medium text-gray-200 break-words group-hover:text-white transition-colors">
                                     {tItem(item.name)}
-                                    {item.edge.quantity != null && (
+                                    {formatEdgeQuantity(item.edge) && (
                                       <span className="ml-2 font-mono text-cyan-300">
-                                        ×{item.edge.quantity}
+                                        {formatEdgeQuantity(item.edge)}
                                       </span>
                                     )}
                                   </div>
                                   {item.detail && (
-                                    <div className="text-[10px] leading-relaxed text-gray-400 break-words">
+                                    <div className="mt-1 text-xs leading-relaxed text-slate-400 break-words">
                                       {item.detail}
                                     </div>
                                   )}
@@ -637,16 +610,16 @@ export default function CraftingTableModal({
                                   )}
                                 </div>
                                 <div className="flex-1 min-w-0 text-left">
-                                  <div className="text-sm font-medium text-gray-200 truncate group-hover:text-white transition-colors">
+                                  <div className="text-sm font-medium text-gray-200 break-words group-hover:text-white transition-colors">
                                     {tItem(item.name)}
-                                    {item.edge.quantity != null && (
+                                    {formatEdgeQuantity(item.edge) && (
                                       <span className="ml-2 font-mono text-cyan-300">
-                                        ×{item.edge.quantity}
+                                        {formatEdgeQuantity(item.edge)}
                                       </span>
                                     )}
                                   </div>
                                   {item.detail && (
-                                    <div className="text-[10px] leading-relaxed text-gray-400 break-words">
+                                    <div className="mt-1 text-xs leading-relaxed text-slate-400 break-words">
                                       {item.detail}
                                     </div>
                                   )}

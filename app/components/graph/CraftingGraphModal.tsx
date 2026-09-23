@@ -42,7 +42,6 @@ export default function CraftingGraphModal({
   const { t, tItem } = useTranslation();
   const cyRef = useRef<cytoscape.Core | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const hasAnimated = useRef<string | null>(null);
   const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -178,7 +177,23 @@ export default function CraftingGraphModal({
         userZoomingEnabled: true,
         userPanningEnabled: true,
         boxSelectionEnabled: false,
+        autoungrabify: true,
       });
+      const labelHeights = new Map<string, number>();
+      cy.nodes('[type="label"]').forEach((node) => {
+        labelHeights.set(node.id(), node.boundingBox().h);
+      });
+      cy.layout({
+        name: "preset",
+        positions: buildLayoutPositions(
+          elements,
+          leftGrouped,
+          rightGrouped,
+          labelHeights,
+        ) as unknown as cytoscape.NodePositionFunction,
+        fit: true,
+        padding: 120,
+      }).run();
     } catch (error) {
       console.error("Error initializing Cytoscape:", error);
       // Clean up container to prevent stale state
@@ -198,7 +213,6 @@ export default function CraftingGraphModal({
       resizeTimeoutRef.current = setTimeout(() => {
         if (cyRef.current) {
           cyRef.current.resize();
-          cyRef.current.fit(undefined, 120);
         }
       }, 150);
     };
@@ -215,43 +229,16 @@ export default function CraftingGraphModal({
       if (cyRef.current) {
         try {
           cyRef.current.resize();
-          cyRef.current.fit(undefined, 150);
-
-          const shouldAnimate = hasAnimated.current !== itemName;
-
-          if (shouldAnimate) {
-            hasAnimated.current = itemName;
-
-            const centerNode = cyRef.current.$('[type="center"]');
-            const currentZoom = cyRef.current.zoom();
-
-            const containerHeight = cyRef.current.height();
-            const centerNodeHeight = 250;
-            const targetNodeScreenHeight = containerHeight * 0.22;
-            const targetZoom = targetNodeScreenHeight / centerNodeHeight;
-
-            if (currentZoom < targetZoom * 0.8) {
-              const finalZoom = Math.max(currentZoom * 1.5, targetZoom);
-
-              cyRef.current.animate(
-                {
-                  zoom: finalZoom,
-                  center: { eles: centerNode },
-                },
-                { duration: 1300, easing: "ease-out-cubic" },
-              );
-            } else {
-              const finalZoom = currentZoom * 0.85;
-
-              cyRef.current.animate(
-                {
-                  zoom: finalZoom,
-                  center: { eles: centerNode },
-                },
-                { duration: 1300, easing: "ease-out-cubic" },
-              );
-            }
-          }
+          const graph = cyRef.current;
+          const bounds = graph.elements().boundingBox();
+          // A full vertical fit makes large trader inventories unreadably small.
+          // Frame the columns at a useful scale; the inventory can be panned vertically.
+          const zoom = Math.min(1, Math.max(0.2, (graph.width() - 64) / bounds.w));
+          graph.zoom(zoom);
+          graph.pan({
+            x: graph.width() / 2 - ((bounds.x1 + bounds.x2) / 2) * zoom,
+            y: graph.height() / 2 - 400 * zoom,
+          });
         } catch {
           // Ignore errors if cytoscape instance was destroyed
         }
@@ -295,13 +282,6 @@ export default function CraftingGraphModal({
     translateRelation,
     handleItemSelect,
   ]);
-
-  // Reset animation tracking when item changes
-  useEffect(() => {
-    if (isOpen) {
-      hasAnimated.current = null;
-    }
-  }, [itemName, isOpen]);
 
   if (!isOpen) return null;
 
